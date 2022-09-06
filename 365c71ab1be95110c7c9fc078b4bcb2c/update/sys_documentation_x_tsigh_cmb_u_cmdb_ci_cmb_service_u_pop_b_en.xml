@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_pop_b" label="Pop B" language="en" table="x_tsigh_cmb_u_cmdb_ci_cmb_service">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_pop_b</element>
+            <help/>
+            <hint/>
+            <label>Pop B</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <plural>Pop Bs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-09-05 15:13:02</sys_created_on>
+            <sys_id>9aa5db701bb19510c7c9fc078b4bcbd9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Pop B</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_documentation_x_tsigh_cmb_u_cmdb_ci_cmb_service_u_pop_b_en</sys_update_name>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-09-05 15:13:02</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

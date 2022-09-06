@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="Equipment Group" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_equipment_group" sizeclass="0" type="collection">
+        <element label="Currency" max_length="38" name="u_currency" type="currency"/>
+        <element label="Hostname" max_length="300" name="u_hostname" type="string"/>
+        <element label="MRC" max_length="40" name="u_mrc" type="float"/>
+        <element label="OTC" max_length="40" name="u_otc" type="float"/>
+    </element>
+</database>
