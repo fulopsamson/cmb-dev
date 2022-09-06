@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="CMB Service" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sizeclass="0" type="collection">
+        <element label="Acceptance date" max_length="40" name="u_acceptance_date" type="glide_date_time"/>
+        <element label="Currency" max_length="40" name="u_currency" reference="fx_currency" type="reference"/>
+        <element choice="1" label="Project code" max_length="40" name="u_project_code" type="choice">
+            <choice/>
+        </element>
+        <element label="Service description" max_length="100" name="u_service_description" type="string"/>
+        <element choice="1" label="State" max_length="40" name="u_state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Active" value="Active"/>
+                <element inactive_on_update="false" label="Designed" value="Designed"/>
+                <element inactive_on_update="false" label="FeasabilityChecked" value="FeasabilityChecked"/>
+                <element inactive_on_update="false" label="Inactive" value="Inactive"/>
+                <element inactive_on_update="false" label="Initial" value="Initial"/>
+                <element inactive_on_update="false" label="Reserved" value="Reserved"/>
+            </choice>
+        </element>
+    </element>
+</database>
