@@ -136,5 +136,25 @@
             <sys_updated_on>2022-09-06 14:22:15</sys_updated_on>
             <value>Reserved</value>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_state</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Terminated</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-09 06:51:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>211906461b719910c7c9fc078b4bcb57</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-09 06:51:10</sys_updated_on>
+            <value>Terminated</value>
+        </sys_choice>
     </sys_choice>
 </record_update>

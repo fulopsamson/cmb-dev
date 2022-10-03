@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="u_cmdb_ci_cmb_service" version="2" view="cmb_service">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="u_cmdb_ci_cmb_service - CMB Service" name="u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="f436892b1bf91110c7c9fc078b4bcbdb">b036892b1bf91110c7c9fc078b4bcbe0</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-13 17:49:32</sys_created_on>
+            <sys_id>3036816b1bf91110c7c9fc078b4bcb5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-13 17:49:32</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>u_cmdb_ci_cmb_service - CMB Service</calculated_name>
+            <filter/>
+            <name>u_cmdb_ci_cmb_service</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-13 17:49:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b036892b1bf91110c7c9fc078b4bcbe0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_cmdb_ci_cmb_service - CMB Service</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_related_u_cmdb_ci_cmb_service_cmb_service</sys_update_name>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-13 17:49:32</sys_updated_on>
+            <sys_user/>
+            <view display_value="CMB Service" name="cmb_service">f436892b1bf91110c7c9fc078b4bcbdb</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

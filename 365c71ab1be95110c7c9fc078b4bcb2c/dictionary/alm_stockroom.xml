@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Stockroom" max_length="40" name="alm_stockroom" sizeclass="262" type="collection">
+        <element label="POP CI" max_length="32" name="x_tsigh_cmb_pop_ci" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_pop" type="reference"/>
+        <index name="index2">
+            <element name="x_tsigh_cmb_pop_ci"/>
+        </index>
+    </element>
+</database>

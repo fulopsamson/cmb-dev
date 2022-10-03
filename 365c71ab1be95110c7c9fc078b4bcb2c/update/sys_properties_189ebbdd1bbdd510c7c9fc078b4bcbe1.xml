@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>CMB Service activity formatter fields</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.ui.x_tsigh_cmb_u_cmdb_ci_cmb_service_activity.fields</name>
+        <read_roles/>
+        <suffix>x_tsigh_cmb</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-07 07:28:44</sys_created_on>
+        <sys_id>189ebbdd1bbdd510c7c9fc078b4bcbe1</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>glide.ui.x_tsigh_cmb_u_cmdb_ci_cmb_service_activity.fields</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_properties_189ebbdd1bbdd510c7c9fc078b4bcbe1</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-15 12:34:33</sys_updated_on>
+        <type>string</type>
+        <value>sys_class_name,sys_updated_on,u_billing_profile,u_account,u_acceptance_date,u_contract,u_contract_period,u_endpoint_a,u_endpoint_b,u_pop_a,u_pop_b,u_rfs_commited,u_rfs_requested,u_project,u_project_code,u_product_type,u_work_note,u_otc,*Relations*</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=189ebbdd1bbdd510c7c9fc078b4bcbe1"/>
+</record_update>

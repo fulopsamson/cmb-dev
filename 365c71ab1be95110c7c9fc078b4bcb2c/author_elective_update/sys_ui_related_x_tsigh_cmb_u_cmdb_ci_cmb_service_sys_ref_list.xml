@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related action="DELETE" sys_domain="global" table="x_tsigh_cmb_u_cmdb_ci_cmb_service" version="2" view="sys_ref_list">
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>CMB Service - Reference List</calculated_name>
+            <filter/>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-14 07:48:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5d468c3b1b755110c7c9fc078b4bcb95</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>CMB Service - Reference List</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_sys_ref_list</sys_update_name>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-14 07:48:59</sys_updated_on>
+            <sys_user/>
+            <view display_value="Reference List" name="sys_ref_list">2d3cf1531b211110c7c9fc078b4bcb20</view>
+            <view_name/>
+        </sys_ui_related_list>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>CMB Service - Reference List</calculated_name>
+            <filter/>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-14 07:48:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5d468c3b1b755110c7c9fc078b4bcb95</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>CMB Service - Reference List</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_sys_ref_list</sys_update_name>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-14 07:48:59</sys_updated_on>
+            <sys_user/>
+            <view display_value="Reference List" name="sys_ref_list">2d3cf1531b211110c7c9fc078b4bcb20</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_sys_ref_list</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_related sys_domain="global" table="x_tsigh_cmb_u_cmdb_ci_cmb_service" version="2" view="sys_ref_list"><sys_ui_related_list action="INSERT_OR_UPDATE"><calculated_name>CMB Service - Reference List</calculated_name><filter/><name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name><order_by/><position/><related_list/><sys_class_name>sys_ui_related_list</sys_class_name><sys_created_by>toma.istvan</sys_created_by><sys_created_on>2022-09-14 07:48:42</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>5d468c3b1b755110c7c9fc078b4bcb95</sys_id><sys_mod_count>1</sys_mod_count><sys_name>CMB Service - Reference List</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_sys_ref_list</sys_update_name><sys_updated_by>toma.istvan</sys_updated_by><sys_updated_on>2022-09-14 07:48:59</sys_updated_on><sys_user/><view display_value="Reference List" name="sys_ref_list">2d3cf1531b211110c7c9fc078b4bcb20</view><view_name/></sys_ui_related_list><sys_ui_related_list action="INSERT_OR_UPDATE"><calculated_name>CMB Service - Reference List</calculated_name><filter/><name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name><order_by/><position/><related_list/><sys_class_name>sys_ui_related_list</sys_class_name><sys_created_by>toma.istvan</sys_created_by><sys_created_on>2022-09-14 07:48:42</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>5d468c3b1b755110c7c9fc078b4bcb95</sys_id><sys_mod_count>1</sys_mod_count><sys_name>CMB Service - Reference List</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_sys_ref_list</sys_update_name><sys_updated_by>toma.istvan</sys_updated_by><sys_updated_on>2022-09-14 07:48:59</sys_updated_on><sys_user/><view display_value="Reference List" name="sys_ref_list">2d3cf1531b211110c7c9fc078b4bcb20</view><view_name/></sys_ui_related_list></sys_ui_related></record_update>]]></payload>
+        <payload_hash>-247769495</payload_hash>
+        <record_name>CMB Service</record_name>
+        <reverted_from/>
+        <source>155d3a0d1b7d9510c7c9fc078b4bcb27</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-14 07:51:12</sys_created_on>
+        <sys_id>71d604bb1b755110c7c9fc078b4bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1833afb037b0000001</sys_recorded_at>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-14 07:51:12</sys_updated_on>
+        <type>Related Lists</type>
+        <update_guid>31d604bb24755110a2c0e44c5fd54221</update_guid>
+        <update_guid_history>31d604bb24755110a2c0e44c5fd54221:-247769495</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-14 07:51:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_related_list">sys_ui_related_list</sys_db_object>
+        <sys_id>5c6019e7113f4e21a4b98b6262489c71</sys_id>
+        <sys_metadata>5d468c3b1b755110c7c9fc078b4bcb95</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMB Service - Reference List</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="CMB Service">1d6ec3381b719510c7c9fc078b4bcb61</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_sys_ref_list</sys_update_name>
+        <sys_update_version display_value="sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_sys_ref_list">71d604bb1b755110c7c9fc078b4bcb21</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-14 07:51:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

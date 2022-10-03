@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_service</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Segment onLoad</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+
+    var cmbService = g_form.getReference('u_service', callBack);
+
+    function callBack(rec) {
+        g_form.setValue('u_provider', rec.u_account);
+        g_form.setValue('u_billing_profile', rec.u_billing_profile);
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-21 15:18:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e260bd861b0e1510c7c9fc078b4bcb85</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Segment onLoad</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_client_e260bd861b0e1510c7c9fc078b4bcb85</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-21 15:21:08</sys_updated_on>
+        <table>x_tsigh_cmb_u_cmdb_ci_segment</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_client_e260bd861b0e1510c7c9fc078b4bcb85</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;u_service&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Segment onLoad&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onLoad() {
+
+    var cmbService = g_form.getReference('u_service', callBack);
+
+    function callBack(rec) {
+        g_form.setValue('u_provider', rec.u_account);
+        g_form.setValue('u_billing_profile', rec.u_billing_profile);
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;toma.istvan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-21 15:18:48&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;e260bd861b0e1510c7c9fc078b4bcb85&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Segment onLoad&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_e260bd861b0e1510c7c9fc078b4bcb85&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;toma.istvan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-09-21 15:21:08&lt;/sys_updated_on&gt;&lt;table&gt;x_tsigh_cmb_u_cmdb_ci_segment&lt;/table&gt;&lt;type&gt;onLoad&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>941330595</payload_hash>
+        <record_name>Segment onLoad</record_name>
+        <reverted_from/>
+        <source>155d3a0d1b7d9510c7c9fc078b4bcb27</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-21 15:21:08</sys_created_on>
+        <sys_id>38f0f5c61b0e1510c7c9fc078b4bcb12</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18360a375940000001</sys_recorded_at>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-21 15:21:08</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>30f0f5c6c50e1510b915aa1896781f12</update_guid>
+        <update_guid_history>30f0f5c6c50e1510b915aa1896781f12:941330595,9170b5866e0e1510ef991955989fcd9f:-1423962,2260bd86780e1510519fa511745c4588:1306908011</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-22 07:26:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>1d2450caca374c10880b69892339b390</sys_id>
+        <sys_metadata>e260bd861b0e1510c7c9fc078b4bcb85</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Segment onLoad</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Segment">dbf356ce1b719910c7c9fc078b4bcbfa</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_client_e260bd861b0e1510c7c9fc078b4bcb85</sys_update_name>
+        <sys_update_version display_value="sys_script_client_e260bd861b0e1510c7c9fc078b4bcb85">38f0f5c61b0e1510c7c9fc078b4bcb12</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-22 07:26:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

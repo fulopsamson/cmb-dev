@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related action="DELETE" sys_domain="global" table="x_tsigh_cmb_u_cmdb_ci_cmb_service" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="CMB Service - Default view" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="Default view">e762ae9e1bc6951030bc986c9b4bcb35</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>task.cmdb_ci</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-22 13:35:48</sys_created_on>
+            <sys_id>af62ae9e1bc6951030bc986c9b4bcb36</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-22 13:35:48</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="CMB Service - Default view" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="Default view">e762ae9e1bc6951030bc986c9b4bcb35</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>REL:6b15118a1b06551030bc986c9b4bcb0a</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-22 13:35:48</sys_created_on>
+            <sys_id>e762ae9e1bc6951030bc986c9b4bcb37</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-22 13:35:48</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="CMB Service - Default view" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="Default view">e762ae9e1bc6951030bc986c9b4bcb35</list_id>
+            <order_by/>
+            <position>2</position>
+            <related_list>x_tsigh_cmb_u_cmdb_ci_segment.u_service</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-22 13:35:48</sys_created_on>
+            <sys_id>eb62ae9e1bc6951030bc986c9b4bcb37</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-22 13:35:48</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="CMB Service - Default view" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="Default view">e762ae9e1bc6951030bc986c9b4bcb35</list_id>
+            <order_by/>
+            <position>3</position>
+            <related_list>x_tsigh_cmb_u_cmdb_ci_equipment_group.u_service</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-22 13:35:48</sys_created_on>
+            <sys_id>ef62ae9e1bc6951030bc986c9b4bcb37</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-22 13:35:48</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="CMB Service - Default view" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="Default view">e762ae9e1bc6951030bc986c9b4bcb35</list_id>
+            <order_by/>
+            <position>4</position>
+            <related_list>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_parent_service</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-22 13:35:48</sys_created_on>
+            <sys_id>e362ae9e1bc6951030bc986c9b4bcb38</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-22 13:35:48</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>CMB Service - Default view</calculated_name>
+            <filter/>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-22 13:35:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e762ae9e1bc6951030bc986c9b4bcb35</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>CMB Service - Default view</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_null</sys_update_name>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-22 13:35:48</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_null</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_related sys_domain="global" table="x_tsigh_cmb_u_cmdb_ci_cmb_service" version="2" view=""><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="CMB Service - Default view" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="Default view">e762ae9e1bc6951030bc986c9b4bcb35</list_id><order_by/><position>0</position><related_list>task.cmdb_ci</related_list><sys_class_name>sys_ui_related_list_entry</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-09-22 13:35:48</sys_created_on><sys_id>af62ae9e1bc6951030bc986c9b4bcb36</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-09-22 13:35:48</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="CMB Service - Default view" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="Default view">e762ae9e1bc6951030bc986c9b4bcb35</list_id><order_by/><position>1</position><related_list>REL:6b15118a1b06551030bc986c9b4bcb0a</related_list><sys_class_name>sys_ui_related_list_entry</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-09-22 13:35:48</sys_created_on><sys_id>e762ae9e1bc6951030bc986c9b4bcb37</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-09-22 13:35:48</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="CMB Service - Default view" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="Default view">e762ae9e1bc6951030bc986c9b4bcb35</list_id><order_by/><position>2</position><related_list>x_tsigh_cmb_u_cmdb_ci_segment.u_service</related_list><sys_class_name>sys_ui_related_list_entry</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-09-22 13:35:48</sys_created_on><sys_id>eb62ae9e1bc6951030bc986c9b4bcb37</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-09-22 13:35:48</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="CMB Service - Default view" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="Default view">e762ae9e1bc6951030bc986c9b4bcb35</list_id><order_by/><position>3</position><related_list>x_tsigh_cmb_u_cmdb_ci_equipment_group.u_service</related_list><sys_class_name>sys_ui_related_list_entry</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-09-22 13:35:48</sys_created_on><sys_id>ef62ae9e1bc6951030bc986c9b4bcb37</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-09-22 13:35:48</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list_entry action="INSERT_OR_UPDATE"><filter/><list_id display_value="CMB Service - Default view" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" related_list="NULL" sys_domain="global" view="Default view">e762ae9e1bc6951030bc986c9b4bcb35</list_id><order_by/><position>4</position><related_list>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_parent_service</related_list><sys_class_name>sys_ui_related_list_entry</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-09-22 13:35:48</sys_created_on><sys_id>e362ae9e1bc6951030bc986c9b4bcb38</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-09-22 13:35:48</sys_updated_on></sys_ui_related_list_entry><sys_ui_related_list action="INSERT_OR_UPDATE"><calculated_name>CMB Service - Default view</calculated_name><filter/><name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name><order_by/><position/><related_list/><sys_class_name>sys_ui_related_list</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-09-22 13:35:48</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>e762ae9e1bc6951030bc986c9b4bcb35</sys_id><sys_mod_count>0</sys_mod_count><sys_name>CMB Service - Default view</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_null</sys_update_name><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-09-22 13:35:48</sys_updated_on><sys_user/><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_related_list></sys_ui_related></record_update>]]></payload>
+        <payload_hash>-15203773</payload_hash>
+        <record_name>CMB Service</record_name>
+        <reverted_from/>
+        <source>62414eab1be95110c7c9fc078b4bcb64</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-09-22 13:35:48</sys_created_on>
+        <sys_id>2762ae9e1bc6951030bc986c9b4bcb3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18365695fd70000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-09-22 13:35:48</sys_updated_on>
+        <type>Related Lists</type>
+        <update_guid>ab62ae9ec2c69510c89816ba3ce7d539</update_guid>
+        <update_guid_history>ab62ae9ec2c69510c89816ba3ce7d539:-15203773,ad8a6542370e151070b93ac1494f3dbb:-144263382,76d6a18e3dca1510c6cab15220310360:1111554410,cc95d58a41065510226ee53f1374ce81:-426477608,65574d8a95c255105111c8965e66003a:-1978331056,1a27498afac255106b7fd57c05164f3a:-1332056039,d207c58ae1c2551025cf5e343bdbac51:-1058673390,1dc0ccf395755110046870cf29e9244f:759740915,be11dde33f3d11105841c17c59f6ffc5:955104607,cb57c96b2ff911105738df49b0649f83:1561007285</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-09-22 13:37:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_related_list">sys_ui_related_list</sys_db_object>
+        <sys_id>d19593ade7c5400f9dfe5638e8070959</sys_id>
+        <sys_metadata>3ad6a18e1bca1510c7c9fc078b4bcb5b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMB Service - Default view</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="CMB Service">1d6ec3381b719510c7c9fc078b4bcb61</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_null</sys_update_name>
+        <sys_update_version display_value="sys_ui_related_x_tsigh_cmb_u_cmdb_ci_cmb_service_null">2762ae9e1bc6951030bc986c9b4bcb3a</sys_update_version>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-09-22 13:37:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

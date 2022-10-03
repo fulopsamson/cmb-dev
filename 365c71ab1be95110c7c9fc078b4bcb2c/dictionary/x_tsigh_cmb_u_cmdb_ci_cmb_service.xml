@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="cmdb_ci" label="CMB Service" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sizeclass="0" type="collection">
+    <element audit="true" extends="cmdb_ci" label="CMB Service" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sizeclass="215" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
         <element label="Acceptance date" max_length="40" name="u_acceptance_date" type="glide_date_time"/>
         <element label="Acceptance document" max_length="40" name="u_acceptance_document" type="file_attachment"/>
         <element label="Account" max_length="32" name="u_account" reference="customer_account" type="reference"/>
-        <element label="Billing Profile" max_length="32" name="u_billing_profile" reference="x_tsigh_cmb_billing_profile" type="reference"/>
+        <element label="Backup service" max_length="32" name="u_backup_service" reference="x_tsigh_cmb_u_cmdb_ci_cmb_service" type="reference"/>
+        <element label="Billing Profile" max_length="32" name="u_billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.u_account" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Cancellation form" max_length="40" name="u_cancellation_form" type="file_attachment"/>
         <element choice="1" label="Capacity unit of measurement" max_length="40" name="u_capacity_unit_of_measurement" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Mbps" sequence="1" value="Mbps"/>
+                <element inactive_on_update="false" label="Gbps" sequence="2" value="Gbps"/>
+                <element inactive_on_update="false" label="bps" sequence="3" value="bps"/>
+            </choice>
         </element>
         <element label="Capacity value" max_length="40" name="u_capacity_value" type="integer"/>
         <element label="Combridge ID" max_length="200" name="u_combridge_id" type="string"/>
-        <element label="Contract" max_length="32" name="u_contract" reference="ast_contract" type="reference"/>
+        <element label="Contract" max_length="32" name="u_contract" reference="ast_contract" reference_qual="javascript:&quot;x_tsigh_cmb_billing_profile=&quot; + current.u_billing_profile + &quot;^u_type=PO^ORu_type=Addendum&quot;" type="reference" use_reference_qualifier="advanced"/>
         <element label="Contract period" max_length="40" name="u_contract_period" type="integer"/>
-        <element label="Currency" max_length="40" name="u_currency" reference="fx_currency" type="reference"/>
+        <element label="Currency" max_length="40" name="u_currency" read_only="true" reference="fx_currency" type="reference"/>
         <element label="Early termination fee" max_length="40" name="u_early_termination_fee" type="float"/>
         <element label="Endpoint A" max_length="32" name="u_endpoint_a" reference="alm_stockroom" type="reference"/>
         <element label="Endpoint B" max_length="32" name="u_endpoint_b" reference="alm_stockroom" type="reference"/>
@@ -22,17 +29,20 @@
         <element label="OTC pos on PO" max_length="40" name="u_otc_pos_on_po" type="string"/>
         <element label="Owner" max_length="32" name="u_owner" reference="sys_user" type="reference"/>
         <element label="Partner circuit ID" max_length="100" name="u_partner_circuit_id" type="string"/>
-        <element label="Pop A" max_length="32" name="u_pop_a" reference="alm_stockroom" type="reference"/>
-        <element label="Pop B" max_length="32" name="u_pop_b" reference="alm_stockroom" type="reference"/>
+        <element label="Pop A" max_length="32" name="u_pop_a" reference="alm_stockroom" reference_qual="type.name=Backbone Equipment^EQ" reference_qual_condition="type.name=Backbone Equipment^EQ" type="reference"/>
+        <element label="Pop B" max_length="32" name="u_pop_b" reference="alm_stockroom" reference_qual="type.name=Backbone Equipment^EQ" reference_qual_condition="type.name=Backbone Equipment^EQ" type="reference"/>
         <element label="Product type" max_length="32" name="u_product_type" reference="x_tsigh_cmb_product_type" type="reference"/>
         <element label="Project" max_length="32" name="u_project" reference="x_tsigh_cmb_project" type="reference"/>
         <element choice="1" label="Project code" max_length="40" name="u_project_code" type="choice">
             <choice/>
         </element>
-        <element label="RFS Commited" max_length="40" name="u_rfs_commited" type="glide_date"/>
-        <element label="RFS Requested" max_length="40" name="u_rfs_requested" type="glide_date"/>
+        <element choice="1" label="Reason for termination" max_length="40" name="u_reason_for_termination" type="choice">
+            <choice/>
+        </element>
+        <element label="RFS Commited" max_length="40" name="u_rfs_commited" type="glide_date_time"/>
+        <element label="RFS Requested" max_length="40" name="u_rfs_requested" type="glide_date_time"/>
         <element label="Service description" max_length="100" name="u_service_description" type="string"/>
-        <element choice="1" label="State" max_length="40" name="u_state" type="choice">
+        <element choice="1" default="Initial" label="State" max_length="40" name="u_state" read_only="true" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Active" value="Active"/>
                 <element inactive_on_update="false" label="Designed" value="Designed"/>
@@ -40,7 +50,9 @@
                 <element inactive_on_update="false" label="Inactive" value="Inactive"/>
                 <element inactive_on_update="false" label="Initial" value="Initial"/>
                 <element inactive_on_update="false" label="Reserved" value="Reserved"/>
+                <element inactive_on_update="false" label="Terminated" value="Terminated"/>
             </choice>
         </element>
+        <element label="Work note" max_length="4000" name="u_work_note" type="journal_input"/>
     </element>
 </database>

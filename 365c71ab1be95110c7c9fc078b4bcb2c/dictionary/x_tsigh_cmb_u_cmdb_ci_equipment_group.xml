@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="cmdb_ci" label="Equipment Group" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_equipment_group" sizeclass="0" type="collection">
+    <element extends="cmdb_ci" label="Equipment Group" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_equipment_group" sizeclass="15" type="collection">
+        <element label="Assets" max_length="4000" name="u_assets" reference="cmdb_ci" reference_qual="javascript:&quot;install_status=6^asset.stockroomISNOTEMPTY^asset.stockroom=&quot; + current.u_service.u_endpoint_a +  &quot;^ORasset.stockroom=&quot; + current.u_service.u_endpoint_b " type="glide_list" use_reference_qualifier="advanced"/>
         <element label="Currency" max_length="38" name="u_currency" type="currency"/>
         <element label="Hostname" max_length="300" name="u_hostname" type="string"/>
         <element label="MRC" max_length="40" name="u_mrc" type="float"/>

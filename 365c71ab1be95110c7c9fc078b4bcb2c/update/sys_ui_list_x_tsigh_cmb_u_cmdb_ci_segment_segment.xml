@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_tsigh_cmb_u_cmdb_ci_segment" version="2" view="segment">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>name</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="NULL" relationship="NULL" sys_domain="global" view="4f86e8bb1bf55110c7c9fc078b4bcb1e">4786e8bb1bf55110c7c9fc078b4bcb22</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-14 10:09:43</sys_created_on>
+            <sys_id>0786e8bb1bf55110c7c9fc078b4bcb23</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-14 10:09:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>manufacturer</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="NULL" relationship="NULL" sys_domain="global" view="4f86e8bb1bf55110c7c9fc078b4bcb1e">4786e8bb1bf55110c7c9fc078b4bcb22</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-14 10:09:43</sys_created_on>
+            <sys_id>8b86e8bb1bf55110c7c9fc078b4bcb23</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-14 10:09:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_class_name</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="NULL" relationship="NULL" sys_domain="global" view="4f86e8bb1bf55110c7c9fc078b4bcb1e">4786e8bb1bf55110c7c9fc078b4bcb22</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-14 10:09:43</sys_created_on>
+            <sys_id>0f86e8bb1bf55110c7c9fc078b4bcb23</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-14 10:09:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>location</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="NULL" relationship="NULL" sys_domain="global" view="4f86e8bb1bf55110c7c9fc078b4bcb1e">4786e8bb1bf55110c7c9fc078b4bcb22</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-14 10:09:43</sys_created_on>
+            <sys_id>8f86e8bb1bf55110c7c9fc078b4bcb23</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-14 10:09:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>assigned_to</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="NULL" relationship="NULL" sys_domain="global" view="4f86e8bb1bf55110c7c9fc078b4bcb1e">4786e8bb1bf55110c7c9fc078b4bcb22</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-14 10:09:43</sys_created_on>
+            <sys_id>0386e8bb1bf55110c7c9fc078b4bcb24</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-14 10:09:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>model_id</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="NULL" relationship="NULL" sys_domain="global" view="4f86e8bb1bf55110c7c9fc078b4bcb1e">4786e8bb1bf55110c7c9fc078b4bcb22</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-14 10:09:43</sys_created_on>
+            <sys_id>8386e8bb1bf55110c7c9fc078b4bcb24</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-14 10:09:43</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_tsigh_cmb_u_cmdb_ci_segment</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-14 10:09:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4786e8bb1bf55110c7c9fc078b4bcb22</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_tsigh_cmb_u_cmdb_ci_segment</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_list_x_tsigh_cmb_u_cmdb_ci_segment_segment</sys_update_name>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-14 10:09:43</sys_updated_on>
+            <sys_user/>
+            <view display_value="Segment" name="segment">4f86e8bb1bf55110c7c9fc078b4bcb1e</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.state=='temporary'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>true</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>true</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Valid</name>
+        <onclick/>
+        <order>-1100</order>
+        <script><![CDATA[var invoice_lines = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+invoice_lines.addQuery('client_invoice', current.sys_id);
+invoice_lines.addQuery('approval', '!=', 'approved');
+invoice_lines.query();
+if (invoice_lines.getRowCount() > 0) {
+    gs.addErrorMessage('All invoice lines must be Approved before sending to financial Approval');
+	action.setRedirectURL(current);
+} else {
+
+    try {
+        var gr = new GlideRecord('x_tsigh_cmb_client_invoice');
+        var rec = gr.get(current.sys_id);
+        var inputs = {};
+        inputs['client_invoice'] = gr; // GlideRecord of table: x_tsigh_cmb_client_invoice 
+        sn_fd.FlowAPI.getRunner().subflow('x_tsigh_cmb.client_invoice_after_validation').inBackground().withInputs(inputs).run();
+
+    } catch (ex) {
+        var message = ex.getMessage();
+        gs.error(message);
+    }
+    action.setRedirectURL(current);
+    current.state = 'validated_by_owner';
+    current.update();
+}]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:44:21</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fcee75c01b96d910c7c9fc078b4bcb84</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>Valid</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_action_fcee75c01b96d910c7c9fc078b4bcb84</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-28 22:48:56</sys_updated_on>
+        <table>x_tsigh_cmb_client_invoice</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

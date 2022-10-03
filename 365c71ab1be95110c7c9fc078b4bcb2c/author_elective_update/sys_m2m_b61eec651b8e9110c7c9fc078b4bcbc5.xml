@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_m2m">
+    <sys_m2m action="DELETE">
+        <from_table>x_tsigh_cmb_u_cmdb_ci_equipment_group</from_table>
+        <m2m_from_field>equipment_group</m2m_from_field>
+        <m2m_from_label>Configuration Items</m2m_from_label>
+        <m2m_table>x_tsigh_cmb_m2m_configuratio_equipment_gr</m2m_table>
+        <m2m_to_field>configuration_item</m2m_to_field>
+        <m2m_to_label>Equipment Groups</m2m_to_label>
+        <sys_class_name>sys_m2m</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-20 09:35:10</sys_created_on>
+        <sys_id>b61eec651b8e9110c7c9fc078b4bcbc5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_m2m_configuratio_equipment_gr</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_m2m_b61eec651b8e9110c7c9fc078b4bcbc5</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-20 09:35:10</sys_updated_on>
+        <to_table>cmdb_ci</to_table>
+    </sys_m2m>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_m2m_b61eec651b8e9110c7c9fc078b4bcbc5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_m2m"><sys_m2m action="INSERT_OR_UPDATE"><from_table>x_tsigh_cmb_u_cmdb_ci_equipment_group</from_table><m2m_from_field>equipment_group</m2m_from_field><m2m_from_label>Configuration Items</m2m_from_label><m2m_table>x_tsigh_cmb_m2m_configuratio_equipment_gr</m2m_table><m2m_to_field>configuration_item</m2m_to_field><m2m_to_label>Equipment Groups</m2m_to_label><sys_class_name>sys_m2m</sys_class_name><sys_created_by>toma.istvan</sys_created_by><sys_created_on>2022-09-20 09:35:10</sys_created_on><sys_id>b61eec651b8e9110c7c9fc078b4bcbc5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_tsigh_cmb_m2m_configuratio_equipment_gr</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_m2m_b61eec651b8e9110c7c9fc078b4bcbc5</sys_update_name><sys_updated_by>toma.istvan</sys_updated_by><sys_updated_on>2022-09-20 09:35:10</sys_updated_on><to_table>cmdb_ci</to_table></sys_m2m></record_update>]]></payload>
+        <payload_hash>-1559126301</payload_hash>
+        <record_name>x_tsigh_cmb_m2m_configuratio_equipment_gr</record_name>
+        <reverted_from/>
+        <source>155d3a0d1b7d9510c7c9fc078b4bcb27</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-20 09:35:11</sys_created_on>
+        <sys_id>6f2857a11bc6d110c7c9fc078b4bcb04</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1835a405f0a0000001</sys_recorded_at>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-20 09:35:11</sys_updated_on>
+        <type>Many to Many Definition</type>
+        <update_guid>a72857a10cc6d110670236e31fa8a004</update_guid>
+        <update_guid_history>a72857a10cc6d110670236e31fa8a004:-1559126301</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-21 07:43:21</sys_created_on>
+        <sys_db_object display_value="" name="sys_m2m">sys_m2m</sys_db_object>
+        <sys_id>34d0e45997484f4abe767de8807ad151</sys_id>
+        <sys_metadata>b61eec651b8e9110c7c9fc078b4bcbc5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_m2m_configuratio_equipment_gr</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_m2m_b61eec651b8e9110c7c9fc078b4bcbc5</sys_update_name>
+        <sys_update_version display_value="sys_m2m_b61eec651b8e9110c7c9fc078b4bcbc5">6f2857a11bc6d110c7c9fc078b4bcb04</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-21 07:43:21</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

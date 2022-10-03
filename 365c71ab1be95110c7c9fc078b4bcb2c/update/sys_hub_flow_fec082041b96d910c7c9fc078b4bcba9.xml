@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>client_invoice_after_validation</internal_name>
+        <label_cache>[{"name":"subflow.client_invoice.number","label":"Input➛Client invoice➛Invoice number","reference":"","reference_display":"Invoice number","type":"string","base_type":"string","parent_table_name":"x_tsigh_cmb_client_invoice","column_name":"number"},{"name":"ceb16ea9-1cfd-4597-a783-98dab7af17a8.__dont_treat_as_error__","label":"1 - Generate Client Invoice PDF➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"3553ce63-7467-4be9-be11-4f15593af5b6"}},{"name":"ceb16ea9-1cfd-4597-a783-98dab7af17a8.__action_status__","label":"1 - Generate Client Invoice PDF➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD4c41be68e4165d101d95405d20114a19","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"279c5a8b-da71-4667-a969-2c183a47a8ce"}},{"name":"subflow.client_invoice.sys_id","label":"Input➛Client invoice➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_tsigh_cmb_client_invoice","column_name":"sys_id"},{"name":"32e94e65-c263-40a5-9c14-3ed20691670f.__dont_treat_as_error__","label":"1 - Generate PDF Document➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"32e94e65-c263-40a5-9c14-3ed20691670f.__action_status__","label":"1 - Generate PDF Document➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"32e94e65-c263-40a5-9c14-3ed20691670f.generatedattachmentid","label":"1 - Generate PDF Document➛Generate Attachment Id","reference_display":"Generate Attachment Id","type":"GUID","base_type":"GUID","attributes":{"uiType":"GUID","uiTypeLabel":"Sys ID (GUID)","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2280f6b2-64ef-46e5-addc-feea57038a64"}},{"name":"5291e666-2972-422b-a9e5-b778a46a1e7a.__status__","label":"5 - Error Handler➛Error Status","reference_display":"Error Status","type":"object","base_type":"object","attributes":{"uiType":"object","uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a2d877e1-8123-4d86-abdf-4e5143759a7c.__dont_treat_as_error__","label":"1 - Look Up Records➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a2d877e1-8123-4d86-abdf-4e5143759a7c.__action_status__","label":"1 - Look Up Records➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a2d877e1-8123-4d86-abdf-4e5143759a7c.Count","label":"1 - Look Up Records➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a2d877e1-8123-4d86-abdf-4e5143759a7c.Table","label":"1 - Look Up Records➛Client invoice lines Table","reference":"x_tsigh_cmb_client_invoice_lines","reference_display":"Client invoice lines","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a2d877e1-8123-4d86-abdf-4e5143759a7c.Records","label":"1 - Look Up Records➛Client invoice lines Records","reference":"x_tsigh_cmb_client_invoice_lines","reference_display":"Client invoice lines","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.5f63e48fc0a8010e00eeaad81cd4dd37}}","label":"IT Finance CAB","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference"},{"name":"subflow.client_invoice","label":"Input➛Client invoice","reference":"x_tsigh_cmb_client_invoice","reference_display":"Client invoice","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a8427cd0-8a39-4b00-b7dc-2c4873cfbc05","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"2ace9fd2-7dc7-4427-9787-c56595799102.__dont_treat_as_error__","label":"2 - Ask For Approval➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2ace9fd2-7dc7-4427-9787-c56595799102.__action_status__","label":"2 - Ask For Approval➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2ace9fd2-7dc7-4427-9787-c56595799102.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master_snapshot>9a818a441b96d910c7c9fc078b4bcb9b</master_snapshot>
+        <name>Client invoice after Validation</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:38:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fec082041b96d910c7c9fc078b4bcba9</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Client invoice after Validation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_hub_flow_fec082041b96d910c7c9fc078b4bcba9</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:14:48</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_variable_value action="delete_multiple" query="document_key=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=fec082041b96d910c7c9fc078b4bcba9^sys_idNOT IN3ac082041b96d910c7c9fc078b4bcbaa"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>fec082041b96d910c7c9fc078b4bcba9</id>
+        <name>Client invoice after Validation</name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:38:12</sys_created_on>
+        <sys_id>3ac082041b96d910c7c9fc078b4bcbaa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:38:12</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3ac082041b96d910c7c9fc078b4bcbaa"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=fec082041b96d910c7c9fc078b4bcba9^sys_idNOT IN11814a441b96d910c7c9fc078b4bcb82"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a8427cd0-8a39-4b00-b7dc-2c4873cfbc05</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_tsigh_cmb_client_invoice</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>client_invoice</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Client invoice</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Client invoice after Validation">fec082041b96d910c7c9fc078b4bcba9</model>
+        <model_id>fec082041b96d910c7c9fc078b4bcba9</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_fec082041b96d910c7c9fc078b4bcba9</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_tsigh_cmb_client_invoice">x_tsigh_cmb_client_invoice</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>11814a441b96d910c7c9fc078b4bcb82</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=fec082041b96d910c7c9fc078b4bcba9^sys_idNOT INa891f6a81b165d10c7c9fc078b4bcb9d,d5814a441b96d910c7c9fc078b4bcba0"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Generate Client Invoice PDF">fb317e681b165d10c7c9fc078b4bcbc7</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Client invoice after Validation">fec082041b96d910c7c9fc078b4bcba9</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-29 14:28:16</sys_created_on>
+        <sys_id>a891f6a81b165d10c7c9fc078b4bcb9d</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:17:22</sys_updated_on>
+        <ui_id>ceb16ea9-1cfd-4597-a783-98dab7af17a8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a891f6a81b165d10c7c9fc078b4bcb9d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>a891f6a81b165d10c7c9fc078b4bcb9d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-29 14:28:16</sys_created_on>
+        <sys_id>2491f6a81b165d10c7c9fc078b4bcba0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 14:28:16</sys_updated_on>
+        <value>x_tsigh_cmb.order_template</value>
+        <variable display_value="templateName">37317e681b165d10c7c9fc078b4bcbcb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a891f6a81b165d10c7c9fc078b4bcb9d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>filename</field>
+        <id>a891f6a81b165d10c7c9fc078b4bcb9d</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-29 14:28:16</sys_created_on>
+        <sys_id>ec91f6a81b165d10c7c9fc078b4bcb9f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 14:28:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fb317e681b165d10c7c9fc078b4bcbc7</table>
+        <value>{{subflow.client_invoice.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>invoice</field>
+        <id>a891f6a81b165d10c7c9fc078b4bcb9d</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-29 14:28:16</sys_created_on>
+        <sys_id>a091f6a81b165d10c7c9fc078b4bcba0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 14:28:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fb317e681b165d10c7c9fc078b4bcbc7</table>
+        <value>{{subflow.client_invoice}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>templatename</field>
+        <id>a891f6a81b165d10c7c9fc078b4bcb9d</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-29 14:28:16</sys_created_on>
+        <sys_id>2c91f6a81b165d10c7c9fc078b4bcb9f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 14:28:16</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fb317e681b165d10c7c9fc078b4bcbc7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a891f6a81b165d10c7c9fc078b4bcb9d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a891f6a81b165d10c7c9fc078b4bcb9d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="Client invoice after Validation">fec082041b96d910c7c9fc078b4bcba9</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>d5814a441b96d910c7c9fc078b4bcba0</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:17:23</sys_updated_on>
+        <ui_id>2ace9fd2-7dc7-4427-9787-c56595799102</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d5814a441b96d910c7c9fc078b4bcba0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5814a441b96d910c7c9fc078b4bcba0</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>61814a441b96d910c7c9fc078b4bcbb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:23</sys_updated_on>
+        <value>x_tsigh_cmb_client_invoice</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5814a441b96d910c7c9fc078b4bcba0</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>ad814a441b96d910c7c9fc078b4bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:23</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>d5814a441b96d910c7c9fc078b4bcba0</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>e5814a441b96d910c7c9fc078b4bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:23</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d5814a441b96d910c7c9fc078b4bcba0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>d5814a441b96d910c7c9fc078b4bcba0</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>a1814a441b96d910c7c9fc078b4bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyG[{{static.5f63e48fc0a8010e00eeaad81cd4dd37}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>d5814a441b96d910c7c9fc078b4bcba0</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>65814a441b96d910c7c9fc078b4bcbaf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>d5814a441b96d910c7c9fc078b4bcba0</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>ed814a441b96d910c7c9fc078b4bcbaf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>d5814a441b96d910c7c9fc078b4bcba0</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>2d814a441b96d910c7c9fc078b4bcbaf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{subflow.client_invoice}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>d5814a441b96d910c7c9fc078b4bcba0</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>65814a441b96d910c7c9fc078b4bcbb0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:23</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d5814a441b96d910c7c9fc078b4bcba0"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d5814a441b96d910c7c9fc078b4bcba0"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_fec082041b96d910c7c9fc078b4bcba9^sys_idNOT IN95814a441b96d910c7c9fc078b4bcb97"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>client_invoice</element>
+        <help/>
+        <hint/>
+        <label>Client invoice</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_fec082041b96d910c7c9fc078b4bcba9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:23</sys_created_on>
+        <sys_id>95814a441b96d910c7c9fc078b4bcb97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=fec082041b96d910c7c9fc078b4bcba9"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=fec082041b96d910c7c9fc078b4bcba9^sys_idNOT IN12818a441b96d910c7c9fc078b4bcbe1"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_subflow_plan","id":"12818a441b96d910c7c9fc078b4bcbe1","name":"plan","plan_signature":null}}</plan>
+        <plan_id display_value="Client invoice after Validation">fec082041b96d910c7c9fc078b4bcba9</plan_id>
+        <snapshot>bfccf2a81b565d10c7c9fc078b4bcbc7</snapshot>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>12818a441b96d910c7c9fc078b4bcbe1</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:14:48</sys_updated_on>
+    </sys_flow_subflow_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>client_invoice_after_validation</internal_name>
+        <label_cache>[{"name":"subflow.client_invoice.number","label":"Input➛Client invoice➛Invoice number","reference":"","reference_display":"Invoice number","type":"string","base_type":"string","parent_table_name":"x_tsigh_cmb_client_invoice","column_name":"number"},{"name":"ceb16ea9-1cfd-4597-a783-98dab7af17a8.__dont_treat_as_error__","label":"1 - Generate Client Invoice PDF➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"3553ce63-7467-4be9-be11-4f15593af5b6"}},{"name":"ceb16ea9-1cfd-4597-a783-98dab7af17a8.__action_status__","label":"1 - Generate Client Invoice PDF➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD4c41be68e4165d101d95405d20114a19","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"279c5a8b-da71-4667-a969-2c183a47a8ce"}},{"name":"subflow.client_invoice.sys_id","label":"Input➛Client invoice➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"x_tsigh_cmb_client_invoice","column_name":"sys_id"},{"name":"32e94e65-c263-40a5-9c14-3ed20691670f.__dont_treat_as_error__","label":"1 - Generate PDF Document➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"32e94e65-c263-40a5-9c14-3ed20691670f.__action_status__","label":"1 - Generate PDF Document➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"32e94e65-c263-40a5-9c14-3ed20691670f.generatedattachmentid","label":"1 - Generate PDF Document➛Generate Attachment Id","reference_display":"Generate Attachment Id","type":"GUID","base_type":"GUID","attributes":{"uiType":"GUID","uiTypeLabel":"Sys ID (GUID)","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"2280f6b2-64ef-46e5-addc-feea57038a64"}},{"name":"5291e666-2972-422b-a9e5-b778a46a1e7a.__status__","label":"5 - Error Handler➛Error Status","reference_display":"Error Status","type":"object","base_type":"object","attributes":{"uiType":"object","uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a2d877e1-8123-4d86-abdf-4e5143759a7c.__dont_treat_as_error__","label":"1 - Look Up Records➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a2d877e1-8123-4d86-abdf-4e5143759a7c.__action_status__","label":"1 - Look Up Records➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a2d877e1-8123-4d86-abdf-4e5143759a7c.Count","label":"1 - Look Up Records➛Count","reference_display":"Count","type":"integer","base_type":"integer","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a2d877e1-8123-4d86-abdf-4e5143759a7c.Table","label":"1 - Look Up Records➛Client invoice lines Table","reference":"x_tsigh_cmb_client_invoice_lines","reference_display":"Client invoice lines","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"a2d877e1-8123-4d86-abdf-4e5143759a7c.Records","label":"1 - Look Up Records➛Client invoice lines Records","reference":"x_tsigh_cmb_client_invoice_lines","reference_display":"Client invoice lines","type":"records","base_type":"records","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.5f63e48fc0a8010e00eeaad81cd4dd37}}","label":"IT Finance CAB","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference"},{"name":"subflow.client_invoice","label":"Input➛Client invoice","reference":"x_tsigh_cmb_client_invoice","reference_display":"Client invoice","type":"reference","base_type":"reference","column_name":"","attributes":{"uiType":"reference","uiTypeLabel":"Reference","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"a8427cd0-8a39-4b00-b7dc-2c4873cfbc05","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"2ace9fd2-7dc7-4427-9787-c56595799102.__dont_treat_as_error__","label":"2 - Ask For Approval➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2ace9fd2-7dc7-4427-9787-c56595799102.__action_status__","label":"2 - Ask For Approval➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2ace9fd2-7dc7-4427-9787-c56595799102.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>Client invoice after Validation</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Client invoice after Validation">fec082041b96d910c7c9fc078b4bcba9</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9a818a441b96d910c7c9fc078b4bcb9b</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:14:48</sys_updated_on>
+        <type>subflow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=9a818a441b96d910c7c9fc078b4bcb9b^sys_idNOT INda818a441b96d910c7c9fc078b4bcb9c"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>9a818a441b96d910c7c9fc078b4bcb9b</id>
+        <name>Client invoice after Validation</name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:26</sys_created_on>
+        <sys_id>da818a441b96d910c7c9fc078b4bcb9c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:26</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=da818a441b96d910c7c9fc078b4bcb9c"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=9a818a441b96d910c7c9fc078b4bcb9b^sys_idNOT IN1e818a441b96d910c7c9fc078b4bcb9d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=a8427cd0-8a39-4b00-b7dc-2c4873cfbc05</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>x_tsigh_cmb_client_invoice</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>client_invoice</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Client invoice</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Client invoice after Validation">9a818a441b96d910c7c9fc078b4bcb9b</model>
+        <model_id>9a818a441b96d910c7c9fc078b4bcb9b</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_9a818a441b96d910c7c9fc078b4bcb9b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="x_tsigh_cmb_client_invoice">x_tsigh_cmb_client_invoice</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:26</sys_created_on>
+        <sys_id>1e818a441b96d910c7c9fc078b4bcb9d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:27</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=9a818a441b96d910c7c9fc078b4bcb9b^sys_idNOT IN5e818a441b96d910c7c9fc078b4bcbd3,8a3cf2681b565d10c7c9fc078b4bcb5e"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Client invoice after Validation">9a818a441b96d910c7c9fc078b4bcb9b</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_id>5e818a441b96d910c7c9fc078b4bcbd3</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:14:48</sys_updated_on>
+        <ui_id>2ace9fd2-7dc7-4427-9787-c56595799102</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5e818a441b96d910c7c9fc078b4bcbd3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5e818a441b96d910c7c9fc078b4bcbd3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_id>1a818a441b96d910c7c9fc078b4bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:27</sys_updated_on>
+        <value>x_tsigh_cmb_client_invoice</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5e818a441b96d910c7c9fc078b4bcbd3</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_id>56818a441b96d910c7c9fc078b4bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:27</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5e818a441b96d910c7c9fc078b4bcbd3</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_id>92818a441b96d910c7c9fc078b4bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:27</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5e818a441b96d910c7c9fc078b4bcbd3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>5e818a441b96d910c7c9fc078b4bcbd3</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_id>5e818a441b96d910c7c9fc078b4bcbd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesAnyG[{{static.5f63e48fc0a8010e00eeaad81cd4dd37}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>5e818a441b96d910c7c9fc078b4bcbd3</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_id>16818a441b96d910c7c9fc078b4bcbd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>5e818a441b96d910c7c9fc078b4bcbd3</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_id>9a818a441b96d910c7c9fc078b4bcbd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>5e818a441b96d910c7c9fc078b4bcbd3</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_id>d6818a441b96d910c7c9fc078b4bcbd5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{subflow.client_invoice}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>5e818a441b96d910c7c9fc078b4bcbd3</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_id>12818a441b96d910c7c9fc078b4bcbd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5e818a441b96d910c7c9fc078b4bcbd3"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5e818a441b96d910c7c9fc078b4bcbd3"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Generate Client Invoice PDF">fb317e681b165d10c7c9fc078b4bcbc7</action_type>
+        <action_type_parent display_value="Generate Client Invoice PDF">5e84666c1bd25d10c7c9fc078b4bcbba</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="Client invoice after Validation">9a818a441b96d910c7c9fc078b4bcb9b</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-29 15:14:47</sys_created_on>
+        <sys_id>8a3cf2681b565d10c7c9fc078b4bcb5e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:14:48</sys_updated_on>
+        <ui_id>ceb16ea9-1cfd-4597-a783-98dab7af17a8</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8a3cf2681b565d10c7c9fc078b4bcb5e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>8a3cf2681b565d10c7c9fc078b4bcb5e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-29 15:14:47</sys_created_on>
+        <sys_id>c23cf2681b565d10c7c9fc078b4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:14:47</sys_updated_on>
+        <value>x_tsigh_cmb.order_template</value>
+        <variable display_value="templateName">37317e681b165d10c7c9fc078b4bcbcb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8a3cf2681b565d10c7c9fc078b4bcb5e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>filename</field>
+        <id>8a3cf2681b565d10c7c9fc078b4bcb5e</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-29 15:14:47</sys_created_on>
+        <sys_id>8e3cf2681b565d10c7c9fc078b4bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:14:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fb317e681b165d10c7c9fc078b4bcbc7</table>
+        <value>{{subflow.client_invoice.number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>invoice</field>
+        <id>8a3cf2681b565d10c7c9fc078b4bcb5e</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-29 15:14:47</sys_created_on>
+        <sys_id>423cf2681b565d10c7c9fc078b4bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:14:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fb317e681b165d10c7c9fc078b4bcbc7</table>
+        <value>{{subflow.client_invoice}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>templatename</field>
+        <id>8a3cf2681b565d10c7c9fc078b4bcb5e</id>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-29 15:14:47</sys_created_on>
+        <sys_id>463cf2681b565d10c7c9fc078b4bcb60</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-29 15:14:47</sys_updated_on>
+        <table>var__m_sys_hub_action_input_fb317e681b165d10c7c9fc078b4bcbc7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8a3cf2681b565d10c7c9fc078b4bcb5e"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8a3cf2681b565d10c7c9fc078b4bcb5e"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_9a818a441b96d910c7c9fc078b4bcb9b^sys_idNOT IN5e818a441b96d910c7c9fc078b4bcbc6"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>client_invoice</element>
+        <help/>
+        <hint/>
+        <label>Client invoice</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_9a818a441b96d910c7c9fc078b4bcb9b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-09-27 21:41:27</sys_created_on>
+        <sys_id>5e818a441b96d910c7c9fc078b4bcbc6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-09-27 21:41:27</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_9a818a441b96d910c7c9fc078b4bcb9b"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>fec082041b96d910c7c9fc078b4bcba9</sys_id>
+        <latest_snapshot>9a818a441b96d910c7c9fc078b4bcb9b</latest_snapshot>
+        <compiler_build>glide-sandiego-12-22-2021__patch6-07-21-2022_07-29-2022_1727.zip</compiler_build>
+    </sys_hub_flow>
+</record_update>

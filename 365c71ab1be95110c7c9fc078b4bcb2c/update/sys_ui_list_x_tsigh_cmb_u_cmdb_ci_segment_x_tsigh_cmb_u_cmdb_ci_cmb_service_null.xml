@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="x_tsigh_cmb_u_cmdb_ci_cmb_service" relationship="" sys_domain="global" table="x_tsigh_cmb_u_cmdb_ci_segment" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="x_tsigh_cmb_u_cmdb_ci_cmb_service" relationship="NULL" sys_domain="global" view="Default view">0d0b9f251bc6d110c7c9fc078b4bcbf2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-20 09:47:35</sys_created_on>
+            <sys_id>c50b9f251bc6d110c7c9fc078b4bcbf3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-20 09:47:35</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_legacy_id</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="x_tsigh_cmb_u_cmdb_ci_cmb_service" relationship="NULL" sys_domain="global" view="Default view">0d0b9f251bc6d110c7c9fc078b4bcbf2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-20 09:47:35</sys_created_on>
+            <sys_id>490b9f251bc6d110c7c9fc078b4bcbf3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-20 09:47:35</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_provider</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="x_tsigh_cmb_u_cmdb_ci_cmb_service" relationship="NULL" sys_domain="global" view="Default view">0d0b9f251bc6d110c7c9fc078b4bcbf2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-20 09:47:35</sys_created_on>
+            <sys_id>c90b9f251bc6d110c7c9fc078b4bcbf3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-20 09:47:35</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_billing_profile</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="x_tsigh_cmb_u_cmdb_ci_cmb_service" relationship="NULL" sys_domain="global" view="Default view">0d0b9f251bc6d110c7c9fc078b4bcbf2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-20 09:47:35</sys_created_on>
+            <sys_id>4d0b9f251bc6d110c7c9fc078b4bcbf3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-20 09:47:35</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_service</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="x_tsigh_cmb_u_cmdb_ci_cmb_service" relationship="NULL" sys_domain="global" view="Default view">0d0b9f251bc6d110c7c9fc078b4bcbf2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-20 09:47:35</sys_created_on>
+            <sys_id>cd0b9f251bc6d110c7c9fc078b4bcbf3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-20 09:47:35</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_position</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="x_tsigh_cmb_u_cmdb_ci_cmb_service" relationship="NULL" sys_domain="global" view="Default view">0d0b9f251bc6d110c7c9fc078b4bcbf2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-20 09:47:35</sys_created_on>
+            <sys_id>410b9f251bc6d110c7c9fc078b4bcbf4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-20 09:47:35</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_on</element>
+            <list_id display_value="x_tsigh_cmb_u_cmdb_ci_segment" element="NULL" name="x_tsigh_cmb_u_cmdb_ci_segment" parent="x_tsigh_cmb_u_cmdb_ci_cmb_service" relationship="NULL" sys_domain="global" view="Default view">0d0b9f251bc6d110c7c9fc078b4bcbf2</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-20 09:47:35</sys_created_on>
+            <sys_id>c10b9f251bc6d110c7c9fc078b4bcbf4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-20 09:47:35</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_tsigh_cmb_u_cmdb_ci_segment</name>
+            <parent>x_tsigh_cmb_u_cmdb_ci_cmb_service</parent>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-20 09:47:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0d0b9f251bc6d110c7c9fc078b4bcbf2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_tsigh_cmb_u_cmdb_ci_segment</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_list_x_tsigh_cmb_u_cmdb_ci_segment_x_tsigh_cmb_u_cmdb_ci_cmb_service_null</sys_update_name>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-20 09:47:35</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

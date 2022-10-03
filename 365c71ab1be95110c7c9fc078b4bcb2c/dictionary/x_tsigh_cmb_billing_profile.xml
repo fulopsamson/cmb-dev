@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" max_length="40" name="x_tsigh_cmb_billing_profile" sizeclass="931" type="collection">
+        <element label="Account" max_length="32" name="account" reference="customer_account" type="reference"/>
+        <index name="index6">
+            <element name="account"/>
+        </index>
+    </element>
+</database>

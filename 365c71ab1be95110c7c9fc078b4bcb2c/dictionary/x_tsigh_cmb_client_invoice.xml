@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="28" type="collection">
+        <element choice="3" choice_field="approval" choice_table="task" default="not requested" label="Approval" max_length="40" name="approval" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Not Yet Requested" sequence="0" value="not requested"/>
+                <element inactive_on_update="false" label="Requested" sequence="1" value="requested"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+            </choice>
+        </element>
+        <element choice="1" default="temporary" label="State" max_length="20" name="state" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Temporary" sequence="1" value="temporary"/>
+                <element inactive_on_update="false" label="Validated by owner" sequence="2" value="validated_by_owner"/>
+                <element inactive_on_update="false" label="Received" sequence="3" value="received"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="4" value="cancelled"/>
+                <element inactive_on_update="false" label="Validated by finance" sequence="5" value="validated_by_finance"/>
+            </choice>
+        </element>
+    </element>
+</database>
