@@ -1,6 +1,214 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="cmdb_ci" label="CMB Service" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sizeclass="215" type="collection">
+    <element audit="true" extends="cmdb_ci" label="CMB Service" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sizeclass="217" type="collection">
+        <element choice="1" choice_field="approval" choice_table="task" label="Approval" max_length="40" name="approval" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Not Yet Requested" sequence="0" value="not requested"/>
+                <element inactive_on_update="false" label="Requested" sequence="1" value="requested"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+            </choice>
+        </element>
+        <element label="Commercial change" max_length="40" name="commercial_change" type="boolean"/>
+        <element label="Contract end date" max_length="40" name="contract_end_date" type="glide_date"/>
+        <element label="Contract name" max_length="40" name="contract_name" type="string"/>
+        <element label="Contract start date" max_length="40" name="contract_start_date" type="glide_date"/>
+        <element choice="1" choice_field="u_type" choice_table="ast_contract" label="Contract type" max_length="10" name="contract_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="PO" sequence="0" value="po"/>
+                <element inactive_on_update="false" label="Addendum" sequence="1" value="addendum"/>
+                <element inactive_on_update="false" label="Frame contract" sequence="2" value="frame_contract"/>
+                <element inactive_on_update="false" label="NDA" sequence="3" value="nda"/>
+            </choice>
+        </element>
+        <element label="Endpoint A location" max_length="32" name="endpoint_a_location" reference="cmn_location" type="reference"/>
+        <element label="Endpoint B location" max_length="32" name="endpoint_b_location" reference="cmn_location" type="reference"/>
+        <element label="ID" max_length="40" name="id" type="integer"/>
+        <element label="New contract" max_length="40" name="new_contract" type="boolean"/>
+        <element label="New Endpoint A" max_length="40" name="new_endpoint_a" type="boolean"/>
+        <element label="New Endpoint B" max_length="40" name="new_endpoint_b" type="boolean"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Original ID" max_length="20" name="original_id" type="string"/>
+        <element label="Partner reference number" max_length="100" name="partner_ref_nr" type="string"/>
+        <element label="PO/Contract number" max_length="20" name="po_contract_number" type="string"/>
+        <element choice="1" label="Serial" max_length="40" name="serial" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="BVPN" value="BVPN"/>
+                <element inactive_on_update="false" label="CBLIA" value="CBLIA"/>
+                <element inactive_on_update="false" label="CBNGN" value="CBNGN"/>
+                <element inactive_on_update="false" label="CL2TP" value="CL2TP"/>
+                <element inactive_on_update="false" label="CMB" value="CMB"/>
+                <element inactive_on_update="false" label="CMBBB" value="CMBBB"/>
+                <element inactive_on_update="false" label="CMBIP" value="CMBIP"/>
+                <element inactive_on_update="false" label="CMBOS" value="CMBOS"/>
+                <element inactive_on_update="false" label="G0VPN" value="G0VPN"/>
+                <element inactive_on_update="false" label="HA" value="HA"/>
+                <element inactive_on_update="false" label="HA" value="HA"/>
+                <element inactive_on_update="false" label="S0VPN" value="S0VPN"/>
+                <element inactive_on_update="false" label="TGBCB" value="TGBCB"/>
+                <element inactive_on_update="false" label="000001" sequence="0" value="000001"/>
+                <element inactive="true" inactive_on_update="true" label="BVPN" sequence="0" value="BVPN"/>
+                <element inactive_on_update="false" label="1" sequence="1" value="1"/>
+                <element inactive="true" inactive_on_update="true" label="CBLIA" sequence="1" value="CBLIA"/>
+                <element inactive_on_update="false" label="19154" sequence="2" value="19154"/>
+                <element inactive="true" inactive_on_update="true" label="CBNGN" sequence="2" value="CBNGN"/>
+                <element inactive_on_update="false" label="19178" sequence="3" value="19178"/>
+                <element inactive="true" inactive_on_update="true" label="CL2TP" sequence="3" value="CL2TP"/>
+                <element inactive_on_update="false" label="40212" sequence="4" value="40212"/>
+                <element inactive="true" inactive_on_update="true" label="CMB" sequence="4" value="CMB"/>
+                <element inactive_on_update="false" label="40213" sequence="5" value="40213"/>
+                <element inactive="true" inactive_on_update="true" label="CMBBB" sequence="5" value="CMBBB"/>
+                <element inactive_on_update="false" label="40214" sequence="6" value="40214"/>
+                <element inactive="true" inactive_on_update="true" label="CMBIP" sequence="6" value="CMBIP"/>
+                <element inactive_on_update="false" label="40232" sequence="7" value="40232"/>
+                <element inactive="true" inactive_on_update="true" label="CMBOS" sequence="7" value="CMBOS"/>
+                <element inactive_on_update="false" label="40234" sequence="8" value="40234"/>
+                <element inactive="true" inactive_on_update="true" label="G0VPN" sequence="8" value="G0VPN"/>
+                <element inactive_on_update="false" label="40256" sequence="9" value="40256"/>
+                <element inactive="true" inactive_on_update="true" label="HA" sequence="9" value="HA"/>
+                <element inactive_on_update="false" label="40257" sequence="10" value="40257"/>
+                <element inactive_on_update="false" label="40264" sequence="11" value="40264"/>
+                <element inactive="true" inactive_on_update="true" label="S0VPN" sequence="11" value="S0VPN"/>
+                <element inactive_on_update="false" label="40265" sequence="12" value="40265"/>
+                <element inactive="true" inactive_on_update="true" label="TGBCB" sequence="12" value="TGBCB"/>
+                <element inactive_on_update="false" label="40266" sequence="13" value="40266"/>
+                <element inactive_on_update="false" label="40267" sequence="14" value="40267"/>
+                <element inactive_on_update="false" label="40310" sequence="15" value="40310"/>
+                <element inactive_on_update="false" label="40312" sequence="16" value="40312"/>
+                <element inactive_on_update="false" label="40331" sequence="17" value="40331"/>
+                <element inactive_on_update="false" label="40332" sequence="18" value="40332"/>
+                <element inactive_on_update="false" label="40341" sequence="19" value="40341"/>
+                <element inactive_on_update="false" label="40344" sequence="20" value="40344"/>
+                <element inactive_on_update="false" label="40346" sequence="21" value="40346"/>
+                <element inactive_on_update="false" label="40352" sequence="22" value="40352"/>
+                <element inactive_on_update="false" label="40354" sequence="23" value="40354"/>
+                <element inactive_on_update="false" label="40356" sequence="24" value="40356"/>
+                <element inactive_on_update="false" label="40357" sequence="25" value="40357"/>
+                <element inactive_on_update="false" label="40358" sequence="26" value="40358"/>
+                <element inactive_on_update="false" label="403580" sequence="27" value="403580"/>
+                <element inactive_on_update="false" label="40359" sequence="28" value="40359"/>
+                <element inactive_on_update="false" label="40364" sequence="29" value="40364"/>
+                <element inactive_on_update="false" label="40365" sequence="30" value="40365"/>
+                <element inactive_on_update="false" label="40366" sequence="31" value="40366"/>
+                <element inactive_on_update="false" label="40367" sequence="32" value="40367"/>
+                <element inactive_on_update="false" label="40368" sequence="33" value="40368"/>
+                <element inactive_on_update="false" label="40369" sequence="34" value="40369"/>
+                <element inactive_on_update="false" label="abc" sequence="35" value="abc"/>
+                <element inactive_on_update="false" label="b0VPN" sequence="36" value="b0VPN"/>
+                <element inactive_on_update="false" label="bVPN" sequence="38" value="bVPN"/>
+                <element inactive_on_update="false" label="CBCPNA" sequence="39" value="CBCPNA"/>
+                <element inactive_on_update="false" label="CBCPNB" sequence="40" value="CBCPNB"/>
+                <element inactive_on_update="false" label="CBCPNC" sequence="41" value="CBCPNC"/>
+                <element inactive_on_update="false" label="CBCPNG" sequence="42" value="CBCPNG"/>
+                <element inactive_on_update="false" label="CBRTC" sequence="45" value="CBRTC"/>
+                <element inactive_on_update="false" label="CBSIP" sequence="46" value="CBSIP"/>
+                <element inactive_on_update="false" label="CBTPX" sequence="47" value="CBTPX"/>
+                <element inactive_on_update="false" label="CBVPSA" sequence="48" value="CBVPSA"/>
+                <element inactive_on_update="false" label="CBVPSM" sequence="49" value="CBVPSM"/>
+                <element inactive_on_update="false" label="CBVPSP" sequence="50" value="CBVPSP"/>
+                <element inactive_on_update="false" label="CBVPSS" sequence="51" value="CBVPSS"/>
+                <element inactive_on_update="false" label="CBVPSU" sequence="52" value="CBVPSU"/>
+                <element inactive_on_update="false" label="CMB4EU" sequence="55" value="CMB4EU"/>
+                <element inactive_on_update="false" label="CMBAZR" sequence="56" value="CMBAZR"/>
+                <element inactive_on_update="false" label="CMBB2B" sequence="57" value="CMBB2B"/>
+                <element inactive_on_update="false" label="CMBCCS" sequence="59" value="CMBCCS"/>
+                <element inactive_on_update="false" label="CMBcol" sequence="60" value="CMBcol"/>
+                <element inactive_on_update="false" label="CMBCOL" sequence="61" value="CMBCOL"/>
+                <element inactive_on_update="false" label="CMBDF" sequence="62" value="CMBDF"/>
+                <element inactive_on_update="false" label="CMBIMP" sequence="63" value="CMBIMP"/>
+                <element inactive_on_update="false" label="CMBIte" sequence="65" value="CMBIte"/>
+                <element inactive_on_update="false" label="CMBLAN" sequence="66" value="CMBLAN"/>
+                <element inactive_on_update="false" label="CMBLL" sequence="67" value="CMBLL"/>
+                <element inactive_on_update="false" label="CMBMEN" sequence="68" value="CMBMEN"/>
+                <element inactive_on_update="false" label="CMBMOL" sequence="69" value="CMBMOL"/>
+                <element inactive_on_update="false" label="CMBMOS" sequence="70" value="CMBMOS"/>
+                <element inactive_on_update="false" label="CMBNGN" sequence="71" value="CMBNGN"/>
+                <element inactive_on_update="false" label="CMBNNI" sequence="72" value="CMBNNI"/>
+                <element inactive_on_update="false" label="CMBOTP" sequence="74" value="CMBOTP"/>
+                <element inactive_on_update="false" label="cmbpi" sequence="75" value="cmbpi"/>
+                <element inactive_on_update="false" label="CMBRTC" sequence="76" value="CMBRTC"/>
+                <element inactive_on_update="false" label="CMBtel" sequence="77" value="CMBtel"/>
+                <element inactive_on_update="false" label="CMBVPN" sequence="78" value="CMBVPN"/>
+                <element inactive_on_update="false" label="CMBVPS" sequence="79" value="CMBVPS"/>
+                <element inactive_on_update="false" label="CMBWDM" sequence="80" value="CMBWDM"/>
+                <element inactive_on_update="false" label="CSOINT" sequence="81" value="CSOINT"/>
+                <element inactive_on_update="false" label="CSOST" sequence="82" value="CSOST"/>
+                <element inactive_on_update="false" label="DF" sequence="83" value="DF"/>
+                <element inactive_on_update="false" label="DID" sequence="84" value="DID"/>
+                <element inactive_on_update="false" label="DL" sequence="85" value="DL"/>
+                <element inactive_on_update="false" label="FEMIGR" sequence="86" value="FEMIGR"/>
+                <element inactive_on_update="false" label="GB" sequence="88" value="GB"/>
+                <element inactive_on_update="false" label="HAR" sequence="90" value="HAR"/>
+                <element inactive_on_update="false" label="HB" sequence="91" value="HB"/>
+                <element inactive_on_update="false" label="HD" sequence="92" value="HD"/>
+                <element inactive_on_update="false" label="HE" sequence="93" value="HE"/>
+                <element inactive_on_update="false" label="HF" sequence="94" value="HF"/>
+                <element inactive_on_update="false" label="HG" sequence="95" value="HG"/>
+                <element inactive_on_update="false" label="HX" sequence="96" value="HX"/>
+                <element inactive_on_update="false" label="INGD" sequence="97" value="INGD"/>
+                <element inactive_on_update="false" label="INSTAL" sequence="98" value="INSTAL"/>
+                <element inactive_on_update="false" label="MF" sequence="99" value="MF"/>
+                <element inactive_on_update="false" label="ML" sequence="100" value="ML"/>
+                <element inactive_on_update="false" label="MT" sequence="101" value="MT"/>
+                <element inactive_on_update="false" label="MTNGN" sequence="102" value="MTNGN"/>
+                <element inactive_on_update="false" label="None" sequence="103" value="None"/>
+                <element inactive_on_update="false" label="OF" sequence="104" value="OF"/>
+                <element inactive_on_update="false" label="QWER" sequence="105" value="QWER"/>
+                <element inactive_on_update="false" label="SG" sequence="107" value="SG"/>
+                <element inactive_on_update="false" label="SIPIC" sequence="108" value="SIPIC"/>
+                <element inactive_on_update="false" label="SIPT" sequence="109" value="SIPT"/>
+                <element inactive_on_update="false" label="SIPU5" sequence="110" value="SIPU5"/>
+                <element inactive_on_update="false" label="SSIPIC" sequence="111" value="SSIPIC"/>
+                <element inactive_on_update="false" label="SSIPT" sequence="112" value="SSIPT"/>
+                <element inactive_on_update="false" label="SURVEY" sequence="113" value="SURVEY"/>
+                <element inactive_on_update="false" label="SVPN" sequence="114" value="SVPN"/>
+                <element inactive_on_update="false" label="tCL2TP" sequence="115" value="tCL2TP"/>
+                <element inactive_on_update="false" label="TCMBIP" sequence="116" value="TCMBIP"/>
+                <element inactive_on_update="false" label="tCMBIP" sequence="117" value="tCMBIP"/>
+                <element inactive_on_update="false" label="tCMBLL" sequence="118" value="tCMBLL"/>
+                <element inactive_on_update="false" label="te2tp" sequence="119" value="te2tp"/>
+                <element inactive_on_update="false" label="teGB" sequence="120" value="teGB"/>
+                <element inactive_on_update="false" label="teL2TP" sequence="121" value="teL2TP"/>
+                <element inactive_on_update="false" label="TEM" sequence="122" value="TEM"/>
+                <element inactive_on_update="false" label="TEM2TP" sequence="123" value="TEM2TP"/>
+                <element inactive_on_update="false" label="tem2TP" sequence="124" value="tem2TP"/>
+                <element inactive_on_update="false" label="TEMB2B" sequence="125" value="TEMB2B"/>
+                <element inactive_on_update="false" label="TEMBB" sequence="126" value="TEMBB"/>
+                <element inactive_on_update="false" label="TEMCCS" sequence="127" value="TEMCCS"/>
+                <element inactive_on_update="false" label="temGB" sequence="128" value="temGB"/>
+                <element inactive_on_update="false" label="TEMGN" sequence="129" value="TEMGN"/>
+                <element inactive_on_update="false" label="TEMIA" sequence="130" value="TEMIA"/>
+                <element inactive_on_update="false" label="TEMIGR" sequence="131" value="TEMIGR"/>
+                <element inactive_on_update="false" label="TEMIP" sequence="132" value="TEMIP"/>
+                <element inactive_on_update="false" label="TEMLAN" sequence="133" value="TEMLAN"/>
+                <element inactive_on_update="false" label="TEMLL" sequence="134" value="TEMLL"/>
+                <element inactive_on_update="false" label="TEMMOL" sequence="135" value="TEMMOL"/>
+                <element inactive_on_update="false" label="TEMN" sequence="136" value="TEMN"/>
+                <element inactive_on_update="false" label="TEMOS" sequence="137" value="TEMOS"/>
+                <element inactive_on_update="false" label="TEMPN" sequence="138" value="TEMPN"/>
+                <element inactive_on_update="false" label="TEMt" sequence="139" value="TEMt"/>
+                <element inactive_on_update="false" label="TEMTP" sequence="140" value="TEMTP"/>
+                <element inactive_on_update="false" label="TEMVPN" sequence="141" value="TEMVPN"/>
+                <element inactive_on_update="false" label="test" sequence="142" value="test"/>
+                <element inactive_on_update="false" label="tGB" sequence="143" value="tGB"/>
+                <element inactive_on_update="false" label="TMPLL" sequence="145" value="TMPLL"/>
+                <element inactive_on_update="false" label="TS1CB" sequence="146" value="TS1CB"/>
+                <element inactive_on_update="false" label="tsill" sequence="147" value="tsill"/>
+                <element inactive_on_update="false" label="TSILL" sequence="148" value="TSILL"/>
+                <element inactive_on_update="false" label="TSIPIC" sequence="149" value="TSIPIC"/>
+                <element inactive_on_update="false" label="TSIPT" sequence="150" value="TSIPT"/>
+                <element inactive_on_update="false" label="TSISB" sequence="151" value="TSISB"/>
+                <element inactive_on_update="false" label="TSL2T" sequence="152" value="TSL2T"/>
+                <element inactive_on_update="false" label="TSL2TP" sequence="153" value="TSL2TP"/>
+                <element inactive_on_update="false" label="TSMLAN" sequence="154" value="TSMLAN"/>
+                <element inactive_on_update="false" label="TSPIIC" sequence="155" value="TSPIIC"/>
+                <element inactive_on_update="false" label="TSPIT" sequence="156" value="TSPIT"/>
+                <element inactive_on_update="false" label="tTSILL" sequence="157" value="tTSILL"/>
+                <element inactive_on_update="false" label="VPS-S" sequence="158" value="VPS-S"/>
+                <element inactive_on_update="false" label="VPSSS" sequence="159" value="VPSSS"/>
+                <element inactive_on_update="false" label="VPSXD" sequence="160" value="VPSXD"/>
+                <element inactive_on_update="false" label="VPSXS" sequence="161" value="VPSXS"/>
+            </choice>
+        </element>
         <element label="Acceptance date" max_length="40" name="u_acceptance_date" type="glide_date_time"/>
         <element label="Acceptance document" max_length="40" name="u_acceptance_document" type="file_attachment"/>
         <element label="Account" max_length="32" name="u_account" reference="customer_account" type="reference"/>
@@ -15,29 +223,424 @@
             </choice>
         </element>
         <element label="Capacity value" max_length="40" name="u_capacity_value" type="integer"/>
-        <element label="Combridge ID" max_length="200" name="u_combridge_id" type="string"/>
+        <element label="Child service" max_length="32" name="u_child_service" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_cmb_service" type="reference"/>
+        <element display="true" label="Combridge ID" max_length="200" name="u_combridge_id" read_only="true" type="string"/>
         <element label="Contract" max_length="32" name="u_contract" reference="ast_contract" reference_qual="javascript:&quot;x_tsigh_cmb_billing_profile=&quot; + current.u_billing_profile + &quot;^u_type=PO^ORu_type=Addendum&quot;" type="reference" use_reference_qualifier="advanced"/>
         <element label="Contract period" max_length="40" name="u_contract_period" type="integer"/>
         <element label="Currency" max_length="40" name="u_currency" read_only="true" reference="fx_currency" type="reference"/>
+        <element label="Designation" max_length="200" name="u_designation" type="string"/>
         <element label="Early termination fee" max_length="40" name="u_early_termination_fee" type="float"/>
-        <element label="Endpoint A" max_length="32" name="u_endpoint_a" reference="alm_stockroom" type="reference"/>
-        <element label="Endpoint B" max_length="32" name="u_endpoint_b" reference="alm_stockroom" type="reference"/>
+        <element label="Endpoint A" max_length="32" name="u_endpoint_a" reference="alm_stockroom" reference_cascade_rule="delete" reference_qual="type.name=Endpoint^EQ" reference_qual_condition="type.name=Endpoint^EQ" type="reference"/>
+        <element label="Endpoint B" max_length="32" name="u_endpoint_b" reference="alm_stockroom" reference_cascade_rule="delete" reference_qual="type.name=Endpoint^EQ" reference_qual_condition="type.name=Endpoint^EQ" type="reference"/>
         <element label="Last billing date" max_length="40" name="u_last_billing_date" type="glide_date"/>
+        <element label="Legacy ID" max_length="40" name="u_legacy_id" type="string"/>
+        <element default="http://10.10.51.178/combridge/index.php?entity=order_edit&amp;action=view&amp;id=" label="Link to order" max_length="200" name="u_link" type="url"/>
         <element label="MRC" max_length="40" name="u_mrc" type="float"/>
         <element label="MRC pos on PO" max_length="40" name="u_mrc_pos_on_po" type="string"/>
         <element label="OTC" max_length="40" name="u_otc" type="float"/>
         <element label="OTC pos on PO" max_length="40" name="u_otc_pos_on_po" type="string"/>
         <element label="Owner" max_length="32" name="u_owner" reference="sys_user" type="reference"/>
+        <element label="Parent service" max_length="32" name="u_parent_service" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_cmb_service" type="reference"/>
         <element label="Partner circuit ID" max_length="100" name="u_partner_circuit_id" type="string"/>
         <element label="Pop A" max_length="32" name="u_pop_a" reference="alm_stockroom" reference_qual="type.name=Backbone Equipment^EQ" reference_qual_condition="type.name=Backbone Equipment^EQ" type="reference"/>
         <element label="Pop B" max_length="32" name="u_pop_b" reference="alm_stockroom" reference_qual="type.name=Backbone Equipment^EQ" reference_qual_condition="type.name=Backbone Equipment^EQ" type="reference"/>
         <element label="Product type" max_length="32" name="u_product_type" reference="x_tsigh_cmb_product_type" type="reference"/>
         <element label="Project" max_length="32" name="u_project" reference="x_tsigh_cmb_project" type="reference"/>
         <element choice="1" label="Project code" max_length="40" name="u_project_code" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Asahi_Austria" value="35010"/>
+                <element inactive_on_update="false" label="Asahi_Canada" value="35008"/>
+                <element inactive_on_update="false" label="Asahi_Cehia" value="35002"/>
+                <element inactive_on_update="false" label="Asahi_Germany" value="35001"/>
+                <element inactive_on_update="false" label="Asahi_Hong Kong" value="35015"/>
+                <element inactive_on_update="false" label="Asahi_Hungary" value="35012"/>
+                <element inactive_on_update="false" label="Asahi_Italy" value="35004"/>
+                <element inactive_on_update="false" label="Asahi_Olanda" value="35003"/>
+                <element inactive_on_update="false" label="Asahi_Poland" value="35009"/>
+                <element inactive_on_update="false" label="Asahi_Romania" value="35013"/>
+                <element inactive_on_update="false" label="Asahi_Slovakia" value="35011"/>
+                <element inactive_on_update="false" label="Asahi_South Korea" value="35005"/>
+                <element inactive_on_update="false" label="Asahi_Sweden" value="35014"/>
+                <element inactive_on_update="false" label="Asahi_Taiwan" value="35006"/>
+                <element inactive_on_update="false" label="Asahi_USA" value="35007"/>
+                <element inactive_on_update="false" label="Asahi_XXX" value="35016"/>
+                <element inactive_on_update="false" label="AT&amp;S PoC_Austria" value="36002"/>
+                <element inactive_on_update="false" label="AT&amp;S PoC_China" value="36001"/>
+                <element inactive_on_update="false" label="BCG_China" value="26004"/>
+                <element inactive_on_update="false" label="BCG_Indonesia" value="26002"/>
+                <element inactive_on_update="false" label="BCG_Israel" value="26003"/>
+                <element inactive_on_update="false" label="BCG_Philippines" value="26006"/>
+                <element inactive_on_update="false" label="BCG_Qatar" value="26007"/>
+                <element inactive_on_update="false" label="BCG_Thailand" value="26001"/>
+                <element inactive_on_update="false" label="BCG_United Arab Emirates" value="26005"/>
+                <element inactive_on_update="false" label="Besi_Austria" value="10001"/>
+                <element inactive_on_update="false" label="Besi_China" value="10002"/>
+                <element inactive_on_update="false" label="Besi_Malaysia" value="10003"/>
+                <element inactive_on_update="false" label="Besi_Netherlands" value="10004"/>
+                <element inactive_on_update="false" label="Besi_Project Management" value="10010"/>
+                <element inactive_on_update="false" label="Besi_Singapore" value="10005"/>
+                <element inactive_on_update="false" label="Besi_South Korea" value="10006"/>
+                <element inactive_on_update="false" label="Besi_Switzerland" value="10007"/>
+                <element inactive_on_update="false" label="Besi_Taiwan" value="10008"/>
+                <element inactive_on_update="false" label="Besi_USA" value="10009"/>
+                <element inactive_on_update="false" label="Bosch_Croatia" value="44003"/>
+                <element inactive_on_update="false" label="Bosch_Hungary" value="44004"/>
+                <element inactive_on_update="false" label="Bosch_Romania" value="44001"/>
+                <element inactive_on_update="false" label="Bosch_Slovenia" value="44002"/>
+                <element inactive_on_update="false" label="Buerkert Switzerland" value="24011"/>
+                <element inactive_on_update="false" label="Buerkert_Australia" value="24020"/>
+                <element inactive_on_update="false" label="Buerkert_Austria" value="24001"/>
+                <element inactive_on_update="false" label="Buerkert_Brazil" value="24008"/>
+                <element inactive_on_update="false" label="Buerkert_Canada" value="24009"/>
+                <element inactive_on_update="false" label="Buerkert_China" value="24003"/>
+                <element inactive_on_update="false" label="Buerkert_Czech Republic" value="24005"/>
+                <element inactive_on_update="false" label="Buerkert_Denmark" value="24021"/>
+                <element inactive_on_update="false" label="Buerkert_Finland" value="24023"/>
+                <element inactive_on_update="false" label="Buerkert_France" value="24010"/>
+                <element inactive_on_update="false" label="Buerkert_Germany" value="24002"/>
+                <element inactive_on_update="false" label="Buerkert_India" value="24025"/>
+                <element inactive_on_update="false" label="Buerkert_Italy" value="24026"/>
+                <element inactive_on_update="false" label="Buerkert_Japan" value="24012"/>
+                <element inactive_on_update="false" label="Buerkert_Malaysia" value="24014"/>
+                <element inactive_on_update="false" label="Buerkert_Netherlands" value="24015"/>
+                <element inactive_on_update="false" label="Buerkert_New Zealand" value="24028"/>
+                <element inactive_on_update="false" label="Buerkert_Norway" value="24027"/>
+                <element inactive_on_update="false" label="Buerkert_Philippines" value="24016"/>
+                <element inactive_on_update="false" label="Buerkert_Poland" value="24017"/>
+                <element inactive_on_update="false" label="Buerkert_Singapore" value="24006"/>
+                <element inactive_on_update="false" label="Buerkert_South Africa" value="24030"/>
+                <element inactive_on_update="false" label="Buerkert_South Korea" value="24013"/>
+                <element inactive_on_update="false" label="Buerkert_Spain" value="24022"/>
+                <element inactive_on_update="false" label="Buerkert_Sweden" value="24018"/>
+                <element inactive_on_update="false" label="Buerkert_Turkey" value="24007"/>
+                <element inactive_on_update="false" label="Buerkert_UK" value="24024"/>
+                <element inactive_on_update="false" label="Buerkert_United Arab Emirates" value="24004"/>
+                <element inactive_on_update="false" label="Buerkert_Uruguay" value="24019"/>
+                <element inactive_on_update="false" label="Buerkert_USA" value="24029"/>
+                <element inactive_on_update="false" label="Covestro Crown_China" value="32005"/>
+                <element inactive_on_update="false" label="Covestro Crown_Germany" value="32007"/>
+                <element inactive_on_update="false" label="Covestro Crown_Japan" value="32002"/>
+                <element inactive_on_update="false" label="Covestro Crown_Netherlands" value="32006"/>
+                <element inactive_on_update="false" label="Covestro Crown_Spain" value="32001"/>
+                <element inactive_on_update="false" label="Covestro Crown_USA" value="32003"/>
+                <element inactive_on_update="false" label="Covestro_Australia" value="11019"/>
+                <element inactive_on_update="false" label="Covestro_Belgium" value="11022"/>
+                <element inactive_on_update="false" label="Covestro_Brazil" value="11004"/>
+                <element inactive_on_update="false" label="Covestro_China" value="11005"/>
+                <element inactive_on_update="false" label="Covestro_France" value="11006"/>
+                <element inactive_on_update="false" label="Covestro_Germany" value="11001"/>
+                <element inactive_on_update="false" label="Covestro_India" value="11007"/>
+                <element inactive_on_update="false" label="Covestro_Indonezia" value="11023"/>
+                <element inactive_on_update="false" label="Covestro_Italy" value="11008"/>
+                <element inactive_on_update="false" label="Covestro_Japan" value="11009"/>
+                <element inactive_on_update="false" label="Covestro_Malaysia" value="11010"/>
+                <element inactive_on_update="false" label="Covestro_Mexico" value="11026"/>
+                <element inactive_on_update="false" label="Covestro_Netherlands" value="11011"/>
+                <element inactive_on_update="false" label="Covestro_Poland" value="11021"/>
+                <element inactive_on_update="false" label="Covestro_Romania" value="11027"/>
+                <element inactive_on_update="false" label="Covestro_Russia" value="11025"/>
+                <element inactive_on_update="false" label="Covestro_Singapore" value="11012"/>
+                <element inactive_on_update="false" label="Covestro_Slovakia" value="11002"/>
+                <element inactive_on_update="false" label="Covestro_South Korea" value="11024"/>
+                <element inactive_on_update="false" label="Covestro_Spain" value="11003"/>
+                <element inactive_on_update="false" label="Covestro_Switzerland" value="11013"/>
+                <element inactive_on_update="false" label="Covestro_Thailand" value="11014"/>
+                <element inactive_on_update="false" label="Covestro_Turkey" value="11015"/>
+                <element inactive_on_update="false" label="Covestro_United Arab Emirates" value="11016"/>
+                <element inactive_on_update="false" label="Covestro_United Kingdom" value="11017"/>
+                <element inactive_on_update="false" label="Covestro_USA" value="11020"/>
+                <element inactive_on_update="false" label="Covestro_Vietnam" value="11018"/>
+                <element inactive_on_update="false" label="CSO" value="38001"/>
+                <element inactive_on_update="false" label="CSO Synch Tools SW" value="38002"/>
+                <element inactive_on_update="false" label="Daimler_Germany" value="31001"/>
+                <element inactive_on_update="false" label="Delfort_Austria" value="12001"/>
+                <element inactive_on_update="false" label="Delfort_Bulgaria" value="12002"/>
+                <element inactive_on_update="false" label="Delfort_Czech Republic" value="12003"/>
+                <element inactive_on_update="false" label="Delfort_Finland" value="12004"/>
+                <element inactive_on_update="false" label="Delfort_Germany" value="12005"/>
+                <element inactive_on_update="false" label="Delfort_Hungary" value="12006"/>
+                <element inactive_on_update="false" label="Delfort_Malaysia" value="12007"/>
+                <element inactive_on_update="false" label="Delfort_Mexico" value="12008"/>
+                <element inactive_on_update="false" label="Delfort_Project Management" value="12012"/>
+                <element inactive_on_update="false" label="Delfort_United Kingdom" value="12009"/>
+                <element inactive_on_update="false" label="Delfort_USA" value="12010"/>
+                <element inactive_on_update="false" label="Delfort_Vietnam" value="12011"/>
+                <element inactive_on_update="false" label="Denso_Hungary" value="39002"/>
+                <element inactive_on_update="false" label="Denso_Turkey" value="39001"/>
+                <element inactive_on_update="false" label="DMG Mori_Australia" value="46001"/>
+                <element inactive_on_update="false" label="DMG Mori_Austria" value="46002"/>
+                <element inactive_on_update="false" label="DMG Mori_Belgium" value="46003"/>
+                <element inactive_on_update="false" label="DMG Mori_China" value="46032"/>
+                <element inactive_on_update="false" label="DMG Mori_Czech Republic" value="46004"/>
+                <element inactive_on_update="false" label="DMG Mori_Denmark" value="46005"/>
+                <element inactive_on_update="false" label="DMG Mori_Egypt" value="46006"/>
+                <element inactive_on_update="false" label="DMG Mori_Finland" value="46007"/>
+                <element inactive_on_update="false" label="DMG Mori_France" value="46008"/>
+                <element inactive_on_update="false" label="DMG Mori_Germany" value="46009"/>
+                <element inactive_on_update="false" label="DMG Mori_Greece" value="46010"/>
+                <element inactive_on_update="false" label="DMG Mori_Hungary" value="46011"/>
+                <element inactive_on_update="false" label="DMG Mori_India" value="46012"/>
+                <element inactive_on_update="false" label="DMG Mori_Israel" value="46013"/>
+                <element inactive_on_update="false" label="DMG Mori_Italy" value="46014"/>
+                <element inactive_on_update="false" label="DMG Mori_Japan" value="46031"/>
+                <element inactive_on_update="false" label="DMG Mori_Malaysia" value="46015"/>
+                <element inactive_on_update="false" label="DMG Mori_Netherlands" value="46016"/>
+                <element inactive_on_update="false" label="DMG Mori_Philippines" value="46017"/>
+                <element inactive_on_update="false" label="DMG Mori_Poland" value="46018"/>
+                <element inactive_on_update="false" label="DMG Mori_Portugal" value="46019"/>
+                <element inactive_on_update="false" label="DMG Mori_Romania" value="46020"/>
+                <element inactive_on_update="false" label="DMG Mori_Singapore" value="46021"/>
+                <element inactive_on_update="false" label="DMG Mori_Slovenia" value="46022"/>
+                <element inactive_on_update="false" label="DMG Mori_South Korea" value="46023"/>
+                <element inactive_on_update="false" label="DMG Mori_Spain" value="46024"/>
+                <element inactive_on_update="false" label="DMG Mori_Sweden" value="46025"/>
+                <element inactive_on_update="false" label="DMG Mori_Switzerland" value="46026"/>
+                <element inactive_on_update="false" label="DMG Mori_Taiwan" value="46027"/>
+                <element inactive_on_update="false" label="DMG Mori_Turkey" value="46028"/>
+                <element inactive_on_update="false" label="DMG Mori_United Kingdom" value="46029"/>
+                <element inactive_on_update="false" label="DMG Mori_Vietnam" value="46030"/>
+                <element inactive_on_update="false" label="Doka_Australia" value="33006"/>
+                <element inactive_on_update="false" label="Doka_Austria" value="33001"/>
+                <element inactive_on_update="false" label="Doka_Egypt" value="33004"/>
+                <element inactive_on_update="false" label="Doka_Germany" value="33005"/>
+                <element inactive_on_update="false" label="Doka_Ireland" value="33002"/>
+                <element inactive_on_update="false" label="Doka_United Arab Emirates" value="33003"/>
+                <element inactive_on_update="false" label="DS Smith_Croatia" value="13005"/>
+                <element inactive_on_update="false" label="DS Smith_Czech Republic" value="13006"/>
+                <element inactive_on_update="false" label="DS Smith_Poland" value="13007"/>
+                <element inactive_on_update="false" label="DS Smith_Romania" value="13001"/>
+                <element inactive_on_update="false" label="DS Smith_Serbia" value="13004"/>
+                <element inactive_on_update="false" label="DS Smith_Slovakia" value="13002"/>
+                <element inactive_on_update="false" label="DS Smith_Slovenia" value="13003"/>
+                <element inactive_on_update="false" label="DTGBS Belgium_Lab Enablement" value="52001"/>
+                <element inactive_on_update="false" label="Durr_Brazil" value="53002"/>
+                <element inactive_on_update="false" label="Durr_China" value="53003"/>
+                <element inactive_on_update="false" label="Durr_Czech Republic" value="53004"/>
+                <element inactive_on_update="false" label="Durr_Denmark" value="53005"/>
+                <element inactive_on_update="false" label="Durr_France" value="53006"/>
+                <element inactive_on_update="false" label="Durr_Germany" value="53001"/>
+                <element inactive_on_update="false" label="Durr_Hong Kong" value="53007"/>
+                <element inactive_on_update="false" label="Durr_India" value="53008"/>
+                <element inactive_on_update="false" label="Durr_Italy" value="53009"/>
+                <element inactive_on_update="false" label="Durr_Mexico" value="53010"/>
+                <element inactive_on_update="false" label="Durr_Poland" value="53011"/>
+                <element inactive_on_update="false" label="Durr_Singapore" value="53012"/>
+                <element inactive_on_update="false" label="Durr_South Korea" value="53013"/>
+                <element inactive_on_update="false" label="Durr_Spain" value="53014"/>
+                <element inactive_on_update="false" label="Durr_USA" value="53015"/>
+                <element inactive_on_update="false" label="Endress + Hauser" value="29037"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Argentina" value="29025"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Austria" value="29021"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Belgium" value="29026"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Canada" value="29008"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Chile" value="29027"/>
+                <element inactive_on_update="false" label="Endress + Hauser_China" value="29007"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Croatia" value="29020"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Czech Republic" value="29012"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Denmark" value="29018"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Finland" value="29019"/>
+                <element inactive_on_update="false" label="Endress + Hauser_France" value="29002"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Germany" value="29003"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Hong Kong" value="29028"/>
+                <element inactive_on_update="false" label="Endress + Hauser_India" value="29010"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Indonesia" value="29030"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Italy" value="29009"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Japan" value="29015"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Malaysia" value="29031"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Mexico" value="29011"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Netherlands" value="29004"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Norway" value="29022"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Panama" value="29036"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Poland" value="29023"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Romania" value="29016"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Singapore" value="29005"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Slovenia" value="29024"/>
+                <element inactive_on_update="false" label="Endress + Hauser_South Africa" value="29032"/>
+                <element inactive_on_update="false" label="Endress + Hauser_South Korea" value="29033"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Sweden" value="29001"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Switzerland" value="29017"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Thailand" value="29034"/>
+                <element inactive_on_update="false" label="Endress + Hauser_United Kingdom" value="29013"/>
+                <element inactive_on_update="false" label="Endress + Hauser_USA" value="29006"/>
+                <element inactive_on_update="false" label="Endress + Hauser_Vietnam" value="29035"/>
+                <element inactive_on_update="false" label="Endress+ Hause_Brazil" value="29014"/>
+                <element inactive_on_update="false" label="Fara cod proiect" value="51001"/>
+                <element inactive_on_update="false" label="Farmasi" value="40001"/>
+                <element inactive_on_update="false" label="FQML_Mauritania" value="25001"/>
+                <element inactive_on_update="false" label="FQML_South Africa" value="25002"/>
+                <element inactive_on_update="false" label="FQML_UK" value="25003"/>
+                <element inactive_on_update="false" label="GDC_Germany" value="34001"/>
+                <element inactive_on_update="false" label="Georg Fischer_Hungary" value="18002"/>
+                <element inactive_on_update="false" label="Georg Fischer_India" value="18001"/>
+                <element inactive_on_update="false" label="HBPO_Slovakia" value="49001"/>
+                <element inactive_on_update="false" label="Landgard_Austria" value="30002"/>
+                <element inactive_on_update="false" label="Landgard_Germany" value="30001"/>
+                <element inactive_on_update="false" label="Landgard_Netherland" value="30003"/>
+                <element inactive_on_update="false" label="Mazda_Croatia" value="19001"/>
+                <element inactive_on_update="false" label="Mazda_Hungary" value="19003"/>
+                <element inactive_on_update="false" label="Mazda_Project Management" value="19005"/>
+                <element inactive_on_update="false" label="Mazda_Slovakia" value="19004"/>
+                <element inactive_on_update="false" label="Mazda_Slovenia" value="19002"/>
+                <element inactive_on_update="false" label="MSC_Austria" value="45001"/>
+                <element inactive_on_update="false" label="MSC_Schweiz" value="45002"/>
+                <element inactive_on_update="false" label="MSIG_Belgium" value="47004"/>
+                <element inactive_on_update="false" label="MSIG_France" value="47007"/>
+                <element inactive_on_update="false" label="MSIG_Germany" value="47002"/>
+                <element inactive_on_update="false" label="MSIG_Italy" value="47006"/>
+                <element inactive_on_update="false" label="MSIG_Netherlands" value="47001"/>
+                <element inactive_on_update="false" label="MSIG_Slovakia" value="47003"/>
+                <element inactive_on_update="false" label="MSIG_Spain" value="47005"/>
+                <element inactive_on_update="false" label="PMG_Austria" value="28003"/>
+                <element inactive_on_update="false" label="PMG_Germany" value="28004"/>
+                <element inactive_on_update="false" label="PMG_Romania" value="28005"/>
+                <element inactive_on_update="false" label="PMG_Spain" value="28001"/>
+                <element inactive_on_update="false" label="PMG_USA" value="28002"/>
+                <element inactive_on_update="false" label="Primetals_Austria" value="14001"/>
+                <element inactive_on_update="false" label="Primetals_Belgium" value="14012"/>
+                <element inactive_on_update="false" label="Primetals_Brazil" value="14002"/>
+                <element inactive_on_update="false" label="Primetals_China" value="14009"/>
+                <element inactive_on_update="false" label="Primetals_Czech Republic" value="14018"/>
+                <element inactive_on_update="false" label="Primetals_Germany" value="14013"/>
+                <element inactive_on_update="false" label="Primetals_India" value="14010"/>
+                <element inactive_on_update="false" label="Primetals_Italy" value="14015"/>
+                <element inactive_on_update="false" label="Primetals_Japan" value="14003"/>
+                <element inactive_on_update="false" label="Primetals_Mexico" value="14007"/>
+                <element inactive_on_update="false" label="Primetals_Poland" value="14014"/>
+                <element inactive_on_update="false" label="Primetals_Project Management" value="14005"/>
+                <element inactive_on_update="false" label="Primetals_Singapore" value="14008"/>
+                <element inactive_on_update="false" label="Primetals_Slovakia" value="14019"/>
+                <element inactive_on_update="false" label="Primetals_South Korea" value="14020"/>
+                <element inactive_on_update="false" label="Primetals_Turkey" value="14016"/>
+                <element inactive_on_update="false" label="Primetals_UK" value="14011"/>
+                <element inactive_on_update="false" label="Primetals_Ukraine" value="14017"/>
+                <element inactive_on_update="false" label="Primetals_USA" value="14004"/>
+                <element inactive_on_update="false" label="Primetals_XXX" value="14006"/>
+                <element inactive_on_update="false" label="Prinzhorn_Austria" value="15001"/>
+                <element inactive_on_update="false" label="Prinzhorn_Bulgaria" value="15002"/>
+                <element inactive_on_update="false" label="Prinzhorn_Cehia" value="15011"/>
+                <element inactive_on_update="false" label="Prinzhorn_Croatia" value="15003"/>
+                <element inactive_on_update="false" label="Prinzhorn_Germany" value="15004"/>
+                <element inactive_on_update="false" label="Prinzhorn_Greece" value="15005"/>
+                <element inactive_on_update="false" label="Prinzhorn_Hungary" value="15006"/>
+                <element inactive_on_update="false" label="Prinzhorn_Poland" value="15007"/>
+                <element inactive_on_update="false" label="Prinzhorn_Romania" value="15008"/>
+                <element inactive_on_update="false" label="Prinzhorn_Turkey" value="15009"/>
+                <element inactive_on_update="false" label="Prinzhorn_Ukraine" value="15010"/>
+                <element inactive_on_update="false" label="RKW Cisco CPE_Egypt" value="20001"/>
+                <element inactive_on_update="false" label="Rotschild_India" value="23001"/>
+                <element inactive_on_update="false" label="Rotschild_Indonesia" value="23002"/>
+                <element inactive_on_update="false" label="Rotschild_Malaysia" value="23003"/>
+                <element inactive_on_update="false" label="Rotschild_USA" value="23004"/>
+                <element inactive_on_update="false" label="Shell_Qatar" value="55001"/>
+                <element inactive_on_update="false" label="Swietelsky_AT" value="56001"/>
+                <element inactive_on_update="false" label="T-Agile_Lab" value="42002"/>
+                <element inactive_on_update="false" label="T-Agile_SDx equipm" value="42003"/>
+                <element inactive_on_update="false" label="T-Agile_SDx Provider Hub" value="42001"/>
+                <element inactive_on_update="false" label="Tann Karton_Austria" value="16001"/>
+                <element inactive_on_update="false" label="Tann Karton_Canada" value="16002"/>
+                <element inactive_on_update="false" label="Tann Karton_China" value="16003"/>
+                <element inactive_on_update="false" label="Tann Karton_Colombiana" value="16004"/>
+                <element inactive_on_update="false" label="Tann Karton_Germany" value="16005"/>
+                <element inactive_on_update="false" label="Tann Karton_Philippines" value="16006"/>
+                <element inactive_on_update="false" label="Tann Karton_Russia" value="16007"/>
+                <element inactive_on_update="false" label="Teufelberger_Austria" value="48001"/>
+                <element inactive_on_update="false" label="Teufelberger_Czech Republic" value="48002"/>
+                <element inactive_on_update="false" label="Teufelberger_Poland" value="48003"/>
+                <element inactive_on_update="false" label="Tiger_Austria" value="17001"/>
+                <element inactive_on_update="false" label="Tiger_Belgium" value="17002"/>
+                <element inactive_on_update="false" label="Tiger_Canada" value="17003"/>
+                <element inactive_on_update="false" label="Tiger_China" value="17004"/>
+                <element inactive_on_update="false" label="Tiger_Czech Republik" value="17005"/>
+                <element inactive_on_update="false" label="Tiger_France" value="17006"/>
+                <element inactive_on_update="false" label="Tiger_Hungary" value="17007"/>
+                <element inactive_on_update="false" label="Tiger_Mexico" value="17008"/>
+                <element inactive_on_update="false" label="Tiger_Poland" value="17009"/>
+                <element inactive_on_update="false" label="Tiger_Project Management" value="17013"/>
+                <element inactive_on_update="false" label="Tiger_Slovakia" value="17010"/>
+                <element inactive_on_update="false" label="Tiger_USA" value="17011"/>
+                <element inactive_on_update="false" label="Tiger_Vietnam" value="17012"/>
+                <element inactive_on_update="false" label="TM CZ" value="37001"/>
+                <element inactive_on_update="false" label="Toyota_Cyprus" value="43001"/>
+                <element inactive_on_update="false" label="Toyota_Hungary" value="43003"/>
+                <element inactive_on_update="false" label="Toyota_Romania" value="43004"/>
+                <element inactive_on_update="false" label="Toyota_Slovenia" value="43002"/>
+                <element inactive_on_update="false" label="Toyota_Ukraine" value="43005"/>
+                <element inactive_on_update="false" label="TS_PL" value="54001"/>
+                <element inactive_on_update="false" label="Uniper_Austria" value="27007"/>
+                <element inactive_on_update="false" label="Uniper_Germany" value="27001"/>
+                <element inactive_on_update="false" label="Uniper_Hungary" value="27006"/>
+                <element inactive_on_update="false" label="Uniper_Netherlands" value="27008"/>
+                <element inactive_on_update="false" label="Uniper_Singapore" value="27003"/>
+                <element inactive_on_update="false" label="Uniper_Sweden" value="27009"/>
+                <element inactive_on_update="false" label="Uniper_UK" value="27002"/>
+                <element inactive_on_update="false" label="Uniper_United Arab Emirates" value="27004"/>
+                <element inactive_on_update="false" label="Uniper_USA" value="27005"/>
+                <element inactive_on_update="false" label="Uniqua Slovakia" value="22007"/>
+                <element inactive_on_update="false" label="Uniqua_Bosnia and Herzegovina" value="22008"/>
+                <element inactive_on_update="false" label="Uniqua_Bulgaria" value="22001"/>
+                <element inactive_on_update="false" label="Uniqua_Croatia" value="22002"/>
+                <element inactive_on_update="false" label="Uniqua_Czech Republic" value="22003"/>
+                <element inactive_on_update="false" label="Uniqua_Hungary" value="22004"/>
+                <element inactive_on_update="false" label="Uniqua_Lichtenstein" value="22010"/>
+                <element inactive_on_update="false" label="Uniqua_Montenegro" value="22011"/>
+                <element inactive_on_update="false" label="Uniqua_Poland" value="22005"/>
+                <element inactive_on_update="false" label="Uniqua_Romania" value="22006"/>
+                <element inactive_on_update="false" label="Uniqua_Russia" value="22013"/>
+                <element inactive_on_update="false" label="Uniqua_Serbia" value="22009"/>
+                <element inactive_on_update="false" label="Uniqua_Switzerland" value="22012"/>
+                <element inactive_on_update="false" label="Versa_Austria" value="41001"/>
+                <element inactive_on_update="false" label="Voestalpine_Australia" value="21007"/>
+                <element inactive_on_update="false" label="Voestalpine_Austria" value="21001"/>
+                <element inactive_on_update="false" label="Voestalpine_Belgium" value="21010"/>
+                <element inactive_on_update="false" label="Voestalpine_Brazil" value="21005"/>
+                <element inactive_on_update="false" label="Voestalpine_Canada" value="21024"/>
+                <element inactive_on_update="false" label="Voestalpine_Cehia" value="21013"/>
+                <element inactive_on_update="false" label="Voestalpine_China" value="21018"/>
+                <element inactive_on_update="false" label="Voestalpine_Croatia" value="21021"/>
+                <element inactive_on_update="false" label="Voestalpine_Denmark" value="21019"/>
+                <element inactive_on_update="false" label="Voestalpine_Finland" value="21031"/>
+                <element inactive_on_update="false" label="Voestalpine_France" value="21008"/>
+                <element inactive_on_update="false" label="Voestalpine_Germany" value="21002"/>
+                <element inactive_on_update="false" label="Voestalpine_Hungary" value="21023"/>
+                <element inactive_on_update="false" label="Voestalpine_India" value="21026"/>
+                <element inactive_on_update="false" label="Voestalpine_Italy" value="21004"/>
+                <element inactive_on_update="false" label="Voestalpine_Japan" value="21011"/>
+                <element inactive_on_update="false" label="Voestalpine_Malaysia" value="21029"/>
+                <element inactive_on_update="false" label="Voestalpine_Mexico" value="21027"/>
+                <element inactive_on_update="false" label="Voestalpine_Netherlands" value="21009"/>
+                <element inactive_on_update="false" label="Voestalpine_Norway" value="21017"/>
+                <element inactive_on_update="false" label="Voestalpine_Poland" value="21006"/>
+                <element inactive_on_update="false" label="Voestalpine_Portugal" value="21028"/>
+                <element inactive_on_update="false" label="Voestalpine_Russia" value="21025"/>
+                <element inactive_on_update="false" label="Voestalpine_Serbia" value="21020"/>
+                <element inactive_on_update="false" label="Voestalpine_Slovakia" value="21016"/>
+                <element inactive_on_update="false" label="Voestalpine_Slovenia" value="21022"/>
+                <element inactive_on_update="false" label="Voestalpine_Spain" value="21015"/>
+                <element inactive_on_update="false" label="Voestalpine_Sweden" value="21014"/>
+                <element inactive_on_update="false" label="Voestalpine_Switzerland" value="21030"/>
+                <element inactive_on_update="false" label="Voestalpine_Thailand" value="21032"/>
+                <element inactive_on_update="false" label="Voestalpine_UK" value="21003"/>
+                <element inactive_on_update="false" label="Voestalpine_USA" value="21012"/>
+                <element inactive_on_update="false" label="XXXX" value="44005"/>
+                <element inactive_on_update="false" label="Zollner_China" value="50006"/>
+                <element inactive_on_update="false" label="Zollner_CostaRica" value="50002"/>
+                <element inactive_on_update="false" label="Zollner_Germany" value="50001"/>
+                <element inactive_on_update="false" label="Zollner_HongKong" value="50009"/>
+                <element inactive_on_update="false" label="Zollner_Hungary" value="50003"/>
+                <element inactive_on_update="false" label="Zollner_Romania" value="50004"/>
+                <element inactive_on_update="false" label="Zollner_Switzerland" value="50008"/>
+                <element inactive_on_update="false" label="Zollner_Tunisia" value="50007"/>
+                <element inactive_on_update="false" label="Zollner_USA" value="50005"/>
+            </choice>
         </element>
         <element choice="1" label="Reason for termination" max_length="40" name="u_reason_for_termination" type="choice">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="New supplier" value="5"/>
+                <element inactive_on_update="false" label="Not satisfied with agent" value="3"/>
+                <element inactive_on_update="false" label="Not satisfied with customer care" value="2"/>
+                <element inactive_on_update="false" label="Not satisfied with prices" value="4"/>
+                <element inactive_on_update="false" label="Not satisfied with service" value="1"/>
+            </choice>
         </element>
         <element label="RFS Commited" max_length="40" name="u_rfs_commited" type="glide_date_time"/>
         <element label="RFS Requested" max_length="40" name="u_rfs_requested" type="glide_date_time"/>

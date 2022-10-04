@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="invoice_generating_method" table="x_tsigh_cmb_billing_profile" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>invoice_generating_method</element>
+            <name>x_tsigh_cmb_billing_profile</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-02 12:10:29</sys_created_on>
+            <sys_id>b61fc7771b6d9110c7c9fc078b4bcb20</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>invoice_generating_method</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_choice_x_tsigh_cmb_billing_profile_invoice_generating_method</sys_update_name>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-02 12:10:29</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>invoice_generating_method</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Group by order</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_billing_profile</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-02 12:10:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d30f4b771b6d9110c7c9fc078b4bcb11</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-02 12:10:29</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>invoice_generating_method</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Group by partner</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_billing_profile</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-02 12:10:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3c2fcf371b6d9110c7c9fc078b4bcb4f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-02 12:10:38</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>invoice_generating_method</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Group by partner reference number</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_billing_profile</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-02 12:11:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>225f0b771b6d9110c7c9fc078b4bcb8a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-02 12:11:34</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>invoice_generating_method</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Separate invoice by partner reference number</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_billing_profile</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-02 12:10:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>132f47771b6d9110c7c9fc078b4bcb14</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-02 12:11:10</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

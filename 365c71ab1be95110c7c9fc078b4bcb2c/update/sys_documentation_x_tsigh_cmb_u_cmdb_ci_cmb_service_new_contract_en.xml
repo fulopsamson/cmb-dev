@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="new_contract" label="New contract" language="en" table="x_tsigh_cmb_u_cmdb_ci_cmb_service">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>new_contract</element>
+            <help/>
+            <hint/>
+            <label>New contract</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <plural>New contracts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-20 10:18:12</sys_created_on>
+            <sys_id>2902efe51b8ed11030bc986c9b4bcbb7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>New contract</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_documentation_x_tsigh_cmb_u_cmdb_ci_cmb_service_new_contract_en</sys_update_name>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:18:12</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

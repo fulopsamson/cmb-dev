@@ -1,0 +1,3520 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="serial" table="x_tsigh_cmb_u_cmdb_ci_cmb_service" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>serial</element>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-20 10:13:47</sys_created_on>
+            <sys_id>bc0123691bc6d110c7c9fc078b4bcb7c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>serial</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_choice_x_tsigh_cmb_u_cmdb_ci_cmb_service_serial</sys_update_name>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:13:47</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>BVPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b0fe6f41b9add1030bc986c9b4bcbc3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:45</sys_updated_on>
+            <value>BVPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBLIA</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a91faaf41b9add1030bc986c9b4bcb33</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:54</sys_updated_on>
+            <value>CBLIA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBNGN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>541f2af41b9add1030bc986c9b4bcbd7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:49</sys_updated_on>
+            <value>CBNGN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CL2TP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>881f2af41b9add1030bc986c9b4bcb7e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:48</sys_updated_on>
+            <value>CL2TP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a81f2af41b9add1030bc986c9b4bcbfa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:50</sys_updated_on>
+            <value>CMB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBBB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1e0fa6f41b9add1030bc986c9b4bcb3e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:41</sys_updated_on>
+            <value>CMBBB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBIP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c60f66f41b9add1030bc986c9b4bcbec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:40</sys_updated_on>
+            <value>CMBIP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBOS</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>190f26f41b9add1030bc986c9b4bcbac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:36</sys_updated_on>
+            <value>CMBOS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>G0VPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ce0f66f41b9add1030bc986c9b4bcbc6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:39</sys_updated_on>
+            <value>G0VPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HA</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>410f26f41b9add1030bc986c9b4bcb82</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:36</sys_updated_on>
+            <value>HA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HA</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>830fe6f41b9add1030bc986c9b4bcb95</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:44</sys_updated_on>
+            <value>HA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>S0VPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>310f66f41b9add1030bc986c9b4bcb95</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:39</sys_updated_on>
+            <value>S0VPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TGBCB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8b0fe6f41b9add1030bc986c9b4bcb76</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:55:44</sys_updated_on>
+            <value>TGBCB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>000001</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2c1f6af41b9add1030bc986c9b4bcb20</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>000001</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>BVPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>290f66f41b9add1030bc986c9b4bcb51</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>BVPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>1</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>451f6af41b9add1030bc986c9b4bcb92</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>CBLIA</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>830fe6f41b9add1030bc986c9b4bcb7e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>CBLIA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>19154</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ba0fe6f41b9add1030bc986c9b4bcb58</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>19154</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>CBNGN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>411f6af41b9add1030bc986c9b4bcb83</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>CBNGN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>19178</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b81f6af41b9add1030bc986c9b4bcb37</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>19178</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>CL2TP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>070fe6f41b9add1030bc986c9b4bcb8d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>CL2TP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40212</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6e0fa6f41b9add1030bc986c9b4bcbd1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40212</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>CMB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-20 12:40:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a672c0f51b4ad110c7c9fc078b4bcbc5</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>CMB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40213</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>310f66f41b9add1030bc986c9b4bcb86</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40213</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>CMBBB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1e0fa6f41b9add1030bc986c9b4bcb2f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>CMBBB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40214</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>630f2af41b9add1030bc986c9b4bcb0d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40214</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>CMBIP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b41f6af41b9add1030bc986c9b4bcb28</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>CMBIP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40232</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>700f26f41b9add1030bc986c9b4bcb0a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40232</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>CMBOS</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>101f2af41b9add1030bc986c9b4bcbf3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:28</sys_updated_on>
+            <value>CMBOS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40234</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7f0f2af41b9add1030bc986c9b4bcb3a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40234</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>G0VPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>410f26f41b9add1030bc986c9b4bcb55</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:28</sys_updated_on>
+            <value>G0VPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40256</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2e0fe6f41b9add1030bc986c9b4bcb03</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40256</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>HA</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>390f66f41b9add1030bc986c9b4bcb8d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:28</sys_updated_on>
+            <value>HA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40257</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c01f2af41b9add1030bc986c9b4bcbb1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40257</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40264</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>780f26f41b9add1030bc986c9b4bcb11</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40264</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>S0VPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>310f66f41b9add1030bc986c9b4bcb77</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:28</sys_updated_on>
+            <value>S0VPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40265</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>12</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>490f26f41b9add1030bc986c9b4bcb2f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40265</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>TGBCB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>12</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1e0fa6f41b9add1030bc986c9b4bcb4d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:28</sys_updated_on>
+            <value>TGBCB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40266</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>13</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>660fa6f41b9add1030bc986c9b4bcbca</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40266</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40267</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>14</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>eb0f2af41b9add1030bc986c9b4bcb14</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40267</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40310</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>15</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>160fa6f41b9add1030bc986c9b4bcb37</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40310</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40312</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>16</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>290f66f41b9add1030bc986c9b4bcb24</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40312</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40331</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>17</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>490f26f41b9add1030bc986c9b4bcb3e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40331</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40332</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>18</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>281f6af41b9add1030bc986c9b4bcb11</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40332</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40341</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>19</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5e0fa6f41b9add1030bc986c9b4bcbc2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40341</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40344</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>20</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>160fa6f41b9add1030bc986c9b4bcb46</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40344</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40346</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>21</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>941f2af41b9add1030bc986c9b4bcbeb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40346</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40352</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>22</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>110f26f41b9add1030bc986c9b4bcbd2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40352</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40354</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>23</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c81f2af41b9add1030bc986c9b4bcb92</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40354</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40356</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>24</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>210f66f41b9add1030bc986c9b4bcb3b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40356</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40357</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>25</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>190f26f41b9add1030bc986c9b4bcbf7</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40357</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40358</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>26</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8b0fe6f41b9add1030bc986c9b4bcb85</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40358</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>403580</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>27</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>190f26f41b9add1030bc986c9b4bcbca</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>403580</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40359</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>28</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c60f66f41b9add1030bc986c9b4bcbfb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40359</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40364</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>29</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>190f26f41b9add1030bc986c9b4bcbd9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40364</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40365</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>30</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>490f26f41b9add1030bc986c9b4bcb5c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40365</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40366</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>31</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1f0fe6f41b9add1030bc986c9b4bcbac</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40366</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40367</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>32</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f30f2af41b9add1030bc986c9b4bcb33</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40367</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40368</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>33</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>301f6af41b9add1030bc986c9b4bcb30</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40368</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>40369</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>34</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>830fe6f41b9add1030bc986c9b4bcb6f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>40369</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>abc</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>35</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ac1f6af41b9add1030bc986c9b4bcb09</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>abc</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>b0VPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>36</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b11faaf41b9add1030bc986c9b4bcb52</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>b0VPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>bVPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>38</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>700fe2f41b9add1030bc986c9b4bcbfb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>bVPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBCPNA</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>39</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>241f6af41b9add1030bc986c9b4bcb02</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:24</sys_updated_on>
+            <value>CBCPNA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBCPNB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>40</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>390f66f41b9add1030bc986c9b4bcb7e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBCPNB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBCPNC</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>41</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5d1f6af41b9add1030bc986c9b4bcbb0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBCPNC</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBCPNG</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>42</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>490f26f41b9add1030bc986c9b4bcb7a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBCPNG</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBRTC</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>45</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>110f26f41b9add1030bc986c9b4bcb96</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBRTC</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBSIP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>46</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9f0fe6f41b9add1030bc986c9b4bcbd2</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBSIP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBTPX</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>47</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ff0f2af41b9add1030bc986c9b4bcb23</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBTPX</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBVPSA</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>48</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6e0fa6f41b9add1030bc986c9b4bcbe0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBVPSA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBVPSM</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>49</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>251faaf41b9add1030bc986c9b4bcb3b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBVPSM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBVPSP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>50</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fd0f66f41b9add1030bc986c9b4bcba8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBVPSP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBVPSS</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>51</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6f0fe6f41b9add1030bc986c9b4bcbfd</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBVPSS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CBVPSU</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>52</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>330f2af41b9add1030bc986c9b4bcb77</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CBVPSU</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMB4EU</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>55</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>410f26f41b9add1030bc986c9b4bcb37</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMB4EU</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBAZR</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>56</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c60f66f41b9add1030bc986c9b4bcbdd</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBAZR</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBB2B</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>57</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b70f2af41b9add1030bc986c9b4bcb6f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBB2B</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBCCS</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>59</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>410f26f41b9add1030bc986c9b4bcb28</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBCCS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBcol</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>60</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>110f26f41b9add1030bc986c9b4bcbff</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBcol</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBCOL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>61</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>551f6af41b9add1030bc986c9b4bcbcf</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBCOL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBDF</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>62</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3e0fe6f41b9add1030bc986c9b4bcb21</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBDF</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBIMP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>63</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>391faaf41b9add1030bc986c9b4bcb4a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBIMP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBIte</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>65</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>110f26f41b9add1030bc986c9b4bcbc3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBIte</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBLAN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>66</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>490f26f41b9add1030bc986c9b4bcb20</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBLAN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBLL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>67</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>780f26f41b9add1030bc986c9b4bcb02</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBLL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBMEN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>68</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>441f2af41b9add1030bc986c9b4bcb9a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBMEN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBMOL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>69</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8b0fe6f41b9add1030bc986c9b4bcb67</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBMOL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBMOS</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>70</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>110f26f41b9add1030bc986c9b4bcba5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBMOS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBNGN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>71</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>311faaf41b9add1030bc986c9b4bcb69</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBNGN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBNNI</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>72</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c91f6af41b9add1030bc986c9b4bcb8a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBNNI</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBOTP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>74</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cd1f6af41b9add1030bc986c9b4bcb99</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBOTP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>cmbpi</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>75</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>211faaf41b9add1030bc986c9b4bcb2c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>cmbpi</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBRTC</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>76</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d91f6af41b9add1030bc986c9b4bcbc7</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBRTC</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBtel</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>77</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c60f66f41b9add1030bc986c9b4bcbce</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBtel</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBVPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>78</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>410f26f41b9add1030bc986c9b4bcb19</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBVPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBVPS</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>79</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b20fe6f41b9add1030bc986c9b4bcb42</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBVPS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CMBWDM</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>80</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>210f66f41b9add1030bc986c9b4bcb0e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CMBWDM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CSOINT</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>81</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>260fe6f41b9add1030bc986c9b4bcb0b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CSOINT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>CSOST</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>82</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>491f6af41b9add1030bc986c9b4bcba1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>CSOST</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DF</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>83</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ce0f66f41b9add1030bc986c9b4bcbd5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>DF</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DID</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>84</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>341f6af41b9add1030bc986c9b4bcb3f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>DID</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>DL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>85</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d51f6af41b9add1030bc986c9b4bcbb8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>DL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>FEMIGR</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>86</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3d1faaf41b9add1030bc986c9b4bcb59</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>FEMIGR</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>GB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>88</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a51faaf41b9add1030bc986c9b4bcb24</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:25</sys_updated_on>
+            <value>GB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HAR</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>90</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>770f2af41b9add1030bc986c9b4bcb1c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>HAR</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>91</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1e0fa6f41b9add1030bc986c9b4bcb5c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>HB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HD</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>92</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>210f66f41b9add1030bc986c9b4bcb2c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>HD</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HE</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>93</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b01f6af41b9add1030bc986c9b4bcb56</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>HE</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HF</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>94</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>490f26f41b9add1030bc986c9b4bcb6b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>HF</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HG</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>95</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>360fe6f41b9add1030bc986c9b4bcb1a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>HG</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>HX</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>96</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>501f2af41b9add1030bc986c9b4bcbc8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>HX</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>INGD</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>97</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-20 10:13:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c1f0a3a91bc6d110c7c9fc078b4bcb05</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>INGD</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>INSTAL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>98</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bd1faaf41b9add1030bc986c9b4bcb42</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>INSTAL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MF</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>99</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>190f26f41b9add1030bc986c9b4bcbe8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>MF</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>ML</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:50</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a01f6af41b9add1030bc986c9b4bcb19</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>ML</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MT</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>101</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>190f26f41b9add1030bc986c9b4bcbbb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>MT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>MTNGN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>102</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e70f2af41b9add1030bc986c9b4bcb05</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>MTNGN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>None</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>103</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f80fe2f41b9add1030bc986c9b4bcbf1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>None</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>OF</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>104</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>410f26f41b9add1030bc986c9b4bcb46</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>OF</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>QWER</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>105</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-20 10:13:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fc01ab291bc6d110c7c9fc078b4bcb54</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>QWER</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SG</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>107</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b20fe6f41b9add1030bc986c9b4bcb60</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>SG</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SIPIC</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>108</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>170fe6f41b9add1030bc986c9b4bcbcb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>SIPIC</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SIPT</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>109</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c11f6af41b9add1030bc986c9b4bcba9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>SIPT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SIPU5</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>110</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0b0fe6f41b9add1030bc986c9b4bcb9d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>SIPU5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SSIPIC</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>111</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>110f26f41b9add1030bc986c9b4bcbf0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>SSIPIC</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SSIPT</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>112</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6e0fa6f41b9add1030bc986c9b4bcbef</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>SSIPT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SURVEY</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>113</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>970fe6f41b9add1030bc986c9b4bcbb4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>SURVEY</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>SVPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>114</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ba0fe6f41b9add1030bc986c9b4bcb49</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>SVPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>tCL2TP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>115</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3e0fe6f41b9add1030bc986c9b4bcb12</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>tCL2TP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TCMBIP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>116</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:53</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>511f6af41b9add1030bc986c9b4bcbc0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>TCMBIP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>tCMBIP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>117</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cc1f2af41b9add1030bc986c9b4bcba1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>tCMBIP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>tCMBLL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>118</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ed1f6af41b9add1030bc986c9b4bcbd6</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>tCMBLL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>te2tp</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>119</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>560fa6f41b9add1030bc986c9b4bcbbb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>te2tp</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>teGB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>120</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>210f66f41b9add1030bc986c9b4bcb59</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>teGB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>teL2TP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>121</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>490f26f41b9add1030bc986c9b4bcb4d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>teL2TP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEM</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>122</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>110f26f41b9add1030bc986c9b4bcbe1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>TEM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEM2TP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>123</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>930fe6f41b9add1030bc986c9b4bcba5</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>TEM2TP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>tem2TP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>124</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fd0f66f41b9add1030bc986c9b4bcbb7</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>tem2TP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMB2B</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>125</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f50f66f41b9add1030bc986c9b4bcbb0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>TEMB2B</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMBB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>126</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ce0f66f41b9add1030bc986c9b4bcbf3</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>TEMBB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMCCS</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>127</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>381f6af41b9add1030bc986c9b4bcb4e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:26</sys_updated_on>
+            <value>TEMCCS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>temGB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>128</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>290f66f41b9add1030bc986c9b4bcb06</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>temGB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMGN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>129</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>210f66f41b9add1030bc986c9b4bcb4a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMGN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMIA</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>130</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4c1f2af41b9add1030bc986c9b4bcbb8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMIA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMIGR</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>131</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>210f66f41b9add1030bc986c9b4bcb1d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMIGR</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMIP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>132</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b51faaf41b9add1030bc986c9b4bcb61</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMIP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMLAN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>133</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d81f2af41b9add1030bc986c9b4bcbcf</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMLAN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMLL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>134</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>310f66f41b9add1030bc986c9b4bcb68</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMLL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMMOL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>135</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7b0f2af41b9add1030bc986c9b4bcb2b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMMOL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>136</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>410f26f41b9add1030bc986c9b4bcb64</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMOS</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>137</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>390f66f41b9add1030bc986c9b4bcb6f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMOS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>138</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b20fe6f41b9add1030bc986c9b4bcb51</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMt</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>139</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f70f2af41b9add1030bc986c9b4bcb42</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMt</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMTP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>140</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>290f66f41b9add1030bc986c9b4bcb33</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMTP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TEMVPN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>141</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>160fa6f41b9add1030bc986c9b4bcb55</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TEMVPN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>test</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>142</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>190f26f41b9add1030bc986c9b4bcb9d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>test</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>tGB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>143</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>960fa6f41b9add1030bc986c9b4bcb0f</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>tGB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TMPLL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>145</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>290f66f41b9add1030bc986c9b4bcb42</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TMPLL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TS1CB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>146</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6b0fe6f41b9add1030bc986c9b4bcbee</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TS1CB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>tsill</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>147</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>660fa6f41b9add1030bc986c9b4bcbd9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>tsill</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TSILL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>148</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:54</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>691f6af41b9add1030bc986c9b4bcbde</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TSILL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TSIPIC</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>149</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>390f66f41b9add1030bc986c9b4bcb60</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TSIPIC</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TSIPT</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>150</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bc1f6af41b9add1030bc986c9b4bcb46</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TSIPT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TSISB</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>151</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>481f2af41b9add1030bc986c9b4bcba9</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TSISB</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TSL2T</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>152</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>290f66f41b9add1030bc986c9b4bcb15</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TSL2T</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TSL2TP</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>153</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>130fe6f41b9add1030bc986c9b4bcbbc</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TSL2TP</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TSMLAN</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>154</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>660fa6f41b9add1030bc986c9b4bcbe8</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TSMLAN</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TSPIIC</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>155</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ce0f66f41b9add1030bc986c9b4bcbe4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TSPIIC</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TSPIT</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>156</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>110f26f41b9add1030bc986c9b4bcbb4</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>TSPIT</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>tTSILL</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>157</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e30fe6f41b9add1030bc986c9b4bcbf6</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>tTSILL</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>VPS-S</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>158</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>ef0fe6f41b9add1030bc986c9b4bcbe6</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>VPS-S</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>VPSSS</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>159</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:49</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d41f2af41b9add1030bc986c9b4bcbc0</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>VPSSS</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>VPSXD</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>160</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>410f26f41b9add1030bc986c9b4bcb73</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>VPSXD</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>serial</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>VPSXS</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>161</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-30 08:55:39</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c60f66f41b9add1030bc986c9b4bcbbf</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-04 08:10:27</sys_updated_on>
+            <value>VPSXS</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

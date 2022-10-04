@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>launchOrder</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Launch Order</name>
+        <onclick>launchOrder()</onclick>
+        <order>100</order>
+        <script><![CDATA[//var template = gs.getProperty('x_tsigh_cmb.order_template');
+var tableName = current.getTableName();
+recordSysId = current.getUniqueValue();
+pdfName = current.number;
+/*
+if(current.getDisplayValue('kind_of_order') == 'New'){
+	template = template.replace('kind_of_order', current.getDisplayValue('kind_of_order'));
+	template = template.replace('kind_of_order', current.getDisplayValue('kind_of_order'));
+	template = template.replace('rfs_date', current.rfs_r_date);
+	template = template.replace('rfs_date', current.rfs_r_date);
+	template = template.replace('rfs_date', current.rfs_r_date);
+
+}
+
+else if(current.getDisplayValue('kind_of_order') == 'Cancellation'){
+	template = template.replace('kind_of_order', current.getDisplayValue('kind_of_order'));
+	template = template.replace('kind_of_order', current.getDisplayValue('kind_of_order'));
+	template = template.replace('R-RFS Date', 'Last Billing Date');
+	template = template.replace('R-RFS Date', 'Last Billing Date');
+	template = template.replace('R-RFS Date', 'Last Billing Date');
+		
+	template = template.replace('rfs_date', current.last_billing_date);
+	template = template.replace('rfs_date', current.last_billing_date);
+	template = template.replace('rfs_date', current.last_billing_date);
+}
+else if(current.getDisplayValue('kind_of_order') == 'Cancellation'){
+	template = template.replace('kind_of_order', current.getDisplayValue('kind_of_order'));
+	template = template.replace('kind_of_order', current.getDisplayValue('kind_of_order'));
+	template = template.replace('R-RFS Date', 'Last Billing Date');
+	template = template.replace('R-RFS Date', 'Last Billing Date');
+	template = template.replace('R-RFS Date', 'Last Billing Date');
+		
+	template = template.replace('rfs_date', current.last_billing_date);
+	template = template.replace('rfs_date', current.last_billing_date);
+	template = template.replace('rfs_date', current.last_billing_date);
+}
+
+template = template.replace('segment_id', current.number);
+template = template.replace('contract_term', current.u_contract_period);
+template = template.replace('date_of_order', current.sys_created_on);
+template = template.replace('date_of_order', current.sys_created_on);
+template = template.replace('otc', current.u_otc);
+template = template.replace('mrc', current.u_mrc);
+template = template.replace('left_text', current.additional_info_a);
+template = template.replace('right_text', current.additional_info_b);
+template = template.replace('currency', current.u_currency);
+template = template.replace('additional_info', current.comments);
+template = template.replace('bid_ref', current.u_bid_reference);
+
+
+var lines = new GlideRecord('sys_user');
+lines.addQuery('sys_id', current.sys_created_by);
+lines.query();
+if(lines.next()){
+	var name = lines.first_name + " " + lines.last_name;
+	template = template.replace('provisioning_contact_name', name);
+	template = template.replace('provisioning_phone_number', lines.phone);
+	template = template.replace('provisioning_email_address', lines.email);
+}
+else if(!lines.next()){
+	template = template.replace('provisioning_contact_name', ' ');
+	template = template.replace('provisioning_phone_number', ' ');
+	template = template.replace('provisioning_email_address', ' ');
+}
+
+var grService = current.u_service.getRefRecord();
+if(grService.isValidRecord()){
+	template = template.replace('circuit_id', grService.u_combridge_id);
+	//template = template.replace('order_id', grService.u_combridge_id);
+
+	var own = new GlideRecord('sys_user');
+	own.addQuery('sys_id', grService.u_owner);
+	own.query();
+	if(own.next()){
+		name = own.first_name + " " + own.last_name;
+		template = template.replace('commertial_contact_name', name);
+		template = template.replace('commertial_phone_number', own.phone);
+		template = template.replace('commertial_email_address', own.email);
+	}
+	else if(!own.next()){
+		template = template.replace('commertial_contact_name', ' ');
+		template = template.replace('commertial_phone_number', ' ');
+		template = template.replace('commertial_email_address', ' ');
+	}
+	
+	var grEndA = grService.u_endpoint_a.getRefRecord();
+	if(grEndA.isValidRecord()){
+		template = template.replace('left_end', grEndA.name);
+		template = template.replace('left_location', grEndA.getDisplayValue('location'));
+		var string = grService.getDisplayValue('u_capacity_value') + grService.getDisplayValue('u_capacity_unit_of_measurement');
+		template = template.replace('left_capacity', string);
+		
+		var stockLines = new GlideRecord('customer_contact');
+		stockLines.addQuery('u_stockroom', grService.u_endpoint_a);
+		stockLines.query();
+		if(stockLines.next()){
+			template = template.replace('left_contact_name', stockLines.name);
+			template = template.replace('left_phone_number', stockLines.getDisplayValue('mobile_phone'));
+			template = template.replace('left_email_address', stockLines.email);
+		}
+	}
+	
+	else if(!(grEndA.isValidRecord())){
+		template = template.replace('End A', ' ');
+		template = template.replace('left_contact_name', ' ');
+		template = template.replace('left_phone_number', ' ');
+		template = template.replace('left_email_address', ' ');
+		template = template.replace('left_end', ' ');
+		template = template.replace('left_location', ' ');
+		template = template.replace('left_capacity', ' ');
+		template = template.replace('left_service_type', ' ');
+
+	}
+	
+	var grEndB = grService.u_endpoint_b.getRefRecord();
+	if(grEndB.isValidRecord()){
+		template = template.replace('right_end', grEndB.name);
+		template = template.replace('right_location', grEndB.getDisplayValue('location'));
+		template = template.replace('right_capacity', string);
+						
+		var stockLinesB = new GlideRecord('customer_contact');
+		stockLinesB.addQuery('u_stockroom', grService.u_endpoint_b);
+		stockLinesB.query();
+		if(stockLinesB.next()){
+			template = template.replace('right_contact_name', stockLinesB.name);
+			template = template.replace('right_phone_number', stockLinesB.mobile_phone);
+			template = template.replace('right_email_address', stockLinesB.email);
+		}
+	}
+	
+	else if(!(grEndB.isValidRecord())){
+		template = template.replace('End B', ' ');
+		template = template.replace('right_contact_name', ' ');
+		template = template.replace('right_phone_number', ' ');
+		template = template.replace('right_email_address', ' ');
+		template = template.replace('right_end', ' ');
+		template = template.replace('right_location', ' ');
+		template = template.replace('right_capacity', ' ');
+		template = template.replace('right_service_type', ' ');
+	}
+}
+
+var grAcc = current.u_provider.getRefRecord();
+template = template.replace('right_company', grAcc.name);
+template = template.replace('right_address', grAcc.getDisplayValue('u_location'));
+template = template.replace('right_vat', grAcc.u_contribution_code_vat_cui);
+
+var cmbId = gs.getProperty('x_tsigh_cmb.billing_address');
+
+var cmbBill = new GlideRecord('customer_account');
+cmbBill.addQuery('sys_id', cmbId);
+cmbBill.query();
+if(cmbBill.next()){
+	template = template.replace('left_company', cmbBill.name);
+	template = template.replace('left_address', cmbBill.getDisplayValue('u_location'));
+	template = template.replace('left_vat', cmbBill.u_contribution_code_vat_cui);
+	template = template.replace('billing_company_name', cmbBill.name);
+	template = template.replace('left_billing_address', cmbBill.getDisplayValue('u_location'));
+
+	var billLines = new GlideRecord('customer_contact');
+	billLines.addQuery('account', cmbId);
+	billLines.query();
+	if(billLines.next()){
+		template = template.replace('billing_contact_name', billLines.name);
+		template = template.replace('billing_phone_number', billLines.mobile_phone);
+		template = template.replace('billing_email_address', billLines.email);
+	}
+}
+template = template.replace('right_service_type', current.getDisplayValue('u_product_type_desired'));
+template = template.replace('left_service_type', current.getDisplayValue('product_type'));
+*/
+var template = new x_tsigh_cmb.supplierOrderPDF().getHTML(recordSysId);
+
+var v = new sn_pdfgeneratorutils.PDFGenerationAPI;
+var result = v.convertToPDF(template, tableName, recordSysId, pdfName);
+if (result.status == "success") {
+		current.u_order = result['attachment_id'];
+		gs.addInfoMessage('Supplier order PDF attached');
+		current.update();
+} 
+else {
+	gs.addErrorMessage('Failed to generate PDF');
+}
+action.setRedirectURL(current);
+	
+	]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-22 09:51:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d2de6d161b4a5510c7c9fc078b4bcb86</sys_id>
+        <sys_mod_count>251</sys_mod_count>
+        <sys_name>Launch Order</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_action_d2de6d161b4a5510c7c9fc078b4bcb86</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-03 12:31:59</sys_updated_on>
+        <table>x_tsigh_cmb_u_cmdb_ci_segment</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>true</ui16_compatible>
+    </sys_ui_action>
+</record_update>

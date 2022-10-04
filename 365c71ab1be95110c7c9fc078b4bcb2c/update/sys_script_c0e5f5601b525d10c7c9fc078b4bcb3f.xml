@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>alm_transfer_order_line</collection>
+        <condition>current.stage.changes() || current.asset.changes() || current.operation() == 'insert'</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>CMB Push Status to Asset/Consumable</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var asset = new GlideRecord('alm_asset');
+	asset.addQuery('sys_id', current.asset);
+	asset.query();
+	if (asset.next()) {
+		var updateAsset = true;
+		var assetIsDefective = false;
+		var assetIsPreallocated = false;
+		if ('defective' === asset.getValue('substatus'))
+			assetIsDefective = true; // Preserve existing status of 'defective'
+		if ('pre_allocated' === asset.getValue('substatus'))
+			assetIsPreallocated = true; // Preserve existing status of preallocated
+
+		// Update asset when TOL is created (Stage = 'draft')
+
+		if (current.stage.toString() === 'draft') {
+			// install_status = 6 = In stock
+			asset.install_status = '6';
+			asset.substatus = 'pending_transfer';
+			asset.active_to = true;
+		}else {
+			switch (current.stage.toString()) {
+				case 'requested':
+					// install_status = 6 = In stock
+					asset.install_status = '6';
+					asset.substatus = 'pending_transfer';
+					asset.active_to = true;
+					// Update asset with user information
+					if (asset.sys_class_name.toString() !== 'alm_consumable') {
+						setAssetReservedFor();
+					}
+					break;
+
+				case 'shipment_preparation':
+					// install_status = 6 = In stock
+					asset.install_status = '6';
+					asset.substatus = 'pending_transfer';
+					asset.active_to = true;
+					// Update asset with user information
+					if (asset.sys_class_name.toString() !== 'alm_consumable') {
+						setAssetReservedFor();
+					}
+					break;
+
+				case 'in_transit':
+					asset.install_status = '9';
+					asset.substatus = 'reserved';
+					asset.active_to = true;
+					if (asset.sys_class_name.toString() !== 'alm_consumable') {
+						setAssetReservedFor();
+					}
+					break;
+
+				case 'received':
+					gs.info('Stage changed to received');
+					asset.install_status = '6';
+					asset.stockroom = current.transfer_order.to_stockroom;
+					asset.active_to = false;
+					if (asset.sys_class_name.toString() !== 'alm_consumable') {
+						setAssetReservedFor();
+					}
+					if (asset.substatus != 'reserved' || current.request_line.nil() || current.request_line.requested_for.nil()) {
+						asset.substatus = 'available';
+					}
+
+					break;
+
+				case 'delivered':
+					asset.install_status = '6';
+					asset.substatus = 'reserved';
+					asset.active_to = false;
+					break;
+
+				default:
+					// Nothing to do
+					updateAsset = false;
+			}			
+		}
+
+		// Update the asset
+		
+		updateTOLAsset(updateAsset, assetIsDefective, assetIsPreallocated, asset);
+		propagateStage(current, current.stage);
+	}
+
+	function getChildrenInStage(transferOrder, stage) {
+		var grTOL = new GlideRecord('alm_transfer_order_line');
+		grTOL.addQuery('transfer_order', transferOrder.sys_id);
+		grTOL.addQuery('stage', 'IN', stage);
+		grTOL.query();
+
+		return grTOL.getRowCount();
+	}
+
+	function getChildrenCount(transferOrder){
+		var grTOL = new GlideRecord('alm_transfer_order_line');
+		grTOL.addQuery('transfer_order', transferOrder.sys_id);
+		grTOL.query();
+
+		return grTOL.getRowCount();
+	}	
+
+	function propagateStage(transferOrderLine, action){
+		var totalChildren = parseInt(getChildrenCount(transferOrderLine.transfer_order));
+		var stageChildren = parseInt(getChildrenInStage(transferOrderLine.transfer_order, transferOrderLine.stage));
+		gs.info('Total children: '+totalChildren+' - '+stageChildren+' - action: '+action);;
+
+		var grTO = new GlideRecord('alm_transfer_order');
+		grTO.addQuery('sys_id', transferOrderLine.transfer_order.sys_id);
+		grTO.query();
+
+		if (grTO.next()) {
+			gs.info('Total children: '+totalChildren+' - '+stageChildren+' - acztion: '+action+' - '+(action == 'requested' && totalChildren == stageChildren));
+			if (action == 'requested' && totalChildren == stageChildren){
+				grTO.stage = action;
+			} else if (action === 'in_transit') {
+				if (totalChildren === stageChildren)
+					grTO.stage = 'fully_shipped';
+				else
+					grTO.stage = 'partially_shipped';
+			} else if (action === 'cancelled') {
+				if (totalChildren === stageChildren) {
+					grTO.stage = 'cancelled';
+				} 
+			} else if ((action == 'received' || action == 'delivered') && (totalChildren == stageChildren))
+				grTO.stage = action;
+			else if (action == 'shipment_preparation' && grTO.getValue('stage') != 'partially_shipped')
+				grTO.stage = action;
+			grTO.update();
+
+			if (action == 'requested'){
+				var grTOL = new GlideRecord('alm_transfer_order_line');
+				grTOL.addQuery('sys_id', transferOrderLine.sys_id);
+				grTOL.query();
+				if(grTOL.next()){
+					grTOL.quantity_remaining = grTOL.quantity_requested;
+					grTOL.update();
+				}
+			}
+		}		
+
+	}
+
+	function updateTOLAsset(updateAsset, assetIsDefective, assetIsPreallocated, asset) {
+		if (updateAsset) {
+			gs.info('TOL: Updating the asset');
+			if (assetIsDefective)
+				asset.substatus = 'defective';
+			else if (assetIsPreallocated)
+				asset.substatus = 'pre_allocated';
+			asset.update();
+		}
+	}
+
+	function setAssetReservedFor() {
+		// Update asset with user information ('reserved_for') when the TOL is created from Service Catalog REQ
+		// Or when a TOL has 'request_line' (REQ-->RITM) and has been 'requested_for' (reference to sys_user) 
+		if (!gs.nil(current.request_line)) {
+			if (!gs.nil(current.request_line.request.requested_for)) {
+				asset.reserved_for = current.request_line.request.requested_for;
+			}
+		}
+	}	// Add your code here
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-09-29 10:08:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c0e5f5601b525d10c7c9fc078b4bcb3f</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>CMB Push Status to Asset/Consumable</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_c0e5f5601b525d10c7c9fc078b4bcb3f</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-09-30 10:18:52</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=c0e5f5601b525d10c7c9fc078b4bcb3f"/>
+</record_update>

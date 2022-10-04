@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="x_tsigh_cmb_warehouse_name" label="Warehouse name" language="en" table="alm_stockroom">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_tsigh_cmb_warehouse_name</element>
+            <help/>
+            <hint/>
+            <label>Warehouse name</label>
+            <language>en</language>
+            <name>alm_stockroom</name>
+            <plural>Warehouse names</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-09-29 14:37:10</sys_created_on>
+            <sys_id>f693b22c1bda9d1030bc986c9b4bcb9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Warehouse name</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_documentation_alm_stockroom_x_tsigh_cmb_warehouse_name_en</sys_update_name>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-09-29 14:37:10</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

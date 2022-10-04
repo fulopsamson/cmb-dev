@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>system property for the main stockroom</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_tsigh_cmb.main_stockroom</name>
+        <read_roles/>
+        <suffix>main_stockroom</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-29 13:25:38</sys_created_on>
+        <sys_id>2ed2aa2c1bd25d10c7c9fc078b4bcb2b</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_tsigh_cmb.main_stockroom</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_properties_2ed2aa2c1bd25d10c7c9fc078b4bcb2b</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-03 12:12:52</sys_updated_on>
+        <type>string</type>
+        <value>496876b51bd65150c7c9fc078b4bcbe0</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=2ed2aa2c1bd25d10c7c9fc078b4bcb2b"/>
+</record_update>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="7f8d21a41b125d10c7c9fc078b4bcb0f" sys_domain="global" table="x_tsigh_cmb_u_cmdb_ci_segment" version="3" view="Order_Template">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>441c623d1b965150c7c9fc078b4bcb8c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_provider</element>
+            <position>1</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>c81c623d1b965150c7c9fc078b4bcb8c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_billing_profile</element>
+            <position>2</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>4c1c623d1b965150c7c9fc078b4bcb8c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_la_provider_id</element>
+            <position>3</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>cc1c623d1b965150c7c9fc078b4bcb8c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_mrc</element>
+            <position>4</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>401c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_from</element>
+            <position>5</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>c01c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_created_by</element>
+            <position>6</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>441c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_contract_period</element>
+            <position>7</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>c41c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>kind_of_order</element>
+            <position>8</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>481c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>9</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>c81c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_legacy_id</element>
+            <position>10</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>4c1c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_service</element>
+            <position>11</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>cc1c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_currency</element>
+            <position>12</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>401c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_order</element>
+            <position>13</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>c01c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_otc</element>
+            <position>14</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>441c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_to</element>
+            <position>15</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>c41c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>sys_created_on</element>
+            <position>16</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>481c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>rfs_r_date</element>
+            <position>17</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>c81c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_billing_date</element>
+            <position>18</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
+            <sys_id>4c1c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_tsigh_cmb_u_cmdb_ci_segment</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-29 09:31:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7f8d21a41b125d10c7c9fc078b4bcb0f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_tsigh_cmb_u_cmdb_ci_segment</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_section_7f8d21a41b125d10c7c9fc078b4bcb0f</sys_update_name>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-09-29 09:31:07</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Order Template" name="Order_Template">fb8ded641b125d10c7c9fc078b4bcb8e</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

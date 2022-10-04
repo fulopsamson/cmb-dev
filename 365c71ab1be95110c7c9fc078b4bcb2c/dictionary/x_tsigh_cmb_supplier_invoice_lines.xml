@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Supplier invoice lines" max_length="40" name="x_tsigh_cmb_supplier_invoice_lines" sizeclass="3176" type="collection">
+        <element label="Currency" max_length="32" name="currency" read_only="true" reference="fx_currency" type="reference"/>
+        <element label="Product" max_length="32" name="product" reference="cmdb_model" type="reference"/>
+        <element label="Quantity" max_length="40" name="quantity" type="integer"/>
+        <element label="Serial numbers" max_length="40" name="serial_numbers" type="string"/>
+        <element label="Supplier invoice" max_length="32" name="supplier_invoice" read_only="true" reference="x_tsigh_cmb_supplier_invoice" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;&#13;&#10;&#9;&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Total price" max_length="40" name="total_price" read_only="true" type="float"/>
+        <element label="Unit price" max_length="40" name="unit_price" type="float"/>
+        <element choice="3" default="0" label="VAT" max_length="40" name="vat" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="0" sequence="0" value="0"/>
+                <element inactive_on_update="false" label="9" sequence="1" value="9"/>
+                <element inactive_on_update="false" label="19" sequence="2" value="19"/>
+                <element inactive_on_update="false" label="20" sequence="3" value="20"/>
+                <element inactive_on_update="false" label="24" sequence="4" value="24"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="product"/>
+        </index>
+        <index name="index2">
+            <element name="currency"/>
+        </index>
+        <index name="index3">
+            <element name="supplier_invoice"/>
+        </index>
+    </element>
+</database>

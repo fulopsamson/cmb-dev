@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Stockroom" max_length="40" name="alm_stockroom" sizeclass="262" type="collection">
+    <element label="Stockroom" max_length="40" name="alm_stockroom" sizeclass="264" type="collection">
+        <element label="Billing profile" max_length="32" name="x_tsigh_cmb_billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.u_account" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Legacy ID" max_length="10" name="x_tsigh_cmb_legacy_id" read_only="true" type="string"/>
         <element label="POP CI" max_length="32" name="x_tsigh_cmb_pop_ci" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_pop" type="reference"/>
+        <element label="Warehouse name" max_length="200" name="x_tsigh_cmb_warehouse_name" type="string"/>
+        <index name="index">
+            <element name="x_tsigh_cmb_billing_profile"/>
+        </index>
         <index name="index2">
             <element name="x_tsigh_cmb_pop_ci"/>
         </index>

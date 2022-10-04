@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>u_cancellation_form</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-09-23 11:22:49</sys_created_on>
+        <sys_id>5d9dc7621b0e9510c7c9fc078b4bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_cancellation_form</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_policy_action_5d9dc7621b0e9510c7c9fc078b4bcb28</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-09-23 11:22:49</sys_updated_on>
+        <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
+        <ui_policy display_value="CMB Service Make termination fields R/O initially">f23d83621b0e9510c7c9fc078b4bcb3d</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_policy_action_5d9dc7621b0e9510c7c9fc078b4bcb28</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>true</disabled><field>u_cancellation_form</field><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-09-23 11:22:49</sys_created_on><sys_id>5d9dc7621b0e9510c7c9fc078b4bcb28</sys_id><sys_mod_count>0</sys_mod_count><sys_name>u_cancellation_form</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_ui_policy_action_5d9dc7621b0e9510c7c9fc078b4bcb28</sys_update_name><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-09-23 11:22:49</sys_updated_on><table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table><ui_policy display_value="CMB Service Make termination fields R/O initially">f23d83621b0e9510c7c9fc078b4bcb3d</ui_policy><visible>ignore</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>-83350664</payload_hash>
+        <record_name>u_cancellation_form</record_name>
+        <reverted_from/>
+        <source>62414eab1be95110c7c9fc078b4bcb64</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-09-23 11:22:49</sys_created_on>
+        <sys_id>9d9dc7621b0e9510c7c9fc078b4bcb2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1836a15fbff0000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-09-23 11:22:49</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>d59dc762a50e95103146eb9982edb92a</update_guid>
+        <update_guid_history>d59dc762a50e95103146eb9982edb92a:-83350664</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-09-23 11:27:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>912288bed52a48cea4fc36a4dee696d1</sys_id>
+        <sys_metadata>5d9dc7621b0e9510c7c9fc078b4bcb28</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_cancellation_form</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_5d9dc7621b0e9510c7c9fc078b4bcb28</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_5d9dc7621b0e9510c7c9fc078b4bcb28">9d9dc7621b0e9510c7c9fc078b4bcb2a</sys_update_version>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-09-23 11:27:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

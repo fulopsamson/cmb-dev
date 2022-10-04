@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Product type" max_length="40" name="x_tsigh_cmb_product_type" sizeclass="0" type="collection">
+    <element label="Product type" max_length="40" name="x_tsigh_cmb_product_type" sizeclass="55" type="collection">
         <element label="Capacity" max_length="40" name="capacity" type="boolean"/>
         <element label="Cost code" max_length="40" name="cost_code" type="string"/>
         <element label="Description" max_length="40" name="description" type="string"/>
+        <element label="Legacy ID" max_length="10" name="legacy_id" type="string"/>
         <element label="Name" max_length="40" name="name" type="string"/>
         <element label="Product identifier" max_length="40" name="product_identifier" type="string"/>
     </element>

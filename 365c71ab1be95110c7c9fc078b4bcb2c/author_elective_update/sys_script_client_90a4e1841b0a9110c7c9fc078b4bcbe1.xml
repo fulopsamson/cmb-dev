@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>total_net_value</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Total value RON OnChange</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	
+	var total = g_form.getValue('total_net_value').replace(/,/g, '');
+	var rate = g_form.getValue('exchange_rate_value');
+		
+	var total_ron = parseFloat(total * rate);
+	js.info('total_ron' + total_ron);
+	g_form.setValue('total_net_value_in_ron', 'alma a fa alatt');
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-15 09:24:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>90a4e1841b0a9110c7c9fc078b4bcbe1</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Total value RON OnChange</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_client_90a4e1841b0a9110c7c9fc078b4bcbe1</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-09-15 09:42:07</sys_updated_on>
+        <table>x_tsigh_cmb_supplier_invoice</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_client_90a4e1841b0a9110c7c9fc078b4bcbe1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;total_net_value&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Total value RON OnChange&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	
+	var total = g_form.getValue('total_net_value').replace(/,/g, '');
+	var rate = g_form.getValue('exchange_rate_value');
+		
+	var total_ron = parseFloat(total * rate);
+	js.info('total_ron' + total_ron);
+	g_form.setValue('total_net_value_in_ron', 'alma a fa alatt');
+	
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;szabo.zoltan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-15 09:24:35&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;90a4e1841b0a9110c7c9fc078b4bcbe1&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;Total value RON OnChange&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_90a4e1841b0a9110c7c9fc078b4bcbe1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;szabo.zoltan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-09-15 09:42:07&lt;/sys_updated_on&gt;&lt;table&gt;x_tsigh_cmb_supplier_invoice&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>922953314</payload_hash>
+        <record_name>Total value RON OnChange</record_name>
+        <reverted_from/>
+        <source>89509a301bbd5510c7c9fc078b4bcbfc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-15 09:42:07</sys_created_on>
+        <sys_id>1cd92d881b0a9110c7c9fc078b4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1834086e9e30000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-09-15 09:42:07</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>14d92d88200a91108f8b77916477f970</update_guid>
+        <update_guid_history>14d92d88200a91108f8b77916477f970:922953314,c8182548f40a911028d6b8175a17d03c:138120821,edd72148de0a91105e8b7065bf3fcba3:-411140498,b21729847b0a9110ebc0d37174a7adbc:-1493216421,8126a5c4db0a91105fe009922d158aa8:275587334,63c5e1c4810a911066855216159af1a4:-113132339</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-15 09:47:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>7887d00386be4594a4b11e0379f8c5e4</sys_id>
+        <sys_metadata>90a4e1841b0a9110c7c9fc078b4bcbe1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Total value RON OnChange</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Supplier invoice">0e3b35471b755d10c7c9fc078b4bcb6f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_client_90a4e1841b0a9110c7c9fc078b4bcbe1</sys_update_name>
+        <sys_update_version display_value="sys_script_client_90a4e1841b0a9110c7c9fc078b4bcbe1">1cd92d881b0a9110c7c9fc078b4bcb70</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-09-15 09:47:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="DELETE">
+        <active>true</active>
+        <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
+        <description/>
+        <device_type>browser</device_type>
+        <hint/>
+        <name>Supplier invoice</name>
+        <order>100</order>
+        <roles>x_tsigh_cmb.supplier_invoice_user</roles>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-12 09:13:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>45860a8f1b755d10c7c9fc078b4bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Supplier invoice</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_app_application_45860a8f1b755d10c7c9fc078b4bcb05</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-09-12 09:13:36</sys_updated_on>
+        <title>Supplier invoice</title>
+        <view_name/>
+    </sys_app_application>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_app_application_45860a8f1b755d10c7c9fc078b4bcb05</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application"><sys_app_application action="INSERT_OR_UPDATE"><active>true</active><category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category><description/><device_type>browser</device_type><hint/><name>Supplier invoice</name><order>100</order><roles>x_tsigh_cmb.supplier_invoice_user</roles><sys_class_name>sys_app_application</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-09-12 09:13:36</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>45860a8f1b755d10c7c9fc078b4bcb05</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Supplier invoice</sys_name><sys_overrides/><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_app_application_45860a8f1b755d10c7c9fc078b4bcb05</sys_update_name><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-09-12 09:13:36</sys_updated_on><title>Supplier invoice</title><view_name/></sys_app_application></record_update>]]></payload>
+        <payload_hash>577241879</payload_hash>
+        <record_name>Supplier invoice</record_name>
+        <reverted_from/>
+        <source>89509a301bbd5510c7c9fc078b4bcbfc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-12 09:13:36</sys_created_on>
+        <sys_id>49860a8f1b755d10c7c9fc078b4bcb08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18330f9ba500000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-09-12 09:13:36</sys_updated_on>
+        <type>Application Menu</type>
+        <update_guid>81860a8f17755d10bc10d2434f260708</update_guid>
+        <update_guid_history>81860a8f17755d10bc10d2434f260708:577241879</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Supplier invoice">7b3094371bb55110c7c9fc078b4bcbe3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-14 08:32:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_application">sys_app_application</sys_db_object>
+        <sys_id>11dd5ab8d15046ef8586329093a8bac9</sys_id>
+        <sys_metadata>45860a8f1b755d10c7c9fc078b4bcb05</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Supplier invoice</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_app_application_45860a8f1b755d10c7c9fc078b4bcb05</sys_update_name>
+        <sys_update_version display_value="sys_app_application_45860a8f1b755d10c7c9fc078b4bcb05">49860a8f1b755d10c7c9fc078b4bcb08</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-09-14 08:32:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

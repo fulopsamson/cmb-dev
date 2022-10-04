@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="kind_of_order" table="x_tsigh_cmb_u_cmdb_ci_segment" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>kind_of_order</element>
+            <name>x_tsigh_cmb_u_cmdb_ci_segment</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-29 09:43:19</sys_created_on>
+            <sys_id>9250b5a81b125d10c7c9fc078b4bcb23</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>kind_of_order</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_choice_x_tsigh_cmb_u_cmdb_ci_segment_kind_of_order</sys_update_name>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-09-29 09:43:19</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>kind_of_order</element>
+            <hint/>
+            <inactive>true</inactive>
+            <label>-- New choice --</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_segment</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-29 09:43:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5e50b5a81b125d10c7c9fc078b4bcb22</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-09-29 09:54:23</sys_updated_on>
+            <value>-- New choice --</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>kind_of_order</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>New</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_segment</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-29 09:54:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>54e27d6c1b125d10c7c9fc078b4bcb99</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-09-29 09:54:23</sys_updated_on>
+            <value>new</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>kind_of_order</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Edit</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_segment</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-29 09:54:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>14e27d6c1b125d10c7c9fc078b4bcb9d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-09-29 09:54:23</sys_updated_on>
+            <value>edit</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>kind_of_order</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Cancellation</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_segment</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-29 09:54:23</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d0e27d6c1b125d10c7c9fc078b4bcba1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-09-29 09:54:23</sys_updated_on>
+            <value>cancellation</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

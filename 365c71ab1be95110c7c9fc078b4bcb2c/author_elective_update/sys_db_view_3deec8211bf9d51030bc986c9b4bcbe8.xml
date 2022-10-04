@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view">
+    <sys_db_view action="DELETE">
+        <description/>
+        <label>Account and location</label>
+        <name>x_tsigh_cmb_acc_loc</name>
+        <plural>Accounts and locations</plural>
+        <sys_class_name>sys_db_view</sys_class_name>
+        <sys_created_by>samson</sys_created_by>
+        <sys_created_on>2022-09-07 08:41:10</sys_created_on>
+        <sys_id>3deec8211bf9d51030bc986c9b4bcbe8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_acc_loc</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_db_view_3deec8211bf9d51030bc986c9b4bcbe8</sys_update_name>
+        <sys_updated_by>samson</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:41:10</sys_updated_on>
+    </sys_db_view>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_db_view_3deec8211bf9d51030bc986c9b4bcbe8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view"><sys_db_view action="INSERT_OR_UPDATE"><description/><label>Account and location</label><name>x_tsigh_cmb_acc_loc</name><plural>Accounts and locations</plural><sys_class_name>sys_db_view</sys_class_name><sys_created_by>samson</sys_created_by><sys_created_on>2022-09-07 08:41:10</sys_created_on><sys_id>3deec8211bf9d51030bc986c9b4bcbe8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_tsigh_cmb_acc_loc</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_db_view_3deec8211bf9d51030bc986c9b4bcbe8</sys_update_name><sys_updated_by>samson</sys_updated_by><sys_updated_on>2022-09-07 08:41:10</sys_updated_on></sys_db_view></record_update>]]></payload>
+        <payload_hash>-421254809</payload_hash>
+        <record_name>x_tsigh_cmb_acc_loc</record_name>
+        <reverted_from/>
+        <source>45310a671b6d111030bc986c9b4bcb4e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson</sys_created_by>
+        <sys_created_on>2022-09-07 08:41:10</sys_created_on>
+        <sys_id>ad2f80611bf9d51030bc986c9b4bcb21</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183171c3e9e0000001</sys_recorded_at>
+        <sys_updated_by>samson</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:41:10</sys_updated_on>
+        <type>Database View</type>
+        <update_guid>e52f80615ef9d510140897722a795921</update_guid>
+        <update_guid_history>e52f80615ef9d510140897722a795921:-421254809</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson</sys_created_by>
+        <sys_created_on>2022-09-07 08:42:11</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_view">sys_db_view</sys_db_object>
+        <sys_id>2a85eb5a8e1244d0a8cec789a8178404</sys_id>
+        <sys_metadata>3deec8211bf9d51030bc986c9b4bcbe8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_acc_loc</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_db_view_3deec8211bf9d51030bc986c9b4bcbe8</sys_update_name>
+        <sys_update_version display_value="sys_db_view_3deec8211bf9d51030bc986c9b4bcbe8">ad2f80611bf9d51030bc986c9b4bcb21</sys_update_version>
+        <sys_updated_by>samson</sys_updated_by>
+        <sys_updated_on>2022-09-07 08:42:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

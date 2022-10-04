@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Budget" max_length="40" name="fm_budget" sizeclass="4" type="collection">
         <element default="0" label="Actual value" max_length="40" name="x_tsigh_cmb_actual_value" read_only="true" type="float"/>
+        <element choice="3" default="RON" label="Currency" max_length="32" name="x_tsigh_cmb_currency" reference="fx_currency" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference">
+            <choice/>
+        </element>
         <element label="Planned Value" max_length="40" name="x_tsigh_cmb_planned_value" type="float"/>
+        <index name="index">
+            <element name="x_tsigh_cmb_currency"/>
+        </index>
     </element>
 </database>

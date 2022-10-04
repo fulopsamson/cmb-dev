@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="currency" label="Currency" language="en" table="x_tsigh_cmb_billing_profile">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>currency</element>
+            <help/>
+            <hint/>
+            <label>Currency</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_billing_profile</name>
+            <plural>Currencies</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-02 12:10:00</sys_created_on>
+            <sys_id>b7fe87771b6d9110c7c9fc078b4bcb7a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Currency</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_documentation_x_tsigh_cmb_billing_profile_currency_en</sys_update_name>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-02 12:10:00</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-12 09:13:36</sys_created_on>
+        <sys_id>9d860a8f1b755d10c7c9fc078b4bcb31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_supplier_invoice.x_tsigh_cmb.supplier_invoice_user</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_security_acl display_value="x_tsigh_cmb_supplier_invoice">99860a8f1b755d10c7c9fc078b4bcb2e</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_9d860a8f1b755d10c7c9fc078b4bcb31</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-09-12 09:13:36</sys_updated_on>
+        <sys_user_role display_value="x_tsigh_cmb.supplier_invoice_user" name="x_tsigh_cmb.supplier_invoice_user">f086c64f1b755d10c7c9fc078b4bcbdf</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

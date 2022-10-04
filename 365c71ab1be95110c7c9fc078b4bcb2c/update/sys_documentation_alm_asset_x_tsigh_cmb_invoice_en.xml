@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="x_tsigh_cmb_invoice" label="Invoice" language="en" table="alm_asset">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>x_tsigh_cmb_invoice</element>
+            <help/>
+            <hint/>
+            <label>Invoice</label>
+            <language>en</language>
+            <name>alm_asset</name>
+            <plural>Invoices</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-15 10:26:45</sys_created_on>
+            <sys_id>060479041b4a9110c7c9fc078b4bcb40</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Invoice</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_documentation_alm_asset_x_tsigh_cmb_invoice_en</sys_update_name>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-15 10:26:45</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

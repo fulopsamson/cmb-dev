@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="id" label="ID" language="en" table="x_tsigh_cmb_u_cmdb_ci_cmb_service">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>id</element>
+            <help/>
+            <hint/>
+            <label>ID</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <plural>IDs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-09-30 08:22:06</sys_created_on>
+            <sys_id>6257aa3c1b529d10c7c9fc078b4bcb67</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>ID</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_documentation_x_tsigh_cmb_u_cmdb_ci_cmb_service_id_en</sys_update_name>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-09-30 08:22:06</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

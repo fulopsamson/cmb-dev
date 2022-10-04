@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_model" label="Service Model" max_length="40" name="cmdb_service_product_model" sizeclass="2" type="collection">
+        <element label="Cost code" max_length="30" name="x_tsigh_cmb_cost_code" type="string"/>
+        <element label="Product identifier" max_length="20" name="x_tsigh_cmb_product_identifier" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.NumberGeneratorServ</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>NumberGeneratorServ</name>
+        <script><![CDATA[var NumberGeneratorServ = Class.create();
+NumberGeneratorServ.prototype = {
+    initialize: function() {
+    },
+	getNext: function(ser){
+		var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+		var ids;
+		gr.addQuery('serial', ser);
+		gr.orderByDesc('id');
+		gr.query();
+		
+		if(gr.next()){
+			ids = gr.id;
+        }
+		
+		if(!ids){
+			ids = 1;
+			return ids;
+		}
+        
+		else if(ids > 0){
+			ids = ids + 1;
+			return ids;
+        }
+		else 
+			return null;
+	},
+
+    type: 'NumberGeneratorServ'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-03 08:26:26</sys_created_on>
+        <sys_id>1dd44af11b165150c7c9fc078b4bcb6f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NumberGeneratorServ</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_1dd44af11b165150c7c9fc078b4bcb6f</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-03 08:26:26</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_include_1dd44af11b165150c7c9fc078b4bcb6f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_tsigh_cmb.NumberGeneratorServ&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;NumberGeneratorServ&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var NumberGeneratorServ = Class.create();
+NumberGeneratorServ.prototype = {
+    initialize: function() {
+    },
+	getNext: function(ser){
+		var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+		var ids;
+		gr.addQuery('serial', ser);
+		gr.orderByDesc('id');
+		gr.query();
+		
+		if(gr.next()){
+			ids = gr.id;
+        }
+		
+		if(!ids){
+			ids = 1;
+			return ids;
+		}
+        
+		else if(ids &gt; 0){
+			ids = ids + 1;
+			return ids;
+        }
+		else 
+			return null;
+	},
+
+    type: 'NumberGeneratorServ'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;szabo.zoltan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-03 08:26:26&lt;/sys_created_on&gt;&lt;sys_id&gt;1dd44af11b165150c7c9fc078b4bcb6f&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;NumberGeneratorServ&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_1dd44af11b165150c7c9fc078b4bcb6f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;szabo.zoltan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-03 08:26:26&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1742812166</payload_hash>
+        <record_name>NumberGeneratorServ</record_name>
+        <reverted_from/>
+        <source>89509a301bbd5510c7c9fc078b4bcbfc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-03 08:26:26</sys_created_on>
+        <sys_id>d3150ef11b165150c7c9fc078b4bcbe9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1839cf419b20000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-03 08:26:26</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>cb150ef168165150207501dddbc3ffe8</update_guid>
+        <update_guid_history>cb150ef168165150207501dddbc3ffe8:-1742812166</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-03 08:37:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>1132f17e5fa94550833d2a05103d7240</sys_id>
+        <sys_metadata>1dd44af11b165150c7c9fc078b4bcb6f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NumberGeneratorServ</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_include_1dd44af11b165150c7c9fc078b4bcb6f</sys_update_name>
+        <sys_update_version display_value="sys_script_include_1dd44af11b165150c7c9fc078b4bcb6f">d3150ef11b165150c7c9fc078b4bcbe9</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-03 08:37:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Endpoint data" section_id="c8b268991bf1d510c7c9fc078b4bcb9b" sys_domain="global" table="x_tsigh_cmb_u_cmdb_ci_cmb_service" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>new_endpoint_a</element>
+            <position>0</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-20 10:24:35</sys_created_on>
+            <sys_id>cb732be91b8ed11030bc986c9b4bcb45</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Endpoint data" display_value="Endpoint data" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c8b268991bf1d510c7c9fc078b4bcb9b</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:24:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_endpoint_a</element>
+            <position>1</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-20 10:24:35</sys_created_on>
+            <sys_id>4f732be91b8ed11030bc986c9b4bcb45</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Endpoint data" display_value="Endpoint data" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c8b268991bf1d510c7c9fc078b4bcb9b</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:24:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>endpoint_a_location</element>
+            <position>2</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-20 10:24:35</sys_created_on>
+            <sys_id>cf732be91b8ed11030bc986c9b4bcb45</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Endpoint data" display_value="Endpoint data" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c8b268991bf1d510c7c9fc078b4bcb9b</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:24:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_pop_a</element>
+            <position>3</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-20 10:24:35</sys_created_on>
+            <sys_id>43732be91b8ed11030bc986c9b4bcb46</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Endpoint data" display_value="Endpoint data" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c8b268991bf1d510c7c9fc078b4bcb9b</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:24:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-20 10:24:35</sys_created_on>
+            <sys_id>c3732be91b8ed11030bc986c9b4bcb46</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Endpoint data" display_value="Endpoint data" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c8b268991bf1d510c7c9fc078b4bcb9b</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:24:35</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>new_endpoint_b</element>
+            <position>5</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-20 10:24:35</sys_created_on>
+            <sys_id>47732be91b8ed11030bc986c9b4bcb46</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Endpoint data" display_value="Endpoint data" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c8b268991bf1d510c7c9fc078b4bcb9b</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:24:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_endpoint_b</element>
+            <position>6</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-20 10:24:35</sys_created_on>
+            <sys_id>c7732be91b8ed11030bc986c9b4bcb46</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Endpoint data" display_value="Endpoint data" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c8b268991bf1d510c7c9fc078b4bcb9b</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:24:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>endpoint_b_location</element>
+            <position>7</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-20 10:24:35</sys_created_on>
+            <sys_id>4b732be91b8ed11030bc986c9b4bcb46</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Endpoint data" display_value="Endpoint data" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c8b268991bf1d510c7c9fc078b4bcb9b</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:24:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_pop_b</element>
+            <position>8</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-09-20 10:24:35</sys_created_on>
+            <sys_id>cb732be91b8ed11030bc986c9b4bcb46</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Endpoint data" display_value="Endpoint data" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c8b268991bf1d510c7c9fc078b4bcb9b</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-09-20 10:24:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Endpoint data</caption>
+            <header>false</header>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-09-06 15:28:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c8b268991bf1d510c7c9fc078b4bcb9b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_tsigh_cmb_u_cmdb_ci_cmb_service</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_section_c8b268991bf1d510c7c9fc078b4bcb9b</sys_update_name>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-09-06 15:28:04</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

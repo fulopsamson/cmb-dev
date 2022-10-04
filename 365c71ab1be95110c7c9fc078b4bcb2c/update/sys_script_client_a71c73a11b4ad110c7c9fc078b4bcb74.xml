@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>serial</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>CMB Combridge ID OnChange</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	var cmb;
+	var ga = new GlideAjax('x_tsigh_cmb.NumberGenerator');
+	ga.addParam('sysparm_name', 'getnext');
+	ga.addParam('sysparm_serial', newValue);	
+	ga.getXML(processResponse);
+	
+	function processResponse(response) {
+		var result = response.responseXML.documentElement.getAttribute("answer");
+		jslog('---' + result);
+		if (result != null){
+			cmb = parseInt(result).toString();
+			if(cmb.length < 6){
+				cmb = new Array(6 - cmb.length + 1).join(0) + cmb;
+			}
+			var id = newValue + " " + cmb;
+			g_form.setValue('id', parseInt(result));
+			g_form.setValue('u_combridge_id', id);
+		}
+			
+		else 
+			g_form.showFieldMsg('id', 'Error, no returnable value!', 'error');
+	}
+
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-20 12:17:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a71c73a11b4ad110c7c9fc078b4bcb74</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>CMB Combridge ID OnChange</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_client_a71c73a11b4ad110c7c9fc078b4bcb74</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-03 08:14:37</sys_updated_on>
+        <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
