@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="sys_user" label="Contact" max_length="40" name="customer_contact" sizeclass="2745" text_index="true" type="collection">
-        <element label="Segment" max_length="32" name="x_tsigh_cmb_segment" reference="x_tsigh_cmb_u_cmdb_ci_segment" type="reference"/>
-        <index name="index">
-            <element name="x_tsigh_cmb_segment"/>
-        </index>
-    </element>
-</database>

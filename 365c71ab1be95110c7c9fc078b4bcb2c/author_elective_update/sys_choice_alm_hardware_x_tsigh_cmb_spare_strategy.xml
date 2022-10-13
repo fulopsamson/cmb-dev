@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="x_tsigh_cmb_spare_strategy" table="alm_hardware" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>x_tsigh_cmb_spare_strategy</element>
+            <name>alm_hardware</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-10-06 12:55:59</sys_created_on>
+            <sys_id>bc9f5a321b1e1550c7c9fc078b4bcb04</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_tsigh_cmb_spare_strategy</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_choice_alm_hardware_x_tsigh_cmb_spare_strategy</sys_update_name>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-10-06 12:55:59</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_tsigh_cmb_spare_strategy</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Local</label>
+            <language>en</language>
+            <name>alm_hardware</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-10-06 12:56:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3c9f9a321b1e1550c7c9fc078b4bcb26</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-10-06 12:56:25</sys_updated_on>
+            <value>Local</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>x_tsigh_cmb_spare_strategy</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Warehouse</label>
+            <language>en</language>
+            <name>alm_hardware</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>toma.istvan</sys_created_by>
+            <sys_created_on>2022-10-06 12:55:59</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4f8f5a321b1e1550c7c9fc078b4bcb6d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>toma.istvan</sys_updated_by>
+            <sys_updated_on>2022-10-06 12:56:16</sys_updated_on>
+            <value>Warehouse</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

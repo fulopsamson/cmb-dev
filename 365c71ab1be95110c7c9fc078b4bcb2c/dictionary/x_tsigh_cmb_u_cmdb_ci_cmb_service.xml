@@ -223,7 +223,6 @@
             </choice>
         </element>
         <element label="Capacity value" max_length="40" name="u_capacity_value" type="integer"/>
-        <element label="Child service" max_length="32" name="u_child_service" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_cmb_service" type="reference"/>
         <element display="true" label="Combridge ID" max_length="200" name="u_combridge_id" read_only="true" type="string"/>
         <element label="Contract" max_length="32" name="u_contract" reference="ast_contract" reference_qual="javascript:&quot;x_tsigh_cmb_billing_profile=&quot; + current.u_billing_profile + &quot;^u_type=PO^ORu_type=Addendum&quot;" type="reference" use_reference_qualifier="advanced"/>
         <element label="Contract period" max_length="40" name="u_contract_period" type="integer"/>

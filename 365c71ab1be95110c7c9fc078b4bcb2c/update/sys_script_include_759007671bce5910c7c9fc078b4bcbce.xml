@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
     <sys_script_include action="INSERT_OR_UPDATE">
-        <access>package_private</access>
+        <access>public</access>
         <active>true</active>
         <api_name>x_tsigh_cmb.CMBAjax</api_name>
         <caller_access/>
@@ -9,53 +9,87 @@
         <name>CMBAjax</name>
         <script><![CDATA[var CMBAjax = Class.create();
 CMBAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-	sellDevices: function() {
-		var devices = this.getParameter('devicelist');
-		var ret = new x_tsigh_cmb.CMBUtils().createCustomerInvoice(devices);
-		return JSON.stringify(ret);
-	},
-	transferDevices:function(){
-		var devices = this.getParameter('devicelist');
-		var ret = new x_tsigh_cmb.CMBUtils().createTO(devices);
-		return JSON.stringify(ret);
-	},
-	getExchangeRate:function(){
-		var ret = '';
-		var date = this.getParameter('sysparm_datestr');
-		var curr = this.getParameter('sysparm_currency');
+    sellDevices: function() {
+        var devices = this.getParameter('devicelist');
+        var ret = new x_tsigh_cmb.CMBUtils().createCustomerInvoice(devices);
+        return JSON.stringify(ret);
+    },
+    transferDevices: function() {
+        var devices = this.getParameter('devicelist');
+        var ret = new x_tsigh_cmb.CMBUtils().createTO(devices);
+        return JSON.stringify(ret);
+    },
+    getBudget: function() {
+        var cc = this.getParameter('sysparm_cc');
 
-		var grx = new GlideRecord('fx_rate');
-		grx.addQuery('sys_created_on','STARTSWITH',date);
-		grx.addQuery('currency',curr);
-		grx.query();
-		if(grx.next()){
-			ret = grx.rate;
-		}
-		return ret;
-	},
-	
-	getCurrency:function(){
-		var bp = this.getParameter('sysparm_profileid');
-		var gr = new GlideRecord('x_tsigh_cmb_billing_profile');
-		gr.get(bp);
-		return gr.currency.sys_id.toString();
-	},
+        var gr = new GlideRecord('fm_budget');
+        gr.addQuery('start', '<=', gs.endOfToday());
+        gr.addQuery('end', '>=', gs.beginningOfToday());
+        gr.addQuery('u_cost_center', cc);
+        gr.query();
+        if (gr.next()) {
+            return gr.sys_id;
+        }
+        return;
 
+    },
 
+    uploadAtt: function() {
+        var sysparm_data = this.getParameter('sysparm_data');
+        var attachment = new GlideSysAttachment();
 
-	type: 'CMBAjax'
+        var rec = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+        rec.initialize();
+        var fileName = 'temp.xlsx';
+        var contentType = 'application/vnd.ms-excel';
+        var content = sysparm_data;
+
+        var agr = attachment.write(rec, fileName, contentType, content);
+
+        return agr;
+    },
+
+    getExchangeRate: function() {
+        var ret = '';
+        var date = this.getParameter('sysparm_datestr');
+        var curr = this.getParameter('sysparm_currency');
+
+        var grx = new GlideRecord('fx_rate');
+        grx.addQuery('sys_created_on', 'STARTSWITH', date);
+        grx.addQuery('currency', curr);
+        grx.query();
+        if (grx.next()) {
+            ret = Math.round(1 / grx.rate, 4);
+        }
+        return ret;
+    },
+
+    getCurrency: function() {
+        var bp = this.getParameter('sysparm_profileid');
+        var gr = new GlideRecord('x_tsigh_cmb_billing_profile');
+        gr.get(bp);
+        return gr.currency.sys_id.toString();
+    },
+    getGenMethod: function() {
+        var bp = this.getParameter('sysparm_profileid');
+        var gr = new GlideRecord('x_tsigh_cmb_billing_profile');
+        gr.get(bp);
+        return gr.getDisplayValue('invoice_generating_method');
+    },
+
+    type: 'CMBAjax'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-09-26 13:08:52</sys_created_on>
         <sys_id>759007671bce5910c7c9fc078b4bcbce</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>CMBAjax</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_759007671bce5910c7c9fc078b4bcbce</sys_update_name>
-        <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-10-04 08:55:09</sys_updated_on>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-11 18:27:28</sys_updated_on>
     </sys_script_include>
 </record_update>

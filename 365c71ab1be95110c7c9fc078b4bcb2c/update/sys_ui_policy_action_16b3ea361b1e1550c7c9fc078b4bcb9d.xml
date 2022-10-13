@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>x_tsigh_cmb_spare_strategy</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-06 13:14:16</sys_created_on>
+        <sys_id>16b3ea361b1e1550c7c9fc078b4bcb9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_spare_strategy</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_policy_action_16b3ea361b1e1550c7c9fc078b4bcb9d</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-06 13:14:16</sys_updated_on>
+        <table>alm_hardware</table>
+        <ui_policy display_value="Hardware Spare strategy">d5b3e6f21b1e1550c7c9fc078b4bcb09</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>
