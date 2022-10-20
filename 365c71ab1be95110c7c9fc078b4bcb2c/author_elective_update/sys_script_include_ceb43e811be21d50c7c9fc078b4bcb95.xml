@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.Temp</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Temp</name>
+        <script><![CDATA[var Temp = Class.create();
+Temp.prototype = {
+    initialize: function() {},
+    getContent: function(att) {
+        var ga = new GlideSysAttachment();
+
+        return ga.getContent(att);
+    },
+    type: 'Temp'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-13 14:15:02</sys_created_on>
+        <sys_id>ceb43e811be21d50c7c9fc078b4bcb95</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Temp</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_ceb43e811be21d50c7c9fc078b4bcb95</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-13 14:16:23</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_include_ceb43e811be21d50c7c9fc078b4bcb95</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_tsigh_cmb.Temp&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;Temp&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var Temp = Class.create();
+Temp.prototype = {
+    initialize: function() {},
+    getContent: function(att) {
+        var ga = new GlideSysAttachment();
+
+        return ga.getContent(att);
+    },
+    type: 'Temp'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;toma.istvan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-13 14:15:02&lt;/sys_created_on&gt;&lt;sys_id&gt;ceb43e811be21d50c7c9fc078b4bcb95&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Temp&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_ceb43e811be21d50c7c9fc078b4bcb95&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;toma.istvan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-13 14:16:23&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1139848557</payload_hash>
+        <record_name>Temp</record_name>
+        <reverted_from/>
+        <source>155d3a0d1b7d9510c7c9fc078b4bcb27</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-13 14:16:23</sys_created_on>
+        <sys_id>8f157ec11be21d50c7c9fc078b4bcb38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d1b416ad0000001</sys_recorded_at>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-13 14:16:23</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>87157ec1dae21d505d60c2aa2aba2c38</update_guid>
+        <update_guid_history>87157ec1dae21d505d60c2aa2aba2c38:-1139848557,5d157ac1afe21d50038838a713248f96:1324277991,03c43281e4e21d5064f5a4f7b2c6db6f:-1236822321</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-13 14:21:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>0ced8c33515b4a4a856f3e218b814981</sys_id>
+        <sys_metadata>ceb43e811be21d50c7c9fc078b4bcb95</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Temp</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_include_ceb43e811be21d50c7c9fc078b4bcb95</sys_update_name>
+        <sys_update_version display_value="sys_script_include_ceb43e811be21d50c7c9fc078b4bcb95">8f157ec11be21d50c7c9fc078b4bcb38</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-13 14:21:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

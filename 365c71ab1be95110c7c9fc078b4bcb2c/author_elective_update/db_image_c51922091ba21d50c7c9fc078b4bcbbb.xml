@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="DELETE">
+        <active>true</active>
+        <category/>
+        <format>png</format>
+        <height>1020</height>
+        <image>411922091ba21d50c7c9fc078b4bcbb8</image>
+        <name>411922091ba21d50c7c9fc078b4bcbb8.png</name>
+        <size_bytes>173671</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-13 13:23:50</sys_created_on>
+        <sys_id>c51922091ba21d50c7c9fc078b4bcbbb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>411922091ba21d50c7c9fc078b4bcbb8.png</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>db_image_c51922091ba21d50c7c9fc078b4bcbbb</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-13 13:23:50</sys_updated_on>
+        <thumbnail/>
+        <width>826</width>
+    </db_image>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>db_image_c51922091ba21d50c7c9fc078b4bcbbb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>1020</height><image>411922091ba21d50c7c9fc078b4bcbb8</image><name>411922091ba21d50c7c9fc078b4bcbb8.png</name><size_bytes>173671</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-13 13:23:50</sys_created_on><sys_id>c51922091ba21d50c7c9fc078b4bcbbb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>411922091ba21d50c7c9fc078b4bcbb8.png</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>db_image_c51922091ba21d50c7c9fc078b4bcbbb</sys_update_name><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-10-13 13:23:50</sys_updated_on><thumbnail/><width>826</width></db_image></record_update>]]></payload>
+        <payload_hash>1308422266</payload_hash>
+        <record_name>411922091ba21d50c7c9fc078b4bcbb8.png</record_name>
+        <reverted_from/>
+        <source>58f5b3821b1a9150c7c9fc078b4bcb91</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-13 13:23:50</sys_created_on>
+        <sys_id>c11922091ba21d50c7c9fc078b4bcbbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d183f8ea0000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-13 13:23:50</sys_updated_on>
+        <type>Images</type>
+        <update_guid>0d192209a8a21d505cb09e4eb4662bbc</update_guid>
+        <update_guid_history>0d192209a8a21d505cb09e4eb4662bbc:1308422266</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="411922091ba21d50c7c9fc078b4bcbb8.png">6295f2051be21d50c7c9fc078b4bcb75</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-13 14:18:33</sys_created_on>
+        <sys_db_object display_value="" name="db_image">db_image</sys_db_object>
+        <sys_id>7f6beb97448c4ee8908eb6ff40a692c9</sys_id>
+        <sys_metadata>c51922091ba21d50c7c9fc078b4bcbbb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>411922091ba21d50c7c9fc078b4bcbb8.png</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>db_image_c51922091ba21d50c7c9fc078b4bcbbb</sys_update_name>
+        <sys_update_version display_value="db_image_c51922091ba21d50c7c9fc078b4bcbbb">c11922091ba21d50c7c9fc078b4bcbbd</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-13 14:18:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name>new_stock_control</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.x_tsigh_cmb_under_stockroom_control!=true</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>New stockroom control</name>
+        <onclick>stockroomcontrol()</onclick>
+        <order>-100</order>
+        <script><![CDATA[function stockroomcontrol() {
+    var ga = new GlideAjax('x_tsigh_cmb.AjaxUtils');
+    ga.addParam('sysparm_name', 'getAssetsAtStockroom');
+    ga.addParam('sysparm_stockroom', g_form.getUniqueValue());
+    ga.getXML(processResponse);
+}
+
+function processResponse(response) {
+    var result = response.responseXML.documentElement.getAttribute("answer");
+    alert(JSON.parse(result));
+	var alma =  JSON.parse(result);
+	g_form.setValue('x_tsigh_cmb_current_inventory', 'c51bfe311b56d15030bc986c9b4bcb5e');
+	g_form.setValue('x_tsigh_cmb_under_stockroom_control', true);
+	g_form.save();
+}
+/*    gsftSubmit(null, g_form.getFormElement(), 'new_stock_control');
+}
+
+if (typeof window == 'undefined')
+    serverReopen();
+
+function serverReopen() {
+    current.x_tsigh_cmb_under_stockroom_control = 'true';
+    gs.addInfoMessage('New stockroom control started.');
+	current.update();
+    action.setRedirectURL(current);
+}*/]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-18 05:44:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>99afa2ea1ba21110c7c9fc078b4bcb57</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>New stockroom control</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_action_99afa2ea1ba21110c7c9fc078b4bcb57</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-18 09:21:16</sys_updated_on>
+        <table>alm_stockroom</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_action_99afa2ea1ba21110c7c9fc078b4bcb57</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;new_stock_control&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition&gt;current.x_tsigh_cmb_under_stockroom_control!=true&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;format_for_configurable_workspace&gt;false&lt;/format_for_configurable_workspace&gt;&lt;hint/&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;New stockroom control&lt;/name&gt;&lt;onclick&gt;stockroomcontrol()&lt;/onclick&gt;&lt;order&gt;-100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function stockroomcontrol() {
+    var ga = new GlideAjax('x_tsigh_cmb.AjaxUtils');
+    ga.addParam('sysparm_name', 'getAssetsAtStockroom');
+    ga.addParam('sysparm_stockroom', g_form.getUniqueValue());
+    ga.getXML(processResponse);
+}
+
+function processResponse(response) {
+    var result = response.responseXML.documentElement.getAttribute("answer");
+    alert(JSON.parse(result));
+	var alma =  JSON.parse(result);
+	g_form.setValue('x_tsigh_cmb_current_inventory', 'c51bfe311b56d15030bc986c9b4bcb5e');
+	g_form.setValue('x_tsigh_cmb_under_stockroom_control', true);
+	g_form.save();
+}
+/*    gsftSubmit(null, g_form.getFormElement(), 'new_stock_control');
+}
+
+if (typeof window == 'undefined')
+    serverReopen();
+
+function serverReopen() {
+    current.x_tsigh_cmb_under_stockroom_control = 'true';
+    gs.addInfoMessage('New stockroom control started.');
+	current.update();
+    action.setRedirectURL(current);
+}*/]]&gt;&lt;/script&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;toma.istvan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-18 05:44:43&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;99afa2ea1ba21110c7c9fc078b4bcb57&lt;/sys_id&gt;&lt;sys_mod_count&gt;41&lt;/sys_mod_count&gt;&lt;sys_name&gt;New stockroom control&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_99afa2ea1ba21110c7c9fc078b4bcb57&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;toma.istvan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-18 09:21:16&lt;/sys_updated_on&gt;&lt;table&gt;alm_stockroom&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1623939154</payload_hash>
+        <record_name>New stockroom control</record_name>
+        <reverted_from/>
+        <source>155d3a0d1b7d9510c7c9fc078b4bcb27</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-18 09:21:16</sys_created_on>
+        <sys_id>28816fa61b661110c7c9fc078b4bcb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183ea65b0240000001</sys_recorded_at>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-18 09:21:16</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>20816fa687661110bbf96f48c2b01366</update_guid>
+        <update_guid_history>20816fa687661110bbf96f48c2b01366:1623939154,7121efa6926611103bc7fb849a36f53e:-178299241,fdff5fa6296611105e367a50987e6b5c:-765668927,d3af53a6b66611109470c0c794bb60c6:-1467402760,c72f1f26b76611106f7dd1dd945f4f4e:1331968842,569e1726d36611102132366dfc0c5eb8:1872833386,1f6a1b2218661110df43bfd91679660d:-1191375510,ef3a1b221766111080426f1135bbca07:-106109359,ae39d722e766111016ad8337e0478a7b:-706285706,922957224966111007db31cfd19a23fb:800470099,361817ee7426111006828cf014096b8b:-1592583096,c8e713ee8e26111054e11b1caddf51e5:1493731441,bfa717aead261110f7b8320f18e22184:1187554980,0617d3ae152611106feee4bf1a267cef:-658446004,ec07d3ae0d261110a246dacdefd852ea:62900561,78e1cf2e7ce21110b58abcdf34806519:1404434897,aca0072e01e2111055ad4f0789baec7d:-1298781956,cb708faa99e21110ffc1cca72da9d42f:2103101643,5f500fea24e21110653bc7e4884d054a:323677038,f2108bea55e211106b9d5b542110e719:210885456,d2ffb6eac2e2111018bbb5edc9945281:1567639090,13cf72eab9e21110cc9f3d4de1535c8f:1775745397,bcaf3a6af5e2111039b33d6f518f51c2:-1019195758,c15f3aaaa7e211101e469ded24726a77:-1999646792,1d3f7a6ad0e21110efadbf4708c7cecc:848335726,f30ffe2a9ee211102b19e376a3a4d6ac:-1950789737,a3def62a8fe21110509a401b037e4445:116248543,88edfe2aece21110bd1ff2d92e41663f:-793619383,4abd32e6eee2111042180ca248f1d3d2:975682391,0c7db62ac1e21110c298432971f745b2:-337353826,83ec7ee614e21110b2de9a69d5e747da:774843724,d54b76a622e21110c3c6f48ee7cf4514:1262982492,831b7e66b0e21110921622e618ac9954:1504210354,a4baba6633e21110e1bcbf159343a3f8:-321363291,965a7e2660e21110c96cbccf688d0d0d:-2028133664,40e97e267fe211105571850eab5c5f06:-673038088,b365f22238e2111099f09de09dd3193f:-1392758764,6035b222c7e21110068b54891a5991ad:-1579770536,f1a4faee0fa21110a649658dfeedbe30:-931261536,327436ee5fa21110eea749e2c25faa94:1779620188,44c0faeacda21110c8b2017b04fc514e:-1179431783,64ff26eaa0a21110e799db325ce4565a:4942083</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-18 09:37:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>0761ccedae4249b2ba8c458edd0fbe24</sys_id>
+        <sys_metadata>99afa2ea1ba21110c7c9fc078b4bcb57</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New stockroom control</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Stockroom">97dfb9931ba11110c7c9fc078b4bcb1f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_action_99afa2ea1ba21110c7c9fc078b4bcb57</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_99afa2ea1ba21110c7c9fc078b4bcb57">28816fa61b661110c7c9fc078b4bcb66</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-18 09:37:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

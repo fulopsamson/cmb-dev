@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script><![CDATA[function submit() {
+	// Get file that was uploaded
+	var selectedFile = document.getElementById('file').files[0];
+	//alert(selectedFile);
+	// Trigger file upload
+	if (selectedFile) fileUpload(selectedFile);
+}
+
+function fileUpload(file) {
+	var reader = new FileReader();
+		reader.readAsText(file);
+	// Create an event listener to trigger Ajax funciton after file is read
+	reader.onload = function(evt) {
+		var ga = new GlideAjax('x_tsigh_cmb.CMBAjax');
+		ga.addParam('sysparm_name', 'uploadAtt'); 
+		ga.addParam('sysparm_data', evt.target.result); 
+		ga.getXML(function(response){
+			var answer = response.responseXML.documentElement.getAttribute("answer");
+			alert(answer);
+			
+			if (answer) location.reload();
+		});
+	};
+	// Read file
+
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_tsigh_cmb_cmb_upload_service.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<input type="file" id="file" accept="image/*"></input>
+	<button type="button" class="btn btn-primary" id="submit" onclick="submit()">Submit</button>
+</j:jelly>]]></html>
+        <name>cmb_upload_service</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-11 14:46:32</sys_created_on>
+        <sys_id>61d7acec1bae1d5030bc986c9b4bcbb3</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>cmb_upload_service</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_page_61d7acec1bae1d5030bc986c9b4bcbb3</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-11 18:27:12</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_page_61d7acec1bae1d5030bc986c9b4bcbb3</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function submit() {
+	// Get file that was uploaded
+	var selectedFile = document.getElementById('file').files[0];
+	//alert(selectedFile);
+	// Trigger file upload
+	if (selectedFile) fileUpload(selectedFile);
+}
+
+function fileUpload(file) {
+	var reader = new FileReader();
+		reader.readAsText(file);
+	// Create an event listener to trigger Ajax funciton after file is read
+	reader.onload = function(evt) {
+		var ga = new GlideAjax('x_tsigh_cmb.CMBAjax');
+		ga.addParam('sysparm_name', 'uploadAtt'); 
+		ga.addParam('sysparm_data', evt.target.result); 
+		ga.getXML(function(response){
+			var answer = response.responseXML.documentElement.getAttribute("answer");
+			alert(answer);
+			
+			if (answer) location.reload();
+		});
+	};
+	// Read file
+
+}]]&gt;&lt;/client_script&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;x_tsigh_cmb_cmb_upload_service.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+	&lt;input type="file" id="file" accept="image/*"&gt;&lt;/input&gt;
+	&lt;button type="button" class="btn btn-primary" id="submit" onclick="submit()"&gt;Submit&lt;/button&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;cmb_upload_service&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;daniel.szabo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-11 14:46:32&lt;/sys_created_on&gt;&lt;sys_id&gt;61d7acec1bae1d5030bc986c9b4bcbb3&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_name&gt;cmb_upload_service&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_61d7acec1bae1d5030bc986c9b4bcbb3&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;toma.istvan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-11 18:27:12&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2116728186</payload_hash>
+        <record_name>cmb_upload_service</record_name>
+        <reverted_from/>
+        <source>49db5ce21bd6d150c7c9fc078b4bcb8d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-11 18:27:12</sys_created_on>
+        <sys_id>195b1de01b269950c7c9fc078b4bcb28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183c84cfd6b0000001</sys_recorded_at>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-11 18:27:12</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>115b1de0f526995018ec68478019a828</update_guid>
+        <update_guid_history>115b1de0f526995018ec68478019a828:-2116728186,151fe8a42cee1d5085dede91d743e94d:1421648184,465e286452ee1d50a59adb0e0f81a52d:-973734654,d65d2c2417ee1d5016d9a7fa13458f10:268257565,06dce024c5ee1d50fdbef30f735e0fc5:-1079054807,70ccece082ee1d50ad2d10a822793435:-826524718,a18b64e013ee1d504d09df4920a197a8:-542697331,fd0b6ca063ee1d50b557279f219cac71:61506893,e18ae420f9ee1d50aaba90be0a1f2ad5:398484621,0e5ae42087ee1d502f0b24b3cb7fcec8:-496458971,59e96c2003ee1d5019f157735ceebfbb:38741233,8dd8acecb9ae1d50c775fc57032f807c:-1988674230</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-20 06:06:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>072ac27aa469415e846a1713faa4d309</sys_id>
+        <sys_metadata>61d7acec1bae1d5030bc986c9b4bcbb3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cmb_upload_service</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_page_61d7acec1bae1d5030bc986c9b4bcbb3</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_61d7acec1bae1d5030bc986c9b4bcbb3">195b1de01b269950c7c9fc078b4bcb28</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-20 06:06:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
