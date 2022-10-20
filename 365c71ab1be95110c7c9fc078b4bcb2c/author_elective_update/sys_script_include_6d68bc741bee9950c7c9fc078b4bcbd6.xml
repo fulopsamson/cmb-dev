@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_tsigh_cmb.AddImage</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>AddImage</name>
+        <script><![CDATA[var AddImage = Class.create();
+AddImage.prototype = {
+    initialize: function() {
+    },
+	
+	insertImageRecord: function(table){
+		img_sys = table.u_additional_image;
+		var att = new GlideRecord('sys_attachment');
+		att.addQuery('sys_id', img_sys);
+		att.query();
+		
+		if(att.next()){
+			//gs.info('String ' + att.content_type);
+			var content_type = att.content_type;
+			var pos = content_type.search('/');
+			//gs.info('Position ' + pos);
+
+			content_type = content_type.substring(pos + 1);
+			//gs.info('Type ' + content_type);
+		}
+		
+		var img = new GlideRecord('db_image');
+		img.initialize();
+		var name = img_sys + '.' + content_type;
+		img.name = name;
+		img.image = img_sys;
+		//gs.info('Name: ' + name);
+		//gs.info('Sys_id: ' + img_sys);
+		img.insert();
+
+	},
+    type: 'AddImage'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-12 13:01:42</sys_created_on>
+        <sys_id>6d68bc741bee9950c7c9fc078b4bcbd6</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>AddImage</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_6d68bc741bee9950c7c9fc078b4bcbd6</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-12 13:29:34</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_include_6d68bc741bee9950c7c9fc078b4bcbd6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;false&lt;/active&gt;&lt;api_name&gt;x_tsigh_cmb.AddImage&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;AddImage&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var AddImage = Class.create();
+AddImage.prototype = {
+    initialize: function() {
+    },
+	
+	insertImageRecord: function(table){
+		img_sys = table.u_additional_image;
+		var att = new GlideRecord('sys_attachment');
+		att.addQuery('sys_id', img_sys);
+		att.query();
+		
+		if(att.next()){
+			//gs.info('String ' + att.content_type);
+			var content_type = att.content_type;
+			var pos = content_type.search('/');
+			//gs.info('Position ' + pos);
+
+			content_type = content_type.substring(pos + 1);
+			//gs.info('Type ' + content_type);
+		}
+		
+		var img = new GlideRecord('db_image');
+		img.initialize();
+		var name = img_sys + '.' + content_type;
+		img.name = name;
+		img.image = img_sys;
+		//gs.info('Name: ' + name);
+		//gs.info('Sys_id: ' + img_sys);
+		img.insert();
+
+	},
+    type: 'AddImage'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;szabo.zoltan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-12 13:01:42&lt;/sys_created_on&gt;&lt;sys_id&gt;6d68bc741bee9950c7c9fc078b4bcbd6&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;AddImage&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_6d68bc741bee9950c7c9fc078b4bcbd6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;samson.fulop&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-12 13:29:34&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>749999775</payload_hash>
+        <record_name>AddImage</record_name>
+        <reverted_from/>
+        <source>24b310561b1a155030bc986c9b4bcb3e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-12 13:29:34</sys_created_on>
+        <sys_id>5fc0e5bc1b229d5030bc986c9b4bcb64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183cc62db360000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-12 13:29:34</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>97c0e5bc35229d508cfae965abffbd64</update_guid>
+        <update_guid_history>97c0e5bc35229d508cfae965abffbd64:749999775,2d7d19f01462d9503f1cf45bab6b3659:1200385164,7f2c95f09d62d950b48c4fd4e5d7fc69:-227167674,9b3b99b0f362d950bf73fad4f35b99c4:648881446,876a99709262d950feac52ce2b28661f:749589958</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-20 06:18:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>1f7f45f1c6ba47a493613ed0fcbc95c4</sys_id>
+        <sys_metadata>6d68bc741bee9950c7c9fc078b4bcbd6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AddImage</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_include_6d68bc741bee9950c7c9fc078b4bcbd6</sys_update_name>
+        <sys_update_version display_value="sys_script_include_6d68bc741bee9950c7c9fc078b4bcbd6">5fc0e5bc1b229d5030bc986c9b4bcb64</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-20 06:18:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
