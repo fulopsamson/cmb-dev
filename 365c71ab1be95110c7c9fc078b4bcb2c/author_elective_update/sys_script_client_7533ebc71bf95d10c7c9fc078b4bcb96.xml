@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Get an exchange rate based on Exchange rate date field. </description>
+        <field>invoice_currency</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>ExchangeRateCurrency</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	if(g_form.getValue('exchange_rate_date')){
+		var ga = new GlideAjax('x_tsigh_cmb.InvoiceExchangeRate');
+		ga.addParam('sysparm_name', 'invoiceExchange');
+		ga.addParam('sysparm_invoice_currency', newValue);
+		ga.addParam('sysparm_exchange_rate_date', g_form.getValue('exchange_rate_date'));
+		ga.getXML(processResponse);
+
+		function processResponse(response) {
+			var result = response.responseXML.documentElement.getAttribute("answer");
+			if (result != null)
+				g_form.setValue('exchange_rate_value', result);
+			else 
+				g_form.showFieldMsg('exchange_rate_date', 'There is no valid exchange rate at this date!', 'error');
+			g_form.hideFieldMsg("exchange_rate_date");
+			
+			if(g_form.getValue('exchange_rate_value') && g_form.getValue('total_net_value')){
+				var total_net_ron = parseFloat(g_form.getValue('exchange_rate_value') * parseFloat(g_form.getValue('total_net_value').replace(/,/g, '')));
+				g_form.setValue('total_net_value_in_ron', total_net_ron);
+
+			}
+		}
+	}
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-12 16:01:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7533ebc71bf95d10c7c9fc078b4bcb96</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>ExchangeRateCurrency</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_client_7533ebc71bf95d10c7c9fc078b4bcb96</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-04 15:02:29</sys_updated_on>
+        <table>x_tsigh_cmb_supplier_invoice</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_client_7533ebc71bf95d10c7c9fc078b4bcb96</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Get an exchange rate based on Exchange rate date field. &lt;/description&gt;&lt;field&gt;invoice_currency&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;ExchangeRateCurrency&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	if(g_form.getValue('exchange_rate_date')){
+		var ga = new GlideAjax('x_tsigh_cmb.InvoiceExchangeRate');
+		ga.addParam('sysparm_name', 'invoiceExchange');
+		ga.addParam('sysparm_invoice_currency', newValue);
+		ga.addParam('sysparm_exchange_rate_date', g_form.getValue('exchange_rate_date'));
+		ga.getXML(processResponse);
+
+		function processResponse(response) {
+			var result = response.responseXML.documentElement.getAttribute("answer");
+			if (result != null)
+				g_form.setValue('exchange_rate_value', result);
+			else 
+				g_form.showFieldMsg('exchange_rate_date', 'There is no valid exchange rate at this date!', 'error');
+			g_form.hideFieldMsg("exchange_rate_date");
+			
+			if(g_form.getValue('exchange_rate_value') &amp;&amp; g_form.getValue('total_net_value')){
+				var total_net_ron = parseFloat(g_form.getValue('exchange_rate_value') * parseFloat(g_form.getValue('total_net_value').replace(/,/g, '')));
+				g_form.setValue('total_net_value_in_ron', total_net_ron);
+
+			}
+		}
+	}
+   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;szabo.zoltan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-12 16:01:42&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;7533ebc71bf95d10c7c9fc078b4bcb96&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_name&gt;ExchangeRateCurrency&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_7533ebc71bf95d10c7c9fc078b4bcb96&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;szabo.zoltan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-04 15:02:29&lt;/sys_updated_on&gt;&lt;table&gt;x_tsigh_cmb_supplier_invoice&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-890198006</payload_hash>
+        <record_name>ExchangeRateCurrency</record_name>
+        <reverted_from/>
+        <source>58f5b3821b1a9150c7c9fc078b4bcb91</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-04 15:02:29</sys_created_on>
+        <sys_id>9659e8de1b9a9150c7c9fc078b4bcbe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183a3850d6e0000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-04 15:02:29</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>de59e8dead9a91501b0da7e32bb58ae4</update_guid>
+        <update_guid_history>de59e8dead9a91501b0da7e32bb58ae4:-890198006,ec111cf1188ad11094957bf89c77dddd:1101259895,d51bc8fd9c4ad1100c06ac918519bfb3:2003603895,6ef27e210646d11032a901b785b752a5:1101259895,29d2bea18346d1106f8ab4b22e16c85b:-874728679,9e861b11218a91108cba3c0f8202632d:1101259895,357693510f8a911041bd779a024474f0:-1242712802,d4165351b38a9110aca7b4adcfdabbf6:1101259895,bdc55711b28a91106af1ec46eb55c470:1448660638,6d3497dd154a9110cd8efffb1806ced9:1494267218,82d3971d8a4a9110feef2b90d3d77740:2020397782,1db3db9d714a911056ad040161af4c59:-1112019720,9363975ded4a9110028026f04e15a6da:2020397782,63001bd95f4a9110b063007413d9ccb2:896810563,59ff0f99864a91106024489f013295fc:-303942703,119f03d9eb4a9110b566a45f84219b83:1015544085,c7ab7ed3c235111085e7c0c8e887ca49:-639992582,557bae1773f1111096e18118d166e09e:-982315596,20ca2a57e7f111106ec00a07a76b1cee:21311829,3a8a2a17b8f11110d4ec52c0cfd97940:-22170560,a9652f4b97f95d10de6186090a8060ce:1415811029,fb552f4be6f95d10ac7e11b3b21d4a15:-684232298,15b46b0b15f95d10358d84194d836e1d:-1312267704,83e3e7c783f95d10522d28e82fb52f7c:-1069685898</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-25 07:22:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>93f43e6d7c124de099a0337d6e534a40</sys_id>
+        <sys_metadata>7533ebc71bf95d10c7c9fc078b4bcb96</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>ExchangeRateCurrency</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Supplier invoice">0e3b35471b755d10c7c9fc078b4bcb6f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_client_7533ebc71bf95d10c7c9fc078b4bcb96</sys_update_name>
+        <sys_update_version display_value="sys_script_client_7533ebc71bf95d10c7c9fc078b4bcb96">9659e8de1b9a9150c7c9fc078b4bcbe5</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-25 07:22:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

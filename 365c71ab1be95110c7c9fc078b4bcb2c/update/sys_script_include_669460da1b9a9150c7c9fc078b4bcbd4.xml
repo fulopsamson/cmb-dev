@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.InvoiceExchangeRateServ</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>InvoiceExchangeRateServ</name>
+        <script><![CDATA[var InvoiceExchangeRateServ = Class.create();
+InvoiceExchangeRateServ.prototype = {
+    initialize: function() {
+    },
+	
+	invoiceExchange: function(curr, date){
+		
+		var gr = new GlideRecord('fx_rate');		
+		gr.addQuery("sys_created_on", 'STARTSWITH', date);
+		gr.addQuery('currency', curr);
+		gr.query();
+		
+		if(gr.next()){
+			num = 1/gr.rate;
+            num = parseFloat(num).toFixed(4);
+			return num;
+		}
+		else
+			return null;
+		
+		},
+
+    type: 'InvoiceExchangeRateServ'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-04 14:42:58</sys_created_on>
+        <sys_id>669460da1b9a9150c7c9fc078b4bcbd4</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>InvoiceExchangeRateServ</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_669460da1b9a9150c7c9fc078b4bcbd4</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-25 09:11:34</sys_updated_on>
+    </sys_script_include>
+</record_update>

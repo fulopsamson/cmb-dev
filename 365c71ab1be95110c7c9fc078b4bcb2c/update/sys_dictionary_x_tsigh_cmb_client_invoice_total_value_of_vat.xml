@@ -8,7 +8,7 @@
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
 	// Add your code here
-	return '';  // return the calculated value
+	return Math.round(current.total_net_value*current.vat_value*100)/100;  // return the calculated value
 
 })(current);]]></calculation>
         <choice/>
@@ -38,7 +38,7 @@
         <name>x_tsigh_cmb_client_invoice</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -54,14 +54,14 @@
         <sys_created_by>szabo.daniel</sys_created_by>
         <sys_created_on>2022-09-09 10:04:12</sys_created_on>
         <sys_id>0905fa4a1b71991030bc986c9b4bcbbf</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Total value of VAT</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_dictionary_x_tsigh_cmb_client_invoice_total_value_of_vat</sys_update_name>
-        <sys_updated_by>szabo.daniel</sys_updated_by>
-        <sys_updated_on>2022-09-09 10:04:12</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-21 09:41:42</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

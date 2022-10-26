@@ -7,7 +7,7 @@
         <action_query>false</action_query>
         <action_update>true</action_update>
         <active>true</active>
-        <add_message>false</add_message>
+        <add_message>true</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
@@ -15,12 +15,15 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_tsigh_cmb_u_cmdb_ci_cmb_service">u_state=Active^EQ<item display_value="Active" endquery="false" field="u_state" goto="false" newquery="false" operator="=" or="false" value="Active"/>
+        <filter_condition table="x_tsigh_cmb_u_cmdb_ci_cmb_service">u_parent_serviceISEMPTY^u_stateCHANGESTOActive^NQu_state=Active^serialVALCHANGES^EQ<item endquery="false" field="u_parent_service" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item display_value="Active" endquery="false" field="u_state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="Active"/>
+            <item display_value="Active" endquery="false" field="u_state" goto="false" newquery="true" operator="=" or="false" value="Active"/>
+            <item endquery="false" field="serial" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
-        <message/>
-        <name>Combridge ID</name>
+        <message><![CDATA[<p>Combridge ID has been generated</p>]]></message>
+        <name>CMB Service Combridge ID</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -30,26 +33,25 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	
-	ser = current.serial;
+// 	if (current.serial == previous.serial) {
+// 		return;
+// 	}
+	var ser = current.serial;
 	
 	var num = new x_tsigh_cmb.NumberGeneratorServ();
-	var result = num.getnext(ser);
+// 	service ommitted by sys_id
+	var result = num.getnext(ser, current.sys_id);
 	
-	if (result != null){
-		cmb = parseInt(result).toString();
-		if(cmb.length < 6){
-			cmb = new Array(6 - cmb.length + 1).join(0) + cmb;
-		}
-		var cmbid = ser + " " + cmb;
-		current.id = parseInt(result);
-		current.u_combridge_id = cmbid;
+	
+	var cmb = parseInt(result).toString();
+	if(cmb.length < 6){
+		cmb = new Array(6 - cmb.length + 1).join(0) + cmb;
 	}
-			
-	else 
-		gs.addErrorMessage("Error, no returnable value!");	
-
-
+	
+	var cmbid = ser + " " + cmb;
+	current.id = result;
+	current.u_combridge_id = cmbid;
+	
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>szabo.zoltan</sys_created_by>
@@ -57,15 +59,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c616e9f11b925150c7c9fc078b4bcbfd</sys_id>
-        <sys_mod_count>24</sys_mod_count>
-        <sys_name>Combridge ID</sys_name>
+        <sys_mod_count>52</sys_mod_count>
+        <sys_name>CMB Service Combridge ID</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_c616e9f11b925150c7c9fc078b4bcbfd</sys_update_name>
-        <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-10-03 14:29:44</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-21 16:07:46</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

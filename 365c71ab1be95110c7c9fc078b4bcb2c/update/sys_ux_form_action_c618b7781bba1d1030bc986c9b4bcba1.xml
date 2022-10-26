@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action">
+    <sys_ux_form_action action="INSERT_OR_UPDATE">
+        <action_type>ui_action</action_type>
+        <active>true</active>
+        <declarative_action/>
+        <description/>
+        <name>Cancel transfer order</name>
+        <specificity>10</specificity>
+        <sys_class_name>sys_ux_form_action</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-25 10:46:16</sys_created_on>
+        <sys_id>c618b7781bba1d1030bc986c9b4bcba1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cancel transfer order</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ux_form_action_c618b7781bba1d1030bc986c9b4bcba1</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-25 10:46:16</sys_updated_on>
+        <table>alm_transfer_order</table>
+        <ui_action display_value="Cancel transfer order">8218b7781bba1d1030bc986c9b4bcba1</ui_action>
+    </sys_ux_form_action>
+</record_update>

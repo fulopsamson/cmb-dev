@@ -9,657 +9,714 @@
         <name>CMBUtils</name>
         <script><![CDATA[var CMBUtils = Class.create();
 CMBUtils.prototype = {
-    initialize: function() {
-        this.serviceCopyFields = ['serial', 'u_account', 'u_billing_profile', 'u_owner', 'u_project', 'u_project_code', 'u_contract', 'u_contract_period', 'u_state', 'u_service_description', 'u_product_type', 'u_rfs_requested', 'u_rfs_commited', 'u_partner_circuit_id', 'u_currency', 'u_legacy_id', 'partner_ref_nr', 'u_endpoint_a', 'u_pop_a', 'u_endpoint_b', 'u_pop_b', 'u_mrc', 'u_otc', 'u_acceptance_date', 'u_acceptance_document', 'u_early_termination_fee', 'u_last_billing_date', 'u_reason_for_termination', 'u_cancellation_form', 'u_backup_service', 'id', 'original_id'];
-    },
+	initialize: function() {
+		this.serviceCopyFields = ['serial', 'u_account', 'u_billing_profile', 'u_owner', 'u_project', 'u_project_code', 'u_contract', 'u_contract_period', 'u_state', 'u_service_description', 'u_product_type', 'u_rfs_requested', 'u_rfs_commited', 'u_partner_circuit_id', 'u_currency', 'u_legacy_id', 'partner_ref_nr', 'u_endpoint_a', 'u_pop_a', 'u_endpoint_b', 'u_pop_b', 'u_mrc', 'u_otc', 'u_acceptance_document', 'u_early_termination_fee', 'u_reason_for_termination', 'u_cancellation_form', 'u_backup_service', 'id', 'original_id'];
+	},
 
-    sellDevices: function(inv) {
-        //get invoice lines
-        var gr = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
-        gr.addQuery('client_invoice', inv);
-        gr.query();
-        while (gr.next()) {
-            var gra = new GlideRecord('alm_asset');
-            gra.addQuery('x_tsigh_cmb_client_invoice_line', gr.sys_id);
-            gra.query();
-            while (gra.next()) {
-                gra.setValue('install_status', 7);
-                gra.setValue('substatus', 'sold');
-                gra.update();
 
-            }
+	setAssetState:function(inv, state, substate){
+		var gr = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+		gr.addQuery('client_invoice', inv);
+		gr.query();
+		while (gr.next()) {
+			var gra = new GlideRecord('alm_asset');
+			gra.addQuery('x_tsigh_cmb_client_invoice_line', gr.sys_id);
+			gra.query();
+			while (gra.next()) {
+				gra.setValue('install_status', state);
+				gra.setValue('substatus', substate);
+				gra.update();
 
-        }
+			}
 
-    },
+		}
+	},
 
-    setTOState: function(id, oldstage, newstage) {
-        var to = new GlideRecord('alm_transfer_order');
-        to.get(id);
+	sellDevices: function(inv) {
+		this.setAssetState(inv, 7, 'sold');
+	},
 
-        var tol = new GlideRecord('alm_transfer_order_line');
-        tol.addQuery('transfer_order', to.sys_id);
-        tol.query();
-        while (tol.next()) {
-            /*gs.info('Setting tol '+tol.number+' from '+tol.stage+' to '+newstage+' - '+(tol.stage == oldstage));
+	revokeSales:function(inv){
+		this.setAssetState(inv, 6, 'available');
+	},
+
+	cancelTO:function(inv){
+		var gr = new GlideRecord('alm_transfer_order_line');
+		gr.addQuery('transfer_order', inv);
+		gr.query();
+		while (gr.next()) {
+			gr.setValue('stage','cancelled');
+			gr.update();
+			var gra = new GlideRecord('alm_asset');
+			gra.addQuery('transfer_order', gr.sys_id);
+			gra.query();
+			while (gra.next()) {
+				if(gra.sys_class_name == 'alm_hardware');
+				gra.setValue('install_status', 6);
+				gra.setValue('substatus', 'available');		
+				gra.update();
+			}		
+		}
+		/*	var gr = new GlideRecord('alm_transfer_order_line');
+		gr.addQuery('transfer_order', inv);
+		gr.query();
+		while (gr.next()) {
+			var gra = new GlideRecord('alm_asset');
+			gra.addQuery('transfer_order', gr.sys_id);
+			gra.query();
+			while (gra.next()) {
+				gra.setValue('install_status', 6);
+				gra.setValue('substatus', 'available');				
+
+				if(gra.sys_class_name == 'alm_consumable'){
+					gra.quantity += gra.quantity+gra.quantity_requested;
+
+				}
+				gra.update();
+
+			}
+
+		}		*/
+
+	},
+
+	setTOState: function(id, oldstage, newstage) {
+		var to = new GlideRecord('alm_transfer_order');
+		to.get(id);
+
+		var tol = new GlideRecord('alm_transfer_order_line');
+		tol.addQuery('transfer_order', to.sys_id);
+		tol.query();
+		while (tol.next()) {
+			/*gs.info('Setting tol '+tol.number+' from '+tol.stage+' to '+newstage+' - '+(tol.stage == oldstage));
             if(tol.stage == oldstage){*/
-            gs.info('Setting tol ' + tol.number + ' from ' + tol.stage + ' to ' + newstage);
-            tol.setValue('stage', newstage);
-            tol.update();
+			gs.info('Setting tol ' + tol.number + ' from ' + tol.stage + ' to ' + newstage);
+			tol.setValue('stage', newstage);
+			tol.update();
 
-            //}
-        }
-        to.setValue('stage', newstage);
-        to.update();
+			//}
+		}
+		to.setValue('stage', newstage);
+		to.update();
 
-    },
-    calculateDisplayName: function(asset) {
-        var display_name = "";
-        if (asset.asset_tag)
-            display_name += asset.asset_tag + " - ";
-        else if (asset.serial_number) {
-            display_name += asset.serial_number + " - ";
-        }
-        if (asset.model)
-            display_name += asset.model.display_name;
+	},
+	calculateDisplayName: function(asset) {
+		var display_name = "";
+		if (asset.asset_tag)
+			display_name += asset.asset_tag + " - ";
+		else if (asset.serial_number) {
+			display_name += asset.serial_number + " - ";
+		}
+		if (asset.model)
+			display_name += asset.model.display_name;
 
-        if (asset.display_name == display_name)
-            return false;
+		if (asset.display_name == display_name)
+			return false;
 
-        asset.display_name = display_name.trim();
-        return true;
-    },
+		asset.display_name = display_name.trim();
+		return true;
+	},
 
-    convertAmount: function(amn, tcur, fcur) {
-        if (!fcur) fcur = 'RON';
-        if (fcur == 'RON' && tcur == 'RON') return amn;
-        var gcc = new sn_currency.GlideCurrencyConverter(fcur, tcur);
-        gcc.setAmount(amn);
-        var r = gcc.convert(amn);
-        gs.info(r);
-        return r.getAmount();
+	convertAmount: function(amn, tcur, fcur) {
+		if (!fcur) fcur = 'RON';
+		if (fcur == 'RON' && tcur == 'RON') return amn;
+		var gcc = new sn_currency.GlideCurrencyConverter(fcur, tcur);
+		gcc.setAmount(amn);
+		var r = gcc.convert(amn);
+		gs.info(r);
+		return r.getAmount();
 
-    },
+	},
 
-    generateAssetsfromInvoice: function(gr) {
-        var cur = '';
-        var consumable = false;
-        var hardware = false;
-        if (gr.invoice_currency) {
-            cur = gr.invoice_currency.getDisplayValue();
-        }
-        var stockroom = gr.stockroom.sys_id;
-        var devices = [];
-        var contracts = [];
-        var deviceSN = {};
-
-
-        gri = new GlideRecord('x_tsigh_cmb_supplier_invoice_lines');
-        gri.addQuery('supplier_invoice', gr.sys_id);
-        gri.addEncodedQuery('product.sys_class_name!=cmdb_contract_product_model');
-        gri.query();
-        while (gri.next()) {
-            gs.info('Processing invoice line ' + gri.sys_id.toString())
-            var model = '';
-            var mcat = '';
-            if (gri.product) model = gri.product.sys_id;
-            if (model) {
-                var grm = new GlideRecord('cmdb_model');
-                grm.get(gri.product.sys_id);
-                gs.info('\tProduct class: ' + grm.sys_class_name);
-                try {
-                    if (grm.sys_class_name == 'cmdb_consumable_product_model') {
-                        var gra = new GlideRecord('alm_consumable');
-                        gra.initialize();
-                        gra.model = model;
-                        gra.quantity = gri.quantity;
-                        if (stockroom) gra.stockroom = stockroom;
-                        var id = gra.update();
-                        if (id) {
-                            devices.push(id);
-                        }
-                    } else if (grm.sys_class_name == 'cmdb_hardware_product_model') {
-                        if (grm.cmdb_model_category) {
-
-                            mcat = grm.cmdb_model_category.split(',')[0];
-                            var grc = new GlideRecord('cmdb_model_category');
-                            grc.get(mcat);
-
-                            var count = gri.quantity;
-
-                            var serials = [];
-                            gs.info('\t\tSerial numbers: ' + gri.serial_numbers);
-                            if (gri.serial_numbers) {
-                                serials = gri.serial_numbers.split(',');
-                            }
-                            for (var i = 0; i < count; i++) {
-                                gs.info('\t\t\tProcessing item ' + i);
-                                var gra = new GlideRecord(grc.asset_class);
-                                gra.initialize();
-                                if (grc) gra.model_category = grc.sys_id;
-                                gra.model = grm.sys_id;
-                                gra.x_tsigh_cmb_invoice = gr.sys_id;
-                                if (stockroom) gra.stockroom = stockroom;
-                                if (serials.length > i) {
-                                    gra.setValue('serial_number', serials[i]);
-                                }
-                                if (cur) {
-                                    var pr = gri.unit_price;
-                                    gra.cost.setDisplayValue(cur + ';' + pr);
-                                }
-                                gra.setValue('install_status', 6);
-                                gra.setValue('substatus', 'available');
-                                var id = gra.update();
-
-                                if (id) {
-                                    devices.push(id);
-                                    deviceSN[gra.serial_number] = gra.sys_id.toString();
-                                }
+	generateAssetsfromInvoice: function(gr) {
+		var cur = '';
+		var consumable = false;
+		var hardware = false;
+		if (gr.invoice_currency) {
+			cur = gr.invoice_currency.getDisplayValue();
+		}
+		var stockroom = gr.stockroom.sys_id;
+		var devices = [];
+		var contracts = [];
+		var deviceSN = {};
 
 
-                            }
-                        } else {
-                            gr.work_notes = 'No model category for asset ' + gri.product.display_name + ' on line item';
-                            gr.update();
-                        }
+		gri = new GlideRecord('x_tsigh_cmb_supplier_invoice_lines');
+		gri.addQuery('supplier_invoice', gr.sys_id);
+		gri.addEncodedQuery('product.sys_class_name!=cmdb_contract_product_model');
+		gri.query();
+		while (gri.next()) {
+			gs.info('Processing invoice line ' + gri.sys_id.toString())
+			var model = '';
+			var mcat = '';
+			if (gri.product) model = gri.product.sys_id;
+			if (model) {
+				var grm = new GlideRecord('cmdb_model');
+				grm.get(gri.product.sys_id);
+				gs.info('\tProduct class: ' + grm.sys_class_name);
+				try {
+					if (grm.sys_class_name == 'cmdb_consumable_product_model') {
+						var gra = new GlideRecord('alm_consumable');
+						gra.initialize();
+						gra.model = model;
+						gra.quantity = gri.quantity;
+						if (stockroom) gra.stockroom = stockroom;
+						var id = gra.update();
+						if (id) {
+							devices.push(id);
+						}
+					} else if (grm.sys_class_name == 'cmdb_hardware_product_model') {
+						if (grm.cmdb_model_category) {
 
-                    } else {
+							mcat = grm.cmdb_model_category.split(',')[0];
+							var grc = new GlideRecord('cmdb_model_category');
+							grc.get(mcat);
 
-                    }
+							var count = gri.quantity;
 
-                } catch (e) {
-                    gr.work_notes = 'Error while processing supplier invoice line ' + gr.invoice_number + ' - ' + e.toString();
-                    gr.update();
-                    gs.info('Error while processing supplier invoice line ' + gr.invoice_number + ': ');
+							var serials = [];
+							gs.info('\t\tSerial numbers: ' + gri.serial_numbers);
+							if (gri.serial_numbers) {
+								serials = gri.serial_numbers.split(',');
+							}
+							for (var i = 0; i < count; i++) {
+								gs.info('\t\t\tProcessing item ' + i);
+								var gra = new GlideRecord(grc.asset_class);
+								gra.initialize();
+								if (grc) gra.model_category = grc.sys_id;
+								gra.model = grm.sys_id;
+								gra.x_tsigh_cmb_invoice = gr.sys_id;
+								if (stockroom) gra.stockroom = stockroom;
+								if (serials.length > i) {
+									gra.setValue('serial_number', serials[i]);
+								}
+								if (cur) {
+									var pr = gri.unit_price;
+									gra.cost.setDisplayValue(cur + ';' + pr);
+								}
+								gra.setValue('install_status', 6);
+								gra.setValue('substatus', 'available');
+								var id = gra.update();
 
-
-                }
-            }
-        }
-
-        gs.info('Processing contracts');
-        var gri = new GlideRecord('x_tsigh_cmb_supplier_invoice_lines');
-        gri.addQuery('supplier_invoice', gr.sys_id);
-        gri.addEncodedQuery('product.sys_class_name=cmdb_contract_product_model');
-        gri.query();
-        var processedSerials = [];
-        while (gri.next()) {
-            gs.info('\tProcessing supplier line item ' + gri.sys_id);
-            var grc = new GlideRecord('ast_contract');
-            grc.initialize();
-            grc.setValue('account', gr.supplier);
-            grc.setValue('x_tsigh_cmb_billing_profile', gr.billing_profile);
-            grc.setValue('contract_model', gri.product);
-            grc.setValue('vendor_contract', gri.contract_number);
-            grc.setValue('starts', gri.start_date);
-            grc.setValue('ends', gri.end_date);
-            grc.setValue('x_tsigh_cmb_supplier_invoice', gr.sys_id);
-            grc.setValue('u_currency', gri.getValue('currency'));
-            grc.setValue('u_price', gri.getValue('unit_price'));
-            grc.update();
-            gs.info('\tContract ' + grc.sys_id + ' created');
-            gs.info('\tProcessing related serial numbers ' + gri.serial_numbers);
-            if (gri.serial_numbers) {
-                var serials = gri.serial_numbers.split(',');
-                for (var j = 0; j < serials.length; j++) {
-                    if (deviceSN[serials[j]]) {
-                        gs.info('\t\tAllocating contract ' + grc.sys_id + ' to asset with serial number ' + serials[j] + ' assetsysid: ' + deviceSN[serials[j]]);
-                        this._allocateContract(deviceSN[serials[j]], grc.sys_id);
-                        processedSerials.push(serials[j]);
-                    }
-
-                }
-                var others = this._arrdiff(serials, processedSerials);
-                if (others.length > 0) {
-                    for (var k = 0; k < others.length; k++) {
-                        var gras = new GlideRecord('alm_hardware');
-                        gras.addQuery('serial_number', others[k]);
-                        gras.query();
-                        if (gras.next()) {
-                            this._allocateContract(gras.sys_id, grc.sys_id);
-                        }
-
-                    }
-                }
+								if (id) {
+									devices.push(id);
+									deviceSN[gra.serial_number] = gra.sys_id.toString();
+								}
 
 
-            }
-            if (gri.related_devices) {
-                var asts = gri.related_devices.split(',');
-                for (var i = 0; i < asts.length; i++) {
-                    this._allocateContract(asts[i], grc.sys_id);
-                }
-            }
+							}
+						} else {
+							gr.work_notes = 'No model category for asset ' + gri.product.display_name + ' on line item';
+							gr.update();
+						}
 
-        }
-        //Allocating budget
-        var budgetId = current.budget.sys_id.toString();
-        var grb = new GlideRecord('fm_budget');
-        grb.get(budgetId);
-        var sicur = current.getValue('invoice_currency');
-        var bcur = grb.getValue('x_tsigh_cmb_currency');
-        var amnt = +this.convertAmount(current.total_net_value_in_ron, bcur);
-        var rslt = +grb.getValue('x_tsigh_cmb_actual_value');
-        grb.setValue('x_tsigh_cmb_actual_value', Math.round((amnt + rslt) * 100) / 100);
-        grb.u_work_notes = 'Amount ' + amnt + ' was added to the budget due to Supplier Invoice ' + gr.invoice_number;
-        grb.update();
+					} else {
+
+					}
+
+				} catch (e) {
+					gr.work_notes = 'Error while processing supplier invoice line ' + gr.invoice_number + ' - ' + e.toString();
+					gr.update();
+					gs.info('Error while processing supplier invoice line ' + gr.invoice_number + ': ');
 
 
-    },
+				}
+			}
+		}
 
-    _arrdiff: function(a1, a2) {
-        var a = [],
-            diff = [];
-        for (var i = 0; i < a1.length; i++) {
-            a[a1[i]] = true;
-        }
-        for (var i = 0; i < a2.length; i++) {
-            if (a[a2[i]]) {
-                delete a[a2[i]];
-            } else {
-                a[a2[i]] = true;
-            }
-        }
-        for (var k in a) {
-            diff.push(k);
-        }
-        return diff;
-    },
+		gs.info('Processing contracts');
+		var gri = new GlideRecord('x_tsigh_cmb_supplier_invoice_lines');
+		gri.addQuery('supplier_invoice', gr.sys_id);
+		gri.addEncodedQuery('product.sys_class_name=cmdb_contract_product_model');
+		gri.query();
+		var processedSerials = [];
+		while (gri.next()) {
+			gs.info('\tProcessing supplier line item ' + gri.sys_id);
+			var grc = new GlideRecord('ast_contract');
+			grc.initialize();
+			grc.setValue('account', gr.supplier);
+			grc.setValue('x_tsigh_cmb_billing_profile', gr.billing_profile);
+			grc.setValue('contract_model', gri.product);
+			grc.setValue('vendor_contract', gri.contract_number);
+			grc.setValue('starts', gri.start_date);
+			grc.setValue('ends', gri.end_date);
+			grc.setValue('x_tsigh_cmb_supplier_invoice', gr.sys_id);
+			grc.setValue('u_currency', gri.getValue('currency'));
+			grc.setValue('u_price', gri.getValue('unit_price'));
+			grc.update();
+			gs.info('\tContract ' + grc.sys_id + ' created');
+			gs.info('\tProcessing related serial numbers ' + gri.serial_numbers);
+			if (gri.serial_numbers) {
+				var serials = gri.serial_numbers.split(',');
+				for (var j = 0; j < serials.length; j++) {
+					if (deviceSN[serials[j]]) {
+						gs.info('\t\tAllocating contract ' + grc.sys_id + ' to asset with serial number ' + serials[j] + ' assetsysid: ' + deviceSN[serials[j]]);
+						this._allocateContract(deviceSN[serials[j]], grc.sys_id);
+						processedSerials.push(serials[j]);
+					}
 
-    _allocateContract: function(assetID, contractID) {
-        var grx = new GlideRecord('x_tsigh_cmb_asset_contract');
-        grx.initialize();
-        grx.asset = assetID;
-        grx.contract = contractID;
-        grx.update();
-    },
+				}
+				var others = this._arrdiff(serials, processedSerials);
+				if (others.length > 0) {
+					for (var k = 0; k < others.length; k++) {
+						var gras = new GlideRecord('alm_hardware');
+						gras.addQuery('serial_number', others[k]);
+						gras.query();
+						if (gras.next()) {
+							this._allocateContract(gras.sys_id, grc.sys_id);
+						}
 
-    sumClLineItems: function(current) {
-        var total = 0;
-        var gr = new GlideRecord('x_tsigh_cmb_client_invoice');
-        gr.get(current.client_invoice.sys_id);
-
-        var gri = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
-        gri.addQuery('client_invoice', gr.sys_id);
-        gri.query();
-        while (gri.next()) {
-            if (gri.otc) {
-                total += parseFloat(gri.otc.replace(',', ''));
-            }
-        }
-        gr.setValue('total', total);
-        gr.update();
-
-    },
-
-    sellAsset: function(id) {
-        var gr = new GlideRecord('alm_hardware');
-        if (gr.get(id)) {
-            gr.setValue('install_status', 7);
-            gr.setValue('substatus', 'sold');
-            gr.setValue('stockroom', '');
-            gr.update();
-            return gr.ci.sys_id;
-        }
-        return;
-
-    },
-    createTO: function(assets) {
-        gs.info('TO: ' + assets);
-        var res = {};
-        var assetList = assets.split(',');
-        var stockroom = '';
-        var multipleStockrooms = false;
-        for (var i = 0; i < assetList.length; i++) {
-            var gr = new GlideRecord('alm_asset');
-            gr.get(assetList[i]);
-            if (!stockroom) {
-                stockroom = gr.stockroom.sys_id;
-            } else {
-                if (gr.stockroom.sys_id != stockroom) {
-                    multipleStockrooms = true;
-                    break;
-                }
-            }
-        }
-
-        if (!multipleStockrooms) {
-            var grt = new GlideRecord('alm_transfer_order');
-            grt.initialize();
-            grt.from_stockroom = stockroom;
-            grt.update();
-            gs.info('TO: ' + grt.sys_id);
-            for (var j = 0; j < assetList.length; j++) {
-                gs.info('TO: asset ' + assetList[j]);
-                var gra = new GlideRecord('alm_asset');
-                gra.get(assetList[j]);
-                gs.info('TO: asset2 ' + gra.sys_id);
-                var grl = new GlideRecord('alm_transfer_order_line');
-                grl.initialize();
-                grl.transfer_order = grt.sys_id;
-                grl.stage = 'draft';
-                grl.asset = gra.sys_id;
-                grl.model = gra.model;
-                grl.update();
-            }
-            res.code = 'ok';
-            res.id = grt.sys_id.toString();
+					}
+				}
 
 
-        } else {
-            res.code = 'error';
-            res.msg = 'Selected devices are in multiple stockrooms';
-        }
+			}
+			if (gri.related_devices) {
+				var asts = gri.related_devices.split(',');
+				for (var i = 0; i < asts.length; i++) {
+					this._allocateContract(asts[i], grc.sys_id);
+				}
+			}
+
+		}
+		//Allocating budget
+		var budgetId = current.budget.sys_id.toString();
+		var grb = new GlideRecord('fm_budget');
+		grb.get(budgetId);
+		var sicur = current.getValue('invoice_currency');
+		var bcur = grb.getValue('x_tsigh_cmb_currency');
+		var amnt = +this.convertAmount(current.total_net_value_in_ron, bcur);
+		var rslt = +grb.getValue('x_tsigh_cmb_actual_value');
+		grb.setValue('x_tsigh_cmb_actual_value', Math.round((amnt + rslt) * 100) / 100);
+		grb.u_work_notes = 'Amount ' + amnt + ' was added to the budget due to Supplier Invoice ' + gr.invoice_number;
+		grb.update();
 
 
-        return res;
-    },
+	},
 
-    createCustomerInvoice: function(assets) {
-        var assetList = assets.split(',');
-        var assetRecords = [];
-        var stockroom = '';
-        var multipleStockrooms = false;
-        var res = {};
-        var devices = {};
-        var consumables = [];
-        gs.info('Starting');
+	_arrdiff: function(a1, a2) {
+		var a = [],
+			diff = [];
+		for (var i = 0; i < a1.length; i++) {
+			a[a1[i]] = true;
+		}
+		for (var i = 0; i < a2.length; i++) {
+			if (a[a2[i]]) {
+				delete a[a2[i]];
+			} else {
+				a[a2[i]] = true;
+			}
+		}
+		for (var k in a) {
+			diff.push(k);
+		}
+		return diff;
+	},
 
-        //Go through the assets selected by the user
-        for (var i = 0; i < assetList.length; i++) {
-            var gr = new GlideRecord('alm_asset');
-            //Check related stockroom, to see if all devices are in the related stockroom.
-            if (gr.get(assetList[i])) {
-                //Check if asset has any stockroom
-                if (gr.stockroom) {
-                    var sid = gr.stockroom.sys_id;
-                    //Check if we already have a stockroom to compare
-                    if (stockroom) {
-                        //If current asset stocktroom doesn't match the actual stockroom then selected assets are from different stockrooms. Finish processing and send error
-                        if (stockroom != sid) {
-                            multipleStockrooms = true;
-                            assetRecords = [];
-                            break;
-                        }
-                        //Otherwise, this is the first asset with stockroom, so set it as a reference
-                    } else stockroom = sid;
-                    //Check if current asset is hardware. If yes, save it and collect current asset for aggregation
-                    if (gr.sys_class_name == 'alm_hardware') {
-                        var grh = new GlideRecord('alm_hardware');
-                        grh.get(gr.sys_id);
-                        //Check asset model
-                        var pm = grh.model.sys_id;
-                        //Check if we already have this model in the aggregation. If no, then create aggreagation for current model
-                        if (!devices[pm]) {
-                            devices[pm] = [];
-                        }
-                        //Add asset to aggregation
-                        devices[pm].push(grh.sys_id.toString());
+	_allocateContract: function(assetID, contractID) {
+		var grx = new GlideRecord('x_tsigh_cmb_asset_contract');
+		grx.initialize();
+		grx.asset = assetID;
+		grx.contract = contractID;
+		grx.update();
+	},
 
-                    } else if (gr.sys_class_name == 'alm_consumable') {
-                        //If current asset is consumable, collect it in a consumable list
-                        consumables.push(gr.sys_id.toString());
-                    }
+	sumClLineItems: function(current) {
+		var total = 0;
+		var gr = new GlideRecord('x_tsigh_cmb_client_invoice');
+		gr.get(current.client_invoice.sys_id);
 
-                }
-            }
+		var gri = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+		gri.addQuery('client_invoice', gr.sys_id);
+		gri.query();
+		while (gri.next()) {
+			if (gri.otc) {
+				total += parseFloat(gri.otc.replace(',', ''));
+			}
+		}
+		gr.setValue('total', total);
+		gr.update();
 
-        }
-        //If there are multiple stockrooms, generate error
-        if (multipleStockrooms) {
-            res.code = 'error';
-            res.msg = 'Selected devices are in multiple stockrooms';
-        } else {
-            //Otherwise create invoice
-            var grl;
-            var gri = new GlideRecord('x_tsigh_cmb_client_invoice');
-            gri.initialize();
-            gri.setValue('type', 'selling');
-            gri.update();
+	},
 
-            //For each consumable, create an invoice line. Assign consumable to consumable field
-            for (var j = 0; j < consumables.length; j++) {
-                grl = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
-                grl.initialize();
-                grl.setValue('client_invoice', gri.sys_id);
-                var cons = consumables[j];
+	sellAsset: function(id) {
+		var gr = new GlideRecord('alm_hardware');
+		if (gr.get(id)) {
+			gr.setValue('install_status', 7);
+			gr.setValue('substatus', 'sold');
+			gr.setValue('stockroom', '');
+			gr.update();
+			return gr.ci.sys_id;
+		}
+		return;
 
-                var glc = new GlideRecord('alm_consumable');
-                glc.get(cons);
-                grl.setValue('product', glc.model);
-                grl.setValue('quantity', glc.quantity);
-                grl.update();
-                glc.setValue('x_tsigh_cmb_client_invoice_line', grl.sys_id);
-                glc.setValue('install_status', 9);
-                glc.setValue('substatus', 'reserved');
-                glc.update();
+	},
+	createTO: function(assets) {
+		gs.info('TO: ' + assets);
+		var res = {};
+		var assetList = assets.split(',');
+		var stockroom = '';
+		var multipleStockrooms = false;
+		for (var i = 0; i < assetList.length; i++) {
+			var gr = new GlideRecord('alm_asset');
+			gr.get(assetList[i]);
+			if (!stockroom) {
+				stockroom = gr.stockroom.sys_id;
+			} else {
+				if (gr.stockroom.sys_id != stockroom) {
+					multipleStockrooms = true;
+					break;
+				}
+			}
+		}
 
-            }
-            //Go through the aggregation. For each aggregation, create a line item, add the product model to the invoice, then set the invoice and line item for the asset so they can be tracked via the line item
-            //Get the aggregation keys (product model sys_ids) if any
-            gs.info('Devices: ' + JSON.stringify(devices));
-            var ha = Object.keys(devices);
-            if (ha.length > 0) {
-                //Go through the aggregation
-                for (var j = 0; j < ha.length; j++) {
-                    var aggregatedAssets = devices[ha[j]];
-                    var productId = ha[j];
-                    //Create a line item for current aggregation (product model)
-                    grl = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
-                    grl.initialize();
-                    //Set parent invoice
-                    grl.setValue('client_invoice', gri.sys_id);
-                    //Set current model as product for the invoice line
-
-                    grl.setValue('product', productId);
-
-                    //Set the quantity as the amount of assets for current aggregation
-                    grl.setValue('quantity', aggregatedAssets.length);
-
-                    //save the invoice line
-                    grl.update();
-                    gs.info(j + ' Invoice line item updated');
-                    //Get the actual assets for the aggregation
-                    gs.info('Aggregated assets: ' + aggregatedAssets.toString());
-                    for (var x = 0; x < aggregatedAssets.length; x++) {
-                        var asset = aggregatedAssets[x];
-                        gs.info(x + ' asset ' + asset);
-                        var ast = new GlideRecord('alm_hardware');
-                        if (ast.get(asset)) {
-                            //Set the invoice fields
-                            ast.setValue('x_tsigh_cmb_client_invoice_line', grl.sys_id);
-                            //Reserve the assets
-                            ast.setValue('install_status', 9);
-                            ast.setValue('substatus', 'reserved');
-                            ast.update();
-
-                        }
-                    }
-                }
-            }
-
-            res.code = 'ok';
-            res.id = gri.sys_id.toString();
-
-        }
-        return res;
+		if (!multipleStockrooms) {
+			var grt = new GlideRecord('alm_transfer_order');
+			grt.initialize();
+			grt.from_stockroom = stockroom;
+			grt.update();
+			gs.info('TO: ' + grt.sys_id);
+			for (var j = 0; j < assetList.length; j++) {
+				gs.info('TO: asset ' + assetList[j]);
+				var gra = new GlideRecord('alm_asset');
+				gra.get(assetList[j]);
+				gs.info('TO: asset2 ' + gra.sys_id);
+				var grl = new GlideRecord('alm_transfer_order_line');
+				grl.initialize();
+				grl.transfer_order = grt.sys_id;
+				grl.stage = 'draft';
+				grl.asset = gra.sys_id;
+				grl.model = gra.model;
+				grl.update();
+			}
+			res.code = 'ok';
+			res.id = grt.sys_id.toString();
 
 
-    },
+		} else {
+			res.code = 'error';
+			res.msg = 'Selected devices are in multiple stockrooms';
+		}
 
 
-    createContract: function(current) {
-        gs.info('Creating contract for ' + current.sys_id);
-        var gr = new GlideRecord('ast_contract');
-        gr.initialize();
-        gr.setValue('account', current.getValue('u_account'));
-        gr.setValue('x_tsigh_cmb_billing_profile', current.getValue('u_billing_profile'));
-        gr.setValue('short_description', current.getValue('contract_name'));
-        gr.setValue('starts', current.getValue('contract_start_date'));
-        gr.setValue('ends', current.getValue('contract_end_date'));
-        gr.setValue('type', current.getValue('contract_type'));
-        gr.setValue('vendor_contract', current.getValue('po_contract_number'));
-        return gr.update();
-    },
+		return res;
+	},
 
-    copyService: function(current, commercial) {
-        gs.info('Copying service from ' + current.sys_id + ' - ' + this.serviceCopyFields.toString());
-        /*var currentService = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+	createCustomerInvoice: function(assets) {
+		var assetList = assets.split(',');
+		var assetRecords = [];
+		var stockroom = '';
+		var multipleStockrooms = false;
+		var res = {};
+		var devices = {};
+		var consumables = [];
+		gs.info('Starting');
+
+		//Go through the assets selected by the user
+		for (var i = 0; i < assetList.length; i++) {
+			var gr = new GlideRecord('alm_asset');
+			//Check related stockroom, to see if all devices are in the related stockroom.
+			if (gr.get(assetList[i])) {
+				//Check if asset has any stockroom
+				if (gr.stockroom) {
+					var sid = gr.stockroom.sys_id;
+					//Check if we already have a stockroom to compare
+					if (stockroom) {
+						//If current asset stocktroom doesn't match the actual stockroom then selected assets are from different stockrooms. Finish processing and send error
+						if (stockroom != sid) {
+							multipleStockrooms = true;
+							assetRecords = [];
+							break;
+						}
+						//Otherwise, this is the first asset with stockroom, so set it as a reference
+					} else stockroom = sid;
+					//Check if current asset is hardware. If yes, save it and collect current asset for aggregation
+					if (gr.sys_class_name == 'alm_hardware') {
+						var grh = new GlideRecord('alm_hardware');
+						grh.get(gr.sys_id);
+						//Check asset model
+						var pm = grh.model.sys_id;
+						//Check if we already have this model in the aggregation. If no, then create aggreagation for current model
+						if (!devices[pm]) {
+							devices[pm] = [];
+						}
+						//Add asset to aggregation
+						devices[pm].push(grh.sys_id.toString());
+
+					} else if (gr.sys_class_name == 'alm_consumable') {
+						//If current asset is consumable, collect it in a consumable list
+						consumables.push(gr.sys_id.toString());
+					}
+
+				}
+			}
+
+		}
+		//If there are multiple stockrooms, generate error
+		if (multipleStockrooms) {
+			res.code = 'error';
+			res.msg = 'Selected devices are in multiple stockrooms';
+		} else {
+			//Otherwise create invoice
+			var grl;
+			var gri = new GlideRecord('x_tsigh_cmb_client_invoice');
+			gri.initialize();
+			gri.setValue('type', 'selling');
+			gri.automatically_generated = true;
+			gri.update();
+
+			//For each consumable, create an invoice line. Assign consumable to consumable field
+			for (var j = 0; j < consumables.length; j++) {
+				grl = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+				grl.initialize();
+				grl.setValue('client_invoice', gri.sys_id);
+				var cons = consumables[j];
+
+				var glc = new GlideRecord('alm_consumable');
+				glc.get(cons);
+				grl.setValue('product', glc.model);
+				grl.setValue('quantity', glc.quantity);
+				grl.update();
+				glc.setValue('x_tsigh_cmb_client_invoice_line', grl.sys_id);
+				glc.setValue('install_status', 9);
+				glc.setValue('substatus', 'reserved');
+				glc.update();
+
+			}
+			//Go through the aggregation. For each aggregation, create a line item, add the product model to the invoice, then set the invoice and line item for the asset so they can be tracked via the line item
+			//Get the aggregation keys (product model sys_ids) if any
+			gs.info('Devices: ' + JSON.stringify(devices));
+			var ha = Object.keys(devices);
+			if (ha.length > 0) {
+				//Go through the aggregation
+				for (var j = 0; j < ha.length; j++) {
+					var aggregatedAssets = devices[ha[j]];
+					var productId = ha[j];
+					//Create a line item for current aggregation (product model)
+					grl = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+					grl.initialize();
+					//Set parent invoice
+					grl.setValue('client_invoice', gri.sys_id);
+					//Set current model as product for the invoice line
+
+					grl.setValue('product', productId);
+
+					//Set the quantity as the amount of assets for current aggregation
+					grl.setValue('quantity', aggregatedAssets.length);
+
+					//save the invoice line
+					grl.update();
+					gs.info(j + ' Invoice line item updated');
+					//Get the actual assets for the aggregation
+					gs.info('Aggregated assets: ' + aggregatedAssets.toString());
+					for (var x = 0; x < aggregatedAssets.length; x++) {
+						var asset = aggregatedAssets[x];
+						gs.info(x + ' asset ' + asset);
+						var ast = new GlideRecord('alm_hardware');
+						if (ast.get(asset)) {
+							//Set the invoice fields
+							ast.setValue('x_tsigh_cmb_client_invoice_line', grl.sys_id);
+							//Reserve the assets
+							ast.setValue('install_status', 9);
+							ast.setValue('substatus', 'reserved');
+							ast.update();
+
+						}
+					}
+				}
+			}
+
+			res.code = 'ok';
+			res.id = gri.sys_id.toString();
+
+		}
+		return res;
+
+
+	},
+
+
+	createContract: function(current) {
+		gs.info('Creating contract for ' + current.sys_id);
+		var gr = new GlideRecord('ast_contract');
+		gr.initialize();
+		gr.setValue('account', current.getValue('u_account'));
+		gr.setValue('x_tsigh_cmb_billing_profile', current.getValue('u_billing_profile'));
+		gr.setValue('short_description', current.getValue('contract_name'));
+		gr.setValue('starts', current.getValue('contract_start_date'));
+		gr.setValue('ends', current.getValue('contract_end_date'));
+		gr.setValue('type', current.getValue('contract_type'));
+		gr.setValue('vendor_contract', current.getValue('po_contract_number'));
+		return gr.update();
+	},
+
+	copyService: function(current, commercial) {
+		gs.info('Copying service from ' + current.sys_id + ' - ' + this.serviceCopyFields.toString());
+		/*var currentService = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
         currentService.get(current.sys_id);
         current.setValue('u_combridge_id', 'TMP'+current.getValue('u_combridge_id').slice(3));
         current.update();*/
-        var newService = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
-        newService.initialize();
-        for (var i = 0; i < this.serviceCopyFields.length; i++) {
-            var field = this.serviceCopyFields[i];
-            gs.info('Setting field ' + field + ' with value ' + current.getValue(field));
-            newService.setValue(field, current.getValue(field));
-        }
-        newService.setValue(field, current.getValue(field));
-        newService.setValue('u_parent_service', current.sys_id);
-        newService.setValue('original_id', current.getValue('u_combridge_id'));
-        if (commercial) {
-            newService.setValue('u_state', 'Reserved');
-            newService.setValue('commercial_change', 'true');
-        } else newService.setValue('u_state', 'Initial');
-        newService.setValue('u_combridge_id', 'TMP' + current.getValue('u_combridge_id').slice(3));
-        var result = newService.update();
-        var copyRelObjects = this._copyRelObjects(current.sys_id, newService.getValue('sys_id'));
-        return result;
-    },
+		var newService = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+		newService.initialize();
+		for (var i = 0; i < this.serviceCopyFields.length; i++) {
+			var field = this.serviceCopyFields[i];
+			gs.info('Setting field ' + field + ' with value ' + current.getValue(field));
+			newService.setValue(field, current.getValue(field));
+		}
+		newService.setValue(field, current.getValue(field));
+		newService.setValue('u_parent_service', current.sys_id);
+		newService.setValue('original_id', current.getValue('u_combridge_id'));
 
-    _copyRelObjects: function(old_sysid, new_sysid) {
-        var segments = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_segment');
-        segments.addQuery('u_service', old_sysid);
-        segments.query();
-        while (segments.next()) {
-            var segments2 = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_segment');
-            segments2.get(segments.sys_id);
-            segments2.number = new global.NumberManager('x_tsigh_cmb_u_cmdb_ci_segment').getNextObjNumberPadded();
-            segments2.u_service = new_sysid;
-            segments2.insert();
-        }
-        var eq_groups = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_equipment_group');
-        eq_groups.addQuery('u_service', old_sysid);
-        eq_groups.query();
-        while (eq_groups.next()) {
-            var eq_groups2 = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_equipment_group');
-            eq_groups2.get(eq_groups.sys_id);
-            eq_groups2.u_service = new_sysid;
-            eq_groups2.u_assets = '';
-            eq_groups2.insert();
-        }
-    },
+		var gdt = new GlideDateTime();
+		var gd = new GlideDate();
+		gd = current.u_last_billing_date;
+		gdt.setDisplayValue(gd.getDisplayValue());
+		gdt.addDaysUTC(1);
+		gd = gdt.getLocalDate();
+		newService.u_acceptance_date=gd;
 
-    createEndpoint: function(current, location) {
-        var grl = new GlideRecord('cmn_location');
-        grl.get(location);
+		if (commercial) {
+			newService.setValue('u_state', 'Reserved');
+			newService.setValue('commercial_change', 'true');
+		} else newService.setValue('u_state', 'Initial');
+		newService.setValue('u_combridge_id', 'TMP' + current.getValue('u_combridge_id').slice(3));
+		var result = newService.update();
+		var copyRelObjects = this._copyRelObjects(current.sys_id, newService.getValue('sys_id'));
+		return result;
+	},
 
+	_copyRelObjects: function(old_sysid, new_sysid) {
+		var segments = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_segment');
+		segments.addQuery('u_service', old_sysid);
+		segments.query();
+		while (segments.next()) {
+			var segments2 = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_segment');
+			segments2.get(segments.sys_id);
+			segments2.number = new global.NumberManager('x_tsigh_cmb_u_cmdb_ci_segment').getNextObjNumberPadded();
+			segments2.u_service = new_sysid;
+			segments2.insert();
+		}
+		var eq_groups = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_equipment_group');
+		eq_groups.addQuery('u_service', old_sysid);
+		eq_groups.query();
+		while (eq_groups.next()) {
+			var eq_groups2 = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_equipment_group');
+			eq_groups2.get(eq_groups.sys_id);
+			eq_groups2.u_service = new_sysid;
+			eq_groups2.u_assets = '';
+			eq_groups2.insert();
+		}
+	},
 
-        var gr = new GlideRecord('alm_stockroom');
-        gr.initialize();
-        gr.setValue('u_account', current.getValue('u_account'));
-        gr.setValue('x_tsigh_cmb_billing_profile', current.getValue('u_billing_profile'));
-        gr.setValue('name', grl.name);
-        gr.setValue('location', grl.sys_id);
-        var grt = new GlideRecord('alm_stockroom_type');
-        grt.addQuery('value', 'endpoint');
-        grt.query();
-        if (grt.next()) {
-            gr.setValue('type', 'endpoint');
-        };
+	createEndpoint: function(current, location) {
+		var grl = new GlideRecord('cmn_location');
+		grl.get(location);
 
 
-        return gr.update();
-    },
+		var gr = new GlideRecord('alm_stockroom');
+		gr.initialize();
+		gr.setValue('u_account', current.getValue('u_account'));
+		gr.setValue('x_tsigh_cmb_billing_profile', current.getValue('u_billing_profile'));
+		gr.setValue('name', grl.name);
+		gr.setValue('location', grl.sys_id);
+		var grt = new GlideRecord('alm_stockroom_type');
+		grt.addQuery('value', 'endpoint');
+		grt.query();
+		if (grt.next()) {
+			gr.setValue('type', 'endpoint');
+		};
 
 
-    processInventory: function(stockroom) {
-
-        var a1 = new Array();
-        var gr = new GlideRecord('alm_asset');
-        gr.addQuery('stockroom', stockroom.sys_id);
-        gr.query();
-        while (gr.next()) {
-            var tmp = a1.push(gr.sys_id.toString());
-        }
-        // a1 - assets in the stockroom, the "started from" state
-
-        var a2 = [];
-        a2 = stockroom.x_tsigh_cmb_current_inventory.toString().split(",");
-        // a2 - current inventory field, the "desired" state
+		return gr.update();
+	},
 
 
-        var collectassets = [];
-        if (a1.length > 0) {
-            for (var i = 0; i < a1.length; i++) {
-                if (a2.indexOf(a1[i]) === -1) {
-                    collectassets.push(a1[i]);
-                }
-            }
-            if (collectassets.length > 0) //item deleted, move from current stock to #main_stockroom property#
-            {
-                this._createTOfromto(collectassets, stockroom.sys_id, gs.getProperty('x_tsigh_cmb.main_stockroom'));
-            }
-        }
+	processInventory: function(stockroom) {
 
-        var collectstockrooms = [];
-        var collectbystockroom = {};
-        if (a2.length > 0) {
-            for (var j = 0; j < a2.length; j++) {
-                if (a1.indexOf(a2[j]) === -1) {
-                    var asset = new GlideRecord('alm_asset');
-                    asset.get(a2[j]);
-                    //item added, move from its current stockroom to the actual stockroom
-                    if (collectstockrooms.indexOf(asset.stockroom) === -1) {
-                        collectbystockroom[asset.stockroom] = [asset.sys_id.toString()];
-                        collectstockrooms.push(asset.stockroom);
-                    } else {
-                        collectbystockroom[asset.stockroom].push(asset.sys_id.toString());
-                    }
-                }
-            }
-            if (collectstockrooms.length > 0) {
-                for (var k = 0; k < collectstockrooms.length; k++) {
-                    this._createTOfromto(collectbystockroom[collectstockrooms[k]], collectstockrooms[k], stockroom.sys_id);
-                }
-            }
-        }
+		var a1 = new Array();
+		var gr = new GlideRecord('alm_asset');
+		gr.addQuery('stockroom', stockroom.sys_id);
+		gr.query();
+		while (gr.next()) {
+			var tmp = a1.push(gr.sys_id.toString());
+		}
+		// a1 - assets in the stockroom, the "started from" state
 
-    },
+		var a2 = [];
+		a2 = stockroom.x_tsigh_cmb_current_inventory.toString().split(",");
+		// a2 - current inventory field, the "desired" state
 
-    _createTOfromto: function(assets, from, to) {
-        var grt = new GlideRecord('alm_transfer_order');
-        grt.initialize();
-        grt.from_stockroom = from;
-        grt.to_stockroom = to;
-        grt.update();
-        for (var i = 0; i < assets.length; i++) {
-            var gra = new GlideRecord('alm_asset');
-            gra.get(assets[i]);
-            var grl = new GlideRecord('alm_transfer_order_line');
-            grl.initialize();
-            grl.transfer_order = grt.sys_id;
-            grl.stage = 'draft';
-            grl.asset = gra.sys_id;
-            grl.model = gra.model;
-            grl.update();
-        }
-    },
 
-    type: 'CMBUtils'
+		var collectassets = [];
+		if (a1.length > 0) {
+			for (var i = 0; i < a1.length; i++) {
+				if (a2.indexOf(a1[i]) === -1) {
+					collectassets.push(a1[i]);
+				}
+			}
+			if (collectassets.length > 0) //item deleted, move from current stock to #main_stockroom property#
+			{
+				this._createTOfromto(collectassets, stockroom.sys_id, gs.getProperty('x_tsigh_cmb.main_stockroom'));
+			}
+		}
+
+		var collectstockrooms = [];
+		var collectbystockroom = {};
+		if (a2.length > 0) {
+			for (var j = 0; j < a2.length; j++) {
+				if (a1.indexOf(a2[j]) === -1) {
+					var asset = new GlideRecord('alm_asset');
+					asset.get(a2[j]);
+					//item added, move from its current stockroom to the actual stockroom
+					if (collectstockrooms.indexOf(asset.stockroom) === -1) {
+						collectbystockroom[asset.stockroom] = [asset.sys_id.toString()];
+						collectstockrooms.push(asset.stockroom);
+					} else {
+						collectbystockroom[asset.stockroom].push(asset.sys_id.toString());
+					}
+				}
+			}
+			if (collectstockrooms.length > 0) {
+				for (var k = 0; k < collectstockrooms.length; k++) {
+					this._createTOfromto(collectbystockroom[collectstockrooms[k]], collectstockrooms[k], stockroom.sys_id);
+				}
+			}
+		}
+
+	},
+
+	_createTOfromto: function(assets, from, to) {
+		var grt = new GlideRecord('alm_transfer_order');
+		grt.initialize();
+		grt.from_stockroom = from;
+		grt.to_stockroom = to;
+		grt.update();
+		for (var i = 0; i < assets.length; i++) {
+			var gra = new GlideRecord('alm_asset');
+			gra.get(assets[i]);
+			var grl = new GlideRecord('alm_transfer_order_line');
+			grl.initialize();
+			grl.transfer_order = grt.sys_id;
+			grl.stage = 'draft';
+			grl.asset = gra.sys_id;
+			grl.model = gra.model;
+			grl.update();
+		}
+	},
+
+	type: 'CMBUtils'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-09-20 10:48:44</sys_created_on>
         <sys_id>0a162fad1b8ed11030bc986c9b4bcb2a</sys_id>
-        <sys_mod_count>126</sys_mod_count>
+        <sys_mod_count>139</sys_mod_count>
         <sys_name>CMBUtils</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
-        <sys_policy>read</sys_policy>
+        <sys_policy>protected</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_0a162fad1b8ed11030bc986c9b4bcb2a</sys_update_name>
-        <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-10-19 08:44:51</sys_updated_on>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-25 11:09:20</sys_updated_on>
     </sys_script_include>
 </record_update>

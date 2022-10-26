@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.ClientInvoiceImage</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Collection of functions used for generating client invoice image.</description>
+        <name>ClientInvoiceImage</name>
+        <script><![CDATA[var ClientInvoiceImage = Class.create();
+ClientInvoiceImage.prototype = {
+    initialize: function() {
+    },
+	
+	getHTML: function(invoice_id) {
+		
+		var invoice = new GlideRecord('x_tsigh_cmb_client_invoice');
+		invoice.get(invoice_id);
+		
+		var internal = invoice.client.u_intern_extern;
+		
+		var tmp = '';
+		var combridge_sys_id = gs.getProperty("x_tsigh_cmb.billing_address");
+		
+		
+		if (internal == 'intern') {
+			gs.info('Internal');
+			tmp = gs.getProperty("x_tsigh_cmb.internal_client_invoice_template");
+					
+			var gr = new GlideRecord('customer_account');
+			gr.get(combridge_sys_id);
+			gr.get(invoice.client);
+			
+			tmp = tmp.replace("cont_2", invoice.billing_profile.banking_account);
+			tmp = tmp.replace("bank_2", invoice.billing_profile.bank_name);
+			tmp = tmp.replace("reg_2", gr.u_register_number);
+					
+			var pos = 1;
+			var line = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+			line.addQuery('client_invoice', invoice_id);
+			line.query();
+		
+			var lines = '';
+			
+			while (line.next()) {
+				lines += "<tr>";
+				lines += "<td class=\"lines\">" + pos + ".</td>";
+				lines += "<td class=\"lines\">" + line.getDisplayValue('description') + "</td>";
+				lines += "<td class=\"lines\">" + 'BUC' + "</td>";
+				lines += "<td class=\"lines\">" + line.quantity + "</td>";
+				lines += "<td class=\"lines\">" + line.unit_price_in_ron + "</td>";
+				lines += "<td class=\"lines\">" + line.price_in_ron +  "</td>";
+				lines += "<td class=\"lines\">" + invoice.vat_value * 100 + "</td>";
+				lines += "<td class=\"lines\">" + line.vat_value_in_ron + "</td>";
+				lines == "</tr>";
+				pos += 1;
+			}
+			tmp = tmp.replace("total_net", invoice.total_net_value_in_ron);
+			tmp = tmp.replace("total_tva", invoice.total_value_of_vat_in_ron);
+			tmp = tmp.replace("total_brut", invoice.total_in_ron);
+
+		}
+		
+		else if(internal == 'extern') {
+			
+			tmp = gs.getProperty("x_tsigh_cmb.external_client_invoice_template");
+			
+			tmp = tmp.replace("cmb_id", invoice.number); 
+			
+			var swift = gs.getProperty('x_tsigh_cmb.provider_swift');
+			tmp = tmp.replace("swift", swift);
+			
+			var comp_code = gs.getProperty('x_tsigh_cmb.company_code');
+			tmp = tmp.replace('company_code', comp_code);
+			
+			if(invoice.vat_value){
+				var ron_line = '<tr rowspan="2"><th class="col-cent">Total excl.VAT RON</th>';
+				
+				ron_line += '<td class="lines">' + invoice.total_net_value_in_ron + ' RON</td>';
+				ron_line += '<td class="lines">' + invoice.total_value_of_vat_in_ron + ' RON</td></tr>';
+				ron_line += '<tr><th class="col-cent" colspan="1"> Total RON</th>'; 
+				ron_line += '<td class="lines" colspan="3">' + invoice.total_in_ron + ' RON</td></tr>';
+				
+				tmp = tmp.replace('__ron__', ron_line);
+			}
+			else
+				tmp = tmp.replace('__ron__', "");
+			
+			var pos = 1;
+			var line = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+			line.addQuery('client_invoice', invoice_id);
+			line.query();
+
+			var lines = '';
+			while (line.next()) {
+				lines += "<tr>";
+				lines += "<td class=\"lines\">" + pos + ".</td>";
+				lines += "<td class=\"lines\">" + line.getDisplayValue('description') + "</td>";
+				lines += "<td class=\"lines\">" + line.quantity + "</td>";
+				lines += "<td class=\"lines\">" + line.unit_price + " currency" + "</td>";
+				lines += "<td class=\"lines\">" + line.price + " currency" + "</td>";
+				lines += "<td class=\"lines\">" + line.vat_value_in_ron + " currency" + "</td>";
+				//lines += "<td class=\"lines\">" + invoice.total + " currency" + "</td>";
+				lines == "</tr>";
+				pos += 1;
+			}
+
+			tmp = tmp.replace("total_net", invoice.total_net_value);
+			tmp = tmp.replace("total_tva", invoice.total_value_of_vat);
+			tmp = tmp.replace("total_brut", invoice.total);
+			
+		}
+		
+		var logo = gs.getProperty('x_tsigh_cmb.combridge_logo');
+		if (logo)
+			tmp = tmp.replaceAll('__logo__', logo);
+		
+		tmp = tmp.replace("serial", 'CMB'); 
+		tmp = tmp.replaceAll("invoice_num", invoice.number);
+		tmp = tmp.replace("invoice_date", invoice.invoice_date); 
+		tmp = tmp.replace("invoice_due_date", invoice.due_date); 
+		
+		var gr = new GlideRecord('customer_account');
+		gr.get(combridge_sys_id);
+		tmp = tmp.replace("provider", gr.name);
+		tmp = tmp.replace("reg_1", gr.u_register_number);
+		tmp = tmp.replace("cif_1", gr.u_contribution_code_vat_cui);
+		tmp = tmp.replace("loc_1", gr.u_location.name);
+		tmp = tmp.replace("cont_1", 'cmb_bank_account');
+		tmp = tmp.replace("bank_1", 'UniCredit Bank');
+		
+		gr.get(invoice.client);
+		tmp = tmp.replace("customer", gr.name);
+		tmp = tmp.replace("cif_2", gr.u_contribution_code_vat_cui);
+		tmp = tmp.replace("loc_2", invoice.billing_profile.location.name);
+		
+		tmp = tmp.replace("__lines__", lines);
+		
+		tmp = tmp.replaceAll("currency", invoice.currency);
+		tmp = tmp.replace("exchange_rate", invoice.exchange_rate_value);
+		tmp = tmp.replace("comments", invoice.observation);
+			
+		
+		var prov = new GlideRecord('sys_user');
+		prov.addQuery('user_name', invoice.sys_created_by);
+		prov.query();
+		if(prov.next()){
+			var name = prov.first_name + " " + prov.last_name;
+			tmp = tmp.replace('contact_name', name);
+			tmp = tmp.replace('contact_email', prov.email);
+		}
+		else if(!prov.next()){
+			tmp = tmp.replace('contact_name', '-');
+			tmp = tmp.replace('contact_email', '-');
+		}
+		
+		return tmp;
+	},
+	
+    type: 'ClientInvoiceImage'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-11 11:12:16</sys_created_on>
+        <sys_id>ba577bdc1bea1d5030bc986c9b4bcba6</sys_id>
+        <sys_mod_count>67</sys_mod_count>
+        <sys_name>ClientInvoiceImage</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_ba577bdc1bea1d5030bc986c9b4bcba6</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-24 08:56:38</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -9,17 +9,17 @@
             <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
             <plural>Acceptance dates</plural>
             <sys_class_name>sys_documentation</sys_class_name>
-            <sys_created_by>istvan.toma</sys_created_by>
-            <sys_created_on>2022-09-05 15:35:07</sys_created_on>
-            <sys_id>e5badbf41bb19510c7c9fc078b4bcbb2</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-17 10:49:46</sys_created_on>
+            <sys_id>9f2c629a1bea9110c7c9fc078b4bcb04</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>Acceptance date</sys_name>
             <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
             <sys_policy/>
             <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
             <sys_update_name>sys_documentation_x_tsigh_cmb_u_cmdb_ci_cmb_service_u_acceptance_date_en</sys_update_name>
-            <sys_updated_by>istvan.toma</sys_updated_by>
-            <sys_updated_on>2022-09-05 15:35:07</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-17 10:49:46</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

@@ -32,9 +32,7 @@ BNRExchangeRate.prototype = {
 		var responseBody = response.getBody();
 		var httpStatus = response.getStatusCode();
 
-
 		var resultsStr = global.JSON.stringify(gs.xmlToJSON(responseBody));
-
 
 		var resultsJSon = global.JSON.parse(resultsStr);
 		var gr = new GlideRecord('fx_rate');
@@ -43,7 +41,6 @@ BNRExchangeRate.prototype = {
 		var curr = new GlideRecord('fx_currency');
 		curr.query();
 
-
 	while (curr.next()){ 
 		if(curr.code == 'RON'){
 			gr.initialize();
@@ -51,12 +48,13 @@ BNRExchangeRate.prototype = {
 			gr.rate = 1;
 			gr.insert();
 		}
+		
 	for (i = 0; i < resultsJSon.DataSet.Body.Cube.Rate.length; i ++){
 		if (curr.code == resultsJSon.DataSet.Body.Cube.Rate[i].currency.toString())  {
 			if(resultsJSon.DataSet.Body.Cube.Rate[i].multiplier){
 				gr.initialize();
 				gr.currency = curr.sys_id;
-				gr.rate = 1/parseFloat(resultsJSon.DataSet.Body.Cube.Rate[i].content)/100;
+				gr.rate = 1/(parseFloat(resultsJSon.DataSet.Body.Cube.Rate[i].content)/100);
 				gr.insert();
 			}
 			else{
@@ -77,13 +75,13 @@ BNRExchangeRate.prototype = {
         <sys_created_by>szabo.zoltan</sys_created_by>
         <sys_created_on>2022-09-06 14:34:11</sys_created_on>
         <sys_id>3040dc191bb1d510c7c9fc078b4bcb69</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>BNRExchangeRate</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_3040dc191bb1d510c7c9fc078b4bcb69</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-10-04 10:59:06</sys_updated_on>
+        <sys_updated_on>2022-10-05 11:46:42</sys_updated_on>
     </sys_script_include>
 </record_update>

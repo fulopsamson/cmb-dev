@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Validation line" max_length="40" name="x_tsigh_cmb_validation_line" sizeclass="214" type="collection">
+        <element choice="3" default="requested" label="Approval" max_length="40" name="approval" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Approved" value="approved"/>
+                <element inactive_on_update="false" label="Cancelled" value="cancelled"/>
+                <element inactive_on_update="false" label="Rejected" value="rejected"/>
+                <element inactive_on_update="false" label="Requested" value="requested"/>
+            </choice>
+        </element>
+        <element label="Billing profile" max_length="32" name="billing_profile" read_only="true" reference="x_tsigh_cmb_billing_profile" type="reference"/>
+        <element label="Client invoice" max_length="32" name="client_invoice" read_only="true" reference="x_tsigh_cmb_client_invoice" type="reference"/>
+        <element choice="1" label="Month" max_length="40" name="month" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="January" sequence="100" value="1"/>
+                <element inactive_on_update="false" label="February" sequence="200" value="2"/>
+                <element inactive_on_update="false" label="March" sequence="300" value="3"/>
+                <element inactive_on_update="false" label="April" sequence="400" value="4"/>
+                <element inactive_on_update="false" label="May" sequence="500" value="5"/>
+                <element inactive_on_update="false" label="June" sequence="600" value="6"/>
+                <element inactive_on_update="false" label="July" sequence="700" value="7"/>
+                <element inactive_on_update="false" label="August" sequence="800" value="8"/>
+                <element inactive_on_update="false" label="September" sequence="900" value="9"/>
+                <element inactive_on_update="false" label="October" sequence="1000" value="10"/>
+                <element inactive_on_update="false" label="November" sequence="1100" value="11"/>
+                <element inactive_on_update="false" label="December" sequence="1200" value="12"/>
+            </choice>
+        </element>
+        <element label="MRC" max_length="40" name="mrc" read_only="true" type="float"/>
+        <element label="MRC Calculated" max_length="40" name="mrc_calculated" read_only="true" type="float"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="OTC" max_length="40" name="otc" read_only="true" type="float"/>
+        <element label="OTC calculated" max_length="40" name="otc_calculated" read_only="true" type="float"/>
+        <element label="Period end" max_length="40" name="period_end" type="glide_date"/>
+        <element label="Period start" max_length="40" name="period_start" type="glide_date"/>
+        <element label="Service" max_length="32" name="service" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_cmb_service" type="reference"/>
+        <element label="Year" max_length="40" name="year" type="string"/>
+        <index name="index">
+            <element name="client_invoice"/>
+        </index>
+        <index name="index2">
+            <element name="billing_profile"/>
+        </index>
+        <index name="index3">
+            <element name="service"/>
+        </index>
+    </element>
+</database>

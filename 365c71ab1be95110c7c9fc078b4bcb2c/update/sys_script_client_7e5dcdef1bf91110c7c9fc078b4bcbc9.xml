@@ -17,9 +17,9 @@
 
 	var billingProfile = g_form.getReference('u_to',callBack);
 	
- function callBack(rec){
-		g_form.setValue('u_to_location',rec.location);
- }
+	function callBack(rec){
+			g_form.setValue('u_to_location', rec.location);
+	}
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>toma.istvan</sys_created_by>
@@ -27,15 +27,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7e5dcdef1bf91110c7c9fc078b4bcbc9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Segment To onChange</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_client_7e5dcdef1bf91110c7c9fc078b4bcbc9</sys_update_name>
-        <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-09-13 18:20:48</sys_updated_on>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-25 05:03:48</sys_updated_on>
         <table>x_tsigh_cmb_u_cmdb_ci_segment</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

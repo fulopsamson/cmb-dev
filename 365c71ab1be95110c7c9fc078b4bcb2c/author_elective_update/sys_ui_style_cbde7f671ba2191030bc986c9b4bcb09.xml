@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_style">
+    <sys_ui_style action="DELETE">
+        <alt/>
+        <element>description</element>
+        <name>x_tsigh_cmb_client_invoice_lines</name>
+        <style>width: 300px !important;</style>
+        <sys_class_name>sys_ui_style</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-21 14:04:28</sys_created_on>
+        <sys_id>cbde7f671ba2191030bc986c9b4bcb09</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>x_tsigh_cmb_client_invoice_lines</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_style_cbde7f671ba2191030bc986c9b4bcb09</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-21 14:08:18</sys_updated_on>
+        <value>javascript: current.state != "";</value>
+    </sys_ui_style>
+    <sys_translated_text action="DELETE" query="documentkey=cbde7f671ba2191030bc986c9b4bcb09"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_style_cbde7f671ba2191030bc986c9b4bcb09</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_style"><sys_ui_style action="INSERT_OR_UPDATE"><alt/><element>description</element><name>x_tsigh_cmb_client_invoice_lines</name><style>width: 300px !important;</style><sys_class_name>sys_ui_style</sys_class_name><sys_created_by>samson.fulop</sys_created_by><sys_created_on>2022-10-21 14:04:28</sys_created_on><sys_id>cbde7f671ba2191030bc986c9b4bcb09</sys_id><sys_mod_count>5</sys_mod_count><sys_name>x_tsigh_cmb_client_invoice_lines</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_ui_style_cbde7f671ba2191030bc986c9b4bcb09</sys_update_name><sys_updated_by>samson.fulop</sys_updated_by><sys_updated_on>2022-10-21 14:08:18</sys_updated_on><value>javascript: current.state != "";</value></sys_ui_style><sys_translated_text action="delete_multiple" query="documentkey=cbde7f671ba2191030bc986c9b4bcb09"/></record_update>]]></payload>
+        <payload_hash>-1514533880</payload_hash>
+        <record_name>x_tsigh_cmb_client_invoice_lines</record_name>
+        <reverted_from/>
+        <source>24b310561b1a155030bc986c9b4bcb3e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-21 14:08:18</sys_created_on>
+        <sys_id>a6ff73a71ba2191030bc986c9b4bcb3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183fadf8fd00000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-21 14:08:18</sys_updated_on>
+        <type>Style</type>
+        <update_guid>aeff73a719a219104d15d8b2ede77d3d</update_guid>
+        <update_guid_history>aeff73a719a219104d15d8b2ede77d3d:-1514533880,40cf3fa785a219104e75b8e7203d4e3e:-1677058665,08bf3ba7efa2191085a180da93699d93:-292573707,f08ff7a7b1a2191076e10f454b62c2f6:523068056,9f5f37a738a2191012a2ee7b9144079b:-1688326440,de1ff767b7a219102de4f46f6a3f8076:-959824117</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-21 14:08:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_style">sys_ui_style</sys_db_object>
+        <sys_id>31eb3ff431664cf692209aba9603a444</sys_id>
+        <sys_metadata>cbde7f671ba2191030bc986c9b4bcb09</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_client_invoice_lines</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Client invoice lines">2d75364a1b71991030bc986c9b4bcb4b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_style_cbde7f671ba2191030bc986c9b4bcb09</sys_update_name>
+        <sys_update_version display_value="sys_ui_style_cbde7f671ba2191030bc986c9b4bcb09">a6ff73a71ba2191030bc986c9b4bcb3e</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-21 14:08:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

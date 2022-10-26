@@ -2,7 +2,7 @@
     <sys_ui_action action="INSERT_OR_UPDATE">
         <action_name>cmb_commercial_change</action_name>
         <active>true</active>
-        <client>false</client>
+        <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
@@ -28,16 +28,30 @@
         <list_style/>
         <messages/>
         <name>Commercial Change</name>
-        <onclick/>
+        <onclick>validateCommercialChange()</onclick>
         <order>100</order>
-        <script><![CDATA[var newService = new x_tsigh_cmb.CMBUtils().copyService(current, true);
-if(newService){
-	var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
-	gr.get(newService);
-	action.setRedirectURL(gr);
-	gs.addInfoMessage('New commercial change was created!');
+        <script><![CDATA[function validateCommercialChange(){
+	var lbl = g_form.getValue('u_last_billing_date');
+	if(lbl)
+		gsftSubmit(null, g_form.getFormElement(), 'cmb_commercial_change');
+	else g_form.addErrorMessage('Please provide a value for field Last billing date before initiating a commercial change');
+
 }
 
+
+if (typeof window == 'undefined')
+	createCommercialChange();
+
+
+function createCommercialChange() {
+	var newService = new x_tsigh_cmb.CMBUtils().copyService(current, true);
+	if(newService){
+		var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+		gr.get(newService);
+		action.setRedirectURL(gr);
+		gs.addInfoMessage('New commercial change was created!');
+	}
+}
 ]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -49,7 +63,7 @@ if(newService){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>51d746161b86951030bc986c9b4bcbd6</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>Commercial Change</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -57,9 +71,9 @@ if(newService){
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_ui_action_51d746161b86951030bc986c9b4bcbd6</sys_update_name>
         <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-09-26 10:29:22</sys_updated_on>
+        <sys_updated_on>2022-10-20 12:39:46</sys_updated_on>
         <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
-        <ui11_compatible>true</ui11_compatible>
+        <ui11_compatible>false</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>
 </record_update>

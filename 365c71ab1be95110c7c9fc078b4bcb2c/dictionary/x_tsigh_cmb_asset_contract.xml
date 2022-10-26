@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Asset Contract" max_length="40" name="x_tsigh_cmb_asset_contract" sizeclass="98" type="collection">
+        <element label="Asset" max_length="32" name="asset" reference="alm_asset" type="reference"/>
+        <element label="Contract" max_length="32" name="contract" reference="ast_contract" type="reference"/>
+        <index name="index">
+            <element name="contract"/>
+        </index>
+        <index name="index2">
+            <element name="asset"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_style">
+    <sys_ui_style action="INSERT_OR_UPDATE">
+        <alt/>
+        <element>mrc_calculated</element>
+        <name>x_tsigh_cmb_validation_line</name>
+        <style>background-color:  #FFA07A;</style>
+        <sys_class_name>sys_ui_style</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-20 15:09:09</sys_created_on>
+        <sys_id>29d38f571bee951030bc986c9b4bcb59</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_tsigh_cmb_validation_line</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_style_29d38f571bee951030bc986c9b4bcb59</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-20 15:09:41</sys_updated_on>
+        <value>javascript: current.mrc_calculated &lt; 0</value>
+    </sys_ui_style>
+    <sys_translated_text action="delete_multiple" query="documentkey=29d38f571bee951030bc986c9b4bcb59"/>
+</record_update>

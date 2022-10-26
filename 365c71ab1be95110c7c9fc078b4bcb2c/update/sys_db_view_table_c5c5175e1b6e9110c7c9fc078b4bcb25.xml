@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <left_join>false</left_join>
+        <order>200</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-17 13:52:10</sys_created_on>
+        <sys_id>c5c5175e1b6e9110c7c9fc078b4bcb25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_supplier_invoice</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_db_view_table_c5c5175e1b6e9110c7c9fc078b4bcb25</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-17 13:52:10</sys_updated_on>
+        <table>x_tsigh_cmb_supplier_invoice</table>
+        <variable_prefix>sin</variable_prefix>
+        <view display_value="x_tsigh_cmb_capex_invoice">4e8517de1b6e9110c7c9fc078b4bcbb4</view>
+        <where_clause>sin_sys_id =  sil_supplier_invoice</where_clause>
+    </sys_db_view_table>
+</record_update>

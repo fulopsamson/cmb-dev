@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7f43b9991bf5d510c7c9fc078b4bcbab</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>CMB Product type onChange</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_client_7f43b9991bf5d510c7c9fc078b4bcbab</sys_update_name>
         <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-09-06 22:30:50</sys_updated_on>
+        <sys_updated_on>2022-10-24 15:44:59</sys_updated_on>
         <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

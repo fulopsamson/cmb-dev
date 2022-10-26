@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_tsigh_cmb_supplier_invoice_lines</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Supplier Invoice Lines Total</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var total = 0;
+		
+	var lines = new GlideRecord('x_tsigh_cmb_supplier_invoice_lines');
+	lines.addQuery('supplier_invoice', id);
+	lines.query();
+
+	while(lines.next())
+		total = total + lines.total_price;
+		
+	
+	var inv = new GlideRecord('x_tsigh_cmb_supplier_invoice');
+	inv.addQuery('sys_id', id);
+	inv.query();
+	
+	if(inv.next()){
+		var rate = inv.exchange_rate_value;
+		
+		inv.total_net_value = total;
+		var tot_ron = total*rate;
+		inv.total_net_value_in_ron = tot_ron;
+		
+		var VAT = gs.getProperty('x_tsigh_cmb.tva_percent');
+
+		if(inv.supplier){
+			if(inv.supplier.u_intern_extern == 'intern')
+				inv.total_gross_value_in_ron = tot_ron + tot_ron*VAT;
+			
+			else if(inv.supplier.u_intern_extern == 'extern')
+				inv.total_gross_value_in_ron = tot_ron;
+			else{
+				inv.total_gross_value_in_ron = 0;
+				gs.addErrorMessage('Intern/Extern field is empty in Supplier reference list!');
+			}
+		}
+		inv.update();
+
+	}
+	else
+		gs.addErrorMessage('Something is wrong with the total count! ');
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-26 07:18:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1081189d1b7a1910c7c9fc078b4bcbdd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Supplier Invoice Lines Total</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_1081189d1b7a1910c7c9fc078b4bcbdd</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-26 08:09:15</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=1081189d1b7a1910c7c9fc078b4bcbdd"/>
+</record_update>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="868b26191ba2119030bc986c9b4bcbec" sys_domain="global" table="x_tsigh_cmb_u_cmdb_ci_cmb_service" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-14 08:13:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>028b66191ba2119030bc986c9b4bcb08</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_tsigh_cmb_u_cmdb_ci_cmb_service" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="828b26191ba2119030bc986c9b4bcbe0">868b26191ba2119030bc986c9b4bcbec</sys_ui_form>
+            <sys_ui_section caption="Validation line parameters" display_value="Validation line parameters" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="828b26191ba2119030bc986c9b4bcbe0">ce8b26191ba2119030bc986c9b4bcbe8</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-14 08:16:43</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-14 08:13:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c28b66191ba2119030bc986c9b4bcb0c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_tsigh_cmb_u_cmdb_ci_cmb_service" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="828b26191ba2119030bc986c9b4bcbe0">868b26191ba2119030bc986c9b4bcbec</sys_ui_form>
+            <sys_ui_section caption="Termination details" display_value="Termination details" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="828b26191ba2119030bc986c9b4bcbe0">4a8b26191ba2119030bc986c9b4bcbe9</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-14 08:16:43</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-14 08:13:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8a8b66191ba2119030bc986c9b4bcb10</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_tsigh_cmb_u_cmdb_ci_cmb_service" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="828b26191ba2119030bc986c9b4bcbe0">868b26191ba2119030bc986c9b4bcbec</sys_ui_form>
+            <sys_ui_section caption="Related services" display_value="Related services" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="828b26191ba2119030bc986c9b4bcbe0">c28b26191ba2119030bc986c9b4bcbea</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-14 08:16:43</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-14 08:13:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>468b66191ba2119030bc986c9b4bcb15</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_tsigh_cmb_u_cmdb_ci_cmb_service" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="828b26191ba2119030bc986c9b4bcbe0">868b26191ba2119030bc986c9b4bcbec</sys_ui_form>
+            <sys_ui_section caption="Notes" display_value="Notes" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="828b26191ba2119030bc986c9b4bcbe0">4e8b26191ba2119030bc986c9b4bcbea</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-14 08:16:43</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-14 08:13:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>068b66191ba2119030bc986c9b4bcb1a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_tsigh_cmb_u_cmdb_ci_cmb_service" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="828b26191ba2119030bc986c9b4bcbe0">868b26191ba2119030bc986c9b4bcbec</sys_ui_form>
+            <sys_ui_section caption="CI Relations" display_value="CI Relations" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="828b26191ba2119030bc986c9b4bcbe0">c68b26191ba2119030bc986c9b4bcbeb</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-14 08:16:43</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-14 08:13:02</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>868b26191ba2119030bc986c9b4bcbec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_tsigh_cmb_u_cmdb_ci_cmb_service</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_form_sections_868b26191ba2119030bc986c9b4bcbec</sys_update_name>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-14 08:13:02</sys_updated_on>
+            <sys_user/>
+            <view display_value="Test" name="Test">828b26191ba2119030bc986c9b4bcbe0</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

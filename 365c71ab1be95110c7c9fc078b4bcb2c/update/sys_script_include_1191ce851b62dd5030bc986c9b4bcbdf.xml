@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.CMBServiceImport</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>CMBServiceImport</name>
+        <script><![CDATA[var CMBServiceImport = Class.create();
+CMBServiceImport.prototype = {
+	initialize: function() {
+	},
+	createEquipmentGroups:function(service, cur, otc,mrc){
+		var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_equipment_group');
+		gr.initialize();
+		gr.setValue('u_service',service);
+		if(cur) gr.setValue('u_currency',cur);
+		gr.setValue('u_mrc',mrc?mrc:0);
+		gr.setValue('u_otc',otc?otc:0);
+		return gr.update();
+	},
+
+	getBillingProfile:function(name){
+		var gr = new GlideRecord('x_tsigh_cmb_billing_profile');
+		gr.addQuery('name',name);
+		gr.query();
+		if(gr.next()){
+			return gr;
+		}
+		return;
+
+	},
+
+	createContract:function(conumber,coname){
+		var gr = new GlideRecord('ast_contract');
+		gr.initialize();
+		gr.setValue('vendor_contract',conumber);
+		gr.setValue('short_description',coname);
+		gr.update();
+		return gr.sys_id;
+	},
+
+	getLocation:function(data){
+		gs.info('Location data'+JSON.stringify(data));
+		var gr = new GlideRecord('cmn_location');
+		var keys = Object.keys(data);
+		if(keys.length>0){
+			for(var i=0;i<keys.length;i++){
+				if(data[keys[i]]) gr.addQuery(keys[i],data[keys[i]]);
+			}
+			gr.query();
+			if(gr.next()){
+				return gr.sys_id;
+			} else {
+				gr = new GlideRecord('cmn_location');
+				gr.initialize();
+				var hasAttribute = false;
+				for(var i=0;i<keys.length;i++){
+					if(data[keys[i]]){
+						gr.setValue(keys[i],data[keys[i]]);
+						hasAttribute = true;
+					} 
+				}
+				if(hasAttribute){
+					var newname = (data['zip']?(data['zip']):'')+(data['street']?(' '+data['street']):'')+(data['city']?(' '+data['city']):'')+(data['state']?(' '+data['state']):'');
+					gs.info('New location name: '+newname);
+					gr.setValue('name',newname);
+
+					gr.update();
+					return gr.sys_id;
+				} 
+
+			}
+
+
+		} 
+		return;
+	},
+
+	createStockroom:function(locationId,type,bp,name){
+		gs.info('Creating stockroom, location id: '+locationId+' - type: '+type+', bp: '+bp.sys_id+' - name: '+name);
+		var gst = new GlideRecord('alm_stockroom_type');
+		gst.addQuery('value',type);
+		gst.query();
+		if(gst.next()){
+			var grl = new GlideRecord('cmn_location');
+			grl.get(locationId);
+			var gr = new GlideRecord('alm_stockroom');
+			gr.initialize();
+			gr.setValue('name',name?name:grl.name);
+			if(locationId) gr.setValue('location',locationId);
+			gr.setValue('type',gst.sys_id);
+			gr.setValue('x_tsigh_cmb_billing_profile',bp.sys_id.toString());
+			gr.setValue('u_account',bp.account.sys_id.toString());
+			gr.update();
+			gr.setValue('name',gr.location.name+(name?' '+name:''));
+			return gr;
+		}
+		return;
+
+
+	},
+
+
+	getProduct:function(name){
+		var gr = new GlideRecord('x_tsigh_cmb_product_type');
+		gr.addQuery('name',name);
+		gr.query();
+		if(gr.next()){
+			return gr.sys_id;
+		}
+		return;
+
+	},
+	getProject:function(name){
+		var gr = new GlideRecord('x_tsigh_cmb_project');
+		gr.addQuery('name',name);
+		gr.query();
+		if(gr.next()){
+			return gr.sys_id;
+		}
+		return;		
+	}	,
+	getProjectCode:function(name){
+		var gr = new GlideRecord('sys_choice');
+		gr.addQuery('name','x_tsigh_cmb_u_cmdb_ci_cmb_service');
+		gr.addQuery('label',name);
+		gr.addQuery('element','u_project_code');
+		gr.query();
+		if(gr.next()){
+			if(gr.value){
+				return gr.value.toString();
+			} 
+			return;
+
+		}
+		return;
+	},
+	type: 'CMBServiceImport'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-13 10:35:11</sys_created_on>
+        <sys_id>1191ce851b62dd5030bc986c9b4bcbdf</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>CMBServiceImport</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>protected</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_1191ce851b62dd5030bc986c9b4bcbdf</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-17 08:51:35</sys_updated_on>
+    </sys_script_include>
+</record_update>

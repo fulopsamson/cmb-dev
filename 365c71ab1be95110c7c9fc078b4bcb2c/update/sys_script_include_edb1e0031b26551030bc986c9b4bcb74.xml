@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.CMBInvoiceUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>CMBInvoiceUtils</name>
+        <script><![CDATA[var CMBInvoiceUtils = Class.create();
+CMBInvoiceUtils.prototype = {
+	initialize: function() {
+	},
+
+	_formatDate:function(gd){
+		return gd.getDayOfMonthNoTZ()+'/'+gd.getMonthNoTZ()+'/'+gd.getYearNoTZ();
+	},
+
+	validateLines:function(ids){
+		var ret = [];
+		var checked = [];
+		var lines = ids.split(',');
+		for (var i=0;i<lines.length;i++){
+			var gr = new GlideRecord('x_tsigh_cmb_validation_line');
+			gr.get(lines[i]);
+			gs.info(!gr.service);
+			if(!gr.service){
+				ret.push('There is no service attached for validation line '+gr.number);
+			}else{
+				if(!gr.service.u_billing_profile){
+					if(checked.indexOf(gr.service.sys_id.toString())<0){
+						ret.push('There is no billing profile for service '+gr.service.u_combridge_id);
+						checked.push(gr.service.sys_id.toString());
+
+					}
+				}
+				if(gr.service.u_billing_profile){
+					var bp = gr.service.u_billing_profile;
+					if((bp.invoice_generating_method == 3 || bp.invoice_generating_method == 4) && !(gr.service.partner_ref_nr)){
+						if( checked.indexOf(gr.service.sys_id.toString())<0){
+							ret.push('There is no partner reference number for service '+gr.service.u_combridge_id);
+							checked.push(gr.service.sys_id.toString());
+						}
+					}
+				} 
+			} 
+		}
+		gs.info('Ret: '+JSON.stringify(ret));
+		return ret;
+	},
+
+	calculateVATValues:function(current){
+		var totalVatValue = 0;
+		var gr = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+		gr.addQuery('client_invoice',current.sys_id);
+		gr.query();
+		while(gr.next()){
+			totalVatValue+=gr.vat_value_in_ron;
+		}
+		totalVatValue = Math.round(totalVatValue*100)/100;
+		return totalVatValue;
+	},
+
+	generateInvoiceLinesGroupByOrder:function(ids,bp){
+		var total = 0;
+		var periods = this._getPeriods(ids);
+		var gri = this._createInvoice(bp,periods);
+		var pos = 1;
+		var prf = '';
+
+		var sortedByService = this._sortByService(ids);
+		var skeys = Object.keys(sortedByService);
+		for(var i=0;i<skeys.length;i++){
+			var skey = skeys[i];
+			var slist = sortedByService[skey];
+			var sortedByDate = this._groupByDate(slist);
+			//Go through the months
+			var dkeys = Object.keys(sortedByDate);
+			for(var j=0;j<dkeys.length;j++){
+				var dkey = dkeys[j];
+				//Get the vlines for a specific month
+				var dlist = sortedByDate[dkey];
+				var mrc = 0;
+				var otc = 0;
+				for(var k=0;k<dlist.length;k++){
+					//Aggregate the MRCs and OTCs
+					var grv = new GlideRecord('x_tsigh_cmb_validation_line');
+
+					grv.get(dlist[k]);
+					prf = grv.service.partner_ref_nr?grv.service.partner_ref_nr:'';
+					otc+=grv.otc_calculated?(grv.otc_calculated):0;
+					mrc+=grv.mrc_calculated?(grv.mrc_calculated):0;
+
+					grv.setValue('client_invoice',gri.sys_id);
+					grv.update();
+				}
+				total+=mrc;
+				total+=otc;
+				var year = dkey.slice(0,4);
+				var month = dkey.slice(-2);					
+				var per = this._createLineItemPeriod(year,month);
+				//Create an invoice line for all the MRC for the PRF for that specific month
+
+				if(mrc != 0) this._createInvoiceLine('',gri,mrc,per.period, this.generateInvoiceDescription(bp,'mrc',prf, per.ps,per.pe), pos++);	
+				if(otc != 0) this._createInvoiceLine('',gri,otc,per.period, this.generateInvoiceDescription(bp,'otc',prf, per.ps,per.pe),pos++);
+			}				
+		}
+
+
+		/*for(var i=0;i<keys.length;i++){
+			var el = pris[keys[i]];
+			var otc = 0;
+			var mrc = 0;
+			for(var j=0;j<el.length;j++){	
+				var grv = new GlideRecord('x_tsigh_cmb_validation_line');
+				grv.get(el[j]);
+				otc+=grv.otc_calculated?(grv.otc_calculated):0;
+				mrc+=grv.mrc_calculated?(grv.mrc_calculated):0;
+				grv.setValue('client_invoice',gri.sys_id);
+				grv.update();
+
+			}
+			if(otc != 0) this._createInvoiceLine((gr.service?gr.service.sys_id:''),gri,otc,periods, 'Demo description - OTC value: '+otc);
+			if(mrc != 0) this._createInvoiceLine((gr.service?gr.service.sys_id:''),gri,mrc,periods, 'Demo description - MRC value: '+mrc);
+			total+=otc+mrc;
+		}*/
+		gri.setValue('total_net_value',total);	
+		gri.update();
+
+	},
+
+
+	generateInvoiceDescription:function(bp,type,prn, from,to){
+		gs.info('Generating description for type '+type+' with partner ref. id: '+prn+' to period '+(from+' - '+to));
+		var ext = 'Telecommunication service fee for order no. '+prn+', contract no. '+((type=='mrc'?('MRC for '+(from+' '+to)+')'):'OTC'));
+		var inte = 'Servicii de telecomunicatii cf. ctr. taxa lunara pentru perioada '+((type=='mrc'?((from+' '+to)):'')+' '+prn);
+
+		var ret = '';
+		if(bp.account && bp.account.u_intern_extern){
+			if(bp.account.u_intern_extern == 'extern') ret = ext;
+			else ret = inte;
+
+		}else ret = ext;
+
+		return ret;
+
+
+
+	},
+
+	generateInvoiceLinesSeparate:function(ids, bp){
+
+		//Set total
+		var total = 0;
+		//Get periods based on validation lines
+		var periods = this._getPeriods(ids);
+		/*Sort all validation lines based on partner reference id's. So end result will be something like this: 
+		{
+		  pr1:[vline1,vline2, vline3],
+		  pr2:[vline3, vline4]
+		}
+		*/
+
+		var pris = this._sortByRefNr(ids);
+		var keys = Object.keys(pris);
+		//Get the keys (partner reference numbers) and iterate through the data. Each of the PRN will generate a separate invoice
+		for(var i=0;i<keys.length;i++){
+			//Create invoice for the PRN
+			var pos = 1;
+			
+			var prf = keys[i];
+			var gri = this._createInvoice(bp,periods,prf);
+
+			//Get the element list for the prn. 
+			var el = pris[keys[i]];
+			if(el.length>0){
+				/*Sort the validation lines by date (more precisely year+month so line for the same month can be aggregated)
+				data will look like this:
+				{
+					202201:[vline1, vline2],
+					202202:[vline3]
+				}
+				*/
+				var sortedByDate = this._groupByDate(el);
+				//Go through the months
+				var dkeys = Object.keys(sortedByDate);
+				for(var j=0;j<dkeys.length;j++){
+					var dkey = dkeys[j];
+					//Get the vlines for a specific month
+					var dlist = sortedByDate[dkey];
+					var mrc = 0;
+					var otc = 0;
+					for(var k=0;k<dlist.length;k++){
+						//Aggregate the MRCs and OTCs
+						var grv = new GlideRecord('x_tsigh_cmb_validation_line');
+						grv.get(dlist[k]);
+						otc+=grv.otc_calculated?(grv.otc_calculated):0;
+						mrc+=grv.mrc_calculated?(grv.mrc_calculated):0;
+
+						grv.setValue('client_invoice',gri.sys_id);
+						grv.update();
+					}
+					total+=mrc;
+					total+=otc;
+					var year = dkey.slice(0,4);
+					var month = dkey.slice(-2);					
+					var per = this._createLineItemPeriod(year,month);
+					//Create an invoice line for all the MRC for the PRF for that specific month
+
+					if(mrc != 0) this._createInvoiceLine('',gri,mrc,per.period, this.generateInvoiceDescription(bp,'mrc',prf, per.ps,per.pe), pos++);	
+					if(otc != 0) this._createInvoiceLine('',gri,otc,per.period, this.generateInvoiceDescription(bp,'otc',prf, per.ps,per.pe),pos++);
+				}
+			}
+			//Create a separate line for the OTC for that PRN
+
+			//Set the total for the invoice
+
+			gri.setValue('total_net_value',total);
+			gri.update();					
+
+		}
+
+
+	},
+
+	generateInvoiceLinesGroupByPRF:function(ids,bp){
+		var calculationLines = [];
+		gs.info('PRF: Creating a new invoices by PRF');
+		var total = 0;
+		var periods = this._getPeriods(ids);
+		//Create one invoice for all services
+		var pos = 1;
+		var gri = this._createInvoice(bp,periods);
+		//Sort the validation lines based on date.
+		var sortedByDate = this._groupByDate(ids);
+
+		gs.info('El: '+JSON.stringify(sortedByDate));
+		var dkeys = Object.keys(sortedByDate);
+		//Go through all the selected months. Now we are processing months one by one
+		for(var i=0;i<dkeys.length;i++){
+			var dkey = dkeys[i];
+
+			var el = sortedByDate[dkeys[i]];
+
+			if(el.length>0){
+				/*Sort all the invoice lines based on PRFs. End result - for each month there will be two line items per service (with separate PRN)
+				one OTC (if any) and one MRC*/
+				var pris = this._sortByRefNr(el);
+				gs.info('\tPris: '+JSON.stringify(pris));
+				//Go through the services for the month
+				var pkeys = Object.keys(pris);
+				for(var j=0;j<pkeys.length;j++){
+					var pkey = pkeys[j];
+
+					var plist = pris[pkey];
+					var otc = 0;			
+					var mrc = 0;
+					//Go through all the separate vlines for the specific service for this month and sum the OTCs and MRCs
+					for(var k=0;k<plist.length;k++){
+						var grv = new GlideRecord('x_tsigh_cmb_validation_line');
+						grv.get(plist[k]);
+						if(grv.otc_calculated){
+							otc+=grv.otc_calculated;
+							//calculationLines.push('Month: '+dkey+' - Partner Reference number: '+pkey+'Adding OTC from validation line '+grv.sys_id.toString()+' value: '+otc);
+						}
+						if(grv.mrc_calculated){
+							mrc+=grv.mrc_calculated;
+							//calculationLines.push('Month: '+dkey+' - Partner Reference number: '+pkey+'Adding MRC from validation line '+grv.sys_id.toString()+' value: '+mrc);
+						}
+
+						grv.setValue('client_invoice',gri.sys_id);
+						grv.update();
+					}
+					//Increase the total
+					total+=mrc;
+					total+=otc;
+					var year = dkey.slice(0,4);
+					var month = dkey.slice(-2);
+					var per = this._createLineItemPeriod(year,month);
+
+					//Create the invoice line items;
+					if(mrc != 0) this._createInvoiceLine('',gri,mrc,per.period, this.generateInvoiceDescription(bp,'mrc',pkey, per.ps,per.pe),pos++);	
+					if(otc != 0) this._createInvoiceLine('',gri,otc,per.period, this.generateInvoiceDescription(bp,'otc',pkey, per.ps,per.pe),pos++);
+				}
+			}
+		}
+		//At the end of the day, set the invoice total
+		gri.setValue('total_net_value',total);
+		gri.update();	
+		gs.info('Calucation lines '+JSON.stringify(calculationLines));
+
+	},	
+
+
+	processValidationLines:function(etr){
+		gs.info('Entries to process: '+etr.toString());
+		var bps = {};
+		var entries = etr.split(',');
+
+		for(var i=0;i<entries.length;i++){
+			var gr = new GlideRecord('x_tsigh_cmb_validation_line');
+			gr.get(entries[i]);
+			if(gr.billing_profile){
+				var bpid = gr.billing_profile.sys_id.toString();
+				if(!bps[bpid]){
+					bps[bpid] = [];
+				}
+				bps[bpid].push(entries[i]);
+
+			}
+		}
+		//gs.info('BPS: '+JSON.stringify(bps));
+
+		var es = Object.keys(bps);
+		for(var i=0;i<es.length;i++){
+			var grb = new GlideRecord('x_tsigh_cmb_billing_profile');
+			grb.get(es[i]);
+			var etrs = bps[es[i]];
+			this.generateInvoiceLines(etrs,grb);
+
+		}
+
+	},
+
+	generateInvoiceLines:function(ids, bp, method){
+		var cis = [];
+		if(!method) method = bp.invoice_generating_method;
+		gs.info('Generation method for BP '+bp.name+' : '+method);
+
+		switch (+method){
+			case 1:{
+				cis = this.generateInvoiceLinesGroupByOrder(ids, bp);
+				return cis;
+			}
+			case 3:{
+				cis = this.generateInvoiceLinesGroupByPRF(ids,bp);
+				return cis;
+			}
+			case 4:{
+				cis = this.generateInvoiceLinesSeparate(ids,bp);
+				return cis;
+			}
+
+		}
+
+
+	},
+
+	_getExchangeRate:function(cur){
+		var gr = new GlideRecord('fx_rate');
+		gr.addQuery('currency',cur);
+		gr.orderByDesc('sys_created_on',cur);
+		gr.query();
+		if(gr.next()) return gr;
+
+	},
+
+	_createInvoice:function(bp, periods,prf){
+		gd = new GlideDateTime();
+		var gd = this._getExchangeRate(bp.currency.sys_id);
+		var gr = new GlideRecord('x_tsigh_cmb_client_invoice');
+		gr.initialize();
+		gr.setValue('type','billing');
+		gr.setValue('client',bp.account.sys_id);
+		gr.setValue('billing_profile',bp.sys_id);
+		if(prf) gr.setValue('partner_reference_number',prf)
+		gr.setValue('currency',bp.currency.sys_id);
+		if(gd){
+			gr.setValue('exchange_rate_date',new GlideDateTime(gd.sys_created_on).getDate());
+			gr.setValue('exchange_rate_value',gd.rate);
+		}
+		if(periods){
+			gr.period_start = periods.ps.getDisplayValue();
+			gr.period_end = periods.pe.getDisplayValue();
+		}
+		gr.setValue('automatically_generated',true);
+		gr.update();
+		return gr;
+	},
+
+	_createInvoiceLine:function(sid, gri, price,periods, desc, pos){
+		var gil = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+		gil.initialize();
+		gil.setValue('client_invoice',gri.sys_id);
+		gil.setValue('item',sid);
+		gil.setValue('unit_price',price);
+		if(desc) gil.setValue('description',desc);
+		if(periods){
+			gil.period_start = periods.ps.getDisplayValue();
+			gil.period_end = periods.pe.getDisplayValue();
+		}
+		gil.setValue('position',pos);
+		gil.update();
+		return gil;
+
+	},
+
+	_sortByOrder:function(ids){
+		var pris = {};
+		for(var i=0;i<ids.length;i++){
+			var gr = new GlideRecord('x_tsigh_cmb_validation_line');
+			gr.get(ids[i]);
+			if(gr.service){
+				var refnr = gr.service.sys_id.toString();
+				if(!pris[refnr]){
+					pris[refnr] = [];
+				}
+				pris[refnr].push(gr.sys_id.toString());
+			}
+		}		
+		return pris;
+	},	
+
+	_sortByRefNr:function(ids){
+		var pris = {};
+		for(var i=0;i<ids.length;i++){
+			var gr = new GlideRecord('x_tsigh_cmb_validation_line');
+			gr.get(ids[i]);
+			if(gr.service && gr.service.partner_ref_nr){
+				gs.info('Partner ref nr: '+gr.service.sys_id+' - '+gr.service.partner_ref_nr);
+				var refnr = gr.service.partner_ref_nr;
+				if(!pris[refnr]){
+					pris[refnr] = [];
+				}
+				pris[refnr].push(gr.sys_id.toString());
+			}
+		}		
+		return pris;
+	},
+
+	_sortByService:function(ids){
+		var pris = {};
+		for(var i=0;i<ids.length;i++){
+			var gr = new GlideRecord('x_tsigh_cmb_validation_line');
+			gr.get(ids[i]);
+			if(gr.service){
+				var refnr = gr.service.sys_id;
+				if(!pris[refnr]){
+					pris[refnr] = [];
+				}
+				pris[refnr].push(gr.sys_id.toString());
+			}
+		}		
+		return pris;
+	},
+
+
+	_groupByDate:function(ids){
+		var ret = {};
+		for(var i=0;i<ids.length;i++){
+			var grv = new GlideRecord('x_tsigh_cmb_validation_line');
+			grv.get(ids[i]);
+			var dt = grv.getValue('year')+''+('0'+grv.getValue('month')).slice(-2);
+			if(!ret[dt]){
+				ret[dt] = [];
+			}
+			ret[dt].push(ids[i]);
+		}
+		return ret;
+	},
+	_getPeriods:function(ids){
+		var yearStart;
+		var yearEnd;
+		var monthStart;
+		var monthEnd;
+		for(var i=0;i<ids.length;i++){
+			var gr = new GlideRecord('x_tsigh_cmb_validation_line');
+			gr.get(ids[i]);
+			if(!yearStart && !monthStart && !yearEnd && !monthEnd){
+				yearStart=gr.getValue('year');
+				monthStart=('0'+gr.getValue('month')).slice(-2);			
+				yearEnd=gr.getValue('year');
+				monthEnd=('0'+gr.getValue('month')).slice(-2);				
+			}
+			else {
+				if((yearStart+'-'+monthStart)<((gr.getValue('year')+'-'+gr.getValue('month')))){
+					yearStart=gr.getValue('year');
+					monthStart=gr.getValue('month');				
+				}
+
+				if((yearEnd+'-'+monthEnd)>((gr.getValue('year')+'-'+gr.getValue('month')))){
+					yearEnd=gr.getValue('year');
+					monthEnd=gr.getValue('month');				
+				}
+			}
+		}
+		var ps = new GlideDateTime(yearStart+'-'+monthStart+'-01');
+		var pe = new GlideDateTime(yearEnd+'-'+(monthEnd)+'-01');
+		pe.addMonthsLocalTime(1);
+		//pe.addDaysLocalTime(-1);
+		var ret = {};
+		ret.ps = ps.getDate();
+		ret.pe = pe.getDate();
+		return ret;
+	},
+
+	_createLineItemPeriod:function(year, month){
+		var ret = {};
+		var ps = new GlideDateTime(year+'-'+month+'-01');
+		var pe = new GlideDateTime(year+'-'+month+'-01');
+		pe.addMonthsLocalTime(1);
+		pe.addDaysLocalTime(-1);
+		ret.ps = ps.getDate().getDayOfMonthNoTZ()+'/'+ps.getDate().getMonthNoTZ()+'/'+ps.getDate().getYearNoTZ();
+		ret.pe = pe.getDate().getDayOfMonthNoTZ()+'/'+pe.getDate().getMonthNoTZ()+'/'+pe.getDate().getYearNoTZ();
+		ret.pst = ps.getDate();
+		ret.pet = ps.getDate();
+		ret.period = {};
+		ret.period.ps = ps.getDate();
+		ret.period.pe = pe.getDate();
+		return ret;
+
+	},
+	/*	generateInvoiceLinesSeparate:function(ids,bp){
+
+		var pris = this._sortByRefNr(ids);
+		var keys = Object.keys(pris);
+		for(var i=0;i<keys.length;i++){
+
+			var otc = 0;
+			var mrc = 0;
+			var el = pris[keys[i]];
+			var total = 0;
+			var periods = this._getPeriods(ids);
+			var gri = this._createInvoice(bp,periods);			
+			for(var j=0;j<el.length;j++){
+				var grv = new GlideRecord('x_tsigh_cmb_validation_line');
+				grv.get(el[j]);
+				otc+=grv.otc_calculated?(grv.otc_calculated):0;
+				mrc+=grv.mrc_calculated?(grv.mrc_calculated):0;
+
+				grv.setValue('client_invoice',gri.sys_id);
+				grv.update();
+
+			}
+			total=mrc+otc;
+			if(otc != 0) this._createInvoiceLine('',gri,otc,periods, 'Demo description OTC value: '+otc);
+			if(mrc != 0) this._createInvoiceLine('',gri,mrc,periods, 'Demo description MRC value: '+mrc);	
+			gri.setValue('total_net_value',(otc+mrc));
+			gri.update();
+
+		}
+	},	*/
+
+	type: 'CMBInvoiceUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-19 08:49:33</sys_created_on>
+        <sys_id>edb1e0031b26551030bc986c9b4bcb74</sys_id>
+        <sys_mod_count>128</sys_mod_count>
+        <sys_name>CMBInvoiceUtils</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_edb1e0031b26551030bc986c9b4bcb74</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-26 07:33:00</sys_updated_on>
+    </sys_script_include>
+</record_update>

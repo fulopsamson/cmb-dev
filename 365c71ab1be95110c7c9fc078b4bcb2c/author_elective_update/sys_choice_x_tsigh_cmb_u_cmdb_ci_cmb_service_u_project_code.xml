@@ -7676,5 +7676,25 @@
             <sys_updated_on>2022-09-12 08:54:08</sys_updated_on>
             <value>56001</value>
         </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_project_code</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>undefined</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-13 13:55:04</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a630fa451b26dd5030bc986c9b4bcb78</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-13 13:55:04</sys_updated_on>
+            <value>undefined</value>
+        </sys_choice>
     </sys_choice>
 </record_update>

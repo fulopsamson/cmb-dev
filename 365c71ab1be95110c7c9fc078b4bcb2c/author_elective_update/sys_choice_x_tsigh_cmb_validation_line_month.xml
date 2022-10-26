@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="month" table="x_tsigh_cmb_validation_line" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>month</element>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:47:28</sys_created_on>
+            <sys_id>8a3fd51f1b2a951030bc986c9b4bcba7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>month</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_choice_x_tsigh_cmb_validation_line_month</sys_update_name>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:47:28</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>January</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>100</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:47:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5b2f159f1b2a951030bc986c9b4bcb56</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:54:49</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>February</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>200</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:47:32</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>163fd59f1b2a951030bc986c9b4bcb30</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:54:53</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>March</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>300</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:47:35</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9b3f519f1b2a951030bc986c9b4bcbba</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:54:57</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>April</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>400</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:47:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c84fd15f1b2a951030bc986c9b4bcb48</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:55:00</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>May</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>500</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:47:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>684f519f1b2a951030bc986c9b4bcbbb</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:55:04</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>June</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>600</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:48:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9a4fd15f1b2a951030bc986c9b4bcb49</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:55:08</sys_updated_on>
+            <value>6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>July</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>700</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:48:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f35f15db1b2a951030bc986c9b4bcbf3</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:55:12</sys_updated_on>
+            <value>7</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>August</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>800</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:48:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e86f159f1b2a951030bc986c9b4bcb58</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:55:17</sys_updated_on>
+            <value>8</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>September</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>900</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:48:17</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>916f519f1b2a951030bc986c9b4bcb6e</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:55:24</sys_updated_on>
+            <value>9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>October</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>1000</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:48:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4e6f599f1b2a951030bc986c9b4bcb24</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:55:28</sys_updated_on>
+            <value>10</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>November</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>1100</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:48:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1f6f599f1b2a951030bc986c9b4bcb19</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:56:23</sys_updated_on>
+            <value>11</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>December</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_validation_line</name>
+            <sequence>1200</sequence>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 07:48:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>087f919f1b2a951030bc986c9b4bcbe4</sys_id>
+            <sys_mod_count>3</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 07:56:27</sys_updated_on>
+            <value>12</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

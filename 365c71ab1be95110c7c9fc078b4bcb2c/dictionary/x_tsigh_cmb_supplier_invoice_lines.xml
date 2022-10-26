@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Supplier invoice lines" max_length="40" name="x_tsigh_cmb_supplier_invoice_lines" sizeclass="3176" type="collection">
+    <element label="Supplier invoice lines" max_length="40" name="x_tsigh_cmb_supplier_invoice_lines" sizeclass="3209" type="collection">
+        <element label="Contract number" max_length="40" name="contract_number" type="string"/>
         <element label="Currency" max_length="32" name="currency" read_only="true" reference="fx_currency" type="reference"/>
+        <element label="End date" max_length="40" name="end_date" type="glide_date"/>
         <element label="Product" max_length="32" name="product" reference="cmdb_model" type="reference"/>
         <element label="Quantity" max_length="40" name="quantity" type="integer"/>
-        <element label="Serial numbers" max_length="40" name="serial_numbers" type="string"/>
+        <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Related devices" max_length="1024" name="related_devices" reference="alm_hardware" type="glide_list"/>
+        <element label="Serial numbers" max_length="500" name="serial_numbers" type="string"/>
+        <element label="Start date" max_length="40" name="start_date" type="glide_date"/>
         <element label="Supplier invoice" max_length="32" name="supplier_invoice" read_only="true" reference="x_tsigh_cmb_supplier_invoice" type="reference"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;&#13;&#10;&#9;&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Total price" max_length="40" name="total_price" read_only="true" type="float"/>
         <element label="Unit price" max_length="40" name="unit_price" type="float"/>

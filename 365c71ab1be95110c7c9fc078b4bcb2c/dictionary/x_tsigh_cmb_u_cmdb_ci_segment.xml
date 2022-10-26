@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="cmdb_ci" label="Segment" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_segment" sizeclass="605" type="collection">
-        <element label="Additional Info A" max_length="2000" name="additional_info_a" type="string"/>
-        <element label="Additional Info B" max_length="2000" name="additional_info_b" type="string"/>
+    <element audit="true" extends="cmdb_ci" label="Segment" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_segment" sizeclass="652" type="collection">
+        <element label="Additional Information" max_length="2000" name="additional_information" type="string"/>
+        <element label="Additional Info for Endpoint A" max_length="2000" name="additional_info_a" type="string"/>
+        <element label="Additional Info for Endpoint B" max_length="2000" name="additional_info_b" type="string"/>
         <element choice="3" default="new" label="Kind of order" max_length="40" name="kind_of_order" type="choice">
             <choice>
                 <element inactive="true" inactive_on_update="true" label="-- New choice --" sequence="0" value="-- New choice --"/>
@@ -10,13 +11,13 @@
                 <element inactive_on_update="false" label="Cancellation" sequence="2" value="cancellation"/>
             </choice>
         </element>
-        <element label="Last Billing Date" max_length="40" name="last_billing_date" type="glide_date_time"/>
+        <element label="Last Billing Date" max_length="40" name="last_billing_date" type="glide_date"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
         <element attributes="desired_state=u_product_type_desired" choice="1" label="Product Type A" max_length="32" name="product_type" reference="x_tsigh_cmb_product_type" type="reference">
             <choice/>
         </element>
-        <element label="RFS-R Date" max_length="40" name="rfs_r_date" type="glide_date_time"/>
-        <element label="Additional image" max_length="40" name="u_additional_image" type="file_attachment"/>
+        <element label="RFS-R Date" max_length="40" name="rfs_r_date" type="glide_date"/>
+        <element label="Additional image" max_length="40" name="u_additional_image" type="user_image"/>
         <element label="Bid reference" max_length="256" name="u_bid_reference" type="string"/>
         <element label="Billing Profile" max_length="32" name="u_billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.u_provider" type="reference" use_reference_qualifier="advanced"/>
         <element label="Contact" max_length="32" name="u_contact" reference="contact" type="reference"/>

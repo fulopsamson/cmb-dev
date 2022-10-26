@@ -21,6 +21,26 @@
             <element>state</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Awaiting approval</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-06 07:56:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>170b99b21b9a955030bc986c9b4bcbb3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-06 07:56:46</sys_updated_on>
+            <value>approval</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>state</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>Temporary</label>
             <language>en</language>
             <name>x_tsigh_cmb_supplier_invoice</name>

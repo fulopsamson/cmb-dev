@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="DELETE">
+        <active>true</active>
+        <copied_from/>
+        <description>Open a new 'CMB Service' form</description>
+        <display_name>Open a New Form</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>2</order>
+        <snapshot/>
+        <step_config display_value="Open a New Form">05317cd10b10220050192f15d6673af8</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-07 11:43:32</sys_created_on>
+        <sys_id>d19817831b1e5550c7c9fc078b4bcbff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open a New Form</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_atf_step_d19817831b1e5550c7c9fc078b4bcbff</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-07 11:43:32</sys_updated_on>
+        <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
+        <test display_value="Client invoice unit test">c508db431b1e5550c7c9fc078b4bcb99</test>
+        <timeout/>
+        <warning_message/>
+    </sys_atf_step>
+    <sys_variable_value action="DELETE" query="document_key=d19817831b1e5550c7c9fc078b4bcbff"/>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>d19817831b1e5550c7c9fc078b4bcbff</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-07 11:43:32</sys_created_on>
+        <sys_id>1d9857831b1e5550c7c9fc078b4bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-07 11:43:32</sys_updated_on>
+        <value/>
+        <variable display_value="View">27d4e1c25320220002c6435723dc3486</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>d19817831b1e5550c7c9fc078b4bcbff</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-07 11:43:32</sys_created_on>
+        <sys_id>599857831b1e5550c7c9fc078b4bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-07 11:43:32</sys_updated_on>
+        <value>standard_ui</value>
+        <variable display_value="Form UI">6f2a59a4e7133300b5646ea8c2f6a975</variable>
+    </sys_variable_value>
+    <sys_variable_value action="DELETE">
+        <document>sys_atf_step</document>
+        <document_key>d19817831b1e5550c7c9fc078b4bcbff</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-07 11:43:32</sys_created_on>
+        <sys_id>dd9857831b1e5550c7c9fc078b4bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-07 11:43:32</sys_updated_on>
+        <value>x_tsigh_cmb_u_cmdb_ci_cmb_service</value>
+        <variable display_value="Table">bb84ed825320220002c6435723dc3400</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="DELETE" query="table=var__m_atf_input_variable_05317cd10b10220050192f15d6673af8^id=d19817831b1e5550c7c9fc078b4bcbff"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_atf_step_d19817831b1e5550c7c9fc078b4bcbff</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step"><sys_atf_step action="INSERT_OR_UPDATE"><active>true</active><copied_from/><description>Open a new 'CMB Service' form</description><display_name>Open a New Form</display_name><inputs/><mugshots_cache_json/><notes/><order>2</order><snapshot/><step_config display_value="Open a New Form">05317cd10b10220050192f15d6673af8</step_config><sys_class_name>sys_atf_step</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-07 11:43:32</sys_created_on><sys_id>d19817831b1e5550c7c9fc078b4bcbff</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Open a New Form</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_atf_step_d19817831b1e5550c7c9fc078b4bcbff</sys_update_name><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-10-07 11:43:32</sys_updated_on><table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table><test display_value="Client invoice unit test">c508db431b1e5550c7c9fc078b4bcb99</test><timeout/><warning_message/></sys_atf_step><sys_variable_value action="delete_multiple" query="document_key=d19817831b1e5550c7c9fc078b4bcbff"/><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d19817831b1e5550c7c9fc078b4bcbff</document_key><order>200</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-07 11:43:32</sys_created_on><sys_id>1d9857831b1e5550c7c9fc078b4bcb00</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-10-07 11:43:32</sys_updated_on><value/><variable display_value="View">27d4e1c25320220002c6435723dc3486</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d19817831b1e5550c7c9fc078b4bcbff</document_key><order>50</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-07 11:43:32</sys_created_on><sys_id>599857831b1e5550c7c9fc078b4bcb00</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-10-07 11:43:32</sys_updated_on><value>standard_ui</value><variable display_value="Form UI">6f2a59a4e7133300b5646ea8c2f6a975</variable></sys_variable_value><sys_variable_value action="INSERT_OR_UPDATE"><document>sys_atf_step</document><document_key>d19817831b1e5550c7c9fc078b4bcbff</document_key><order>100</order><sys_class_name>sys_variable_value</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-07 11:43:32</sys_created_on><sys_id>dd9857831b1e5550c7c9fc078b4bcb00</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-10-07 11:43:32</sys_updated_on><value>x_tsigh_cmb_u_cmdb_ci_cmb_service</value><variable display_value="Table">bb84ed825320220002c6435723dc3400</variable></sys_variable_value><sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_05317cd10b10220050192f15d6673af8^id=d19817831b1e5550c7c9fc078b4bcbff"/></record_update>]]></payload>
+        <payload_hash>-1621497476</payload_hash>
+        <record_name>Open a New Form</record_name>
+        <reverted_from/>
+        <source>58f5b3821b1a9150c7c9fc078b4bcb91</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-07 11:43:32</sys_created_on>
+        <sys_id>259857831b1e5550c7c9fc078b4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183b241fdb40000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-07 11:43:32</sys_updated_on>
+        <type>Test Step</type>
+        <update_guid>6d985783d31e5550c5a9892867684502</update_guid>
+        <update_guid_history>6d985783d31e5550c5a9892867684502:-1621497476</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-07 13:03:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_atf_step">sys_atf_step</sys_db_object>
+        <sys_id>2aad1939ecf744409a80a721e71fe100</sys_id>
+        <sys_metadata>d19817831b1e5550c7c9fc078b4bcbff</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open a New Form</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_atf_step_d19817831b1e5550c7c9fc078b4bcbff</sys_update_name>
+        <sys_update_version display_value="sys_atf_step_d19817831b1e5550c7c9fc078b4bcbff">259857831b1e5550c7c9fc078b4bcb03</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-07 13:03:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

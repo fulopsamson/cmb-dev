@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="CMB Service Import table" max_length="40" name="x_tsigh_cmb_cmb_service_import_table" sizeclass="11" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Billing profile name" label="Billing profile name" max_length="40" name="u_billing_profile_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Capacity" label="Capacity" max_length="40" name="u_capacity" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Contract number" label="Contract number" max_length="51" name="u_contract_number" type="string"/>
+        <element attributes="import_attribute_name=Contract period" label="Contract period" max_length="40" name="u_contract_period" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint A" label="Endpoint A" max_length="40" name="u_endpoint_a" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint A City" label="Endpoint A City" max_length="40" name="u_endpoint_a_city" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint A Country" label="Endpoint A Country" max_length="40" name="u_endpoint_a_country" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint A State" label="Endpoint A State" max_length="40" name="u_endpoint_a_state" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint A Street" label="Endpoint A Street" max_length="40" name="u_endpoint_a_street" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint A ZIP" label="Endpoint A ZIP" max_length="40" name="u_endpoint_a_zip" type="string"/>
+        <element attributes="import_attribute_name=Endpoint B" label="Endpoint B" max_length="40" name="u_endpoint_b" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint B City" label="Endpoint B City" max_length="40" name="u_endpoint_b_city" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint B Country" label="Endpoint B Country" max_length="40" name="u_endpoint_b_country" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint B State" label="Endpoint B State" max_length="40" name="u_endpoint_b_state" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint B Street" label="Endpoint B Street" max_length="40" name="u_endpoint_b_street" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Endpoint B ZIP" label="Endpoint B ZIP" max_length="40" name="u_endpoint_b_zip" type="string"/>
+        <element attributes="import_attribute_name=Equipement 2 OTC" label="Equipement 2 OTC" max_length="40" name="u_equipement_2_otc" type="integer"/>
+        <element attributes="import_attribute_name=Equipemnt 1 OTC" label="Equipemnt 1 OTC" max_length="40" name="u_equipemnt_1_otc" type="float"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Equipment 1 MRC" label="Equipment 1 MRC" max_length="40" name="u_equipment_1_mrc" type="string"/>
+        <element attributes="import_attribute_name=Equipment 2 MRC" label="Equipment 2 MRC" max_length="40" name="u_equipment_2_mrc" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=MRC" label="MRC" max_length="40" name="u_mrc" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=OTC" label="OTC" max_length="40" name="u_otc" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Partner circuit ID" label="Partner circuit ID" max_length="40" name="u_partner_circuit_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Partner Order" label="Partner Order" max_length="40" name="u_partner_order" type="string"/>
+        <element attributes="import_attribute_name=Partner reference number" label="Partner reference number" max_length="40" name="u_partner_reference_number" type="float"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Pop A" label="Pop A" max_length="40" name="u_pop_a" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Pop B" label="Pop B" max_length="40" name="u_pop_b" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Product" label="Product" max_length="40" name="u_product" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Project" label="Project" max_length="40" name="u_project" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Project Code" label="Project Code" max_length="40" name="u_project_code" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=RFS requested" label="RFS requested" max_length="40" name="u_rfs_requested" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_tsigh_cmb_supplier_invoice_lines</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_tsigh_cmb_supplier_invoice_lines">quantityVALCHANGES^ORunit_priceVALCHANGES^EQ<item endquery="false" field="quantity" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="false" field="unit_price" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Supplier Invoice lines set total price</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var quant = current.quantity;
+	var unit = current.unit_price;
+	current.total_price = parseFloat(quant * unit);
+	current.setValue('total_price', current.total_price);
+	current.update();
+
+	gs.addInfoMessage('Updated total value: ' + current.getValue("total_price"));
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-15 13:38:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>927fda4c1bca9110c7c9fc078b4bcbbf</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>Supplier Invoice lines set total price</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_927fda4c1bca9110c7c9fc078b4bcbbf</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-07 14:26:52</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=927fda4c1bca9110c7c9fc078b4bcbbf"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_927fda4c1bca9110c7c9fc078b4bcbbf</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_tsigh_cmb_supplier_invoice_lines&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition table="x_tsigh_cmb_supplier_invoice_lines"&gt;quantityVALCHANGES^ORunit_priceVALCHANGES^EQ&lt;item endquery="false" field="quantity" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/&gt;&lt;item endquery="false" field="unit_price" goto="false" newquery="false" operator="VALCHANGES" or="true" value=""/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/filter_condition&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;Supplier Invoice lines set total price&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var quant = current.quantity;
+	var unit = current.unit_price;
+	current.total_price = parseFloat(quant * unit);
+	current.setValue('total_price', current.total_price);
+	current.update();
+
+	gs.addInfoMessage('Updated total value: ' + current.getValue("total_price"));
+	
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;szabo.zoltan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-15 13:38:45&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;927fda4c1bca9110c7c9fc078b4bcbbf&lt;/sys_id&gt;&lt;sys_mod_count&gt;22&lt;/sys_mod_count&gt;&lt;sys_name&gt;Supplier Invoice lines set total price&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_927fda4c1bca9110c7c9fc078b4bcbbf&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;szabo.zoltan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-07 14:26:52&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=927fda4c1bca9110c7c9fc078b4bcbbf"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-116994324</payload_hash>
+        <record_name>Supplier Invoice lines set total price</record_name>
+        <reverted_from/>
+        <source>58f5b3821b1a9150c7c9fc078b4bcb91</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-07 14:26:52</sys_created_on>
+        <sys_id>b5fd77071b9e5550c7c9fc078b4bcb9f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183b2d784600000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-07 14:26:52</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>3dfd7707ea9e5550d3a873eaa1a3b69e</update_guid>
+        <update_guid_history>3dfd7707ea9e5550d3a873eaa1a3b69e:-116994324,0d03d02ecb96d150b0b8776f4c1efca9:-1719475436,1ae2d02e4f96d1503d0c0e33726fdf67:-366142181,694d5e1cfa0ad1105e9730f9f68d234a:-59693148,d56cca9ccdc6d11019b21fec792cfeed:-1613659177,31364a58d8c6d11045cff0080789dc75:80760558,c982768c3a0e91108ed4c1d850934d67:-2038309746,e562fa8cb40e9110fd63d8d492ddb492:-1294996626,f3d1b28ce70e911099675829f53fcfd4:791497453,29a1f68c6c0e9110d69cb3cec7fa27d9:-1567802860,9a11f6c8940e91104a031af3a05c0f4c:-1473138228,0985ea80740e91101200fe0a0af231d7:626280781,44742e408d0e9110eb49adc999e6e0dc:1563383344,3d6426805f0e9110f54d5a0ef01af6bf:1893795274,aeb22e00d40e9110781f711775358a5b:1977177897,a582ea00dc0e91101f6dc69cbadabb14:351922359,ae522200e70e911025492deee004d569:617281083,ed61eacc5cca9110d711785e30dc3c59:-188115032,e011e6cc4dca91107c078b747b5a5029:1979617466,e2e0ea8c58ca9110a3aa0ee650b37771:-1169286802,779022cc79ca91106d68dcda7952b9c7:418194408,f530aa8c14ca9110dce0f7fd9430e099:-2106680112,7effde4ca6ca911029c4853710c22f97:1205098256</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-25 08:05:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>42b51cdcdba54fb49a0ecc75e161b710</sys_id>
+        <sys_metadata>927fda4c1bca9110c7c9fc078b4bcbbf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Supplier Invoice lines set total price</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Supplier invoice lines">012273d31bf51110c7c9fc078b4bcb89</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_927fda4c1bca9110c7c9fc078b4bcbbf</sys_update_name>
+        <sys_update_version display_value="sys_script_927fda4c1bca9110c7c9fc078b4bcbbf">b5fd77071b9e5550c7c9fc078b4bcb9f</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-25 08:05:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -32,7 +32,7 @@
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="String">string</internal_type>
+        <internal_type display_value="">float</internal_type>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
         <name>x_tsigh_cmb_supplier_invoice</name>
@@ -52,8 +52,8 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>szabo.zoltan</sys_created_by>
-        <sys_created_on>2022-09-12 09:13:35</sys_created_on>
-        <sys_id>0315c2cb1b755d10c7c9fc078b4bcb57</sys_id>
+        <sys_created_on>2022-10-10 12:19:56</sys_created_on>
+        <sys_id>6a7df6841bae1950c7c9fc078b4bcbdf</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>Total gross value in RON</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -61,7 +61,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_dictionary_x_tsigh_cmb_supplier_invoice_total_gross_value_in_ron</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-09-12 09:46:39</sys_updated_on>
+        <sys_updated_on>2022-10-10 12:22:35</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

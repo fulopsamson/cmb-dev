@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_tsigh_cmb.external_client_invoice_template</name>
+        <read_roles/>
+        <suffix>external_client_invoice_template</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-18 14:59:17</sys_created_on>
+        <sys_id>c7be68b61b6a1110c7c9fc078b4bcb0c</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>x_tsigh_cmb.external_client_invoice_template</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_properties_c7be68b61b6a1110c7c9fc078b4bcb0c</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-24 08:51:29</sys_updated_on>
+        <type>string</type>
+        <value>&lt;!DOCTYPE html&gt;&#13;
+&lt;html lang="en"&gt;&#13;
+&#13;
+&lt;head&gt;&#13;
+    &lt;meta charset="utf-8"&gt;&#13;
+    &lt;title&gt;Provider service order&lt;/title&gt;&#13;
+&#13;
+    &lt;style&gt;&#13;
+        table {&#13;
+            border-collapse: collapse;&#13;
+        }&#13;
+        &#13;
+        th {&#13;
+            border: 1px solid #eee;&#13;
+        }&#13;
+        &#13;
+        img {&#13;
+            object-fit: contain;&#13;
+        }&#13;
+        &#13;
+        .invoice-box {&#13;
+            max-width: 595pt;&#13;
+            margin: auto;&#13;
+            /* padding: 10px; */&#13;
+            border: 1px solid #eee;&#13;
+            font-size: 14px;&#13;
+            line-height: 20px;&#13;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;&#13;
+            color: #555;&#13;
+        }&#13;
+        .width-25{&#13;
+            width: 25%;&#13;
+            text-align: center;&#13;
+            height: 25px;&#13;
+        }&#13;
+        .width-10{&#13;
+            width: 12.5%;&#13;
+            text-align: center;&#13;
+            height: 25px;&#13;
+        }&#13;
+        .width-20{&#13;
+            width: 20%;&#13;
+            text-align: center;&#13;
+            height: 25px;&#13;
+        }&#13;
+        .width-30{&#13;
+            width: 30%;&#13;
+            text-align: center;&#13;
+            height: 25px;&#13;
+        }&#13;
+        .width-45{&#13;
+            width: 45%;&#13;
+            text-align: center;&#13;
+            height: 25px;&#13;
+        }&#13;
+        .width-5{&#13;
+            width: 5%;&#13;
+            text-align: center;&#13;
+            height: 25px;&#13;
+        }&#13;
+        .width-33{&#13;
+            width: 33%;&#13;
+            text-align: center;&#13;
+            height: 25px;&#13;
+        }&#13;
+        .col {&#13;
+            background-color: #D3D3D3;&#13;
+            text-align: left;&#13;
+            width: 5%;&#13;
+        }&#13;
+        .col-cent {&#13;
+            background-color: #D3D3D3;&#13;
+            text-align: center;&#13;
+            border: 1px solid #eee;&#13;
+            height: 25px;&#13;
+&#13;
+        }&#13;
+        &#13;
+        .border {&#13;
+            border: 1px solid #eee;&#13;
+            height: 25px;&#13;
+            text-align: left;&#13;
+        }&#13;
+        &#13;
+        .lines {&#13;
+            border: 1px solid #eee;&#13;
+            text-align: center;&#13;
+            height: 25px;&#13;
+        }&#13;
+        &#13;
+        .left {&#13;
+            border: 1px solid #eee;&#13;
+            text-align: left;&#13;
+        }&#13;
+        &#13;
+        .center {&#13;
+            text-align: center;&#13;
+        }&#13;
+        &#13;
+        .invoice-box table {&#13;
+            width: 100%;&#13;
+        }&#13;
+    &lt;/style&gt;&#13;
+&lt;/head&gt;&#13;
+&#13;
+&lt;body&gt;&#13;
+    &lt;div class="invoice-box"&gt;&#13;
+&#13;
+        &lt;table class="invoice-box"&gt;&#13;
+            &lt;tbody&gt;&#13;
+                &lt;tr&gt;&#13;
+                    &lt;td width="30%"&gt;&#13;
+                        __logo__&#13;
+                    &lt;/td&gt;&#13;
+                    &lt;td class="center" width="40%"&gt;&#13;
+                        &lt;h3&gt;Invoice&lt;/h3&gt;&#13;
+                    &lt;/td&gt;&#13;
+                    &lt;td class="center" width="30%"&gt;&#13;
+                        &lt;h3&gt;Invoice No: &lt;/h3&gt;&#13;
+                            cmb_id&#13;
+                    &lt;/td&gt;&#13;
+                &lt;/tr&gt;&#13;
+            &lt;/tbody&gt;&#13;
+        &lt;/table&gt;&#13;
+        &lt;br&gt;&#13;
+        &lt;table class="invoice-box"&gt;&#13;
+            &lt;thead&gt;&#13;
+                &lt;tr class="col"&gt;&#13;
+                    &lt;th class="width-33"&gt;Invoice number&lt;/th&gt;&#13;
+                    &lt;th class="width-33"&gt;Invoice Date&lt;/th&gt;&#13;
+                    &lt;th class="width-33"&gt;Due Date&lt;/th&gt;&#13;
+                &lt;/tr&gt;&#13;
+            &lt;/thead&gt;&#13;
+            &lt;tbody&gt;&#13;
+                &lt;tr&gt;&#13;
+                    &lt;td class="lines"&gt;invoice_num&lt;/td&gt;&#13;
+                    &lt;td class="lines"&gt;invoice_date&lt;/td&gt;&#13;
+                    &lt;td class="lines"&gt;invoice_due_date&lt;/td&gt;&#13;
+                &lt;/tr&gt;&#13;
+            &lt;/tbody&gt;&#13;
+        &lt;/table&gt;&#13;
+&#13;
+        &lt;br&gt;&#13;
+&#13;
+        &lt;table class="invoice-box"&gt;&#13;
+            &lt;tr&gt;&#13;
+                &lt;td&gt;&#13;
+                    &lt;table&gt;&#13;
+                        &lt;colgroup&gt;&#13;
+                            &lt;col class="col"&gt;&#13;
+                            &lt;col&gt;&#13;
+                            &lt;col class="col"&gt;&#13;
+                            &lt;col&gt;&#13;
+                        &lt;/colgroup&gt;&#13;
+                        &lt;tr&gt;&#13;
+                            &lt;th class="border width-20"&gt;Provider&lt;/th&gt;&#13;
+                            &lt;td class="border width-30"&gt;provider&lt;/td&gt;&#13;
+                            &lt;th class="border width-20"&gt;Customer&lt;/th&gt;&#13;
+                            &lt;td class="border width-30"&gt;customer&lt;/td&gt;&#13;
+                        &lt;/tr&gt;&#13;
+                        &lt;tr&gt;&#13;
+                            &lt;th class="border"&gt;Address&lt;/th&gt;&#13;
+                            &lt;td class="border"&gt;loc_1&lt;/td&gt;&#13;
+                            &lt;th class="border"&gt;Address&lt;/th&gt;&#13;
+                            &lt;td class="border"&gt;loc_2&lt;/td&gt;&#13;
+                        &lt;/tr&gt;&#13;
+                        &lt;tr&gt;&#13;
+                            &lt;th class="border"&gt;VAT ID&lt;/th&gt;&#13;
+                            &lt;td class="border"&gt;cif_1&lt;/td&gt;&#13;
+                            &lt;th class="border"&gt;VAT ID/Tax ID&lt;/th&gt;&#13;
+                            &lt;td class="border"&gt;cif_2&lt;/td&gt;&#13;
+                        &lt;/tr&gt;&#13;
+                        &lt;tr&gt;&#13;
+                            &lt;th class="border"&gt;Bank acount no&lt;/th&gt;&#13;
+                            &lt;td class="border"&gt;cont_1&lt;/td&gt;&#13;
+                        &lt;/tr&gt;&#13;
+                        &lt;tr&gt;&#13;
+                            &lt;th class="border"&gt;Bank&lt;/th&gt;&#13;
+                            &lt;td class="border"&gt;bank_1&lt;/td&gt;&#13;
+                        &lt;/tr&gt;&#13;
+                        &lt;tr&gt;&#13;
+                            &lt;th class="border"&gt;Individual Registration Code&lt;/th&gt;&#13;
+                            &lt;td class="border"&gt;reg_1&lt;/td&gt;&#13;
+                        &lt;/tr&gt;&#13;
+&#13;
+                        &lt;tr&gt;&#13;
+                            &lt;th class="border"&gt;SWIFT&lt;/th&gt;&#13;
+                            &lt;td class="border"&gt;swift&lt;/td&gt;&#13;
+                        &lt;/tr&gt;&#13;
+                        &lt;tr&gt;&#13;
+                            &lt;th class="border"&gt;Company Code&lt;/th&gt;&#13;
+                            &lt;td class="border"&gt;company_code&lt;/td&gt;&#13;
+                        &lt;/tr&gt;&#13;
+                    &lt;/table&gt;&#13;
+                &lt;/td&gt;&#13;
+            &lt;/tr&gt;&#13;
+        &lt;/table&gt;&#13;
+        &lt;br&gt;&#13;
+        &lt;table class="invoice-box"&gt;&#13;
+            &lt;thead&gt;&#13;
+                &lt;tr class="col"&gt;&#13;
+                    &lt;th class="width-5"&gt;No&lt;/th&gt;&#13;
+                    &lt;th class="width-45"&gt;Description&lt;/th&gt;&#13;
+                    &lt;th class="width-10"&gt;Quantity&lt;/th&gt;&#13;
+                    &lt;th class="width-10"&gt;Unit Price&lt;/th&gt;&#13;
+                    &lt;th class="width-10"&gt;Net Value&lt;/th&gt;&#13;
+                    &lt;th class="width-10"&gt;VAT Value&lt;/th&gt;&#13;
+                    &lt;!--th class="width-10"&gt;Gross Value&lt;/th&gt;--&gt;&#13;
+                &lt;/tr&gt;&#13;
+            &lt;/thead&gt;&#13;
+            &lt;tbody&gt;&#13;
+                __lines__&#13;
+&#13;
+            &lt;/tbody&gt;&#13;
+            &lt;div&gt;Reverse charge for VAT based on art.278 from Romanian Fiscal Code.&lt;/div&gt;&#13;
+            &lt;tfoot&gt;&#13;
+                &lt;tr&gt;&#13;
+                    &lt;td colspan="2"&gt;Contact Person: contact_name &lt;br/&gt;contact_email&lt;/td&gt;&#13;
+                    &lt;td colspan="4"&gt;&#13;
+                        &lt;table style="width: 100%; margin: 0; padding: 0; height: 100%;"&gt;&#13;
+                            &lt;tr&gt;&#13;
+                                &lt;th class="col-cent" colspan="1"&gt;Exchange Rate&lt;/th&gt;&#13;
+                                &lt;td class="lines" colspan="3"&gt;1 currency = exchange_rate RON&lt;/td&gt;&#13;
+                            &lt;/tr&gt;&#13;
+                            &lt;tr rowspan="2"&gt;&#13;
+                                &lt;th class="col-cent"&gt;Total excl.VAT&lt;/th&gt;&#13;
+                                &lt;td class="lines"&gt;total_net currency&lt;/td&gt;&#13;
+                                &lt;td class="lines"&gt;total_tva currency&lt;/td&gt;&#13;
+                            &lt;/tr&gt;&#13;
+                            &lt;tr&gt;&#13;
+                                &lt;th class="col-cent" colspan="1"&gt;Total&lt;/th&gt;&#13;
+                                &lt;td class="lines" colspan="3"&gt;total_brut currency&lt;/td&gt;&#13;
+                            &lt;/tr&gt;&#13;
+                            __ron__&#13;
+                            &#13;
+                        &lt;/table&gt;&#13;
+                    &lt;/td&gt;&#13;
+                &lt;/tr&gt;&#13;
+                &lt;tr width="100%"&gt;&#13;
+                    &lt;td class="lines" colspan="2" &gt;This invoice is payable at Bucharest, RO. All bank transfer fees until the destination will be supported by the customer. &lt;/td&gt;&#13;
+                    &lt;td class="lines" colspan="2"&gt;The invoice is valid without signature and seal.&lt;/td&gt;&#13;
+                    &lt;td class="lines" colspan="2"&gt;Comments: &lt;br&gt;comments&lt;/td&gt;&#13;
+                &lt;/tr&gt;&#13;
+            &lt;/tfoot&gt;&#13;
+        &lt;/table&gt;&#13;
+    &lt;/div&gt;&#13;
+&lt;/body&gt;</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=c7be68b61b6a1110c7c9fc078b4bcb0c"/>
+</record_update>

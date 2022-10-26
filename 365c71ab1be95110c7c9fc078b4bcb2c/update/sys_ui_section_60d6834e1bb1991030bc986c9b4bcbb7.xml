@@ -4,13 +4,13 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>f07264c41b52d910c7c9fc078b4bcba3</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>8f1599831be6551030bc986c9b4bcb37</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>number</element>
             <position>1</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>747264c41b52d910c7c9fc078b4bcba3</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>071599831be6551030bc986c9b4bcb38</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>unit_price</element>
             <position>2</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>f47264c41b52d910c7c9fc078b4bcba3</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>871599831be6551030bc986c9b4bcb38</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>quantity</element>
             <position>3</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>787264c41b52d910c7c9fc078b4bcba3</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>0b1599831be6551030bc986c9b4bcb38</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,27 +60,27 @@
             <element>otc</element>
             <position>4</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>f87264c41b52d910c7c9fc078b4bcba3</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>8b1599831be6551030bc986c9b4bcb38</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>mrc</element>
+            <element>price</element>
             <position>5</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>7c7264c41b52d910c7c9fc078b4bcba3</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>0f1599831be6551030bc986c9b4bcb38</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>period_start</element>
             <position>6</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>fc7264c41b52d910c7c9fc078b4bcba3</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>8f1599831be6551030bc986c9b4bcb38</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>.split</element>
             <position>7</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>707264c41b52d910c7c9fc078b4bcba4</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>031599831be6551030bc986c9b4bcb39</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>client_invoice</element>
             <position>8</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>f07264c41b52d910c7c9fc078b4bcba4</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>831599831be6551030bc986c9b4bcb39</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>item</element>
             <position>9</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>747264c41b52d910c7c9fc078b4bcba4</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>071599831be6551030bc986c9b4bcb39</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -144,13 +144,13 @@
             <element>product</element>
             <position>10</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>f47264c41b52d910c7c9fc078b4bcba4</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>871599831be6551030bc986c9b4bcb39</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -158,69 +158,139 @@
             <element>otc_calculated</element>
             <position>11</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>787264c41b52d910c7c9fc078b4bcba4</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>0b1599831be6551030bc986c9b4bcb39</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>mrc_calculated</element>
-            <position>12</position>
-            <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>f87264c41b52d910c7c9fc078b4bcba4</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
-            <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>period_end</element>
-            <position>13</position>
+            <position>12</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>7c7264c41b52d910c7c9fc078b4bcba4</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>8b1599831be6551030bc986c9b4bcb39</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
-            <position>14</position>
+            <position>13</position>
             <sys_created_by>daniel.szabo</sys_created_by>
-            <sys_created_on>2022-09-27 14:46:01</sys_created_on>
-            <sys_id>fc7264c41b52d910c7c9fc078b4bcba4</sys_id>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>0f1599831be6551030bc986c9b4bcb39</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
             <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-27 14:46:01</sys_updated_on>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>approval</element>
-            <position>15</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-09-27 19:45:02</sys_created_on>
-            <sys_id>05e6698c1b16d910c7c9fc078b4bcba2</sys_id>
+            <position>14</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>8f1599831be6551030bc986c9b4bcb39</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-09-27 19:45:02</sys_updated_on>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>15</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-19 12:24:49</sys_created_on>
+            <sys_id>031599831be6551030bc986c9b4bcb3a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-19 12:24:49</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>position</element>
+            <position>16</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 08:52:17</sys_created_on>
+            <sys_id>230e699b1b6a951030bc986c9b4bcb08</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 08:52:17</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>vat_value</element>
+            <position>17</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-20 16:38:19</sys_created_on>
+            <sys_id>deb8dbdb1b22d51030bc986c9b4bcb87</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-20 16:38:19</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>price_in_ron</element>
+            <position>18</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-21 09:10:34</sys_created_on>
+            <sys_id>89dbfe231baed51030bc986c9b4bcb96</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-21 09:10:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>vat_value_in_ron</element>
+            <position>19</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-21 09:10:34</sys_created_on>
+            <sys_id>01dbfe231baed51030bc986c9b4bcba0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-21 09:10:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>unit_price_in_ron</element>
+            <position>20</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-21 09:10:34</sys_created_on>
+            <sys_id>c1dbfe231baed51030bc986c9b4bcba9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-21 09:10:34</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

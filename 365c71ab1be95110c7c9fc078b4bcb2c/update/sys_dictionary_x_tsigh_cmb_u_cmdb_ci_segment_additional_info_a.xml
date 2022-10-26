@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Additional Info A</column_label>
+        <column_label>Additional Info for Endpoint A</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -54,14 +54,14 @@
         <sys_created_by>szabo.zoltan</sys_created_by>
         <sys_created_on>2022-09-29 09:38:19</sys_created_on>
         <sys_id>bb0fa5281b125d10c7c9fc078b4bcb3d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Additional Info A</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Additional Info for Endpoint A</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_dictionary_x_tsigh_cmb_u_cmdb_ci_segment_additional_info_a</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-09-29 09:38:19</sys_updated_on>
+        <sys_updated_on>2022-10-20 08:18:14</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

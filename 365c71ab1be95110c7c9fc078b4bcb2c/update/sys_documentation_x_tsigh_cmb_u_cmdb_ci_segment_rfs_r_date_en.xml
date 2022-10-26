@@ -10,8 +10,8 @@
             <plural>RFS-R Dates</plural>
             <sys_class_name>sys_documentation</sys_class_name>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-09-29 09:05:11</sys_created_on>
-            <sys_id>ff97a9201b125d10c7c9fc078b4bcb13</sys_id>
+            <sys_created_on>2022-10-25 05:11:37</sys_created_on>
+            <sys_id>bf7ba2701bf6d510c7c9fc078b4bcb4f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>RFS-R Date</sys_name>
             <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -19,7 +19,7 @@
             <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
             <sys_update_name>sys_documentation_x_tsigh_cmb_u_cmdb_ci_segment_rfs_r_date_en</sys_update_name>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-09-29 09:05:11</sys_updated_on>
+            <sys_updated_on>2022-10-25 05:11:37</sys_updated_on>
             <url/>
             <url_target/>
         </sys_documentation>

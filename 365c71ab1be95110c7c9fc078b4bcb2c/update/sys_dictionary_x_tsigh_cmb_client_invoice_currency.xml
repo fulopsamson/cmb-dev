@@ -33,7 +33,7 @@
         <name>x_tsigh_cmb_client_invoice</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference display_value="" name="fx_currency">fx_currency</reference>
         <reference_cascade_rule/>
@@ -51,14 +51,14 @@
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-10-04 08:10:54</sys_created_on>
         <sys_id>252b03c61b569150c7c9fc078b4bcb85</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Currency</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_dictionary_x_tsigh_cmb_client_invoice_currency</sys_update_name>
-        <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-10-04 10:47:56</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-10 08:16:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

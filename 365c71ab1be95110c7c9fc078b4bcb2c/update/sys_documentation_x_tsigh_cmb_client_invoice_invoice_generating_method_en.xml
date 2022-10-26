@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="invoice_generating_method" label="Invoice generating method" language="en" table="x_tsigh_cmb_client_invoice">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>invoice_generating_method</element>
+            <help/>
+            <hint/>
+            <label>Invoice generating method</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_client_invoice</name>
+            <plural>Invoice generating methods</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-10-07 07:45:12</sys_created_on>
+            <sys_id>0602e2c71b5ed55030bc986c9b4bcbfb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Invoice generating method</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_documentation_x_tsigh_cmb_client_invoice_invoice_generating_method_en</sys_update_name>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-07 07:45:12</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

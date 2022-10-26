@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="DELETE">
+        <active>true</active>
+        <category/>
+        <format>png</format>
+        <height>6</height>
+        <image>c4c6aa451ba21d50c7c9fc078b4bcb65</image>
+        <name>pink_line.png</name>
+        <size_bytes>289</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-13 13:13:10</sys_created_on>
+        <sys_id>b44626051ba21d50c7c9fc078b4bcbbe</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>pink_line.png</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>db_image_b44626051ba21d50c7c9fc078b4bcbbe</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-13 13:13:39</sys_updated_on>
+        <thumbnail/>
+        <width>126</width>
+    </db_image>
+    <sys_attachment action="DELETE">
+        <average_image_color>#e41578</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>image</file_name>
+        <hash>c06727207ba9005a7790dcf5ad82da3b680d3278d4caca8696111f63d0c0629a</hash>
+        <image_height>6</image_height>
+        <image_width>126</image_width>
+        <size_bytes>289</size_bytes>
+        <size_compressed>242</size_compressed>
+        <state>available</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-13 13:13:39</sys_created_on>
+        <sys_id>c4c6aa451ba21d50c7c9fc078b4bcb65</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-13 13:13:39</sys_updated_on>
+        <table_name>ZZ_YYdb_image</table_name>
+        <table_sys_id>b44626051ba21d50c7c9fc078b4bcbbe</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="DELETE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="image" sys_id="c4c6aa451ba21d50c7c9fc078b4bcb65">c4c6aa451ba21d50c7c9fc078b4bcb65</sys_attachment>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-13 13:13:39</sys_created_on>
+        <sys_id>08c6aa451ba21d50c7c9fc078b4bcb65</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="DELETE">
+        <data>6wzwc+flkuJiYGDg9fRwCQLSdUDMxsEGJFmDtFSAFGNxkLsTw7pzMi+BnIrUCM80X18GLSCbg4GFUYqBFaQEiO0YpeFsN0YNBmYwm4mBoT2TgQUq7scAAROgfAjNvIARqhootoAJrrpuATOcDXIPg/VOFpAbOAs8IosZGMRUQZjRM0jlA1DQydPFMcSDNzmFoUl9keh/xy8aEvcUFT7vahZ85qwmkTxFLlLRQOqjsva+h/tkeysqAnp0jmUc6V/zo+13mcmjh46GmyQYZrxj4eH/8CIaZJWnq5/LOqeEJgBUlTsBIQEAAA==</data>
+        <length>312</length>
+        <position>1</position>
+        <sys_attachment display_value="image" sys_id="c4c6aa451ba21d50c7c9fc078b4bcb65">c4c6aa451ba21d50c7c9fc078b4bcb65</sys_attachment>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-13 13:13:39</sys_created_on>
+        <sys_id>88c6aa451ba21d50c7c9fc078b4bcb65</sys_id>
+    </sys_attachment_doc>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>db_image_b44626051ba21d50c7c9fc078b4bcbbe</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image"><db_image action="INSERT_OR_UPDATE"><active>true</active><category/><format>png</format><height>6</height><image>c4c6aa451ba21d50c7c9fc078b4bcb65</image><name>pink_line.png</name><size_bytes>289</size_bytes><sys_class_name>db_image</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-13 13:13:10</sys_created_on><sys_id>b44626051ba21d50c7c9fc078b4bcbbe</sys_id><sys_mod_count>2</sys_mod_count><sys_name>pink_line.png</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>db_image_b44626051ba21d50c7c9fc078b4bcbbe</sys_update_name><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-10-13 13:13:39</sys_updated_on><thumbnail/><width>126</width></db_image><sys_attachment action="INSERT_OR_UPDATE"><average_image_color>#e41578</average_image_color><chunk_size_bytes>700000</chunk_size_bytes><compressed>true</compressed><content_type>image/png</content_type><encryption_context/><file_name>image</file_name><hash>c06727207ba9005a7790dcf5ad82da3b680d3278d4caca8696111f63d0c0629a</hash><image_height>6</image_height><image_width>126</image_width><size_bytes>289</size_bytes><size_compressed>242</size_compressed><state>available</state><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-13 13:13:39</sys_created_on><sys_id>c4c6aa451ba21d50c7c9fc078b4bcb65</sys_id><sys_mod_count>5</sys_mod_count><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-10-13 13:13:39</sys_updated_on><table_name>ZZ_YYdb_image</table_name><table_sys_id>b44626051ba21d50c7c9fc078b4bcbbe</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAAAA==</data><length>16</length><position>0</position><sys_attachment display_value="image" sys_id="c4c6aa451ba21d50c7c9fc078b4bcb65">c4c6aa451ba21d50c7c9fc078b4bcb65</sys_attachment><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-13 13:13:39</sys_created_on><sys_id>08c6aa451ba21d50c7c9fc078b4bcb65</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>6wzwc+flkuJiYGDg9fRwCQLSdUDMxsEGJFmDtFSAFGNxkLsTw7pzMi+BnIrUCM80X18GLSCbg4GFUYqBFaQEiO0YpeFsN0YNBmYwm4mBoT2TgQUq7scAAROgfAjNvIARqhootoAJrrpuATOcDXIPg/VOFpAbOAs8IosZGMRUQZjRM0jlA1DQydPFMcSDNzmFoUl9keh/xy8aEvcUFT7vahZ85qwmkTxFLlLRQOqjsva+h/tkeysqAnp0jmUc6V/zo+13mcmjh46GmyQYZrxj4eH/8CIaZJWnq5/LOqeEJgBUlTsBIQEAAA==</data><length>312</length><position>1</position><sys_attachment display_value="image" sys_id="c4c6aa451ba21d50c7c9fc078b4bcb65">c4c6aa451ba21d50c7c9fc078b4bcb65</sys_attachment><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-13 13:13:39</sys_created_on><sys_id>88c6aa451ba21d50c7c9fc078b4bcb65</sys_id></sys_attachment_doc></record_update>]]></payload>
+        <payload_hash>0</payload_hash>
+        <record_name>pink_line.png</record_name>
+        <reverted_from/>
+        <source>58f5b3821b1a9150c7c9fc078b4bcb91</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-13 13:13:39</sys_created_on>
+        <sys_id>08c6ee451ba21d50c7c9fc078b4bcb8c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183d17aa7010000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-13 13:13:39</sys_updated_on>
+        <type>Images</type>
+        <update_guid>00c6ee4553a21d500d1f32d793bb348c</update_guid>
+        <update_guid_history>00c6ee4553a21d500d1f32d793bb348c:-1777323968,48c6aa451ba21d50db4cfdf79fa1c76c:-374031548,4cc6aa4573a21d50e82076a78d391f69:-1447585838,70a66e4578a21d50acb1894888fa0def:692096852</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="pink_line.png">64903edd1bee1d50c7c9fc078b4bcbd6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-14 08:35:03</sys_created_on>
+        <sys_db_object display_value="" name="db_image">db_image</sys_db_object>
+        <sys_id>abd9e3c2f740477a83eaa8ee34e0c3a9</sys_id>
+        <sys_metadata>b44626051ba21d50c7c9fc078b4bcbbe</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pink_line.png</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>db_image_b44626051ba21d50c7c9fc078b4bcbbe</sys_update_name>
+        <sys_update_version display_value="db_image_b44626051ba21d50c7c9fc078b4bcbbe">08c6ee451ba21d50c7c9fc078b4bcb8c</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-14 08:35:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

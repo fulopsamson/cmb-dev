@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>x_tsigh_cmb.ClientInvoiceUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ClientInvoiceUtils</name>
+        <script><![CDATA[var ClientInvoiceUtils = Class.create();
+ClientInvoiceUtils.prototype = {
+    initialize: function() {},
+    generateInvoiceImages: function(invoice_id) {
+        gs.info('Generating invoice image for: ');
+        var invoice = new GlideRecord("x_tsigh_cmb_client_invoice");
+        invoice.get(invoice_id);
+
+        if (!invoice) {
+            gs.error("Premature error in invoice image genration");
+        }
+
+        var gr = new GlideRecord('x_tsigh_cmb_billing_profile');
+        gr.get(invoice.getValue('billing_profile'));
+    },
+    generate: function(billingProfile, year, month) {
+        var billingProfileData = new GlideRecord('x_tsigh_cmb_billing_profile');
+        billingProfileData.get(billingProfile);
+
+        var start_str = year + '-' + month + '-' + '01';
+        var start = new GlideDateTime(start_str);
+        var end = new GlideDateTime(start_str);
+        end.setDayOfMonthUTC(32);
+        var dummy = billingProfileData.getValue('due_days');
+        if (dummy == null || dummy == '') {
+            dummy = 0;
+        }
+        var due_ = new GlideDateTime();
+        due_.addDaysUTC(dummy);
+        var genMethod = billingProfileData.getValue('invoice_generating_method');
+        var serviceUtils = new CMBServiceUtils();
+        var now = new GlideDateTime();
+
+        gs.info('Generating invoice for: ' + billingProfileData.getValue('name'));
+
+
+        var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+        gr.addQuery('u_billing_profile', billingProfile);
+        var e = gr.addQuery('u_state', 'Active');
+        e.addOrCondition('u_state', 'Terminated');
+        gr.query();
+
+        if (genMethod != 4) {
+            var invoice = new GlideRecord('x_tsigh_cmb_client_invoice');
+            invoice.initialize();
+            invoice.setValue('client', billingProfileData.getValue('account'));
+            invoice.setValue('billing_profile', billingProfile);
+            invoice.setValue('exchange_rate_date', now.getDate());
+            invoice.setValue('type', 'billing');
+            invoice.setValue('automatically_generated', true);
+            invoice.setValue('currency', billingProfileData.getValue('currency'));
+            invoice.setValue('state', 'temporary');
+            invoice.setValue('observation', 'This is a test');
+            invoice.setValue('due_date', due_.getDate().getDisplayValue());
+			invoice.setValue('invoice_generating_method', billingProfileData.getDisplayValue('invoice_generating_method'));
+			invoice.setValue('period_start', start);
+			invoice.setValue('period_end', end);
+            var invoiceSysID = invoice.insert();
+
+            while (gr.next()) {
+                var revenue = serviceUtils.getServiceRevenue(gr.getValue('sys_id'), year, month);
+                if (revenue) {
+                    var grx = new GlideRecord('x_tsigh_cmb_validation_line');
+                    grx.initialize();
+                    grx.setValue('otc_calculated', revenue[0]);
+                    grx.setValue('mrc_calculated', revenue[1]);
+                    grx.setValue('period_start', start);
+                    grx.setValue('period_end', end);
+                    grx.setValue('service', gr.getValue('sys_id'));
+                    grx.setValue('client_invoice', invoiceSysID);
+					grx.setValue('billing_profile', billingProfile);
+                    grx.insert();
+                }
+            }
+        } else {
+            var ref_num_list = [];
+            while (gr.next()) {
+                var curr_num = gr.getValue('partner_ref_nr');
+                var contains = false;
+                for (var i = 0; i < ref_num_list.length; i += 1) {
+                    if (ref_num_list[i] == curr_num) {
+                        contains = true;
+                        break;
+                    }
+                }
+                if (!contains) {
+                    ref_num_list.push(curr_num);
+                }
+            }
+            for (var j = 0; j < ref_num_list.length; j += 1) {
+                var ref_num = ref_num_list[j];
+                var inv = new GlideRecord('x_tsigh_cmb_client_invoice');
+                inv.initialize();
+                inv.setValue('client', billingProfileData.getValue('account'));
+                inv.setValue('billing_profile', billingProfile);
+                inv.setValue('exchange_rate_date', now.getDate());
+                inv.setValue('type', 'billing');
+                inv.setValue('automatically_generated', true);
+                inv.setValue('currency', billingProfileData.getValue('currency'));
+                inv.setValue('state', 'temporary');
+                inv.setValue('observation', 'This is a test');
+                inv.setValue('due_date', due_.getDate().getDisplayValue());
+				inv.setValue('invoice_generating_method', billingProfileData.getDisplayValue('invoice_generating_method'));
+                inv.setValue('partner_reference_number', ref_num);
+				inv.setValue('period_start', start);
+				inv.setValue('period_end', end);
+                var invSysID = inv.insert();
+                var gr_2 = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+                gr_2.addQuery('u_billing_profile', billingProfile);
+                var l = gr_2.addQuery('u_state', 'Active');
+                l.addOrCondition('u_state', 'Terminated');
+                gr_2.addQuery('partner_ref_nr', ref_num);
+                gr_2.query();
+                while (gr_2.next()) {
+                    var rev = serviceUtils.getServiceRevenue(gr_2.getValue('sys_id'), year, month);
+                    gs.info(rev);
+                    if (rev) {
+                        var grxx = new GlideRecord('x_tsigh_cmb_validation_line');
+                        grxx.initialize();
+                        grxx.setValue('otc_calculated', rev[0]);
+                        grxx.setValue('mrc_calculated', rev[1]);
+                        grxx.setValue('period_start', start);
+                        grxx.setValue('period_end', end);
+                        grxx.setValue('service', gr_2.getValue('sys_id'));
+                        grxx.setValue('client_invoice', invSysID);
+						grxx.setValue('billing_profile', billingProfile);
+                        grxx.insert();
+                    }
+                }
+            }
+        }
+    },
+    calculateTotal: function(invoice) {
+		var sum = 0;
+		
+		
+		var line = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+		line.addQuery('client_invoice', invoice);
+		line.query();
+		
+		while (line.next()) {
+			sum += line.mrc_calculated;
+			sum += line.otc_calculated;
+		}
+		var inv = new GlideRecord('x_tsigh_cmb_client_invoice');
+		inv.get(invoice);
+		gs.info(sum);
+		gs.info(inv.client.u_intern_extern);
+		inv.setValue('total_net_value', sum);
+		if (inv.client.u_intern_extern == 'extern') {
+			inv.setValue('total', sum);
+			inv.setValue('total_value_of_vat', 0);
+		} else {
+			var v = parseFloat(gs.getProperty('x_tsigh_cmb.tva_percent')) * sum;
+			
+			inv.setValue('total_value_of_vat', v);
+			inv.setValue('total', sum + v);
+		}
+		inv.update();
+    },
+
+    type: 'ClientInvoiceUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-05 15:20:01</sys_created_on>
+        <sys_id>2f96b9621b5e555030bc986c9b4bcb5b</sys_id>
+        <sys_mod_count>81</sys_mod_count>
+        <sys_name>ClientInvoiceUtils</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_2f96b9621b5e555030bc986c9b4bcb5b</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-25 15:21:16</sys_updated_on>
+    </sys_script_include>
+</record_update>

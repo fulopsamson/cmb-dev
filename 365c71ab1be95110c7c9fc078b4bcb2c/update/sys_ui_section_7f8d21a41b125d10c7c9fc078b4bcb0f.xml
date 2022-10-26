@@ -4,13 +4,13 @@
             <element>number</element>
             <position>0</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>441c623d1b965150c7c9fc078b4bcb8c</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>665f493a1bd61550c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>u_provider</element>
             <position>1</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>c81c623d1b965150c7c9fc078b4bcb8c</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>ea5f493a1bd61550c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>u_billing_profile</element>
             <position>2</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>4c1c623d1b965150c7c9fc078b4bcb8c</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>6e5f493a1bd61550c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>u_la_provider_id</element>
             <position>3</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>cc1c623d1b965150c7c9fc078b4bcb8c</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>ee5f493a1bd61550c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>u_mrc</element>
             <position>4</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>401c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>625f493a1bd61550c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>u_from</element>
             <position>5</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>c01c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>e25f493a1bd61550c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>sys_created_by</element>
             <position>6</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>441c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>665f493a1bd61550c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,27 +102,27 @@
             <element>u_contract_period</element>
             <position>7</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>c41c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>e65f493a1bd61550c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>kind_of_order</element>
+            <element>sys_created_on</element>
             <position>8</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>481c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>6a5f493a1bd61550c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>.split</element>
             <position>9</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>c81c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>ea5f493a1bd61550c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -144,13 +144,13 @@
             <element>u_legacy_id</element>
             <position>10</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>4c1c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>6e5f493a1bd61550c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -158,13 +158,13 @@
             <element>u_service</element>
             <position>11</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>cc1c623d1b965150c7c9fc078b4bcb8d</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>ee5f493a1bd61550c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -172,27 +172,27 @@
             <element>u_currency</element>
             <position>12</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>401c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>625f493a1bd61550c7c9fc078b4bcbdf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_order</element>
+            <element>kind_of_order</element>
             <position>13</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>c01c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>e25f493a1bd61550c7c9fc078b4bcbdf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -200,13 +200,13 @@
             <element>u_otc</element>
             <position>14</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>441c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>665f493a1bd61550c7c9fc078b4bcbdf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -214,27 +214,27 @@
             <element>u_to</element>
             <position>15</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>c41c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>e65f493a1bd61550c7c9fc078b4bcbdf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>sys_created_on</element>
+            <element>u_order</element>
             <position>16</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>481c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>6a5f493a1bd61550c7c9fc078b4bcbdf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -242,13 +242,13 @@
             <element>rfs_r_date</element>
             <position>17</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>c81c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>ea5f493a1bd61550c7c9fc078b4bcbdf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -256,13 +256,13 @@
             <element>last_billing_date</element>
             <position>18</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 11:16:37</sys_created_on>
-            <sys_id>4c1c623d1b965150c7c9fc078b4bcb8e</sys_id>
+            <sys_created_on>2022-10-06 07:05:29</sys_created_on>
+            <sys_id>6e5f493a1bd61550c7c9fc078b4bcbdf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">7f8d21a41b125d10c7c9fc078b4bcb0f</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 11:16:37</sys_updated_on>
+            <sys_updated_on>2022-10-06 07:05:29</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

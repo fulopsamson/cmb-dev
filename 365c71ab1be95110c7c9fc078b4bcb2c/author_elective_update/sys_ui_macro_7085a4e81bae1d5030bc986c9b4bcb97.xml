@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="DELETE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>cmb_attachment_form</name>
+        <scoped_name>x_tsigh_cmb_cmb_attachment_form</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-11 14:32:03</sys_created_on>
+        <sys_id>7085a4e81bae1d5030bc986c9b4bcb97</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>cmb_attachment_form</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_macro_7085a4e81bae1d5030bc986c9b4bcb97</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-11 14:34:32</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+  <form id="sys_attachment" action="sys_attachment.do" enctype="multipart/form-data"
+    method="post" name="sys_attachment" onsubmit="return validateAttachment();" target="upload_target">
+    <input id="attachments_modified" name="attachments_modified"
+      type="hidden" value="" />
+	 <input name="sysparm_sys_id"  type="hidden" value="" />
+    <input name="sysparm_table" type="hidden" value="x_tsigh_cmb_u_cmdb_ci_cmb_service" />
+    <input name="sysparm_nostack" type="hidden" value="no" />
+    <input name="sysparm_redirect" type="hidden" value="attachment_uploaded.do?sysparm_nostack=no" />
+    <!-- <input name="sysparm_redirect" type="hidden" value="attachment_uploaded.do?sysparm_nostack=yes" />  -->
+    <input id="sysparm_encryption_context" name="sysparm_encryption_context" type="hidden" value="" />
+    <table>
+      <tr>
+        <td id="attachFileCell">
+          <input id="attachFile" name="attachFile" size="41" title="${gs.getMessage('Attach')}" type="file" onchange="enableOKButton()"/>
+        </td>
+        <td align="right"></td>
+      </tr>
+      <tr>
+        <td colspan="2" height="24">
+          <img id="please_wait" src="images/please_wait.gifx" style="display:none" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_macro_7085a4e81bae1d5030bc986c9b4bcb97</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_macro"&gt;&lt;sys_ui_macro action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;description/&gt;&lt;media_type/&gt;&lt;name&gt;cmb_attachment_form&lt;/name&gt;&lt;scoped_name&gt;x_tsigh_cmb_cmb_attachment_form&lt;/scoped_name&gt;&lt;sys_class_name&gt;sys_ui_macro&lt;/sys_class_name&gt;&lt;sys_created_by&gt;daniel.szabo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-11 14:32:03&lt;/sys_created_on&gt;&lt;sys_id&gt;7085a4e81bae1d5030bc986c9b4bcb97&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;cmb_attachment_form&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_macro_7085a4e81bae1d5030bc986c9b4bcb97&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;daniel.szabo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-11 14:34:32&lt;/sys_updated_on&gt;&lt;xml&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+  &lt;form id="sys_attachment" action="sys_attachment.do" enctype="multipart/form-data"
+    method="post" name="sys_attachment" onsubmit="return validateAttachment();" target="upload_target"&gt;
+    &lt;input id="attachments_modified" name="attachments_modified"
+      type="hidden" value="" /&gt;
+	 &lt;input name="sysparm_sys_id"  type="hidden" value="" /&gt;
+    &lt;input name="sysparm_table" type="hidden" value="x_tsigh_cmb_u_cmdb_ci_cmb_service" /&gt;
+    &lt;input name="sysparm_nostack" type="hidden" value="no" /&gt;
+    &lt;input name="sysparm_redirect" type="hidden" value="attachment_uploaded.do?sysparm_nostack=no" /&gt;
+    &lt;!-- &lt;input name="sysparm_redirect" type="hidden" value="attachment_uploaded.do?sysparm_nostack=yes" /&gt;  --&gt;
+    &lt;input id="sysparm_encryption_context" name="sysparm_encryption_context" type="hidden" value="" /&gt;
+    &lt;table&gt;
+      &lt;tr&gt;
+        &lt;td id="attachFileCell"&gt;
+          &lt;input id="attachFile" name="attachFile" size="41" title="${gs.getMessage('Attach')}" type="file" onchange="enableOKButton()"/&gt;
+        &lt;/td&gt;
+        &lt;td align="right"&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan="2" height="24"&gt;
+          &lt;img id="please_wait" src="images/please_wait.gifx" style="display:none" /&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+  &lt;/form&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/xml&gt;&lt;/sys_ui_macro&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>32679809</payload_hash>
+        <record_name>cmb_attachment_form</record_name>
+        <reverted_from/>
+        <source>49db5ce21bd6d150c7c9fc078b4bcb8d</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-11 14:34:32</sys_created_on>
+        <sys_id>4116246c1bae1d5030bc986c9b4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183c777f94b0000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-11 14:34:32</sys_updated_on>
+        <type>Macro</type>
+        <update_guid>4916246c1cae1d505092094839b587f2</update_guid>
+        <update_guid_history>4916246c1cae1d505092094839b587f2:32679809,3485a4e820ae1d50d614d0844c871c98:683508431</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-11 14:41:19</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_macro">sys_ui_macro</sys_db_object>
+        <sys_id>13e5b441f35143bc8c07d6f488070c91</sys_id>
+        <sys_metadata>7085a4e81bae1d5030bc986c9b4bcb97</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cmb_attachment_form</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_macro_7085a4e81bae1d5030bc986c9b4bcb97</sys_update_name>
+        <sys_update_version display_value="sys_ui_macro_7085a4e81bae1d5030bc986c9b4bcb97">4116246c1bae1d5030bc986c9b4bcbf3</sys_update_version>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-11 14:41:19</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

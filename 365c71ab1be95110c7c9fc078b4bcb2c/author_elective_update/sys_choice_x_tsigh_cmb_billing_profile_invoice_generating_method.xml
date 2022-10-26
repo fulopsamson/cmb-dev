@@ -40,7 +40,7 @@
             <dependent_value/>
             <element>invoice_generating_method</element>
             <hint/>
-            <inactive>false</inactive>
+            <inactive>true</inactive>
             <label>Group by partner</label>
             <language>en</language>
             <name>x_tsigh_cmb_billing_profile</name>
@@ -51,9 +51,9 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>3c2fcf371b6d9110c7c9fc078b4bcb4f</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>daniel.szabo</sys_updated_by>
-            <sys_updated_on>2022-09-02 12:10:38</sys_updated_on>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-10-25 14:37:10</sys_updated_on>
             <value>2</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">

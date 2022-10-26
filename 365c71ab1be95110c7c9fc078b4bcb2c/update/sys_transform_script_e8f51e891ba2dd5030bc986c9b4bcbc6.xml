@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="CMB Services Transform Map">119002851b62dd5030bc986c9b4bcb86</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+	var ciu = new x_tsigh_cmb.CMBServiceImport();
+
+	var bp = ciu.getBillingProfile(source.u_billing_profile_name);
+	gs.info('Billing profile: '+bp.sys_id);
+	if(bp){
+		target.u_account = bp.account;
+		target.u_billing_profile = bp.sys_id;
+		gs.info('Currency: '+bp.currency.sys_id.toString());
+		target.u_currency = bp.currency.sys_id.toString();
+
+	}
+	gs.info('Contract number: '+source.u_contract_number);
+	if(source.u_contract_number){
+		var contractId = ciu.createContract(source.u_contract_number,source.u_contract_number);
+		gs.info('Contract id: '+contractId);
+		target.u_contract = contractId;
+
+	}
+
+	//Location A
+	var locA = {};
+	var hasAdata = false;
+	if(source.u_endpoint_a_city){
+		locA.city = source.u_endpoint_a_city.toString();
+		hasAdata = true;
+	} 
+	if(source.u_endpoint_a_country){
+		locA.country = source.u_endpoint_a_country.toString();
+		hasAdata = true;
+	} 
+	if(source.u_endpoint_a_state){
+		locA.state = source.u_endpoint_a_state.toString();
+		hasAdata = true;
+	} 
+	if(source.u_endpoint_a_street){
+		locA.street = source.u_endpoint_a_street.toString();
+		hasAdata = true;
+	} 
+	if(source.u_endpoint_a_zip){
+		locA.zip = source.u_endpoint_a_zip.toString();
+		hasAdata = true;
+	} 
+	if(locA){
+		gs.info('Endpoint A location: '+JSON.stringify(locA));
+		var locationA = ciu.getLocation(locA);
+		gs.info('Endpoint A location id: '+locationA);
+		if(locationA){
+			var endpointA = ciu.createStockroom(locationA,'endpoint',bp,source.u_endpoint_a?source.u_endpoint_a:'');
+			gs.info('Endpoint A: '+endpointA.sys_id)
+			target.u_endpoint_a = endpointA.sys_id;
+
+		}
+
+	}
+
+
+	var locB = {};
+	if(source.u_endpoint_b_city) locB.city = source.u_endpoint_b_city.toString();
+	if(source.u_endpoint_b_country) locB.country = source.u_endpoint_b_country.toString();
+	if(source.u_endpoint_b_state) locB.state = source.u_endpoint_b_state.toString();
+	if(source.u_endpoint_b_street) locB.street = source.u_endpoint_b_street.toString();
+	if(source.u_endpoint_b_zip) locB.zip = source.u_endpoint_b_zip.toString();
+	if(locB){
+		var locationB = ciu.getLocation(locB);
+		var endpointB = ciu.createStockroom(locationB,'endpoint',bp,source.u_endpoint_a?source.u_endpoint_a:'');
+		target.u_endpoint_b = endpointB.sys_id;
+
+	}
+	if(source.u_pop_a){
+		gs.info('POPA_: '+bp.sys_id+' - '+source.u_pop_a);
+		var popA = ciu.createStockroom('','backbone_equipment',bp,source.u_pop_a);
+		gs.info('POPA_ ID: '+popA.sys_id.toString());
+		if(popA) target.u_pop_a = popA.sys_id.toString();
+	}
+
+	if(source.u_pop_b){
+		gs.info('POPB_: '+bp.sys_id+' - '+source.u_pop_b);
+		var popB = ciu.createStockroom('','backbone_equipment',bp,source.u_pop_b);
+		gs.info('POPB_ ID: '+popB.sys_id.toString());
+		if(popB) target.u_pop_b = popB.sys_id.toString();
+	}
+
+
+
+
+
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-13 12:00:18</sys_created_on>
+        <sys_id>e8f51e891ba2dd5030bc986c9b4bcbc6</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_transform_script_e8f51e891ba2dd5030bc986c9b4bcbc6</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-17 08:54:57</sys_updated_on>
+        <when>onBefore</when>
+    </sys_transform_script>
+</record_update>

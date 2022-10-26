@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Supplier invoice" max_length="40" name="x_tsigh_cmb_supplier_invoice" sizeclass="21" type="collection">
-        <element label="Billing profile" max_length="32" name="billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.supplier" type="reference" use_reference_qualifier="advanced"/>
+    <element audit="true" label="Supplier invoice" max_length="40" name="x_tsigh_cmb_supplier_invoice" sizeclass="53" type="collection">
+        <element choice="1" choice_field="approval" choice_table="x_tsigh_cmb_client_invoice" label="Approval" max_length="20" name="approval" type="string">
+            <choice/>
+        </element>
+        <element label="Billing profile" mandatory="true" max_length="32" name="billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.supplier" type="reference" use_reference_qualifier="advanced"/>
         <element label="Budget" max_length="32" name="budget" read_only="true" reference="fm_budget" type="reference"/>
-        <element choice="1" label="Cost centre" max_length="32" name="cost_centre" reference="cmn_cost_center" type="reference">
+        <element choice="1" label="Cost centre" mandatory="true" max_length="32" name="cost_centre" reference="cmn_cost_center" type="reference">
             <choice/>
         </element>
         <element label="Due Date" max_length="40" name="due_date" type="glide_date"/>
-        <element default="javascript:gs.nowDateTime();" dynamic_default_value="79cb83a85f220100a9ad2572f2b4773c" label="Exchange rate date" max_length="40" name="exchange_rate_date" type="glide_date_time" use_dynamic_default="true"/>
+        <element default="javascript: new GlideDateTime().getDate()" label="Exchange rate date" mandatory="true" max_length="40" name="exchange_rate_date" type="glide_date"/>
         <element label="Exchange rate value" max_length="40" name="exchange_rate_value" read_only="true" type="float"/>
-        <element choice="1" label="Invoice currency" max_length="32" name="invoice_currency" reference="fx_currency" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference" use_dependent_field="true">
+        <element choice="3" default="RON" label="Invoice currency" max_length="32" name="invoice_currency" read_only="true" reference="fx_currency" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference" use_dependent_field="true">
             <choice/>
         </element>
-        <element label="Invoice date" max_length="40" name="invoice_date" type="glide_date"/>
-        <element display="true" label="Invoice number" max_length="40" name="invoice_number" type="string"/>
+        <element label="Invoice date" mandatory="true" max_length="40" name="invoice_date" type="glide_date"/>
+        <element display="true" hint="You have to fill invoice number to be able to add Supplier Invoice Lines and Assets!" label="Invoice number" mandatory="true" max_length="40" name="invoice_number" type="string"/>
         <element label="Observation" max_length="1000" name="observation" type="string"/>
         <element choice="1" label="Payment method" max_length="40" name="payment_method" type="choice">
             <choice>
@@ -23,17 +26,19 @@
         <element label="Sold equipment" max_length="40" name="sold_equipment" type="boolean"/>
         <element choice="1" default="temporary" label="State" max_length="40" name="state" read_only="true" type="choice">
             <choice>
+                <element inactive_on_update="false" label="Awaiting approval" value="approval"/>
                 <element inactive_on_update="false" label="Temporary" sequence="1" value="temporary"/>
                 <element inactive_on_update="false" label="Validated" sequence="2" value="validated"/>
                 <element inactive_on_update="false" label="Received" sequence="3" value="received"/>
                 <element inactive_on_update="false" label="Cancelled" sequence="4" value="cancelled"/>
             </choice>
         </element>
-        <element default="javascript: gs.getProperty('x_tsigh_cmb.main_stockroom')&#13;&#10;" label="Stockroom" max_length="32" name="stockroom" reference="alm_stockroom" type="reference"/>
-        <element display="true" label="Supplier" max_length="32" name="supplier" reference="customer_account" type="reference"/>
-        <element label="Total gross value in RON" max_length="40" name="total_gross_value_in_ron" read_only="true" type="string"/>
+        <element default="javascript: gs.getProperty('x_tsigh_cmb.main_stockroom')&#13;&#10;" label="Stockroom" mandatory="true" max_length="32" name="stockroom" reference="alm_stockroom" type="reference"/>
+        <element display="true" label="Supplier" mandatory="true" max_length="32" name="supplier" reference="customer_account" type="reference"/>
+        <element label="Total gross value in RON" max_length="40" name="total_gross_value_in_ron" read_only="true" type="float"/>
         <element label="Total net value" max_length="40" name="total_net_value" read_only="true" type="float"/>
         <element label="Total net value in RON" max_length="40" name="total_net_value_in_ron" read_only="true" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Work notes" max_length="4000" name="work_notes" type="journal"/>
         <index name="index">
             <element name="stockroom"/>
         </index>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="DELETE">
+        <disabled>true</disabled>
+        <field>quantity</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-21 12:52:25</sys_created_on>
+        <sys_data_policy display_value="Set Read Only Quantity if automatic">7a9e63671b62191030bc986c9b4bcb05</sys_data_policy>
+        <sys_id>729e27671b62191030bc986c9b4bcb70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>quantity</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_data_policy_rule_729e27671b62191030bc986c9b4bcb70</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-21 12:52:25</sys_updated_on>
+        <table>x_tsigh_cmb_client_invoice_lines</table>
+    </sys_data_policy_rule>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_data_policy_rule_729e27671b62191030bc986c9b4bcb70</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule"><sys_data_policy_rule action="INSERT_OR_UPDATE"><disabled>true</disabled><field>quantity</field><mandatory>ignore</mandatory><sys_class_name>sys_data_policy_rule</sys_class_name><sys_created_by>samson.fulop</sys_created_by><sys_created_on>2022-10-21 12:52:25</sys_created_on><sys_data_policy display_value="Set Read Only Quantity if automatic">7a9e63671b62191030bc986c9b4bcb05</sys_data_policy><sys_id>729e27671b62191030bc986c9b4bcb70</sys_id><sys_mod_count>0</sys_mod_count><sys_name>quantity</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_data_policy_rule_729e27671b62191030bc986c9b4bcb70</sys_update_name><sys_updated_by>samson.fulop</sys_updated_by><sys_updated_on>2022-10-21 12:52:25</sys_updated_on><table>x_tsigh_cmb_client_invoice_lines</table></sys_data_policy_rule></record_update>]]></payload>
+        <payload_hash>-99913972</payload_hash>
+        <record_name>quantity</record_name>
+        <reverted_from/>
+        <source>24b310561b1a155030bc986c9b4bcb3e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-21 12:52:25</sys_created_on>
+        <sys_id>cb9e27671b62191030bc986c9b4bcb72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183fa9a14f70000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-21 12:52:25</sys_updated_on>
+        <type>Data Policy Rule</type>
+        <update_guid>079e276720621910d1643c3dc59a8472</update_guid>
+        <update_guid_history>079e276720621910d1643c3dc59a8472:-99913972</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-21 12:54:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_data_policy_rule">sys_data_policy_rule</sys_db_object>
+        <sys_id>fa2220edd66044c3a817add15e633f19</sys_id>
+        <sys_metadata>729e27671b62191030bc986c9b4bcb70</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>quantity</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_data_policy_rule_729e27671b62191030bc986c9b4bcb70</sys_update_name>
+        <sys_update_version display_value="sys_data_policy_rule_729e27671b62191030bc986c9b4bcb70">cb9e27671b62191030bc986c9b4bcb72</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-21 12:54:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

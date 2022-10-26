@@ -28,9 +28,74 @@
         <list_style/>
         <messages/>
         <name>Activate</name>
-        <onclick/>
+        <onclick>validateActivation()</onclick>
         <order>-1200</order>
-        <script><![CDATA[try {	
+        <script><![CDATA[if(!current.u_acceptance_date){
+	gs.addErrorMessage('Please provide a value for field Acceptance date before activating the service');
+	action.setRedirectURL(current);
+
+}else {
+	current.update();
+	
+
+	try {	
+		var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+		if (gr.get(current.sys_id)) {
+			var inputs = {};
+			inputs['service'] = current;
+			inputs['success_state'] = 'Active'; // String 
+			inputs['rejection_state'] = 'Inactive'; // String 
+			
+			sn_fd.FlowAPI.getRunner().subflow('x_tsigh_cmb.cmb_service_initial_approval').inBackground().withInputs(inputs).run();
+		}
+	} catch (ex) {
+		gs.info('Error: '+ex.toString());
+	}
+	action.setRedirectURL(current);
+}
+
+
+
+
+
+
+/*
+
+
+function validateActivation(){
+	var lbl = g_form.getValue('u_acceptance_date');
+	if(lbl){
+		sn_fd.FlowAPI.getRunner().subflow('x_tsigh_cmb.cmb_service_initial_approval').inBackground().withInputs(inputs).run();
+		gsftSubmit(null, g_form.getFormElement(), 'cmb_service_active');
+
+	}
+	else g_form.addErrorMessage('Please provide a value for field Acceptance date before activating the service');
+}
+
+
+if (typeof window == 'undefined')
+//	activateService();
+
+
+/*function activateService() {
+	try {	
+		var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+		if (gr.get(current.sys_id)) {
+			var inputs = {};
+			inputs['service'] = current;
+			inputs['success_state'] = 'Active'; // String 
+			inputs['rejection_state'] = 'Inactive'; // String 
+			sn_fd.FlowAPI.getRunner().subflow('x_tsigh_cmb.cmb_service_initial_approval').inBackground().withInputs(inputs).run();
+		}
+	} catch (ex) {
+		gs.info('Error: '+ex.toString());
+	}
+
+}*/
+
+//}
+/*
+try {	
 	var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
 	if (gr.get(current.sys_id)) {
 		var inputs = {};
@@ -42,15 +107,13 @@
 		// Execute Synchronously: Run in foreground. Code snippet has access to outputs.
 		/*var result = sn_fd.FlowAPI.getRunner().subflow('x_tsigh_cmb.cmb_service_approval_with_task').inForeground().withInputs(inputs).run();
 var outputs = result.getOutputs();*/
-	}
+/*	}
 } catch (ex) {
-	var message = ex.getMessage();
-	gs.info('Error: '+message+'\n'+ex.toString());
+	gs.info('Error: '+ex.toString());
 }
-
-
-action.setRedirectURL(current);
-current.update();]]></script>
+//current.update();
+action.setRedirectURL(current);*/
+]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -61,7 +124,7 @@ current.update();]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>eed908f11b42151030bc986c9b4bcb9f</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>Activate</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -69,7 +132,7 @@ current.update();]]></script>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_ui_action_eed908f11b42151030bc986c9b4bcb9f</sys_update_name>
         <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-09-23 11:04:53</sys_updated_on>
+        <sys_updated_on>2022-10-21 16:12:00</sys_updated_on>
         <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

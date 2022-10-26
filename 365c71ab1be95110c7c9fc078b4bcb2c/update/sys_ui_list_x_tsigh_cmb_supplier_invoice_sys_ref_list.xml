@@ -2,93 +2,123 @@
     <sys_ui_list parent="" relationship="" sys_domain="global" table="x_tsigh_cmb_supplier_invoice" version="2" view="sys_ref_list">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>supplier</element>
-            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">5b0484f71b755110c7c9fc078b4bcb82</list_id>
+            <element>invoice_number</element>
+            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">8b93e02e1bd6d150c7c9fc078b4bcb4c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
-            <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-09-14 07:39:00</sys_created_on>
-            <sys_id>170484f71b755110c7c9fc078b4bcb83</sys_id>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-05 09:15:53</sys_created_on>
+            <sys_id>4793e02e1bd6d150c7c9fc078b4bcb4d</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-09-14 07:39:00</sys_updated_on>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-05 09:15:53</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>billing_profile</element>
-            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">5b0484f71b755110c7c9fc078b4bcb82</list_id>
+            <element>supplier</element>
+            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">8b93e02e1bd6d150c7c9fc078b4bcb4c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
-            <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-09-14 07:39:00</sys_created_on>
-            <sys_id>970484f71b755110c7c9fc078b4bcb83</sys_id>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-05 09:15:53</sys_created_on>
+            <sys_id>c793e02e1bd6d150c7c9fc078b4bcb4d</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-09-14 07:39:00</sys_updated_on>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-05 09:15:53</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>state</element>
-            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">5b0484f71b755110c7c9fc078b4bcb82</list_id>
+            <element>billing_profile</element>
+            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">8b93e02e1bd6d150c7c9fc078b4bcb4c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
-            <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-09-14 07:39:00</sys_created_on>
-            <sys_id>1b0484f71b755110c7c9fc078b4bcb83</sys_id>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-05 09:15:53</sys_created_on>
+            <sys_id>4b93e02e1bd6d150c7c9fc078b4bcb4d</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-09-14 07:39:00</sys_updated_on>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-05 09:15:53</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>cost_centre</element>
-            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">5b0484f71b755110c7c9fc078b4bcb82</list_id>
+            <element>state</element>
+            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">8b93e02e1bd6d150c7c9fc078b4bcb4c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
-            <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-09-14 07:39:01</sys_created_on>
-            <sys_id>9b0484f71b755110c7c9fc078b4bcb83</sys_id>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-05 09:15:53</sys_created_on>
+            <sys_id>cb93e02e1bd6d150c7c9fc078b4bcb4d</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-09-14 07:39:01</sys_updated_on>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-05 09:15:53</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>stockroom</element>
-            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">5b0484f71b755110c7c9fc078b4bcb82</list_id>
+            <element>cost_centre</element>
+            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">8b93e02e1bd6d150c7c9fc078b4bcb4c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
-            <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-09-14 07:39:01</sys_created_on>
-            <sys_id>1f0484f71b755110c7c9fc078b4bcb83</sys_id>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-05 09:15:53</sys_created_on>
+            <sys_id>4f93e02e1bd6d150c7c9fc078b4bcb4d</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-09-14 07:39:01</sys_updated_on>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-05 09:15:53</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>invoice_currency</element>
-            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">5b0484f71b755110c7c9fc078b4bcb82</list_id>
+            <element>stockroom</element>
+            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">8b93e02e1bd6d150c7c9fc078b4bcb4c</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
-            <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-09-14 07:39:01</sys_created_on>
-            <sys_id>9f0484f71b755110c7c9fc078b4bcb83</sys_id>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-05 09:15:53</sys_created_on>
+            <sys_id>cf93e02e1bd6d150c7c9fc078b4bcb4d</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-09-14 07:39:01</sys_updated_on>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-05 09:15:53</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>invoice_currency</element>
+            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">8b93e02e1bd6d150c7c9fc078b4bcb4c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-05 09:15:53</sys_created_on>
+            <sys_id>4393e02e1bd6d150c7c9fc078b4bcb4e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-05 09:15:53</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_tsigh_cmb_supplier_invoice" element="NULL" name="x_tsigh_cmb_supplier_invoice" parent="NULL" relationship="NULL" sys_domain="global" view="2d3cf1531b211110c7c9fc078b4bcb20">8b93e02e1bd6d150c7c9fc078b4bcb4c</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-05 09:15:53</sys_created_on>
+            <sys_id>c393e02e1bd6d150c7c9fc078b4bcb4e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-05 09:15:53</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -101,19 +131,19 @@
             <relationship/>
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
-            <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-09-14 07:39:00</sys_created_on>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-10-05 09:15:53</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>5b0484f71b755110c7c9fc078b4bcb82</sys_id>
+            <sys_id>8b93e02e1bd6d150c7c9fc078b4bcb4c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_tsigh_cmb_supplier_invoice</sys_name>
             <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
             <sys_policy/>
             <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
             <sys_update_name>sys_ui_list_x_tsigh_cmb_supplier_invoice_sys_ref_list</sys_update_name>
-            <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-09-14 07:39:00</sys_updated_on>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-10-05 09:15:53</sys_updated_on>
             <sys_user/>
             <view display_value="Reference List" name="sys_ref_list">2d3cf1531b211110c7c9fc078b4bcb20</view>
             <view_name/>

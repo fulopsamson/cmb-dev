@@ -19,6 +19,7 @@
         return;
     }
 
+	g_form.setValue('u_billing_profile', '');
     var ga = new GlideAjax('x_tsigh_cmb.AjaxUtils');
     ga.addParam('sysparm_name', 'getBillingProfile');
     ga.addParam('sysparm_account', newValue);
@@ -37,7 +38,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>51d03d191bf5d510c7c9fc078b4bcbbf</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>CMB Account onChange</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -45,7 +46,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_client_51d03d191bf5d510c7c9fc078b4bcbbf</sys_update_name>
         <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-09-20 14:11:04</sys_updated_on>
+        <sys_updated_on>2022-10-26 07:09:58</sys_updated_on>
         <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

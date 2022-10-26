@@ -11,13 +11,13 @@
 	return '';  // return the calculated value
 
 })(current);]]></calculation>
-        <choice>1</choice>
+        <choice>3</choice>
         <choice_field/>
         <choice_table/>
         <column_label>Invoice currency</column_label>
         <comments/>
         <create_roles/>
-        <default_value/>
+        <default_value>RON</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -38,7 +38,7 @@
         <name>x_tsigh_cmb_supplier_invoice</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference display_value="" name="fx_currency">fx_currency</reference>
         <reference_cascade_rule/>
@@ -56,14 +56,14 @@
         <sys_created_by>szabo.zoltan</sys_created_by>
         <sys_created_on>2022-09-12 09:13:35</sys_created_on>
         <sys_id>6921064b1b755d10c7c9fc078b4bcb89</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Invoice currency</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_dictionary_x_tsigh_cmb_supplier_invoice_invoice_currency</sys_update_name>
-        <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-10-04 06:29:27</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-25 15:12:11</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

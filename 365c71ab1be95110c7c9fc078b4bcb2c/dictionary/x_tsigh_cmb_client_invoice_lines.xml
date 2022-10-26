@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Client invoice lines" max_length="40" name="x_tsigh_cmb_client_invoice_lines" sizeclass="86" type="collection">
-        <element choice="3" default="requested" label="Approval" max_length="40" name="approval" type="string">
-            <choice>
-                <element inactive_on_update="false" label="Requested" sequence="1" value="requested"/>
-                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
-                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
-            </choice>
-        </element>
-        <element label="Client invoice" max_length="32" name="client_invoice" read_only="true" reference="x_tsigh_cmb_client_invoice" type="reference"/>
+    <element label="Client invoice lines" max_length="40" name="x_tsigh_cmb_client_invoice_lines" sizeclass="272" type="collection">
+        <element label="Client invoice" max_length="32" name="client_invoice" read_only="true" reference="x_tsigh_cmb_client_invoice" reference_cascade_rule="cascade" type="reference"/>
         <element attributes="encode_utf8=false" label="Consumable" max_length="32" name="consumable" reference="alm_consumable" type="reference"/>
-        <element label="Item" max_length="32" name="item" reference="cmdb_ci" type="reference"/>
-        <element label="MRC" max_length="40" name="mrc" type="float"/>
-        <element label="MRC calculated" max_length="40" name="mrc_calculated" type="float"/>
+        <element attributes="edge_encryption_enabled=true" label="Description" max_length="1000" name="description" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
-        <element label="OTC" max_length="40" name="otc" type="float"/>
-        <element label="OTC calculated" max_length="40" name="otc_calculated" type="float"/>
-        <element label="Period end" max_length="40" name="period_end" type="glide_date_time"/>
-        <element label="Period start" max_length="40" name="period_start" type="glide_date_time"/>
+        <element label="Period end" max_length="40" name="period_end" type="glide_date"/>
+        <element label="Period start" max_length="40" name="period_start" type="glide_date"/>
+        <element label="Position" max_length="40" name="position" type="integer"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return (+current.quantity)*(+current.unit_price);  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Price" max_length="40" name="price" read_only="true" type="float"/>
+        <element label="Price in RON" max_length="40" name="price_in_ron" read_only="true" type="float"/>
         <element attributes="encode_utf8=false" label="Product" max_length="32" name="product" reference="cmdb_model" type="reference"/>
-        <element label="Quantity" max_length="40" name="quantity" type="integer"/>
+        <element default="1" label="Quantity" max_length="40" name="quantity" type="integer"/>
         <element label="Unit price" max_length="40" name="unit_price" type="float"/>
+        <element label="Unit price in RON" max_length="40" name="unit_price_in_ron" read_only="true" type="float"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return (+current.client_invoice.vat_value) * (+current.price);&#13;&#10;&#13;&#10;})(current);" label="VAT Value" max_length="40" name="vat_value" read_only="true" type="float"/>
+        <element label="VAT Value in RON" max_length="40" name="vat_value_in_ron" read_only="true" type="float"/>
         <index name="index">
             <element name="client_invoice"/>
         </index>
         <index name="index2">
-            <element name="item"/>
-        </index>
-        <index name="index3">
             <element name="product"/>
         </index>
-        <index name="index4">
+        <index name="index3">
             <element name="consumable"/>
         </index>
     </element>

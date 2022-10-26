@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.CMBServiceUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>CMBServiceUtils</name>
+        <script><![CDATA[var CMBServiceUtils = Class.create();
+CMBServiceUtils.prototype = {
+    initialize: function() {},
+    getRevenueValue: function(in_otc, in_mrc, fee, status, acceptanceDate, lastBillingDate, startDate, endDate) {
+        if (!(status == 'Active' || status == 'Terminated')) {
+            gs.error("Can't calculate revenue if status not one of: {Active, Terminated}");
+            return null;
+        }
+        start = new GlideDateTime(startDate);
+        end = new GlideDateTime(endDate);
+        var daysInMonth = GlideDateTime.subtract(start, end).getDayPart() + 1;
+
+        if (start.after(end)) {
+            gs.error("Can't calculate revenue for period: [" + start + ", " + end + "]");
+            return null;
+        }
+        if (acceptanceDate != '') {
+            var acceptanceDateObj = new GlideDateTime(acceptanceDate);
+        } else {
+            gs.error('Incorrect acceptance date');
+            return null;
+        }
+        var t_otc = 0;
+        if (acceptanceDateObj.getYearUTC() == start.getYearUTC() && acceptanceDateObj.getMonthUTC() == start.getMonthUTC()) {
+            t_otc = in_otc;
+        }
+
+        if (status == 'Terminated') {
+            if (lastBillingDate != '') {
+                var lastBillingDateObj = new GlideDateTime(lastBillingDate);
+                if (start <= lastBillingDateObj && lastBillingDateObj <= end) {
+                    if (acceptanceDateObj.getYearUTC() == start.getYearUTC() && acceptanceDateObj.getMonthUTC() == start.getMonthUTC()) {
+                        var dur = lastBillingDateObj.getDayOfMonthUTC() - acceptanceDateObj.getDayOfMonthUTC() + 1;
+                    } else {
+                        var dur = lastBillingDateObj.getDayOfMonthUTC();
+                    }
+                    mrc = (parseFloat(in_mrc) * dur) / daysInMonth;
+                    if (fee !== '' && fee != null) {
+                        mrc += parseFloat(fee);
+                    }
+                    return [t_otc, mrc];
+                } else {
+                    if (acceptanceDateObj.getYearUTC() == start.getYearUTC() && acceptanceDateObj.getMonthUTC() == start.getMonthUTC()) {
+                        var durValue = end.getDayOfMonthUTC() - acceptanceDateObj.getDayOfMonthUTC() + 1;
+                        return [t_otc, (parseFloat(in_mrc) * durValue) / daysInMonth];
+                    }
+                    return [t_otc, in_mrc];
+                }
+            } else {
+                gs.error('Incorrect last billing date');
+                return null;
+            }
+        } else {
+            if (start.before(acceptanceDateObj) && acceptanceDateObj.before(end) || acceptanceDateObj.equals(end)) {
+                var durValue = end.getDayOfMonthUTC() - acceptanceDateObj.getDayOfMonthUTC() + 1;
+                return [t_otc, (parseFloat(in_mrc) * durValue) / daysInMonth];
+            } else {
+                return [t_otc, parseFloat(in_mrc)];
+            }
+        }
+    },
+    // period int [1, 12], start (date/time), end (date/time)
+    getRevenueForPeriod: function(otc, mrc, period, start, end) {
+        gs.info('GetRevenueForPeriod');
+
+    },
+
+    getRevenueSum: function(service_sys_id) {
+        var service = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+        service.get(service_sys_id);
+
+        var otc = service.u_otc;
+        var mrc = service.u_mrc;
+        var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_equipment_group');
+        gr.addQuery('u_service', service_sys_id);
+        gr.query();
+        while (gr.next()) {
+            otc += gr.u_otc;
+            mrc += gr.u_mrc;
+        }
+        return { 'otc': otc, 'mrc': mrc };
+    },
+
+    getServiceRevenue: function(sys_id, year, month) {
+        var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+        gr.get(sys_id);
+
+        var status = gr.u_state;
+        var acceptanceDate = new GlideDateTime(gr.u_acceptance_date);
+        var lastBillingDate = new GlideDateTime(gr.u_last_billing_date);
+        var fee = gr.u_early_termination_fee;
+
+        var rev = this.getRevenueSum(sys_id);
+        start_str = year + '-' + month + '-' + '01';
+        var start = new GlideDateTime(start_str);
+        var end = new GlideDateTime(start_str);
+        end.setDayOfMonthUTC(32);
+
+        return this.getRevenueValue(rev[0], rev[1], fee, status, acceptanceDate, lastBillingDate, start, end);
+    },
+
+    generateStornoLine: function(service_sys_id, year, month) {
+        var gr = new GlideRecord('x_tsigh_cmb_validation_line');
+        gr.addQuery('service', service_sys_id);
+        gr.addQuery('year', year);
+        gr.addQuery('month', month);
+        gr.addQuery('latest', true);
+        gr.orderByDesc("sys_created_on");
+        gr.query();
+        if (gr.next()) {
+            gs.info('Found:' + gr.number);
+            var validationLine = new GlideRecord('x_tsigh_cmb_validation_line');
+            validationLine.initialize();
+            validationLine.setValue('period_start', gr.period_start);
+            validationLine.setValue('period_end', gr.period_end);
+            validationLine.setValue("billing_profile", gr.billing_profile);
+            validationLine.setValue("service", service_sys_id);
+            validationLine.setValue("year", year);
+            validationLine.setValue("month", month);
+            validationLine.setValue('otc', gr.otc);
+            validationLine.setValue('mrc', gr.mrc);
+            validationLine.setValue('otc_calculated', 0);
+            validationLine.setValue('mrc_calculated', (-1) * gr.mrc_calculated);
+            gr.setValue('approval', 'cancelled');
+            gr.update();
+            validationLine.insert();
+        } else {
+            gs.error('Did not find any validation line');
+        }
+    },
+
+    getDiffInMonths: function(start, end) {
+        var a = new GlideDateTime(start);
+        var b = new GlideDateTime(end);
+
+        var a_y = a.getYearUTC();
+        var a_m = a.getMonthUTC();
+
+        var b_y = b.getYearUTC();
+        var b_m = b.getMonthUTC();
+
+        if (a_y == b_y) {
+            return b_m - a_m;
+        } else {
+            return (b_y - a_y) * 12 + b_m - a_m;
+        }
+
+    },
+
+    claculateMRC: function(in_mrc, startDate, endDate) {
+        var start = new GlideDateTime(startDate);
+        var end = new GlideDateTime(endDate);
+
+        if (start == '' || end == '') {
+            gs.info('Error in calculate func: ' + 'start: ' + start.getDate() + ', end: ' + end.getDate())
+            return null;
+        }
+
+        if (start > end) {
+            gs.info('Error in calculate func: ' + start.getDate() + ' > ' + end.getDate())
+            return null;
+        }
+
+        if (start.getYearUTC() !== end.getYearUTC() || start.getMonthUTC() !== end.getMonthUTC()) {
+            gs.info('Error in calculate func: ' + start.getDate() + ' not in same period as ' + end.getDate())
+            return null;
+        }
+
+
+        var dummy = new GlideDateTime(start);
+        dummy.setDayOfMonthUTC(31);
+        var daysInMonth = dummy.getDayOfMonthUTC();
+
+        var diff = end.getDayOfMonthUTC() - start.getDayOfMonthUTC() + 1;
+
+
+        return (parseFloat(in_mrc) * diff) / daysInMonth;
+
+    },
+
+
+
+    generateValidationLines: function(service_sys_id, year, month) {
+        var service = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+        service.get(service_sys_id);
+
+        if (service.u_state != 'Active' && service.u_state != 'Terminated') {
+            gs.error("Can't calculate revenue for service: " + service_sys_id);
+            return null;
+        }
+
+
+
+
+        var acd = new GlideDateTime(service.u_acceptance_date);
+        var bps = new GlideDateTime(service.first_invoice_date);
+        var bpe = new GlideDateTime(service.last_invoice_date);
+        var lbd = new GlideDateTime(service.u_last_billing_date);
+
+        var start_str = year + '-' + month + '-' + '01 00:00:00';
+        var now_start = new GlideDateTime(start_str);
+        var now_end = new GlideDateTime(start_str);
+        now_end.setDayOfMonthUTC(32);
+
+        gs.info('Period: ' + year + ' - ' + month);
+        gs.info('Current month start: ' + now_start.getDate());
+        gs.info('Current month end: ' + now_end.getDate());
+        gs.info('Acceptance date: ' + acd.getDate());
+        gs.info('First invoice date: ' + bps.getDate());
+        gs.info('Last invoice date: ' + bpe);
+        gs.info('Last billing date: ' + lbd);
+
+        if (acd == '') {
+            gs.error('Invalid service with sys_id: ' + service_sys_id + ' -- accepatance date not set contrary to the fact that its state is active');
+            return;
+        }
+
+        if (bps == '') {
+            gs.error('Invalid service with sys_id: ' + service_sys_id + ' -- first invoice date not set contrary to the fact that its state is active');
+            return;
+        }
+
+        if (bpe == '') {
+            gs.info('Service invoiced for the first time');
+            bpe = new GlideDateTime(bps);
+        }
+
+        if (service.u_state == 'Terminated' && lbd == '') {
+            gs.error('Invalid service with sys_id: ' + service_sys_id + ' -- last billing date not set contrary to the fact that its state is terminated');
+            return;
+        }
+
+        var rev = this.getRevenueSum(service_sys_id);
+        var validationLine = new GlideRecord('x_tsigh_cmb_validation_line');
+        var pointer = new GlideDateTime();
+        if (service.u_state == 'Active') {
+            pointer = new GlideDateTime(bpe);
+            while (pointer < now_end) {
+                var current_start = new GlideDateTime(pointer);
+                pointer.setDayOfMonthUTC(31);
+                var current_end = new GlideDateTime(pointer);
+                // var current_rev = this.getServiceRevenue(service.sys_id, current_start.getYearUTC(), current_end.getMonthUTC());
+
+                validationLine.initialize();
+                validationLine.setValue('period_start', current_start.getDate());
+                validationLine.setValue('period_end', current_end.getDate());
+                validationLine.setValue("billing_profile", service.u_billing_profile);
+                validationLine.setValue("service", service.sys_id);
+                validationLine.setValue("year", current_start.getYearUTC());
+                validationLine.setValue("month", current_start.getMonthUTC());
+                validationLine.setValue('otc', rev.otc);
+                validationLine.setValue('mrc', rev.mrc);
+                if (acd <= current_end && acd >= current_start) {
+                    validationLine.setValue('otc_calculated', rev.otc);
+                } else {
+                    validationLine.setValue('otc_calculated', 0);
+                }
+                validationLine.setValue('mrc_calculated', this.claculateMRC(rev.mrc, current_start, current_end));
+                validationLine.insert();
+
+                pointer.addDaysUTC(1);
+            }
+            service.setValue('last_invoice_date', now_end.getDate());
+            service.update();
+        }
+        if (acd < bps) {
+            // we have to generate storno invoice for the month of the last accepatance
+            // this.generateStornoLine(service.sys_id, bps.getYearUTC(), bps.getMonthUTC());
+            var dummy = new GlideDateTime(bps);
+            var current_start = new GlideDateTime(dummy);
+            dummy.setDayOfMonthUTC(31);
+            var current_end = new GlideDateTime(dummy);
+
+            validationLine.initialize();
+            validationLine.setValue('period_start', current_start.getDate());
+            validationLine.setValue('period_end', current_end.getDate());
+            validationLine.setValue("billing_profile", service.u_billing_profile);
+            validationLine.setValue("service", service.sys_id);
+            validationLine.setValue("year", current_start.getYearUTC());
+            validationLine.setValue("month", current_start.getMonthUTC());
+            validationLine.setValue('otc', rev.otc);
+            validationLine.setValue('mrc', rev.mrc);
+            validationLine.setValue('otc_calculated', 0);
+            validationLine.setValue('mrc_calculated', (-1) * this.claculateMRC(rev.mrc, current_start, current_end));
+            validationLine.insert();
+
+
+
+            pointer = new GlideDateTime(acd);
+            var dummy = new GlideDateTime(bps);
+            dummy.setDayOfMonthUTC(31);
+
+            while (pointer < dummy) {
+                var current_start = new GlideDateTime(pointer);
+                pointer.setDayOfMonthUTC(31);
+                var current_end = new GlideDateTime(pointer);
+
+                validationLine.initialize();
+                validationLine.setValue('period_start', current_start.getDate());
+                validationLine.setValue('period_end', current_end.getDate());
+                validationLine.setValue("billing_profile", service.u_billing_profile);
+                validationLine.setValue("service", service.sys_id);
+                validationLine.setValue("year", current_start.getYearUTC());
+                validationLine.setValue("month", current_start.getMonthUTC());
+                validationLine.setValue('otc', rev.otc);
+                validationLine.setValue('mrc', rev.mrc);
+                if (acd <= current_end && acd >= current_start) {
+                    validationLine.setValue('otc_calculated', rev.otc);
+                } else {
+                    validationLine.setValue('otc_calculated', 0);
+                }
+                validationLine.setValue('mrc_calculated', this.claculateMRC(rev.mrc, current_start, current_end));
+                validationLine.insert();
+
+                pointer.addDaysUTC(1);
+            }
+            service.setValue('first_invoice_date', acd);
+            service.update();
+        }
+        if (acd > bps) {
+            pointer = new GlideDateTime(bps);
+
+            while (pointer < acd) {
+
+                var current_start = new GlideDateTime(pointer);
+                pointer.setDayOfMonthUTC(31);
+                var current_end = new GlideDateTime(pointer);
+                validationLine.initialize();
+                validationLine.setValue('period_start', current_start.getDate());
+                validationLine.setValue('period_end', current_end.getDate());
+                validationLine.setValue("billing_profile", service.u_billing_profile);
+                validationLine.setValue("service", service.sys_id);
+                validationLine.setValue("year", current_start.getYearUTC());
+                validationLine.setValue("month", current_start.getMonthUTC());
+                validationLine.setValue('otc', rev.otc);
+                validationLine.setValue('mrc', rev.mrc);
+                validationLine.setValue('otc_calculated', 0);
+                validationLine.setValue('mrc_calculated', (-1) * this.claculateMRC(rev.mrc, current_start, current_end));
+                validationLine.insert();
+                pointer.addDaysUTC(1);
+            }
+
+            var current_start = new GlideDateTime(acd);
+            var dummy = new GlideDateTime(acd);
+            dummy.setDayOfMonthUTC(31);
+            var current_end = dummy;
+
+            validationLine.initialize();
+            validationLine.setValue('period_start', current_start.getDate());
+            validationLine.setValue('period_end', current_end.getDate());
+            validationLine.setValue("billing_profile", service.u_billing_profile);
+            validationLine.setValue("service", service.sys_id);
+            validationLine.setValue("year", current_start.getYearUTC());
+            validationLine.setValue("month", current_start.getMonthUTC());
+            validationLine.setValue('otc', rev.otc);
+            validationLine.setValue('mrc', rev.mrc);
+            validationLine.setValue('otc_calculated', rev.otc);
+            validationLine.setValue('mrc_calculated', this.claculateMRC(rev.mrc, current_start, current_end));
+            validationLine.insert();
+
+            service.setValue('first_invoice_date', acd);
+            service.update();
+        }
+        // || (service.u_state == 'Terminated' && lbd >= now_end)
+        if (service.u_state == 'Terminated') {
+
+            if (lbd == bpe) {
+                return;
+            } else if (lbd < bpe) {
+
+                pointer = new GlideDateTime(lbd);
+                while (pointer < bpe) {
+                    var current_start = new GlideDateTime(pointer);
+                    pointer.setDayOfMonthUTC(31);
+                    var current_end = new GlideDateTime(pointer);
+                    validationLine.initialize();
+                    validationLine.setValue('period_start', current_start.getDate());
+                    validationLine.setValue('period_end', current_end.getDate());
+                    validationLine.setValue("billing_profile", service.u_billing_profile);
+                    validationLine.setValue("service", service.sys_id);
+                    validationLine.setValue("year", current_start.getYearUTC());
+                    validationLine.setValue("month", current_start.getMonthUTC());
+                    validationLine.setValue('otc', rev.otc);
+                    validationLine.setValue('mrc', rev.mrc);
+                    validationLine.setValue('otc_calculated', 0);
+                    validationLine.setValue('mrc_calculated', (-1) * this.claculateMRC(rev.mrc, current_start, current_end));
+                    validationLine.insert();
+                    pointer.addDaysUTC(1);
+                }
+
+                pointer = new GlideDateTime(lbd);
+                if (acd.getYearUTC() == lbd.getYearUTC() && acd.getMonthUTC() == lbd.getMonthUTC()) {
+                    var current_start = new GlideDateTime(acd);
+                } else {
+                    pointer.setDayOfMonthUTC(1);
+                    var current_start = new GlideDateTime(pointer);
+                }
+                var current_end = new GlideDateTime(lbd);
+                validationLine.initialize();
+                validationLine.setValue('period_start', current_start.getDate());
+                validationLine.setValue('period_end', current_end.getDate());
+                validationLine.setValue("billing_profile", service.u_billing_profile);
+                validationLine.setValue("service", service.sys_id);
+                validationLine.setValue("year", current_start.getYearUTC());
+                validationLine.setValue("month", current_start.getMonthUTC());
+                validationLine.setValue('otc', rev.otc);
+                validationLine.setValue('mrc', rev.mrc);
+                if (acd <= current_end && acd >= current_start) {
+                    validationLine.setValue('otc_calculated', rev.otc);
+                } else {
+                    validationLine.setValue('otc_calculated', 0);
+                }
+                validationLine.setValue('mrc_calculated', this.claculateMRC(rev.mrc, current_start, current_end) + parseFloat(service.u_early_termination_fee));
+                validationLine.insert();
+                if (acd.getYearUTC() == lbd.getYearUTC() && lbd.getMonthUTC() == lbd.getMonthUTC()) {
+                    pointer = new GlideDateTime(acd);
+                } else {
+                    pointer = new GlideDateTime(lbd);
+                    pointer.setDayOfMonthUTC(1);
+                }
+            } else if (bpe < lbd) {
+                pointer = new GlideDateTime(bpe);
+                if (acd.getYearUTC() == bpe.getYearUTC() && acd.getMonthUTC() == bpe.getMonthUTC()) {
+                    var current_start = new GlideDateTime(acd);
+                } else {
+                    pointer.setDayOfMonthUTC(1);
+                    var current_start = new GlideDateTime(pointer);
+                }
+
+                var current_end = new GlideDateTime(bpe);
+                validationLine.initialize();
+                validationLine.setValue('period_start', current_start.getDate());
+                validationLine.setValue('period_end', current_end.getDate());
+                validationLine.setValue("billing_profile", service.u_billing_profile);
+                validationLine.setValue("service", service.sys_id);
+                validationLine.setValue("year", current_start.getYearUTC());
+                validationLine.setValue("month", current_start.getMonthUTC());
+                validationLine.setValue('otc', rev.otc);
+                validationLine.setValue('mrc', rev.mrc);
+                validationLine.setValue('otc_calculated', 0);
+                validationLine.setValue('mrc_calculated', (-1) * this.claculateMRC(rev.mrc, current_start, current_end) + parseFloat(service.u_early_termination_fee));
+                validationLine.insert();
+            }
+
+            while (pointer < lbd) {
+                var current_start = new GlideDateTime(pointer);
+                if (lbd.getYearUTC() == pointer.getYearUTC() && pointer.getMonthUTC() == lbd.getMonthUTC()) {
+                    pointer = new GlideDateTime(lbd);
+                } else {
+                    pointer.setDayOfMonthUTC(31);
+                }
+                var current_end = new GlideDateTime(pointer);
+
+                validationLine.initialize();
+                validationLine.setValue('period_start', current_start.getDate());
+                validationLine.setValue('period_end', current_end.getDate());
+                validationLine.setValue("billing_profile", service.u_billing_profile);
+                validationLine.setValue("service", service.sys_id);
+                validationLine.setValue("year", current_start.getYearUTC());
+                validationLine.setValue("month", current_start.getMonthUTC());
+                validationLine.setValue('otc', rev.otc);
+                validationLine.setValue('mrc', rev.mrc);
+                if (acd <= current_end && acd >= current_start) {
+                    validationLine.setValue('otc_calculated', rev.otc);
+                } else {
+                    validationLine.setValue('otc_calculated', 0);
+                }
+                if (pointer == lbd) {
+                    validationLine.setValue('mrc_calculated', this.claculateMRC(rev.mrc, current_start, current_end) + parseFloat(service.u_early_termination_fee));
+                } else {
+                    validationLine.setValue('mrc_calculated', this.claculateMRC(rev.mrc, current_start, current_end));
+                }
+                validationLine.insert();
+
+                pointer.addDaysUTC(1);
+            }
+            service.setValue('last_invoice_date', lbd);
+            service.update();
+        }
+    },
+
+
+    type: 'CMBServiceUtils'
+};
+
+
+// var x = new CMBServiceUtils();
+
+
+// gs.info(x.getRevenueSum('1b775b11f5b6485e87bbf396dccd5717'));
+
+// x.generateValidationLines("02b5870b879f48d7b215705294a90eb8", 2022, 10);
+
+// var gr = new GlideRecord('x_tsigh_cmb_validation_line');
+// gr.query();
+// while (gr.next()) {
+//     gr.deleteRecord();
+// }
+
+
+// 02b5870b879f48d7b215705294a90eb8]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-05 08:11:11</sys_created_on>
+        <sys_id>0ca49ce21bd6555030bc986c9b4bcb87</sys_id>
+        <sys_mod_count>146</sys_mod_count>
+        <sys_name>CMBServiceUtils</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_0ca49ce21bd6555030bc986c9b4bcb87</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-19 09:33:24</sys_updated_on>
+    </sys_script_include>
+</record_update>

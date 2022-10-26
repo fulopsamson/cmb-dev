@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>product</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>CMB Show fields based on product</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading ) {
+		return;
+	}
+	if(newValue === ''){
+		g_form.clearValue('quantity');
+		g_form.clearValue('unit_price');
+		g_form.clearValue('total_price');
+
+		g_form.clearValue('contract_number');
+		g_form.clearValue('start_date');
+		g_form.clearValue('end_date');		
+
+
+
+	}else {
+		if(g_form.getReference('product',function(gr){
+			switch(gr.getValue('sys_class_name')){
+				case 'cmdb_contract_product_model':{
+					g_form.setVisible('quantity',false);
+					g_form.clearValue('quantity');
+
+					g_form.setVisible('unit_price',false);
+					g_form.clearValue('unit_price');
+
+					g_form.setVisible('total_price',false);
+					g_form.clearValue('total_price');
+
+					g_form.setVisible('contract_number',true);
+					g_form.setVisible('start_date',true);
+					g_form.setVisible('end_date',true);
+				}
+					break;
+				case 'cmdb_hardware_product_model':{
+					g_form.setVisible('contract_number',false);
+					g_form.clearValue('contract_number');
+
+					g_form.setVisible('start_date',false);
+					g_form.clearValue('start_date');
+
+					g_form.setVisible('end_date',false);
+					g_form.clearValue('end_date');
+
+					g_form.setVisible('quantity',true);
+					g_form.setVisible('unit_price',true);
+					g_form.setVisible('total_price',true);					
+				}
+					break;
+			}
+		}));
+
+	}
+
+	//Type appropriate comment here, and begin script below
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-07 10:18:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c29283871bded55030bc986c9b4bcbbd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>CMB Show fields based on product</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_client_c29283871bded55030bc986c9b4bcbbd</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-07 10:28:14</sys_updated_on>
+        <table>x_tsigh_cmb_supplier_invoice_lines</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

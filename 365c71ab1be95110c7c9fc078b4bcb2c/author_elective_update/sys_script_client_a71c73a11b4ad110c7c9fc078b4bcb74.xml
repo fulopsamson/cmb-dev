@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>serial</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>CMB Combridge ID OnChange</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	var cmb;
+	var ga = new GlideAjax('x_tsigh_cmb.NumberGenerator');
+	ga.addParam('sysparm_name', 'getnext');
+	ga.addParam('sysparm_serial', newValue);	
+	ga.getXML(processResponse);
+	
+	function processResponse(response) {
+		var result = response.responseXML.documentElement.getAttribute("answer");
+		jslog('---' + result);
+		if (result != null){
+			cmb = parseInt(result).toString();
+			if(cmb.length < 6){
+				cmb = new Array(6 - cmb.length + 1).join(0) + cmb;
+			}
+			var id = newValue + " " + cmb;
+			g_form.setValue('id', parseInt(result));
+			g_form.setValue('u_combridge_id', id);
+		}
+			
+		else 
+			g_form.showFieldMsg('id', 'Error, no returnable value!', 'error');
+	}
+
+	
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-20 12:17:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a71c73a11b4ad110c7c9fc078b4bcb74</sys_id>
+        <sys_mod_count>41</sys_mod_count>
+        <sys_name>CMB Combridge ID OnChange</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_client_a71c73a11b4ad110c7c9fc078b4bcb74</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-03 08:14:37</sys_updated_on>
+        <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_client_a71c73a11b4ad110c7c9fc078b4bcb74</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;serial&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;CMB Combridge ID OnChange&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	var cmb;
+	var ga = new GlideAjax('x_tsigh_cmb.NumberGenerator');
+	ga.addParam('sysparm_name', 'getnext');
+	ga.addParam('sysparm_serial', newValue);	
+	ga.getXML(processResponse);
+	
+	function processResponse(response) {
+		var result = response.responseXML.documentElement.getAttribute("answer");
+		jslog('---' + result);
+		if (result != null){
+			cmb = parseInt(result).toString();
+			if(cmb.length &lt; 6){
+				cmb = new Array(6 - cmb.length + 1).join(0) + cmb;
+			}
+			var id = newValue + " " + cmb;
+			g_form.setValue('id', parseInt(result));
+			g_form.setValue('u_combridge_id', id);
+		}
+			
+		else 
+			g_form.showFieldMsg('id', 'Error, no returnable value!', 'error');
+	}
+
+	
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;szabo.zoltan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-20 12:17:33&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;a71c73a11b4ad110c7c9fc078b4bcb74&lt;/sys_id&gt;&lt;sys_mod_count&gt;41&lt;/sys_mod_count&gt;&lt;sys_name&gt;CMB Combridge ID OnChange&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_a71c73a11b4ad110c7c9fc078b4bcb74&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;szabo.zoltan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-03 08:14:37&lt;/sys_updated_on&gt;&lt;table&gt;x_tsigh_cmb_u_cmdb_ci_cmb_service&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>185391094</payload_hash>
+        <record_name>CMB Combridge ID OnChange</record_name>
+        <reverted_from/>
+        <source>89509a301bbd5510c7c9fc078b4bcbfc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-03 08:14:37</sys_created_on>
+        <sys_id>8a62c2711b165150c7c9fc078b4bcbe1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1839ce948380000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-03 08:14:37</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>8262c27172165150afe6b22f2c733ae1</update_guid>
+        <update_guid_history>8262c27172165150afe6b22f2c733ae1:185391094,d1c379b174d25150cc2b0cc6fcd5662a:-1392634519,14fe657db0925150b45f989f1e9c69fb:185391094,2d4cfe30dad29d10665a0fa6955de2ac:-1392634519,4d1cb630e3d29d10830fee7804d097a2:-486541108,14dbf63046d29d10d43c0404f56ecebe:90075715,a6abf630b1d29d106b8e86f1ce5b43b0:1317630608,925b363064d29d1053abc693078fef5f:-441078945,1fea76fc54929d109bcfcc62cd19219e:1139560037,5b9abafc30929d10f557b0fd4664f728:998658552,bfe9b6bc76929d108c1b44546c95cc4d:1038696098,5e897abcd3929d109833d04e8d30a74b:1581054943,dc69fe7ce4929d10a8c92ed72971eb31:462953084,5f39367c2c929d1076871939d0e1ee57:-1661746979,0c19767c17929d10d571cbca49f93b80:1424437158,cab8be3c01929d109cda87cf2e6ec72a:1510515523,0298ba3c76929d10e25f35479ba57f91:2084434622,b5f73ef83f929d1036e22740650ab377:-720909605,5ec7f6f8ad929d10245a257d0bce71db:184874424,b96776f887929d1094f3a396cf6af1cd:-2070950743,d4473eb8a8929d10c386e9ac212acb29:712121295,a0e672b802929d1046e1fccb8b4b3532:-1407053701,4b2436f456929d109a3b922316f2396b:1335829039,e559c8cef68615107c45c18e6e4dbb37:-1566909717,f3e7c84e3386151077fb55572afb5901:-1525128014,67b7008e3a86151038d57e1e89df583b:1395686971,8cc7503de58ad11056fa081ab86c011e:-1013871667,9a901435998ad11041fd2f1173696f9f:-407933553,f7be84f1278ad110d37208aed1a4f475:-1868106096,8a8e0cb1988ad110de0837928c0b2a7a:-1533032479,583c4831cb8ad110dcc6cc4824df13b5:24824612,1feac4fd684ad1109b30d7b5eded471e:-680156431,867a80fdd84ad110deaacb06b193ea5d:-1228636506,e93ac8bdae4ad110db0e7193558ce283:-44521172,57b9447d544ad1103ff48fd551a5d521:-236900512,1ca8c87d224ad11001613f3f7210ae6a:1401259927,1328047d8d4ad1102878219760d4d6c4:1957882185,0908007d894ad1100b81d72775b87aa4:-816842591,4ae7cc3d164ad110e46ca1830f02e037:1401259927,bf308c75844ad11083b1d0d6551c176f:-946656625,c5de3325ce4ad1101cb39d1b97d9f446:-101748375,b95d3ba12e4ad11089fd4f5813cecc80:1195539806</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-24 11:38:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>741ec98227fa453c8224dfe240690d84</sys_id>
+        <sys_metadata>a71c73a11b4ad110c7c9fc078b4bcb74</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMB Combridge ID OnChange</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="CMB Service">1d6ec3381b719510c7c9fc078b4bcb61</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_client_a71c73a11b4ad110c7c9fc078b4bcb74</sys_update_name>
+        <sys_update_version display_value="sys_script_client_a71c73a11b4ad110c7c9fc078b4bcb74">8a62c2711b165150c7c9fc078b4bcbe1</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-24 11:38:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

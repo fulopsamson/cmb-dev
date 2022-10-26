@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.NumberGenerator</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>NumberGenerator</name>
+        <script><![CDATA[var NumberGenerator = Class.create();
+NumberGenerator.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	getnext: function(){
+		var ser = this.getParameter('sysparm_serial');
+		var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+		var ids;
+		gr.addQuery('serial', ser);
+		gr.orderByDesc('id');
+		gr.query();
+		
+		if(gr.next()){
+			ids = gr.id;
+        }
+		
+		if(!ids){
+			ids = 1;
+			return ids;
+		}
+        
+		else if(ids > 0){
+			ids = ids + 1;
+			return ids;
+        }
+		else 
+			return null;
+	},
+	
+    type: 'NumberGenerator'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-20 10:36:27</sys_created_on>
+        <sys_id>d7a29b2d1b86d110c7c9fc078b4bcbd8</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>NumberGenerator</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_d7a29b2d1b86d110c7c9fc078b4bcbd8</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-03 08:26:45</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_include_d7a29b2d1b86d110c7c9fc078b4bcbd8</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_tsigh_cmb.NumberGenerator&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;NumberGenerator&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var NumberGenerator = Class.create();
+NumberGenerator.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	getnext: function(){
+		var ser = this.getParameter('sysparm_serial');
+		var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+		var ids;
+		gr.addQuery('serial', ser);
+		gr.orderByDesc('id');
+		gr.query();
+		
+		if(gr.next()){
+			ids = gr.id;
+        }
+		
+		if(!ids){
+			ids = 1;
+			return ids;
+		}
+        
+		else if(ids &gt; 0){
+			ids = ids + 1;
+			return ids;
+        }
+		else 
+			return null;
+	},
+	
+    type: 'NumberGenerator'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;szabo.zoltan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-20 10:36:27&lt;/sys_created_on&gt;&lt;sys_id&gt;d7a29b2d1b86d110c7c9fc078b4bcbd8&lt;/sys_id&gt;&lt;sys_mod_count&gt;38&lt;/sys_mod_count&gt;&lt;sys_name&gt;NumberGenerator&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_d7a29b2d1b86d110c7c9fc078b4bcbd8&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;szabo.zoltan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-03 08:26:45&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-265988084</payload_hash>
+        <record_name>NumberGenerator</record_name>
+        <reverted_from/>
+        <source>89509a301bbd5510c7c9fc078b4bcbfc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-03 08:26:45</sys_created_on>
+        <sys_id>bf254ef11b165150c7c9fc078b4bcbf9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1839cf463400000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-03 08:26:45</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>77254ef1d116515036776c12d58083f9</update_guid>
+        <update_guid_history>77254ef1d116515036776c12d58083f9:-265988084,816202315e1651507b573757271420b2:651714796,04c375f125d251505b46679deeffef27:-265988084,f99c21f94a92515036a268c8aa5f79de:651714796,f0cd7eb0cbd29d10bdf7f07d5962cb54:-265988084,4bc8327c03929d107f1dc9b5cb2fd5c8:382195019,0548bef882929d102bb923577a8047ab:-265988084,43977af89a929d10af0378b2a482ddd6:382195019,215672b8b5929d101b043cb8b6a3439c:-265988084,c9c3f2f4fb929d105b39ee4a67171878:1820544085,3453baf487929d10047a6b520e9e060c:1476360215,2232b2b41a929d10f3d7dc176d360c8a:-2130494928,e012b6b445929d10012697b476d519ff:-1736232879,71d1f674ca929d1046366ed30f786bb8:-1033203055,265a6efc54529d10493cade27ba1df1a:1446508786,a54aa6bc87529d10017f786251d82bec:161898080,6b2e907138cad110858e7f90936d2b54:1446508786,20fd9471c0cad110aa3632a3e93460b2:-1750836206,750ddc3176cad110126f9f03771711a3:193683412,de5c1cfd388ad11097c594d9b726dfeb:-195108730,2fab54fdc28ad110f97d514383e52e11:-1563818891,65b91c7d388ad1101c83171c8120e4a0:-708812533,1249583d428ad11047c7402cfd19eb83:-984388319,e748583d3b8ad1108687a50338d44166:-1170428414,69a71cf9f28ad11069643f0396061c2d:929849491,433790f98f8ad110d499b2670b815b3c:1320954027,08f694b94f8ad110c94556fc041e0a57:1375108295,9a55d079c28ad110404894fccbeaa669:-1931417083,40a11075e78ad1102f6b6b1dffaba0af:-875935404,bc501cf1728ad110fe28cea831041bd8:1895326028,034ec8b1828ad110b1807ab1123e2037:1830607156,678c0871c08ad11070af7a2652479032:1745788551,3905c879074ad11082ae01aa9a88d833:-1311849351,87b100b5864ad1107ab0f01c123fe971:-797113334,29308c75a34ad11038ef632fbb53dc69:-760146217,563efbe13d4ad110206bcd41f221051d:92493957,65ed7fe1904ad110f18ab71cc93822b7:-289209572,f70c33a1c94ad110581cf85c75c86840:1677822889,8936a321ec0ad11005150057e0cdf791:609798324</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-21 07:48:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>6d4ded608244418493ecfcc2b1f10f31</sys_id>
+        <sys_metadata>d7a29b2d1b86d110c7c9fc078b4bcbd8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>NumberGenerator</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_include_d7a29b2d1b86d110c7c9fc078b4bcbd8</sys_update_name>
+        <sys_update_version display_value="sys_script_include_d7a29b2d1b86d110c7c9fc078b4bcbd8">bf254ef11b165150c7c9fc078b4bcbf9</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-21 07:48:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

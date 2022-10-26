@@ -2,13 +2,13 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>package_private</access>
         <active>true</active>
-        <api_name>x_tsigh_cmb.supplierOrderPDF</api_name>
+        <api_name>x_tsigh_cmb.SupplierOrderPDF</api_name>
         <caller_access/>
         <client_callable>false</client_callable>
         <description/>
-        <name>supplierOrderPDF</name>
-        <script><![CDATA[var supplierOrderPDF = Class.create();
-supplierOrderPDF.prototype = {
+        <name>SupplierOrderPDF</name>
+        <script><![CDATA[var SupplierOrderPDF = Class.create();
+SupplierOrderPDF.prototype = {
     initialize: function() {
     }, 
 	
@@ -18,70 +18,157 @@ supplierOrderPDF.prototype = {
 		gr.addQuery('sys_id', sys_id);
 		gr.query();
 		if(gr.next()){
+
+var logo = gs.getProperty('x_tsigh_cmb.combridge_logo');
+if (logo)
+	template = template.replaceAll('logo', logo);
+
+		
 if(gr.getDisplayValue('kind_of_order') == 'New'){
-	template = template.replace('kind_of_order', gr.getDisplayValue('kind_of_order'));
-	template = template.replace('kind_of_order', gr.getDisplayValue('kind_of_order'));
-	template = template.replace('rfs_date', gr.rfs_r_date);
-	template = template.replace('rfs_date', gr.rfs_r_date);
-	template = template.replace('rfs_date', gr.rfs_r_date);
+	template = template.replaceAll('kind_of_order', gr.getDisplayValue('kind_of_order'));
+	template = template.replaceAll('rfs_date', gr.rfs_r_date);
+
 }
 
-else if(gr.getDisplayValue('kind_of_order') == 'Cancellation'){
-	template = template.replace('kind_of_order', gr.getDisplayValue('kind_of_order'));
-	template = template.replace('kind_of_order', gr.getDisplayValue('kind_of_order'));
-	template = template.replace('R-RFS Date', 'Last Billing Date');
-	template = template.replace('R-RFS Date', 'Last Billing Date');
-	template = template.replace('R-RFS Date', 'Last Billing Date');
-		
-	template = template.replace('rfs_date', gr.last_billing_date);
-	template = template.replace('rfs_date', gr.last_billing_date);
-	template = template.replace('rfs_date', gr.last_billing_date);
+else if(gr.getDisplayValue('kind_of_order') == 'Edit'){
+	template = template.replaceAll('kind_of_order', gr.getDisplayValue('kind_of_order'));
+	template = template.replaceAll('R-RFS Date', 'Last Billing Date');
+	
+	template = template.replaceAll('rfs_date', gr.last_billing_date);
+
 }
+			
 else if(gr.getDisplayValue('kind_of_order') == 'Cancellation'){
-	template = template.replace('kind_of_order', gr.getDisplayValue('kind_of_order'));
-	template = template.replace('kind_of_order', gr.getDisplayValue('kind_of_order'));
-	template = template.replace('R-RFS Date', 'Last Billing Date');
-	template = template.replace('R-RFS Date', 'Last Billing Date');
-	template = template.replace('R-RFS Date', 'Last Billing Date');
-		
-	template = template.replace('rfs_date', gr.last_billing_date);
-	template = template.replace('rfs_date', gr.last_billing_date);
-	template = template.replace('rfs_date', gr.last_billing_date);
+	template = template.replaceAll('kind_of_order', gr.getDisplayValue('kind_of_order'));
+	template = template.replaceAll('R-RFS Date', 'Last Billing Date');
+	
+	template = template.replaceAll('rfs_date', gr.last_billing_date);
 }
+
+			
+var attachment = new GlideSysAttachment();
+var segmentSysID = sys_id;
+var agr = attachment.getAttachments('ZZ_YYx_tsigh_cmb_u_cmdb_ci_segment', segmentSysID);
+if (agr.next()) {
+	if (agr.getValue('file_name')=='u_additional_image'){
+		var attachmentContent = attachment.getContentBase64(agr);
+		var attachmentType = agr.getValue('content_type');
+	}
+}
+
+var image_html = '<img src="data:' + attachmentType + ';base64,' + attachmentContent + '" />';
+			
+if(gr.u_additional_image){
+	template = template.replace('image', image_html);
+}
+
 
 template = template.replace('segment_id', gr.number);
 template = template.replace('contract_term', gr.u_contract_period);
-template = template.replace('date_of_order', gr.sys_created_on);
-template = template.replace('date_of_order', gr.sys_created_on);
-template = template.replace('otc', gr.u_otc);
-template = template.replace('mrc', gr.u_mrc);
-template = template.replace('left_text', gr.additional_info_a);
-template = template.replace('right_text', gr.additional_info_b);
+template = template.replaceAll('date_of_order', gr.sys_created_on);
+template = template.replace('otc', gr.getDisplayValue('u_otc'));
+template = template.replace('mrc', gr.getDisplayValue('u_mrc'));
 template = template.replace('currency', gr.u_currency);
-template = template.replace('additional_info', gr.comments);
+template = template.replace('additional_info', gr.additional_information);
 template = template.replace('bid_ref', gr.u_bid_reference);
 
-
-var lines = new GlideRecord('sys_user');
-lines.addQuery('sys_id', gr.sys_created_by);
-lines.query();
-if(lines.next()){
-	var name = lines.first_name + " " + lines.last_name;
+			
+var prov = new GlideRecord('sys_user');
+prov.addQuery('user_name', gr.sys_created_by);
+prov.query();
+if(prov.next()){
+	var name = prov.first_name + " " + prov.last_name;
 	template = template.replace('provisioning_contact_name', name);
-	template = template.replace('provisioning_phone_number', lines.phone);
-	template = template.replace('provisioning_email_address', lines.email);
+	template = template.replace('provisioning_phone_number', prov.phone);
+	template = template.replace('provisioning_email_address', prov.email);
 }
-else if(!lines.next()){
+else if(!prov.next()){
 	template = template.replace('provisioning_contact_name', ' ');
 	template = template.replace('provisioning_phone_number', ' ');
 	template = template.replace('provisioning_email_address', ' ');
 }
 
+			
+var endA = gr.u_from.getRefRecord();
+if(endA.isValidRecord()){
+	template = template.replace('left_end', endA.name);
+	template = template.replace('left_location', endA.getDisplayValue('location'));
+		
+	var stockLines = new GlideRecord('customer_contact');
+	stockLines.addQuery('u_stockroom', gr.u_from);
+	stockLines.query();
+	if(stockLines.next()){
+		template = template.replace('left_contact_name', stockLines.name);
+		template = template.replace('left_phone_number', stockLines.getDisplayValue('mobile_phone'));
+		template = template.replace('left_email_address', stockLines.email);
+	}
+	else{
+		template = template.replace('left_contact_name', ' ');
+		template = template.replace('left_phone_number', ' ');
+		template = template.replace('left_email_address', ' ');
+	}
+}
+			
+else if(!(endA.isValidRecord())){
+	template = template.replace('End A', ' ');
+	template = template.replace('left_capacity', ' ');
+	template = template.replace('left_contact_name', ' ');
+	template = template.replace('left_phone_number', ' ');
+	template = template.replace('left_email_address', ' ');
+	template = template.replace('left_end', ' ');
+	template = template.replace('left_location', ' ');
+	template = template.replace('left_service_type', ' ');
+	template = template.replace('left_text', ' ');
+}
+
+var endB = gr.u_to.getRefRecord();
+if(endB.isValidRecord()){
+	
+	template = template.replace('right_end', endB.name);
+	template = template.replace('right_location', endB.getDisplayValue('location'));
+		
+	var stockLinesB = new GlideRecord('customer_contact');
+	stockLinesB.addQuery('u_stockroom', gr.u_to);
+	stockLinesB.query();
+	if(stockLinesB.next()){
+		template = template.replace('right_contact_name', stockLinesB.name);
+		template = template.replace('right_phone_number', stockLinesB.getDisplayValue('mobile_phone'));
+		template = template.replace('right_email_address', stockLinesB.email);
+	}
+	else{
+		template = template.replace('right_contact_name', ' ');
+		template = template.replace('right_phone_number', ' ');
+		template = template.replace('right_email_address', ' ');
+	}
+}
+else if(!(endB.isValidRecord())){
+	template = template.replace('End B', ' ');
+	template = template.replace('right_capacity', ' ');
+	template = template.replace('right_contact_name', ' ');
+	template = template.replace('right_phone_number', ' ');
+	template = template.replace('right_email_address', ' ');
+	template = template.replace('right_end', ' ');
+	template = template.replace('right_location', ' ');
+	template = template.replace('right_service_type', ' ');
+	template = template.replace('right_text', ' ');
+
+}
+			
 var grService = gr.u_service.getRefRecord();
 if(grService.isValidRecord()){
 	template = template.replace('circuit_id', grService.u_combridge_id);
 	//template = template.replace('order_id', grService.u_combridge_id);
-
+	
+	var string = grService.getDisplayValue('u_capacity_value') + grService.getDisplayValue('u_capacity_unit_of_measurement');
+	if (string != 'null'){
+		template = template.replace('left_capacity', string);
+		template = template.replace('right_capacity', string);
+	}
+	else if(string == 'null'){
+		template = template.replace('left_capacity', ' ');
+		template = template.replace('right_capacity', ' ');
+	}
+	
 	var own = new GlideRecord('sys_user');
 	own.addQuery('sys_id', grService.u_owner);
 	own.query();
@@ -96,74 +183,9 @@ if(grService.isValidRecord()){
 		template = template.replace('commertial_phone_number', ' ');
 		template = template.replace('commertial_email_address', ' ');
 	}
-	
-	var grEndA = grService.u_endpoint_a.getRefRecord();
-	if(grEndA.isValidRecord()){
-		template = template.replace('left_end', grEndA.name);
-		template = template.replace('left_location', grEndA.getDisplayValue('location'));
-		var string = grService.getDisplayValue('u_capacity_value') + grService.getDisplayValue('u_capacity_unit_of_measurement');
-		template = template.replace('left_capacity', string);
-		
-		var stockLines = new GlideRecord('customer_contact');
-		stockLines.addQuery('u_stockroom', grService.u_endpoint_a);
-		stockLines.query();
-		if(stockLines.next()){
-			template = template.replace('left_contact_name', stockLines.name);
-			template = template.replace('left_phone_number', stockLines.getDisplayValue('mobile_phone'));
-			template = template.replace('left_email_address', stockLines.email);
-		}
-		else{
-			template = template.replace('left_contact_name', ' ');
-			template = template.replace('left_phone_number', ' ');
-			template = template.replace('left_email_address', ' ');
-		}
-	}
-	
-	else if(!(grEndA.isValidRecord())){
-		template = template.replace('End A', ' ');
-		template = template.replace('left_contact_name', ' ');
-		template = template.replace('left_phone_number', ' ');
-		template = template.replace('left_email_address', ' ');
-		template = template.replace('left_end', ' ');
-		template = template.replace('left_location', ' ');
-		template = template.replace('left_capacity', ' ');
-		template = template.replace('left_service_type', ' ');
-
-	}
-	
-	var grEndB = grService.u_endpoint_b.getRefRecord();
-	if(grEndB.isValidRecord()){
-		template = template.replace('right_end', grEndB.name);
-		template = template.replace('right_location', grEndB.getDisplayValue('location'));
-		template = template.replace('right_capacity', string);
-						
-		var stockLinesB = new GlideRecord('customer_contact');
-		stockLinesB.addQuery('u_stockroom', grService.u_endpoint_b);
-		stockLinesB.query();
-		if(stockLinesB.next()){
-			template = template.replace('right_contact_name', stockLinesB.name);
-			template = template.replace('right_phone_number', stockLinesB.mobile_phone);
-			template = template.replace('right_email_address', stockLinesB.email);
-		}
-		else{
-			template = template.replace('right_contact_name', ' ');
-			template = template.replace('right_phone_number', ' ');
-			template = template.replace('right_email_address', '');			
-		}
-	}
-	
-	else if(!(grEndB.isValidRecord())){
-		template = template.replace('End B', ' ');
-		template = template.replace('right_contact_name', ' ');
-		template = template.replace('right_phone_number', ' ');
-		template = template.replace('right_email_address', ' ');
-		template = template.replace('right_end', ' ');
-		template = template.replace('right_location', ' ');
-		template = template.replace('right_capacity', ' ');
-		template = template.replace('right_service_type', ' ');
-	}
 }
 
+			
 var grAcc = gr.u_provider.getRefRecord();
 template = template.replace('right_company', grAcc.name);
 template = template.replace('right_address', grAcc.getDisplayValue('u_location'));
@@ -192,24 +214,26 @@ if(cmbBill.next()){
 }
 template = template.replace('right_service_type', gr.getDisplayValue('u_product_type_desired'));
 template = template.replace('left_service_type', gr.getDisplayValue('product_type'));
+template = template.replace('left_text', gr.additional_info_a);
+template = template.replace('right_text', gr.additional_info_b);
 		}
 		return template;
 
 	},
 
-    type: 'supplierOrderPDF'
+    type: 'SupplierOrderPDF'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>szabo.zoltan</sys_created_by>
         <sys_created_on>2022-10-03 12:22:47</sys_created_on>
         <sys_id>94a1fa311bd65150c7c9fc078b4bcb33</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>supplierOrderPDF</sys_name>
+        <sys_mod_count>46</sys_mod_count>
+        <sys_name>SupplierOrderPDF</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_94a1fa311bd65150c7c9fc078b4bcb33</sys_update_name>
-        <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-10-03 14:19:38</sys_updated_on>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-25 11:43:03</sys_updated_on>
     </sys_script_include>
 </record_update>

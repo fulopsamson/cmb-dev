@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_atf_step">
+    <sys_atf_step action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <copied_from/>
+        <description>Open the 'CMB Service' form with id 'CMB Service: CL2TP 000575'
+
+Warning: Using an existing record may cause unexpected behavior for this test&#13;
+See the documentation for Test Design Considerations</description>
+        <display_name>Open an Existing Record</display_name>
+        <inputs/>
+        <mugshots_cache_json/>
+        <notes/>
+        <order>1</order>
+        <snapshot/>
+        <step_config display_value="Open an Existing Record">5f2e0e535332120028bc29cac2dc34d3</step_config>
+        <sys_class_name>sys_atf_step</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-07 08:16:04</sys_created_on>
+        <sys_id>89e8a28f1b5ed55030bc986c9b4bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open an Existing Record</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_atf_step_89e8a28f1b5ed55030bc986c9b4bcbed</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-07 08:16:04</sys_updated_on>
+        <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
+        <test display_value="My New Test">d198ae4f1b5ed55030bc986c9b4bcb72</test>
+        <timeout/>
+        <warning_message>Warning: Using an existing record may cause unexpected behavior for this test&#13;
+See the documentation for Test Design Considerations</warning_message>
+    </sys_atf_step>
+    <sys_variable_value action="delete_multiple" query="document_key=89e8a28f1b5ed55030bc986c9b4bcbed"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>89e8a28f1b5ed55030bc986c9b4bcbed</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-07 08:16:04</sys_created_on>
+        <sys_id>1619a68f1b5ed55030bc986c9b4bcb34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-07 08:16:04</sys_updated_on>
+        <value/>
+        <variable display_value="View">6e55da4e53a0220002c6435723dc34a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>89e8a28f1b5ed55030bc986c9b4bcbed</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-07 08:16:04</sys_created_on>
+        <sys_id>5219a68f1b5ed55030bc986c9b4bcb34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-07 08:16:04</sys_updated_on>
+        <value>1b102d4e38704eddbab47948e17d293d</value>
+        <variable display_value="Record">ad351a4e53a0220002c6435723dc34f0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>89e8a28f1b5ed55030bc986c9b4bcbed</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-07 08:16:04</sys_created_on>
+        <sys_id>5a19a68f1b5ed55030bc986c9b4bcb33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-07 08:16:04</sys_updated_on>
+        <value>standard_ui</value>
+        <variable display_value="Form UI">17d732a9c7a333005e5c45b881c26007</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_atf_step</document>
+        <document_key>89e8a28f1b5ed55030bc986c9b4bcbed</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-07 08:16:04</sys_created_on>
+        <sys_id>d619a68f1b5ed55030bc986c9b4bcb34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-10-07 08:16:04</sys_updated_on>
+        <value>x_tsigh_cmb_u_cmdb_ci_cmb_service</value>
+        <variable display_value="Table">b124164e53a0220002c6435723dc34c5</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_atf_input_variable_5f2e0e535332120028bc29cac2dc34d3^id=89e8a28f1b5ed55030bc986c9b4bcbed"/>
+</record_update>

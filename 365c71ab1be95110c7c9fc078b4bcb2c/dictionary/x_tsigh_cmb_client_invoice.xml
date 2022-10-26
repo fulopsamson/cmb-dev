@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Client invoice" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="33" type="collection">
+    <element audit="true" label="Client invoice" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="220" type="collection">
         <element choice="3" choice_field="approval" choice_table="task" default="not requested" label="Approval" max_length="40" name="approval" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Not Yet Requested" sequence="0" value="not requested"/>
@@ -8,17 +8,28 @@
                 <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
             </choice>
         </element>
-        <element label="Automatically generated" max_length="40" name="automatically_generated" type="boolean"/>
-        <element label="Billing profile" max_length="32" name="billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.client" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Client" max_length="32" name="client" reference="customer_account" type="reference"/>
+        <element label="Automatically generated" max_length="40" name="automatically_generated" read_only="true" type="boolean"/>
+        <element label="Billing profile" mandatory="true" max_length="32" name="billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.client" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Client" mandatory="true" max_length="32" name="client" reference="customer_account" type="reference"/>
         <element label="Contact person" max_length="32" name="contact_person" reference="customer_contact" reference_qual="javascript:&quot;u_billing_profileISNOTEMPTY^u_billing_profile=&quot; + current.billing_profile" type="reference" use_reference_qualifier="advanced"/>
-        <element attributes="encode_utf8=false" label="Currency" max_length="32" name="currency" reference="fx_currency" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element attributes="encode_utf8=false" label="Currency" max_length="32" name="currency" read_only="true" reference="fx_currency" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
         <element label="Due date" max_length="40" name="due_date" type="glide_date"/>
-        <element default="javascript: new GlideDateTime().getDate()" label="Exchange rate date" max_length="40" name="exchange_rate_date" type="glide_date"/>
-        <element label="Exchange rate value" max_length="40" name="exchange_rate_value" type="float"/>
-        <element default="javascript: new GlideDateTime().getDate()" label="Invoice date" max_length="40" name="invoice_date" type="glide_date"/>
+        <element default="javascript: new GlideDateTime().getDate()" label="Exchange rate date" mandatory="true" max_length="40" name="exchange_rate_date" type="glide_date"/>
+        <element label="Exchange rate value" max_length="40" name="exchange_rate_value" read_only="true" type="float"/>
+        <element default="javascript: new GlideDateTime().getDate()" label="Invoice date" mandatory="true" max_length="40" name="invoice_date" type="glide_date"/>
+        <element choice="3" label="Invoice generating method" max_length="100" name="invoice_generating_method" read_only="true" type="string" use_dependent_field="true">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Group by order" sequence="0" value="1"/>
+                <element inactive="true" inactive_on_update="true" label="Group by partner" sequence="1" value="2"/>
+                <element inactive="true" inactive_on_update="true" label="Group by partner reference number" sequence="2" value="3"/>
+                <element inactive="true" inactive_on_update="true" label="Separate invoice by partner reference number" sequence="3" value="4"/>
+            </choice>
+        </element>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Invoice number" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Observation" max_length="1000" name="observation" type="string"/>
+        <element label="Partner reference number" max_length="255" name="partner_reference_number" read_only="true" type="string"/>
+        <element label="Period end" max_length="40" name="period_end" type="glide_date_time"/>
+        <element label="Period start" max_length="40" name="period_start" type="glide_date_time"/>
         <element choice="1" default="temporary" label="State" max_length="20" name="state" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Temporary" sequence="1" value="temporary"/>
@@ -28,15 +39,19 @@
                 <element inactive_on_update="false" label="Validated by finance" sequence="5" value="validated_by_finance"/>
             </choice>
         </element>
-        <element label="Total" max_length="40" name="total" type="float"/>
-        <element label="Total net value" max_length="40" name="total_net_value" type="float"/>
-        <element label="Total value of VAT" max_length="40" name="total_value_of_vat" type="float"/>
-        <element choice="3" label="Type" max_length="10" name="type" type="string">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.total_net_value+current.total_value_of_vat;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Total" max_length="40" name="total" read_only="true" type="float"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;&#13;&#10;&#9;return (+current.total) * (+current.exchange_rate_value);&#13;&#10;&#13;&#10;})(current);" label="Total in RON" max_length="40" name="total_in_ron" read_only="true" type="float" virtual="true"/>
+        <element label="Total net value" max_length="40" name="total_net_value" read_only="true" type="float"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;return (+current.total_net_value) * (+current.exchange_rate_value);&#13;&#10;})(current);" label="Total net value in RON" max_length="40" name="total_net_value_in_ron" read_only="true" type="float" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return Math.round(current.total_net_value*current.vat_value*100)/100;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Total value of VAT" max_length="40" name="total_value_of_vat" read_only="true" type="float"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;return (+current.total_value_of_vat) * (+current.exchange_rate_value);&#13;&#10;&#13;&#10;})(current);" label="Total value of VAT in RON" max_length="40" name="total_value_of_vat_in_ron" read_only="true" type="float" virtual="true"/>
+        <element choice="3" default="selling" label="Type" max_length="10" name="type" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Billing of Service" value="billing"/>
                 <element inactive_on_update="false" label="Selling" value="selling"/>
             </choice>
         </element>
+        <element label="VAT Value" max_length="40" name="vat_value" type="float"/>
         <index name="index">
             <element name="billing_profile"/>
         </index>
