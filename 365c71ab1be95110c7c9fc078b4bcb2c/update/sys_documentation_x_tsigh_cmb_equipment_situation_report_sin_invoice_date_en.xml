@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="sin_invoice_date" label="Equipment Situation" language="en" table="x_tsigh_cmb_equipment_situation_report">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>sin_invoice_date</element>
+            <help/>
+            <hint/>
+            <label>Equipment Situation</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_equipment_situation_report</name>
+            <plural>Equipment Situations</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-01 08:39:13</sys_created_on>
+            <sys_id>2d0e17cb1bbe9d10c7c9fc078b4bcb41</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>Equipment Situation</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_documentation_x_tsigh_cmb_equipment_situation_report_sin_invoice_date_en</sys_update_name>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-04 08:13:39</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

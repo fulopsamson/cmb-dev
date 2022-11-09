@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_rl_action">
+    <sys_ui_policy_rl_action action="INSERT_OR_UPDATE">
+        <list>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_pop_b</list>
+        <sys_class_name>sys_ui_policy_rl_action</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-07 17:51:02</sys_created_on>
+        <sys_id>a1f5d4951b8f9110c7c9fc078b4bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_pop_b</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_policy_rl_action_a1f5d4951b8f9110c7c9fc078b4bcb44</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-07 17:51:02</sys_updated_on>
+        <ui_policy display_value="CMB Service related Backbone Equipments">f3307d3f1bfe1150c7c9fc078b4bcbb5</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_rl_action>
+</record_update>

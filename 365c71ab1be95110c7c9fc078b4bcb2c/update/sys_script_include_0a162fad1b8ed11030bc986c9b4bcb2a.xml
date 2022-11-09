@@ -567,13 +567,14 @@ CMBUtils.prototype = {
 		newService.setValue('u_parent_service', current.sys_id);
 		newService.setValue('original_id', current.getValue('u_combridge_id'));
 
+		/*not needed anymore - VIS-118 
 		var gdt = new GlideDateTime();
 		var gd = new GlideDate();
 		gd = current.u_last_billing_date;
 		gdt.setDisplayValue(gd.getDisplayValue());
 		gdt.addDaysUTC(1);
 		gd = gdt.getLocalDate();
-		newService.u_acceptance_date=gd;
+		newService.u_acceptance_date=gd;*/
 
 		if (commercial) {
 			newService.setValue('u_state', 'Reserved');
@@ -710,13 +711,13 @@ CMBUtils.prototype = {
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-09-20 10:48:44</sys_created_on>
         <sys_id>0a162fad1b8ed11030bc986c9b4bcb2a</sys_id>
-        <sys_mod_count>139</sys_mod_count>
+        <sys_mod_count>143</sys_mod_count>
         <sys_name>CMBUtils</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_0a162fad1b8ed11030bc986c9b4bcb2a</sys_update_name>
-        <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-10-25 11:09:20</sys_updated_on>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-11-08 09:42:08</sys_updated_on>
     </sys_script_include>
 </record_update>

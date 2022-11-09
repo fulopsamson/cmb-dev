@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="cil_quantity" label="CANT,N,12,3" language="en" table="x_tsigh_cmb_import">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>cil_quantity</element>
+            <help/>
+            <hint/>
+            <label>CANT,N,12,3</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_import</name>
+            <plural>CANT,N,12,3s</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-10-31 14:06:51</sys_created_on>
+            <sys_id>787f93f21bb29d10c7c9fc078b4bcb3d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>CANT,N,12,3</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_documentation_x_tsigh_cmb_import_cil_quantity_en</sys_update_name>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-10-31 14:06:51</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

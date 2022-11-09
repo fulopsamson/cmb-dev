@@ -27,7 +27,6 @@ if (logo)
 if(gr.getDisplayValue('kind_of_order') == 'New'){
 	template = template.replaceAll('kind_of_order', gr.getDisplayValue('kind_of_order'));
 	template = template.replaceAll('rfs_date', gr.rfs_r_date);
-
 }
 
 else if(gr.getDisplayValue('kind_of_order') == 'Edit'){
@@ -35,7 +34,6 @@ else if(gr.getDisplayValue('kind_of_order') == 'Edit'){
 	template = template.replaceAll('R-RFS Date', 'Last Billing Date');
 	
 	template = template.replaceAll('rfs_date', gr.last_billing_date);
-
 }
 			
 else if(gr.getDisplayValue('kind_of_order') == 'Cancellation'){
@@ -45,7 +43,7 @@ else if(gr.getDisplayValue('kind_of_order') == 'Cancellation'){
 	template = template.replaceAll('rfs_date', gr.last_billing_date);
 }
 
-			
+
 var attachment = new GlideSysAttachment();
 var segmentSysID = sys_id;
 var agr = attachment.getAttachments('ZZ_YYx_tsigh_cmb_u_cmdb_ci_segment', segmentSysID);
@@ -209,6 +207,7 @@ if(cmbBill.next()){
 	if(billLines.next()){
 		template = template.replace('billing_contact_name', billLines.name);
 		template = template.replace('billing_phone_number', billLines.mobile_phone);
+		// or billLines.phone if the phone number will upload to business phone field
 		template = template.replace('billing_email_address', billLines.email);
 	}
 }
@@ -227,13 +226,13 @@ template = template.replace('right_text', gr.additional_info_b);
         <sys_created_by>szabo.zoltan</sys_created_by>
         <sys_created_on>2022-10-03 12:22:47</sys_created_on>
         <sys_id>94a1fa311bd65150c7c9fc078b4bcb33</sys_id>
-        <sys_mod_count>46</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>SupplierOrderPDF</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_94a1fa311bd65150c7c9fc078b4bcb33</sys_update_name>
-        <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-10-25 11:43:03</sys_updated_on>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-03 15:17:34</sys_updated_on>
     </sys_script_include>
 </record_update>

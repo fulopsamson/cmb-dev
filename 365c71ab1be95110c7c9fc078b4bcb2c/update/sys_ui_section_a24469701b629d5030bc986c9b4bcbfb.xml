@@ -210,6 +210,48 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>project</element>
+            <position>15</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-07 09:24:29</sys_created_on>
+            <sys_id>6a02ae8d1b8f911030bc986c9b4bcbca</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_validation_line" sys_domain="global" view="Default view">a24469701b629d5030bc986c9b4bcbfb</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-07 09:24:29</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>product_type</element>
+            <position>16</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-07 09:25:11</sys_created_on>
+            <sys_id>0532ee8d1b8f911030bc986c9b4bcbeb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_validation_line" sys_domain="global" view="Default view">a24469701b629d5030bc986c9b4bcbfb</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-07 09:25:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>project_code</element>
+            <position>17</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-07 09:25:44</sys_created_on>
+            <sys_id>74526e8d1b8f911030bc986c9b4bcbec</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_validation_line" sys_domain="global" view="Default view">a24469701b629d5030bc986c9b4bcbfb</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-07 09:25:44</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

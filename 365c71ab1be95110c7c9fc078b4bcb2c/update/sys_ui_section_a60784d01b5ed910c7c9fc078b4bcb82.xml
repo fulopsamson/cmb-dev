@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_ui_section caption="Activites" section_id="a60784d01b5ed910c7c9fc078b4bcb82" sys_domain="global" table="x_tsigh_cmb_client_invoice" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>activity.xml</element>
+            <element>validation_log</element>
             <position>0</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-09-28 11:56:08</sys_created_on>
-            <sys_id>4e25459c1b121d10c7c9fc078b4bcb07</sys_id>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-11-08 07:49:23</sys_created_on>
+            <sys_id>efd593991b03151030bc986c9b4bcb16</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activites" display_value="Activites" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">a60784d01b5ed910c7c9fc078b4bcb82</sys_ui_section>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-11-08 07:49:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity.xml</element>
+            <position>1</position>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-11-08 07:49:23</sys_created_on>
+            <sys_id>63d593991b03151030bc986c9b4bcb17</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
             <sys_ui_section caption="Activites" display_value="Activites" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">a60784d01b5ed910c7c9fc078b4bcb82</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-09-28 11:56:08</sys_updated_on>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-11-08 07:49:23</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
         </sys_ui_element>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Client invoice lines" max_length="40" name="x_tsigh_cmb_client_invoice_lines" sizeclass="272" type="collection">
+    <element label="Client invoice lines" max_length="40" name="x_tsigh_cmb_client_invoice_lines" sizeclass="98" type="collection">
         <element label="Client invoice" max_length="32" name="client_invoice" read_only="true" reference="x_tsigh_cmb_client_invoice" reference_cascade_rule="cascade" type="reference"/>
         <element attributes="encode_utf8=false" label="Consumable" max_length="32" name="consumable" reference="alm_consumable" type="reference"/>
+        <element label="Cost code" max_length="40" name="cost_code" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Description" max_length="1000" name="description" type="string"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Period end" max_length="40" name="period_end" type="glide_date"/>
@@ -10,9 +11,16 @@
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return (+current.quantity)*(+current.unit_price);  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Price" max_length="40" name="price" read_only="true" type="float"/>
         <element label="Price in RON" max_length="40" name="price_in_ron" read_only="true" type="float"/>
         <element attributes="encode_utf8=false" label="Product" max_length="32" name="product" reference="cmdb_model" type="reference"/>
+        <element label="Product identifier" max_length="40" name="product_identifier" type="string"/>
+        <element attributes="encode_utf8=false" label="Product type" max_length="32" name="product_type" reference="x_tsigh_cmb_product_type" type="reference"/>
+        <element label="Project" max_length="32" name="project" reference="x_tsigh_cmb_project" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" choice_field="u_project_code" choice_table="x_tsigh_cmb_u_cmdb_ci_cmb_service" label="Project code" max_length="40" name="project_code" type="string">
+            <choice/>
+        </element>
         <element default="1" label="Quantity" max_length="40" name="quantity" type="integer"/>
         <element label="Unit price" max_length="40" name="unit_price" type="float"/>
         <element label="Unit price in RON" max_length="40" name="unit_price_in_ron" read_only="true" type="float"/>
+        <element label="Unit price with VAT in RON" max_length="40" name="unit_price_with_vat_in_ron" read_only="true" type="float"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return (+current.client_invoice.vat_value) * (+current.price);&#13;&#10;&#13;&#10;})(current);" label="VAT Value" max_length="40" name="vat_value" read_only="true" type="float"/>
         <element label="VAT Value in RON" max_length="40" name="vat_value_in_ron" read_only="true" type="float"/>
         <index name="index">
@@ -22,7 +30,13 @@
             <element name="product"/>
         </index>
         <index name="index3">
+            <element name="product_type"/>
+        </index>
+        <index name="index4">
             <element name="consumable"/>
+        </index>
+        <index name="index5">
+            <element name="project"/>
         </index>
     </element>
 </database>

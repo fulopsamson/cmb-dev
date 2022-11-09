@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="all_tables.text_index_translations=true" audit="true" label="Asset" max_length="40" name="alm_asset" sizeclass="3604" text_index="true" type="collection">
+    <element attributes="all_tables.text_index_translations=true" audit="true" label="Asset" max_length="40" name="alm_asset" sizeclass="6248" text_index="true" type="collection">
         <element label="Client invoice line" max_length="32" name="x_tsigh_cmb_client_invoice_line" reference="x_tsigh_cmb_client_invoice_lines" type="reference"/>
         <element label="Cost code" max_length="20" name="x_tsigh_cmb_cost_code" type="string"/>
         <element label="Description" max_length="1000" name="x_tsigh_cmb_description" type="string"/>
+        <element label="Equipment Group" max_length="32" name="x_tsigh_cmb_equipment_group" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_equipment_group" reference_floats="true" reference_qual="javascript:&quot;u_service.u_endpoint_a=&quot; + current.stockroom +  &quot;^ORu_service.u_endpoint_b =&quot; + current.stockroom" type="reference" use_reference_qualifier="advanced"/>
         <element label="Invoice" max_length="32" name="x_tsigh_cmb_invoice" reference="x_tsigh_cmb_supplier_invoice" type="reference"/>
         <element label="Legacy ID" max_length="20" name="x_tsigh_cmb_legacy_id" type="string"/>
+        <element label="Service" max_length="32" name="x_tsigh_cmb_service" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_cmb_service" type="reference"/>
+        <element label="Virtual" max_length="40" name="x_tsigh_cmb_virtual" read_only="true" type="boolean"/>
         <index name="index">
+            <element name="x_tsigh_cmb_service"/>
+        </index>
+        <index name="index2">
+            <element name="x_tsigh_cmb_equipment_group"/>
+        </index>
+        <index name="index3">
             <element name="x_tsigh_cmb_invoice"/>
         </index>
     </element>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions table="alm_stockroom">type=a2aa2b3f3763100044e0bfc8bcbe5de0^ORtype=6a52122f1b2d5110c7c9fc078b4bcb56^ORtype=dfaece2b1b2d5110c7c9fc078b4bcb0c^ORtype=aeaa2b3f3763100044e0bfc8bcbe5dde^EQ<item display_table="alm_stockroom_type" display_value="Warehouse" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="a2aa2b3f3763100044e0bfc8bcbe5de0"/>
+            <item display_table="alm_stockroom_type" display_value="Virtual" endquery="false" field="type" goto="false" newquery="false" operator="=" or="true" value="6a52122f1b2d5110c7c9fc078b4bcb56"/>
+            <item display_table="alm_stockroom_type" display_value="Spare" endquery="false" field="type" goto="false" newquery="false" operator="=" or="true" value="dfaece2b1b2d5110c7c9fc078b4bcb0c"/>
+            <item display_table="alm_stockroom_type" display_value="Central Warehouse" endquery="false" field="type" goto="false" newquery="false" operator="=" or="true" value="aeaa2b3f3763100044e0bfc8bcbe5dde"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>false</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>CMB Service related lists</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-03 08:39:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3831bd7f1bfe1150c7c9fc078b4bcb26</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>CMB Service related lists</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_policy_3831bd7f1bfe1150c7c9fc078b4bcb26</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-03 10:27:10</sys_updated_on>
+        <table>alm_stockroom</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_policy_3831bd7f1bfe1150c7c9fc078b4bcb26</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions table="alm_stockroom"&gt;type=a2aa2b3f3763100044e0bfc8bcbe5de0^ORtype=6a52122f1b2d5110c7c9fc078b4bcb56^ORtype=dfaece2b1b2d5110c7c9fc078b4bcb0c^ORtype=aeaa2b3f3763100044e0bfc8bcbe5dde^EQ&lt;item display_table="alm_stockroom_type" display_value="Warehouse" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="a2aa2b3f3763100044e0bfc8bcbe5de0"/&gt;&lt;item display_table="alm_stockroom_type" display_value="Virtual" endquery="false" field="type" goto="false" newquery="false" operator="=" or="true" value="6a52122f1b2d5110c7c9fc078b4bcb56"/&gt;&lt;item display_table="alm_stockroom_type" display_value="Spare" endquery="false" field="type" goto="false" newquery="false" operator="=" or="true" value="dfaece2b1b2d5110c7c9fc078b4bcb0c"/&gt;&lt;item display_table="alm_stockroom_type" display_value="Central Warehouse" endquery="false" field="type" goto="false" newquery="false" operator="=" or="true" value="aeaa2b3f3763100044e0bfc8bcbe5dde"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/conditions&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;reverse_if_false&gt;false&lt;/reverse_if_false&gt;&lt;run_scripts&gt;false&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;CMB Service related lists&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;szabo.zoltan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-03 08:39:33&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;3831bd7f1bfe1150c7c9fc078b4bcb26&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;CMB Service related lists&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_3831bd7f1bfe1150c7c9fc078b4bcb26&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;szabo.zoltan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-03 10:27:10&lt;/sys_updated_on&gt;&lt;table&gt;alm_stockroom&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1725943750</payload_hash>
+        <record_name>CMB Service related lists</record_name>
+        <reverted_from/>
+        <source>1c84b1d11bfe1910c7c9fc078b4bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-03 10:27:10</sys_created_on>
+        <sys_id>bd0a8a371b725150c7c9fc078b4bcb89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1843d07c63d0000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-03 10:27:10</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>b50a8a3784725150e19a902eddabad89</update_guid>
+        <update_guid_history>b50a8a3784725150e19a902eddabad89:-1725943750,a17802f36b725150cefd43c9f2c470a9:713167561,0a454233547251506b076ea8284912eb:1576817635,533bb9b7f63251506c1565873dd55777:99946207,87d9f5b7d6325150c0d2792ca43dec0a:709128423,3b783177bd3251503064fcb7f584b3fa:943648846,d918b5f3873251503ee220c23b6c2920:-1224769053,88a6f1f3973251504f0ebf33800ac631:709128423,9d14b933063251501e18a2872f02f623:1576817635,b232f5bfcbfe11502ff37ce664529b7a:2117598839,e1613d7f55fe1150bdc1d84c06af057a:713167561</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-03 10:28:11</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>7c21d5fe4ae349d9ab4ba4b7684cc2c1</sys_id>
+        <sys_metadata>3831bd7f1bfe1150c7c9fc078b4bcb26</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMB Service related lists</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Stockroom">97dfb9931ba11110c7c9fc078b4bcb1f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_3831bd7f1bfe1150c7c9fc078b4bcb26</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_3831bd7f1bfe1150c7c9fc078b4bcb26">bd0a8a371b725150c7c9fc078b4bcb89</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-03 10:28:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

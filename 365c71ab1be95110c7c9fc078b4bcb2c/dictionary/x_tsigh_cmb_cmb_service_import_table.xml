@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="sys_import_set_row" label="CMB Service Import table" max_length="40" name="x_tsigh_cmb_cmb_service_import_table" sizeclass="11" type="collection">
+    <element extends="sys_import_set_row" label="CMB Service Import table" max_length="40" name="x_tsigh_cmb_cmb_service_import_table" sizeclass="0" type="collection">
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Billing profile name" label="Billing profile name" max_length="40" name="u_billing_profile_name" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Capacity" label="Capacity" max_length="40" name="u_capacity" type="string"/>
         <element attributes="edge_encryption_enabled=true,import_attribute_name=Contract number" label="Contract number" max_length="51" name="u_contract_number" type="string"/>

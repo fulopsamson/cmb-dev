@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions table="alm_stockroom">type.valueLIKEvirtual^EQ<item endquery="false" field="type.value" goto="false" newquery="false" operator="LIKE" or="false" value="virtual"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>false</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>CMB Service related list for Stockroom</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-07 11:23:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>12cc3a811b4b9110c7c9fc078b4bcbc5</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>CMB Service related list for Stockroom</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_policy_12cc3a811b4b9110c7c9fc078b4bcbc5</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-07 15:04:13</sys_updated_on>
+        <table>alm_stockroom</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_policy_12cc3a811b4b9110c7c9fc078b4bcbc5</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions table="alm_stockroom"&gt;type.valueLIKEvirtual^EQ&lt;item endquery="false" field="type.value" goto="false" newquery="false" operator="LIKE" or="false" value="virtual"/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/conditions&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;reverse_if_false&gt;false&lt;/reverse_if_false&gt;&lt;run_scripts&gt;false&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {
+
+}]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;CMB Service related list for Stockroom&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;szabo.zoltan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-07 11:23:10&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;12cc3a811b4b9110c7c9fc078b4bcbc5&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_name&gt;CMB Service related list for Stockroom&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_12cc3a811b4b9110c7c9fc078b4bcbc5&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;szabo.zoltan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-07 15:04:13&lt;/sys_updated_on&gt;&lt;table&gt;alm_stockroom&lt;/table&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1552103702</payload_hash>
+        <record_name>CMB Service related list for Stockroom</record_name>
+        <reverted_from/>
+        <source>1c84b1d11bfe1910c7c9fc078b4bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-07 15:04:13</sys_created_on>
+        <sys_id>53cf2b051b0f9110c7c9fc078b4bcbea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184529edb4c0000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-07 15:04:13</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>5bcf2b054c0f9110ba21818f184970e9</update_guid>
+        <update_guid_history>5bcf2b054c0f9110ba21818f184970e9:-1552103702,88ceebc1c10f911091548028549a0b03:933240342,669e2bc1200f9110363d95806446d659:863632865,308e63c1d30f9110a4212c924d37fb1c:933240342,6cad2781050f9110d9deb92256565ca6:-1363250474,148d6381b30f9110b760d8b0495bd1ae:1122586631,640ba3cd3acb9110c40b36a26f2ec28f:-1799272521,5ea9e30d60cb9110a42bb730c0f973a4:459330355,4508ebc9a2cb91102b908a769786a839:-373668965,0f836fc50ccb91106bbdbd5f09b8442c:459330355,6630270515cb911022f7bebe3185c89b:1566831177,786fdfc1f6cb91102c10ef9e3d4db43e:-1585388967,c66e13c1dfcb9110b6022fd862960e46:706087569,b83edb8179cb9110fffc2dd5e673b1ce:-1959110799,4b2d5341f3cb91101c9c077a64e71934:109927064,85dc1b415dcb9110f1be776eb158888c:-215590166,4629dbc9268b91100ac021b30c954a93:1483842870,c25f3a45524b911029578db7f0257b62:-142755925,44fe7245c44b9110df6b03b1efa8f73a:-1197117282,a8ce7e05574b911061c1ce4559ba6356:-882232542,15aeb205074b9110fd456302087991a4:1222203562,751ef6c1f54b9110fcf0088b190a71f2:988599648,e6bdf6c10b4b911020c6d6529d0f08e1:-882232542,513d72413c4b91106674befb1864d3ce:1028736423</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-07 15:08:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>4d36e041fb8448009d64a3e2b92578a4</sys_id>
+        <sys_metadata>12cc3a811b4b9110c7c9fc078b4bcbc5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMB Service related list for Stockroom</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Stockroom">97dfb9931ba11110c7c9fc078b4bcb1f</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_12cc3a811b4b9110c7c9fc078b4bcbc5</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_12cc3a811b4b9110c7c9fc078b4bcbc5">53cf2b051b0f9110c7c9fc078b4bcbea</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-07 15:08:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

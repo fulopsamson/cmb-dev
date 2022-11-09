@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>invoice_generating_method</field>
+        <mandatory>false</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-27 09:19:46</sys_created_on>
+        <sys_id>9167fde11b3e5910c7c9fc078b4bcbe6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>invoice_generating_method</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9167fde11b3e5910c7c9fc078b4bcbe6</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-27 09:19:46</sys_updated_on>
+        <table>x_tsigh_cmb_billing_profile</table>
+        <ui_policy display_value="Billing Profile Invoice generating method">d9f2b1211b3e5910c7c9fc078b4bcbb6</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_action>
+</record_update>

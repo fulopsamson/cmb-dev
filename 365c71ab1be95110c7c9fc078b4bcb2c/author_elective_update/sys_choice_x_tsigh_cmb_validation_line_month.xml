@@ -211,9 +211,9 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>4e6f599f1b2a951030bc986c9b4bcb24</sys_id>
-            <sys_mod_count>3</sys_mod_count>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-10-20 07:55:28</sys_updated_on>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-02 15:56:23</sys_updated_on>
             <value>10</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -231,9 +231,9 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>1f6f599f1b2a951030bc986c9b4bcb19</sys_id>
-            <sys_mod_count>3</sys_mod_count>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-10-20 07:56:23</sys_updated_on>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-02 15:56:27</sys_updated_on>
             <value>11</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
@@ -251,9 +251,9 @@
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
             <sys_id>087f919f1b2a951030bc986c9b4bcbe4</sys_id>
-            <sys_mod_count>3</sys_mod_count>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-10-20 07:56:27</sys_updated_on>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-02 15:56:30</sys_updated_on>
             <value>12</value>
         </sys_choice>
     </sys_choice>

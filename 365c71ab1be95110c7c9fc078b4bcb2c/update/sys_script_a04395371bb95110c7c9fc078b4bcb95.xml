@@ -2,7 +2,7 @@
     <sys_script action="INSERT_OR_UPDATE">
         <abort_action>false</abort_action>
         <access>package_private</access>
-        <action_delete>true</action_delete>
+        <action_delete>false</action_delete>
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
@@ -79,7 +79,7 @@
 
 	}
 	else
-		gs.addErrorMessage('Something is wrong with the total count! ');
+		gs.addErrorMessage('Something went wrong with the total counter! ');
 	
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -88,7 +88,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a04395371bb95110c7c9fc078b4bcb95</sys_id>
-        <sys_mod_count>68</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>Supplier Invoice line total/total in ron</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -96,7 +96,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_a04395371bb95110c7c9fc078b4bcb95</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-10-26 07:40:37</sys_updated_on>
+        <sys_updated_on>2022-10-27 10:21:55</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

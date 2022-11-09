@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>create_virt</action_name>
+        <active>false</active>
+        <client>false</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.type== 'selling'&amp;&amp;current.state=='temporary'&amp;&amp;!current.virtual_equipments_generated</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Create virtual eq (Resale)</name>
+        <onclick>createvirtual()</onclick>
+        <order>100</order>
+        <script><![CDATA[var newAssets = [];
+var invoice_lines = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+invoice_lines.addQuery('client_invoice', current.sys_id);
+invoice_lines.query();
+while (invoice_lines.next()) {
+    var gr = new GlideRecord('alm_hardware');
+    gr.addQuery('x_tsigh_cmb_client_invoice_line', invoice_lines.sys_id);
+    gr.addQuery('x_tsigh_cmb_virtual', "false");
+    gr.query();
+    while (gr.next()) {
+        gr.number = new global.NumberManager('alm_asset').getNextObjNumberPadded();
+        gr.x_tsigh_cmb_virtual = "true";
+		if (gr.asset_tag) gr.asset_tag = gr.asset_tag+'-VIRT'; //.substring(2);
+		if (gr.serial_number) gr.serial_number = gr.serial_number+'-VIRT'; //.substring(2);
+        gr.insert();
+
+        newAssets.push(gr.number.toString());
+    }
+}
+current.virtual_equipments_generated = "true";
+current.update();
+
+gs.addInfoMessage("Virtual equipments created: " + newAssets.join());
+
+action.setRedirectURL(current);]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-10-27 09:13:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7be5b5211b3e5910c7c9fc078b4bcb40</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>Create virtual eq (Resale)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_action_7be5b5211b3e5910c7c9fc078b4bcb40</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-10-28 13:37:04</sys_updated_on>
+        <table>x_tsigh_cmb_client_invoice</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

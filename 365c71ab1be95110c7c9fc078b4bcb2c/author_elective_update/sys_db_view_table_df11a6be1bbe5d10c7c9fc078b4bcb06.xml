@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="DELETE">
+        <active>true</active>
+        <left_join>false</left_join>
+        <order>200</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-31 09:34:23</sys_created_on>
+        <sys_id>df11a6be1bbe5d10c7c9fc078b4bcb06</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>x_tsigh_cmb_client_invoice_lines</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_db_view_table_df11a6be1bbe5d10c7c9fc078b4bcb06</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-31 10:07:31</sys_updated_on>
+        <table>x_tsigh_cmb_client_invoice_lines</table>
+        <variable_prefix>cil</variable_prefix>
+        <view display_value="x_tsigh_cmb_import">6e00667a1bbe5d10c7c9fc078b4bcb44</view>
+        <where_clause/>
+    </sys_db_view_table>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_db_view_table_df11a6be1bbe5d10c7c9fc078b4bcb06</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table"><sys_db_view_table action="INSERT_OR_UPDATE"><active>true</active><left_join>false</left_join><order>200</order><sys_class_name>sys_db_view_table</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-31 09:34:23</sys_created_on><sys_id>df11a6be1bbe5d10c7c9fc078b4bcb06</sys_id><sys_mod_count>9</sys_mod_count><sys_name>x_tsigh_cmb_client_invoice_lines</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_db_view_table_df11a6be1bbe5d10c7c9fc078b4bcb06</sys_update_name><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-10-31 10:07:31</sys_updated_on><table>x_tsigh_cmb_client_invoice_lines</table><variable_prefix>cil</variable_prefix><view display_value="x_tsigh_cmb_import">6e00667a1bbe5d10c7c9fc078b4bcb44</view><where_clause/></sys_db_view_table></record_update>]]></payload>
+        <payload_hash>965682708</payload_hash>
+        <record_name>x_tsigh_cmb_client_invoice_lines</record_name>
+        <reverted_from/>
+        <source>1c84b1d11bfe1910c7c9fc078b4bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-31 10:07:31</sys_created_on>
+        <sys_id>3cc8a6761bfe5d10c7c9fc078b4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1842d82b50a0000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-31 10:07:31</sys_updated_on>
+        <type>View Table</type>
+        <update_guid>34c8a67602fe5d1045cdd4a6d73d0073</update_guid>
+        <update_guid_history>34c8a67602fe5d1045cdd4a6d73d0073:965682708,61862af206fe5d10bfe8abe5f6b99ed8:-1009998919,0766e6f2a7fe5d1089534475da79ce60:-1744415238,47f562f24afe5d105e7fbe19dc3ec0bc:-1009998919,8cb2a63229fe5d1079e3cb39f7df1c82:-1744415238,19a12afec2be5d103f40700b1956fd5e:-275582600,a3912afe17be5d10a191e1c5699c7d06:-1942492878,3f81e6fe41be5d104591bb27a1d83965:-109528666,c06122fe0dbe5d10e2061d5aaea2f00a:-2083376651,eb21a2feb1be5d1070c98fc39f0bbd01:965682708</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-31 10:08:09</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_view_table">sys_db_view_table</sys_db_object>
+        <sys_id>119409cbc2e344bc89f11cdf9e05fd44</sys_id>
+        <sys_metadata>df11a6be1bbe5d10c7c9fc078b4bcb06</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_client_invoice_lines</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="x_tsigh_cmb_import">6e00667a1bbe5d10c7c9fc078b4bcb44</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_db_view_table_df11a6be1bbe5d10c7c9fc078b4bcb06</sys_update_name>
+        <sys_update_version display_value="sys_db_view_table_df11a6be1bbe5d10c7c9fc078b4bcb06">3cc8a6761bfe5d10c7c9fc078b4bcb73</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-31 10:08:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

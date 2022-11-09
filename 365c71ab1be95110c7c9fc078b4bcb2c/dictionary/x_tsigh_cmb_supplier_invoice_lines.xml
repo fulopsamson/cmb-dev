@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Supplier invoice lines" max_length="40" name="x_tsigh_cmb_supplier_invoice_lines" sizeclass="3209" type="collection">
+    <element label="Supplier invoice lines" max_length="40" name="x_tsigh_cmb_supplier_invoice_lines" sizeclass="3241" type="collection">
         <element label="Contract number" max_length="40" name="contract_number" type="string"/>
         <element label="Currency" max_length="32" name="currency" read_only="true" reference="fx_currency" type="reference"/>
         <element label="End date" max_length="40" name="end_date" type="glide_date"/>
         <element label="Product" max_length="32" name="product" reference="cmdb_model" type="reference"/>
+        <element choice="1" choice_field="u_project_code" choice_table="x_tsigh_cmb_u_cmdb_ci_cmb_service" label="Project Code" max_length="40" name="project_code" type="choice">
+            <choice/>
+        </element>
         <element label="Quantity" max_length="40" name="quantity" type="integer"/>
         <element attributes="no_sort=true,slushbucket_ref_no_expand=true" label="Related devices" max_length="1024" name="related_devices" reference="alm_hardware" type="glide_list"/>
         <element label="Serial numbers" max_length="500" name="serial_numbers" type="string"/>

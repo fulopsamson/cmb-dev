@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_rl_action">
+    <sys_ui_policy_rl_action action="DELETE">
+        <list>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_pop_b</list>
+        <sys_class_name>sys_ui_policy_rl_action</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-03 08:40:17</sys_created_on>
+        <sys_id>5b81f97f1bfe1150c7c9fc078b4bcb6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_pop_b</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_policy_rl_action_5b81f97f1bfe1150c7c9fc078b4bcb6e</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-03 08:40:17</sys_updated_on>
+        <ui_policy display_value="CMB Service related lists">3831bd7f1bfe1150c7c9fc078b4bcb26</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_rl_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_policy_rl_action_5b81f97f1bfe1150c7c9fc078b4bcb6e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_rl_action"><sys_ui_policy_rl_action action="INSERT_OR_UPDATE"><list>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_pop_b</list><sys_class_name>sys_ui_policy_rl_action</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-11-03 08:40:17</sys_created_on><sys_id>5b81f97f1bfe1150c7c9fc078b4bcb6e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_pop_b</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_ui_policy_rl_action_5b81f97f1bfe1150c7c9fc078b4bcb6e</sys_update_name><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-11-03 08:40:17</sys_updated_on><ui_policy display_value="CMB Service related lists">3831bd7f1bfe1150c7c9fc078b4bcb26</ui_policy><visible>false</visible></sys_ui_policy_rl_action></record_update>]]></payload>
+        <payload_hash>110717419</payload_hash>
+        <record_name>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_pop_b</record_name>
+        <reverted_from/>
+        <source>1c84b1d11bfe1910c7c9fc078b4bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-03 08:40:17</sys_created_on>
+        <sys_id>549135bf1bfe1150c7c9fc078b4bcb0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1843ca5ed330000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-03 08:40:17</sys_updated_on>
+        <type>UI Policy Related List Action</type>
+        <update_guid>9c9135bff3fe115073309a33ae43b40a</update_guid>
+        <update_guid_history>9c9135bff3fe115073309a33ae43b40a:110717419</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-03 08:52:30</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_rl_action">sys_ui_policy_rl_action</sys_db_object>
+        <sys_id>98dc1808769c442996ec63482dd33901</sys_id>
+        <sys_metadata>5b81f97f1bfe1150c7c9fc078b4bcb6e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_pop_b</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_rl_action_5b81f97f1bfe1150c7c9fc078b4bcb6e</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_rl_action_5b81f97f1bfe1150c7c9fc078b4bcb6e">549135bf1bfe1150c7c9fc078b4bcb0b</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-03 08:52:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

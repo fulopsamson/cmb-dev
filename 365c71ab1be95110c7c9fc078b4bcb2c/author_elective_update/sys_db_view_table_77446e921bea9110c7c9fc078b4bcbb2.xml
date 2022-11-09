@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="DELETE">
+        <active>true</active>
+        <left_join>true</left_join>
+        <order>200</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-17 10:15:38</sys_created_on>
+        <sys_id>77446e921bea9110c7c9fc078b4bcbb2</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>x_tsigh_cmb_supplier_invoice_lines</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_db_view_table_77446e921bea9110c7c9fc078b4bcbb2</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-28 10:11:30</sys_updated_on>
+        <table>x_tsigh_cmb_supplier_invoice_lines</table>
+        <variable_prefix>sil</variable_prefix>
+        <view display_value="x_tsigh_cmb_asset_invoices">83146a921bea9110c7c9fc078b4bcb4b</view>
+        <where_clause>sil_sys_id=ahw_x_tsigh_cmb_invoice</where_clause>
+    </sys_db_view_table>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_db_view_table_77446e921bea9110c7c9fc078b4bcbb2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table"><sys_db_view_table action="INSERT_OR_UPDATE"><active>true</active><left_join>true</left_join><order>200</order><sys_class_name>sys_db_view_table</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-10-17 10:15:38</sys_created_on><sys_id>77446e921bea9110c7c9fc078b4bcbb2</sys_id><sys_mod_count>10</sys_mod_count><sys_name>x_tsigh_cmb_supplier_invoice_lines</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_db_view_table_77446e921bea9110c7c9fc078b4bcbb2</sys_update_name><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-10-28 10:11:30</sys_updated_on><table>x_tsigh_cmb_supplier_invoice_lines</table><variable_prefix>sil</variable_prefix><view display_value="x_tsigh_cmb_asset_invoices">83146a921bea9110c7c9fc078b4bcb4b</view><where_clause>sil_sys_id=ahw_x_tsigh_cmb_invoice</where_clause></sys_db_view_table></record_update>]]></payload>
+        <payload_hash>-630147106</payload_hash>
+        <record_name>x_tsigh_cmb_supplier_invoice_lines</record_name>
+        <reverted_from/>
+        <source>fd610e951b729d1030bc986c9b4bcbe1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-28 10:11:31</sys_created_on>
+        <sys_id>4aec8bfd1bb2115030bc986c9b4bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1841e1348380000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-28 10:11:31</sys_updated_on>
+        <type>View Table</type>
+        <update_guid>42ec8bfd57b211501020f7f2469e4346</update_guid>
+        <update_guid_history>42ec8bfd57b211501020f7f2469e4346:-630147106,bd8ccbfde2b21150686f0f97c59802ff:-1757295827,505c0bfd32b211502a79c7acf90724b5:737094605,232c43fd67b211508a5c4472b7d51a70:-1757295827,ea2c87fde1b2115049f8f7ce6d210477:-630147106,181cc3fd14b211504425cd8ea030e18d:789790596,26eb83fd59b211507ad3ba117489ac8b:-68371693,8fdb43fd7eb2115062183873c11b0a68:-1144111509,4ad24b2e3beed110cfa644082d28739e:-67010356,3575ead28bea91104bcaa60c2bd4a7c3:-1144111509,cf54ae9224ea9110b4ed0e3c641f3653:-67010356</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-28 10:15:36</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_view_table">sys_db_view_table</sys_db_object>
+        <sys_id>159aed363d5f41cb87aa5c763ca0d109</sys_id>
+        <sys_metadata>77446e921bea9110c7c9fc078b4bcbb2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_supplier_invoice_lines</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="x_tsigh_cmb_asset_invoices">83146a921bea9110c7c9fc078b4bcb4b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_db_view_table_77446e921bea9110c7c9fc078b4bcbb2</sys_update_name>
+        <sys_update_version display_value="sys_db_view_table_77446e921bea9110c7c9fc078b4bcbb2">4aec8bfd1bb2115030bc986c9b4bcb46</sys_update_version>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-28 10:15:36</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

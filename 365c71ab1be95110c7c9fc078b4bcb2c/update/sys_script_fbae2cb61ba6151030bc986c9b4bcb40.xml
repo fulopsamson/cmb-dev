@@ -76,6 +76,10 @@
             validationLine.setValue("month", current_start.getMonthUTC());
             validationLine.setValue('otc', rev.otc);
             validationLine.setValue('mrc', rev.mrc);
+			validationLine.setValue('project', current.u_project);
+			validationLine.setValue('project_code', current.u_project_code);
+			validationLine.setValue('product_type', current.u_product_type);
+			
 		
             if (curr <= current_end && curr >= current_start) {
                 validationLine.setValue('otc_calculated', rev.otc);
@@ -110,6 +114,9 @@
             validationLine.setValue('mrc', rev.mrc);
             validationLine.setValue('otc_calculated', (-1) * rev.otc);
             validationLine.setValue('mrc_calculated', (-1) * utils.claculateMRC(rev.mrc, current_start, current_end));
+			validationLine.setValue('project', current.u_project);
+			validationLine.setValue('project_code', current.u_project_code);
+			validationLine.setValue('product_type', current.u_product_type);
             validationLine.insert();
 			
 			
@@ -134,6 +141,9 @@
 				} else {
 					validationLine.setValue('otc_calculated', 0);
 				}
+				validationLine.setValue('project', current.u_project);
+				validationLine.setValue('project_code', current.u_project_code);
+				validationLine.setValue('product_type', current.u_product_type);
                 validationLine.setValue('mrc_calculated', utils.claculateMRC(rev.mrc, current_start, current_end));
                 validationLine.insert();
                 pointer.addDaysUTC(1);
@@ -156,7 +166,9 @@
                 validationLine.setValue("month", current_start.getMonthUTC());
                 validationLine.setValue('otc', rev.otc);
                 validationLine.setValue('mrc', rev.mrc);
-				
+				validationLine.setValue('project', current.u_project);
+				validationLine.setValue('project_code', current.u_project_code);
+				validationLine.setValue('product_type', current.u_product_type);
 				if (current_start <= prev && prev <= current_end) {
 					validationLine.setValue('otc_calculated', (-1) * rev.otc);
 				} else {
@@ -182,6 +194,9 @@
             validationLine.setValue('mrc', rev.mrc);
             validationLine.setValue('otc_calculated', rev.otc);
             validationLine.setValue('mrc_calculated', utils.claculateMRC(rev.mrc, current_start, current_end));
+			validationLine.setValue('project', current.u_project);
+			validationLine.setValue('project_code', current.u_project_code);
+			validationLine.setValue('product_type', current.u_product_type);
             validationLine.insert();			
         }
 
@@ -194,7 +209,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fbae2cb61ba6151030bc986c9b4bcb40</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>CMB Service Acceptance date change</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -202,7 +217,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_fbae2cb61ba6151030bc986c9b4bcb40</sys_update_name>
         <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-10-24 14:08:50</sys_updated_on>
+        <sys_updated_on>2022-11-07 09:32:54</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

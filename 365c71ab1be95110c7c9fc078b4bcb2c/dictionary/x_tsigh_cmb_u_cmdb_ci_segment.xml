@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="cmdb_ci" label="Segment" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_segment" sizeclass="652" type="collection">
+    <element audit="true" extends="cmdb_ci" label="Segment" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_segment" sizeclass="0" type="collection">
         <element label="Additional Information" max_length="2000" name="additional_information" type="string"/>
         <element label="Additional Info for Endpoint A" max_length="2000" name="additional_info_a" type="string"/>
         <element label="Additional Info for Endpoint B" max_length="2000" name="additional_info_b" type="string"/>
@@ -22,6 +22,7 @@
         <element label="Billing Profile" max_length="32" name="u_billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.u_provider" type="reference" use_reference_qualifier="advanced"/>
         <element label="Contact" max_length="32" name="u_contact" reference="contact" type="reference"/>
         <element label="Contract period" max_length="40" name="u_contract_period" type="integer"/>
+        <element label="CPE Configuration" max_length="40" name="u_cpe_configuration" type="file_attachment"/>
         <element label="Currency" max_length="32" name="u_currency" read_only="true" reference="fx_currency" type="reference"/>
         <element label="Early termination fee" max_length="40" name="u_early_termination_fee" type="float"/>
         <element label="From" max_length="32" name="u_from" reference="alm_stockroom" reference_qual="javascript:&quot;sys_id=&quot; + current.u_service.u_endpoint_a +  &quot;^ORsys_id=&quot; + current.u_service.u_endpoint_b + &quot;^ORsys_id=&quot; + current.u_service.u_pop_a + &quot;^ORsys_id=&quot; + current.u_service.u_pop_b" type="reference" use_reference_qualifier="advanced"/>
@@ -32,7 +33,7 @@
         <element label="Order" max_length="40" name="u_order" type="file_attachment"/>
         <element label="OTC" max_length="40" name="u_otc" type="float"/>
         <element label="Position" max_length="40" name="u_position" type="integer"/>
-        <element attributes="actual_state=product_type" choice="3" label="Product Type B" max_length="32" name="u_product_type_desired" reference="x_tsigh_cmb_product_type" type="reference">
+        <element attributes="actual_state=product_type" choice="1" label="Product Type B" max_length="32" name="u_product_type_desired" reference="x_tsigh_cmb_product_type" type="reference">
             <choice/>
         </element>
         <element label="Provider" max_length="32" name="u_provider" reference="customer_account" type="reference"/>

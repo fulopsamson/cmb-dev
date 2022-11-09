@@ -15,19 +15,61 @@ CMBAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		return JSON.stringify(ret);
 	},
 	
+	
+	generateClientInvoice:function(){
+		var entries = this.getParameter('sysparm_entries');
+		var ret = [];
+
+		gs.info('Entries : '+entries);
+		if(entries){
+			gs.info('Entries : in');
+			var ciu = new x_tsigh_cmb.CMBInvoiceUtils();
+			ret = ciu.validateLines(entries);
+			gs.info('Entries : val');
+			gs.info('Entries Validation results: '+JSON.stringify(ret));
+			if(ret.length==0){
+				gs.info('Entries : val2 entries: '+entries);
+				
+				var errors = ciu.processValidationLines(entries,true);
+				gs.info('Entries : val2 errors:'+(errors?errors.toString():'No errors'));
+				if(errors && errors.length>0){
+					ret.push('Couldn\'t generate invoice for selected lines. There are issues with the following partner reference numbers: '+errors.toString() );
+					gs.info('Entries val2 error msg: '+ret.toString());
+					return JSON.stringify(ret);
+				}else{
+					gs.info('Entries : val3 proc');
+					ciu.processValidationLines(entries);
+				} 
+
+			}else return JSON.stringify(ret);
+		}
+		return;
+	},
 	transferDevices: function() {
 		var devices = this.getParameter('devicelist');
 		var ret = new x_tsigh_cmb.CMBUtils().createTO(devices);
 		return JSON.stringify(ret);
 	},
-	
+
+
+	getCurrencyValue:function(){
+		var currency = this.getParameter('currency');
+		var dt = this.getParameter('curdate');
+		gs.info('Currency: '+currency+' - '+dt);
+		var gd = new GlideDate();
+		gd.setDisplayValue(dt);
+		var x = new x_tsigh_cmb.InvoiceExchangeRateServ();
+		var value = x.invoiceExchange(currency, dt);
+		return value?value:0;
+	},
+
 	validateLines:function(){
 		var entries = this.getParameter('sysparm_entries');
 		gs.info('entries: '+entries);
 		if(entries){
 			gs.info('Entries found');
 			var lines = entries.split(',');
-			gs.info('Lines: '+lines.toString());
+			gs.info('entries splitted');
 			for(var i=0;i<lines.length;i++){
 				var gr = new GlideRecord('x_tsigh_cmb_validation_line');
 				if(gr.get(lines[i])){
@@ -40,22 +82,8 @@ CMBAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 			return;
 		}
 	},
-	
-	generateClientInvoice:function(){
-		var entries = this.getParameter('sysparm_entries');
 
-		gs.info('Enbtries: '+entries);
-		if(entries){
-			var ciu = new x_tsigh_cmb.CMBInvoiceUtils();
-			var vl = ciu.validateLines(entries);
-			gs.info('Validation results: '+JSON.stringify(vl));
-			if(vl.length==0){
-				ciu.processValidationLines(entries);
-				
-			}else return JSON.stringify(vl);
-		}
-		return;
-	},
+
 
 	getBudget: function() {
 		var cc = this.getParameter('sysparm_cc');
@@ -121,13 +149,13 @@ CMBAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-09-26 13:08:52</sys_created_on>
         <sys_id>759007671bce5910c7c9fc078b4bcbce</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name>CMBAjax</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_759007671bce5910c7c9fc078b4bcbce</sys_update_name>
         <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-10-24 15:16:00</sys_updated_on>
+        <sys_updated_on>2022-11-08 16:52:09</sys_updated_on>
     </sys_script_include>
 </record_update>

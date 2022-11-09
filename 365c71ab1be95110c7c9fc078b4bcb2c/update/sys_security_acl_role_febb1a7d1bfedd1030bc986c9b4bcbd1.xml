@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-28 06:36:39</sys_created_on>
+        <sys_id>febb1a7d1bfedd1030bc986c9b4bcbd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_tsigh_cmb.transfer_manager</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_security_acl display_value="alm_transfer_order_line">7abb1a7d1bfedd1030bc986c9b4bcbd1</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_febb1a7d1bfedd1030bc986c9b4bcbd1</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-28 06:36:39</sys_updated_on>
+        <sys_user_role display_value="x_tsigh_cmb.transfer_manager" name="x_tsigh_cmb.transfer_manager">ef1fa6a51bb2dd1030bc986c9b4bcb1d</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

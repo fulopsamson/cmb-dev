@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_list_control">
+    <sys_ui_list_control action="DELETE">
+        <columns_condition/>
+        <disable_nlq>false</disable_nlq>
+        <edit_condition/>
+        <edit_default_filter/>
+        <edit_roles/>
+        <empty_condition/>
+        <filter_condition/>
+        <filter_roles/>
+        <hierarchical_lists>false</hierarchical_lists>
+        <label/>
+        <link_condition/>
+        <link_roles/>
+        <list_edit_insert_row>false</list_edit_insert_row>
+        <list_edit_ref_qual_tag/>
+        <list_edit_type>disabled</list_edit_type>
+        <name>x_tsigh_cmb_u_cmdb_ci_equipment_group</name>
+        <new_condition/>
+        <new_roles/>
+        <omit_columns_if_empty>false</omit_columns_if_empty>
+        <omit_count>false</omit_count>
+        <omit_count_views>false</omit_count_views>
+        <omit_count_views_list/>
+        <omit_drilldown_link>false</omit_drilldown_link>
+        <omit_edit_button>false</omit_edit_button>
+        <omit_filters>false</omit_filters>
+        <omit_if_empty>false</omit_if_empty>
+        <omit_links>false</omit_links>
+        <omit_new_button>true</omit_new_button>
+        <related_list>alm_asset.x_tsigh_cmb_equipment_group</related_list>
+        <sys_class_name>sys_ui_list_control</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-11-07 17:29:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>14c050911b8f9110c7c9fc078b4bcbfa</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_tsigh_cmb_u_cmdb_ci_equipment_group</sys_name>
+        <sys_overrides display_value="">global</sys_overrides>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_list_control_14c050911b8f9110c7c9fc078b4bcbfa</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-11-07 17:30:35</sys_updated_on>
+    </sys_ui_list_control>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_list_control_14c050911b8f9110c7c9fc078b4bcbfa</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_list_control"><sys_ui_list_control action="INSERT_OR_UPDATE"><columns_condition/><disable_nlq>false</disable_nlq><edit_condition/><edit_default_filter/><edit_roles/><empty_condition/><filter_condition/><filter_roles/><hierarchical_lists>false</hierarchical_lists><label/><link_condition/><link_roles/><list_edit_insert_row>false</list_edit_insert_row><list_edit_ref_qual_tag/><list_edit_type>disabled</list_edit_type><name>x_tsigh_cmb_u_cmdb_ci_equipment_group</name><new_condition/><new_roles/><omit_columns_if_empty>false</omit_columns_if_empty><omit_count>false</omit_count><omit_count_views>false</omit_count_views><omit_count_views_list/><omit_drilldown_link>false</omit_drilldown_link><omit_edit_button>false</omit_edit_button><omit_filters>false</omit_filters><omit_if_empty>false</omit_if_empty><omit_links>false</omit_links><omit_new_button>true</omit_new_button><related_list>alm_asset.x_tsigh_cmb_equipment_group</related_list><sys_class_name>sys_ui_list_control</sys_class_name><sys_created_by>toma.istvan</sys_created_by><sys_created_on>2022-11-07 17:29:32</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>14c050911b8f9110c7c9fc078b4bcbfa</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_tsigh_cmb_u_cmdb_ci_equipment_group</sys_name><sys_overrides display_value="">global</sys_overrides><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_ui_list_control_14c050911b8f9110c7c9fc078b4bcbfa</sys_update_name><sys_updated_by>toma.istvan</sys_updated_by><sys_updated_on>2022-11-07 17:30:35</sys_updated_on></sys_ui_list_control></record_update>]]></payload>
+        <payload_hash>-1523451995</payload_hash>
+        <record_name>x_tsigh_cmb_u_cmdb_ci_equipment_group</record_name>
+        <reverted_from/>
+        <source>155d3a0d1b7d9510c7c9fc078b4bcb27</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-11-07 17:30:35</sys_created_on>
+        <sys_id>db4190911b8f9110c7c9fc078b4bcb2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1845324dab50000001</sys_recorded_at>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-11-07 17:30:35</sys_updated_on>
+        <type>List Control</type>
+        <update_guid>d34190915a8f9110af8f26796328c92b</update_guid>
+        <update_guid_history>d34190915a8f9110af8f26796328c92b:-1523451995,0c111c514f8f91100f733088163b6045:-2035765039</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-11-08 08:19:30</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_list_control">sys_ui_list_control</sys_db_object>
+        <sys_id>05c266ce75bf4c40bd6664f9429b9000</sys_id>
+        <sys_metadata>14c050911b8f9110c7c9fc078b4bcbfa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_u_cmdb_ci_equipment_group</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Cmb U CMDB CI Equipment Group">037c7e631bed5110c7c9fc078b4bcbe1</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_list_control_14c050911b8f9110c7c9fc078b4bcbfa</sys_update_name>
+        <sys_update_version display_value="sys_ui_list_control_14c050911b8f9110c7c9fc078b4bcbfa">db4190911b8f9110c7c9fc078b4bcb2b</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-11-08 08:19:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

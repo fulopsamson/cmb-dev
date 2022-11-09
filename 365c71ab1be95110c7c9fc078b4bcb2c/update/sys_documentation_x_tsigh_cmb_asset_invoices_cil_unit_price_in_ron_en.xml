@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="cil_unit_price_in_ron" label="Customer net value RON" language="en" table="x_tsigh_cmb_asset_invoices">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>cil_unit_price_in_ron</element>
+            <help/>
+            <hint/>
+            <label>Customer net value RON</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_asset_invoices</name>
+            <plural>Customer net value RONs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-01 10:08:23</sys_created_on>
+            <sys_id>5c72ff8b1bfe9d10c7c9fc078b4bcb8d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Customer net value RON</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_documentation_x_tsigh_cmb_asset_invoices_cil_unit_price_in_ron_en</sys_update_name>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-01 10:08:23</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

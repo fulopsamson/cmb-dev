@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="DELETE">
+        <active>true</active>
+        <left_join>false</left_join>
+        <order>200</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-28 14:57:08</sys_created_on>
+        <sys_id>043ec84e1b72d910c7c9fc078b4bcbf3</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>alm_stockroom</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_db_view_table_043ec84e1b72d910c7c9fc078b4bcbf3</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-01 11:31:26</sys_updated_on>
+        <table>alm_stockroom</table>
+        <variable_prefix>stck</variable_prefix>
+        <view display_value="x_tsigh_cmb_equipment_situation_report">17070fb51b7e9910c7c9fc078b4bcb91</view>
+        <where_clause>stck_sys_id = ahw_stockroom</where_clause>
+    </sys_db_view_table>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_db_view_table_043ec84e1b72d910c7c9fc078b4bcbf3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table"><sys_db_view_table action="INSERT_OR_UPDATE"><active>true</active><left_join>false</left_join><order>200</order><sys_class_name>sys_db_view_table</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-10-28 14:57:08</sys_created_on><sys_id>043ec84e1b72d910c7c9fc078b4bcbf3</sys_id><sys_mod_count>9</sys_mod_count><sys_name>alm_stockroom</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_db_view_table_043ec84e1b72d910c7c9fc078b4bcbf3</sys_update_name><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-11-01 11:31:26</sys_updated_on><table>alm_stockroom</table><variable_prefix>stck</variable_prefix><view display_value="x_tsigh_cmb_equipment_situation_report">17070fb51b7e9910c7c9fc078b4bcb91</view><where_clause>stck_sys_id = ahw_stockroom</where_clause></sys_db_view_table></record_update>]]></payload>
+        <payload_hash>-309476790</payload_hash>
+        <record_name>alm_stockroom</record_name>
+        <reverted_from/>
+        <source>1c84b1d11bfe1910c7c9fc078b4bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-01 11:31:26</sys_created_on>
+        <sys_id>bf85441f1b32dd10c7c9fc078b4bcbcc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18432f5e6260000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-01 11:31:26</sys_updated_on>
+        <type>View Table</type>
+        <update_guid>b785441ff532dd10f71e72adfb2eb1cc</update_guid>
+        <update_guid_history>b785441ff532dd10f71e72adfb2eb1cc:-309476790,0275041fe432dd10da0d595916d8333a:-1181071595,250d82fe897e5d105c265412ec5c9499:-309476790,92fc42fef07e5d107324adff47509cb8:-1054348116,dbbc8ebe197e5d1099a8121aebfc6430:-309476790,9aab02be5a7e5d10e763e5641eadbc62:-730032217,669bce7e917e5d10975ad61b41e5a83f:1072245029,046f0c8ed872d910e0e4ecabd69c5ba0:-730032217,d95fc88eaf72d9103961f8404e1a2482:-76656360,354e0c4e4372d910f08beed1a524f52a:-730032217</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-01 11:42:18</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_view_table">sys_db_view_table</sys_db_object>
+        <sys_id>3ff697e2e1b34c599185a49274724629</sys_id>
+        <sys_metadata>043ec84e1b72d910c7c9fc078b4bcbf3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>alm_stockroom</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="x_tsigh_cmb_equipment_situation_report">17070fb51b7e9910c7c9fc078b4bcb91</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_db_view_table_043ec84e1b72d910c7c9fc078b4bcbf3</sys_update_name>
+        <sys_update_version display_value="sys_db_view_table_043ec84e1b72d910c7c9fc078b4bcbf3">bf85441f1b32dd10c7c9fc078b4bcbcc</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-01 11:42:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_rl_action">
+    <sys_ui_policy_rl_action action="DELETE">
+        <list>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_endpoint_a</list>
+        <sys_class_name>sys_ui_policy_rl_action</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-03 08:37:01</sys_created_on>
+        <sys_id>86c0757f1bfe1150c7c9fc078b4bcbe3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_endpoint_a</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_policy_rl_action_86c0757f1bfe1150c7c9fc078b4bcbe3</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-07 17:50:18</sys_updated_on>
+        <ui_policy display_value="CMB Service related Backbone Equipments">f3307d3f1bfe1150c7c9fc078b4bcbb5</ui_policy>
+        <visible>false</visible>
+    </sys_ui_policy_rl_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_ui_policy_rl_action_86c0757f1bfe1150c7c9fc078b4bcbe3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_rl_action"><sys_ui_policy_rl_action action="INSERT_OR_UPDATE"><list>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_endpoint_a</list><sys_class_name>sys_ui_policy_rl_action</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2022-11-03 08:37:01</sys_created_on><sys_id>86c0757f1bfe1150c7c9fc078b4bcbe3</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_endpoint_a</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_ui_policy_rl_action_86c0757f1bfe1150c7c9fc078b4bcbe3</sys_update_name><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2022-11-07 17:50:18</sys_updated_on><ui_policy display_value="CMB Service related Backbone Equipments">f3307d3f1bfe1150c7c9fc078b4bcbb5</ui_policy><visible>false</visible></sys_ui_policy_rl_action></record_update>]]></payload>
+        <payload_hash>-1003398627</payload_hash>
+        <record_name>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_endpoint_a</record_name>
+        <reverted_from/>
+        <source>1c84b1d11bfe1910c7c9fc078b4bcbad</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-07 17:50:18</sys_created_on>
+        <sys_id>98d5d0951b8f9110c7c9fc078b4bcb85</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1845336e9f50000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-07 17:50:18</sys_updated_on>
+        <type>UI Policy Related List Action</type>
+        <update_guid>90d5d095308f9110c4430d063ade8e85</update_guid>
+        <update_guid_history>90d5d095308f9110c4430d063ade8e85:-1003398627,b5c59495728f911031a7db744a7ddd90:1826678202,6cd0717f92fe11505565334c3ba2fe9a:-1003398627</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-07 17:50:40</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_rl_action">sys_ui_policy_rl_action</sys_db_object>
+        <sys_id>6852da9f0bd746dea100a322fd6c6f44</sys_id>
+        <sys_metadata>86c0757f1bfe1150c7c9fc078b4bcbe3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_u_cmdb_ci_cmb_service.u_endpoint_a</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_rl_action_86c0757f1bfe1150c7c9fc078b4bcbe3</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_rl_action_86c0757f1bfe1150c7c9fc078b4bcbe3">98d5d0951b8f9110c7c9fc078b4bcb85</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-07 17:50:40</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

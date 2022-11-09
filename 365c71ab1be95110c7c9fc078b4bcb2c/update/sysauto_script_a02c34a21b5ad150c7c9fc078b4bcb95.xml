@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time>1970-01-01 00:00:00</entered_time>
+        <name>BNR Exchange Rate</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <run_as display_value="Zoltan Szabo">29ffddaf1ba9111030bc986c9b4bcb9f</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2022-10-05 11:03:02</run_start>
+        <run_time>1970-01-01 01:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[var bnr = new x_tsigh_cmb.BNRExchangeRate();
+if(bnr.BNRExchange){
+        bnr.BNRExchange();
+        gs.log('Successfully imported BNR exchange rates');
+}
+else
+       gs.log('Failed to load BNR exchange rates');]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-05 11:04:04</sys_created_on>
+        <sys_id>a02c34a21b5ad150c7c9fc078b4bcb95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BNR Exchange Rate</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sysauto_script_a02c34a21b5ad150c7c9fc078b4bcb95</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-05 11:04:04</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

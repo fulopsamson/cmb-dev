@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.u_state == 'Active'</condition>
+        <condition>current.u_state == 'Active' &amp;&amp; current.isValidRecord() &amp;&amp; current.canWrite() </condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>true</form_button_v2>
@@ -61,7 +61,7 @@ function terminateService(){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>23f94cf11b42151030bc986c9b4bcb9b</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Terminate</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -69,7 +69,7 @@ function terminateService(){
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_ui_action_23f94cf11b42151030bc986c9b4bcb9b</sys_update_name>
         <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-09-23 11:30:51</sys_updated_on>
+        <sys_updated_on>2022-10-28 06:49:07</sys_updated_on>
         <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

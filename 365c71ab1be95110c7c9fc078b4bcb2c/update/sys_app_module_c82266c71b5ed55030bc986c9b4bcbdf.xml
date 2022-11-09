@@ -4,7 +4,7 @@
         <application display_value="Contract">bda0f193c0a8006401aa5f9b522837be</application>
         <assessment/>
         <device_type/>
-        <filter table="ast_contract">contract_model=332122871b5ed55030bc986c9b4bcbaf^EQ<item display_table="cmdb_model" display_value="Vendor support contract" endquery="false" field="contract_model" goto="false" newquery="false" operator="=" or="false" value="332122871b5ed55030bc986c9b4bcbaf"/>
+        <filter table="ast_contract">contract_model=332122871b5ed55030bc986c9b4bcbaf^EQ<item endquery="false" field="contract_model" goto="false" newquery="false" operator="=" or="false" value="332122871b5ed55030bc986c9b4bcbaf"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter>
         <hint/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Contract" max_length="40" name="ast_contract" sizeclass="135" type="collection">
+    <element label="Contract" max_length="40" name="ast_contract" sizeclass="0" type="collection">
         <element label="Billing Profile" max_length="32" name="x_tsigh_cmb_billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.account" type="reference" use_reference_qualifier="advanced"/>
         <element label="Supplier invoice" max_length="32" name="x_tsigh_cmb_supplier_invoice" reference="x_tsigh_cmb_supplier_invoice" type="reference"/>
         <index name="index">
