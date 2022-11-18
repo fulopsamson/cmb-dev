@@ -161,17 +161,17 @@ CMBServiceUtils.prototype = {
         var end = new GlideDateTime(endDate);
 
         if (start == '' || end == '') {
-            gs.info('Error in calculate func: ' + 'start: ' + start.getDate() + ', end: ' + end.getDate())
+            gs.info('Error in calculate func: ' + 'start: ' + start.getDate() + ', end: ' + end.getDate());
             return null;
         }
 
         if (start > end) {
-            gs.info('Error in calculate func: ' + start.getDate() + ' > ' + end.getDate())
+            gs.info('Error in calculate func: ' + start.getDate() + ' > ' + end.getDate());
             return null;
         }
 
         if (start.getYearUTC() !== end.getYearUTC() || start.getMonthUTC() !== end.getMonthUTC()) {
-            gs.info('Error in calculate func: ' + start.getDate() + ' not in same period as ' + end.getDate())
+            gs.info('Error in calculate func: ' + start.getDate() + ' not in same period as ' + end.getDate());
             return null;
         }
 
@@ -512,13 +512,13 @@ CMBServiceUtils.prototype = {
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-10-05 08:11:11</sys_created_on>
         <sys_id>0ca49ce21bd6555030bc986c9b4bcb87</sys_id>
-        <sys_mod_count>146</sys_mod_count>
+        <sys_mod_count>147</sys_mod_count>
         <sys_name>CMBServiceUtils</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_0ca49ce21bd6555030bc986c9b4bcb87</sys_update_name>
         <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-10-19 09:33:24</sys_updated_on>
+        <sys_updated_on>2022-11-14 14:10:04</sys_updated_on>
     </sys_script_include>
 </record_update>

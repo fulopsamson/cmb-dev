@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_tsigh_cmb_calculated_report</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Calculated report after insert</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    var fc = new x_tsigh_cmb.Forecast();
+    var list = current.billing_profiles.toString();
+    var billingprofiles = list.split(',');
+    var string = fc.generateCSV(billingprofiles, current.start_date, current.percent, current.number_of_months_after_expiration, current.currency, current.exchange_date);
+
+    var contentType = 'text/csv;charset=utf-8';
+    var sysattach = new GlideRecord('sys_attachment');
+    sysattach.initialize();
+    sysattach.table_name = current.table_name;
+    sysattach.table_sys_id = current.sys_id;
+    var file = new GlideSysAttachment();
+    var filename = current.number + '.csv';
+    var t = file.write(sysattach, filename, contentType, string);
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>istvan.toma</sys_created_by>
+        <sys_created_on>2022-11-17 16:10:12</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d24e5bd81b975d10c7c9fc078b4bcb72</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Calculated report after insert</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_d24e5bd81b975d10c7c9fc078b4bcb72</sys_update_name>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-11-17 22:37:50</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=d24e5bd81b975d10c7c9fc078b4bcb72"/>
+</record_update>

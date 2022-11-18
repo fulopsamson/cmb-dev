@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="cmdb_ci" label="CMB Service" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sizeclass="0" type="collection">
+    <element audit="true" extends="cmdb_ci" label="CMB Service" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sizeclass="13" type="collection">
         <element choice="1" choice_field="approval" choice_table="task" label="Approval" max_length="40" name="approval" type="string">
             <choice>
                 <element inactive_on_update="false" label="Not Yet Requested" sequence="0" value="not requested"/>
@@ -28,34 +28,35 @@
         <element label="New Endpoint B" max_length="40" name="new_endpoint_b" type="boolean"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element label="Original ID" max_length="20" name="original_id" type="string"/>
-        <element label="Partner reference number" max_length="100" name="partner_ref_nr" type="string"/>
+        <element label="Partner reference number" mandatory="true" max_length="100" name="partner_ref_nr" type="string"/>
         <element label="PO/Contract number" max_length="100" name="po_contract_number" type="string"/>
-        <element choice="3" default="CMB" label="Serial" max_length="40" name="serial" type="choice">
+        <element attributes="edge_encryption_enabled=true" function_definition="glidefunction:subtract(u_mrc,u_otc)" function_field="true" label="test" max_length="40" name="rpt_test" read_only="true" type="glide_date"/>
+        <element attributes="is_searchable_choice=true" choice="3" default="CMB" label="Serial" max_length="40" name="serial" type="choice">
             <choice>
-                <element inactive="true" inactive_on_update="true" label="BVPN" sequence="0" value="BVPN"/>
                 <element inactive_on_update="false" label="BVPN" sequence="0" value="BVPN"/>
+                <element inactive_on_update="false" label="BVPN" sequence="0" value="BVPN"/>
+                <element inactive="true" inactive_on_update="true" label="HA" sequence="0" value="HA"/>
                 <element inactive_on_update="false" label="HA" sequence="1" value="HA"/>
-                <element inactive_on_update="false" label="HA" sequence="1" value="HA"/>
-                <element inactive="true" inactive_on_update="true" label="CBLIA" sequence="2" value="CBLIA"/>
                 <element inactive_on_update="false" label="CBLIA" sequence="2" value="CBLIA"/>
-                <element inactive="true" inactive_on_update="true" label="CBNGN" sequence="3" value="CBNGN"/>
+                <element inactive_on_update="false" label="CBLIA" sequence="2" value="CBLIA"/>
                 <element inactive_on_update="false" label="CBNGN" sequence="3" value="CBNGN"/>
-                <element inactive="true" inactive_on_update="true" label="CL2TP" sequence="4" value="CL2TP"/>
+                <element inactive_on_update="false" label="CBNGN" sequence="3" value="CBNGN"/>
                 <element inactive_on_update="false" label="CL2TP" sequence="4" value="CL2TP"/>
-                <element inactive="true" inactive_on_update="true" label="CMB" sequence="5" value="CMB"/>
+                <element inactive_on_update="false" label="CL2TP" sequence="4" value="CL2TP"/>
                 <element inactive_on_update="false" label="CMB" sequence="5" value="CMB"/>
-                <element inactive="true" inactive_on_update="true" label="CMBBB" sequence="6" value="CMBBB"/>
+                <element inactive_on_update="false" label="CMB" sequence="5" value="CMB"/>
                 <element inactive_on_update="false" label="CMBBB" sequence="6" value="CMBBB"/>
-                <element inactive="true" inactive_on_update="true" label="CMBIP" sequence="7" value="CMBIP"/>
+                <element inactive_on_update="false" label="CMBBB" sequence="6" value="CMBBB"/>
                 <element inactive_on_update="false" label="CMBIP" sequence="7" value="CMBIP"/>
-                <element inactive="true" inactive_on_update="true" label="CMBOS" sequence="8" value="CMBOS"/>
+                <element inactive_on_update="false" label="CMBIP" sequence="7" value="CMBIP"/>
                 <element inactive_on_update="false" label="CMBOS" sequence="8" value="CMBOS"/>
-                <element inactive="true" inactive_on_update="true" label="G0VPN" sequence="9" value="G0VPN"/>
+                <element inactive_on_update="false" label="CMBOS" sequence="8" value="CMBOS"/>
+                <element inactive_on_update="false" label="G0VPN" sequence="9" value="G0VPN"/>
                 <element inactive_on_update="false" label="G0VPN" sequence="9" value="G0VPN"/>
                 <element inactive_on_update="false" label="HA" sequence="9" value="HA"/>
-                <element inactive="true" inactive_on_update="true" label="S0VPN" sequence="10" value="S0VPN"/>
                 <element inactive_on_update="false" label="S0VPN" sequence="10" value="S0VPN"/>
-                <element inactive="true" inactive_on_update="true" label="TGBCB" sequence="11" value="TGBCB"/>
+                <element inactive_on_update="false" label="S0VPN" sequence="10" value="S0VPN"/>
+                <element inactive_on_update="false" label="TGBCB" sequence="11" value="TGBCB"/>
                 <element inactive_on_update="false" label="TGBCB" sequence="11" value="TGBCB"/>
                 <element inactive_on_update="false" label="000001" sequence="12" value="000001"/>
                 <element inactive_on_update="false" label="1" sequence="13" value="1"/>
@@ -225,7 +226,7 @@
         <element label="Capacity value" max_length="40" name="u_capacity_value" type="integer"/>
         <element label="Combridge ID" max_length="200" name="u_combridge_id" read_only="true" type="string"/>
         <element label="Contract" max_length="32" name="u_contract" reference="ast_contract" reference_qual="javascript:&quot;x_tsigh_cmb_billing_profile=&quot; + current.u_billing_profile + &quot;^u_type=PO^ORu_type=Addendum&quot;" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Contract number" max_length="100" name="u_contract_number" type="string"/>
+        <element label="Contract number" mandatory="true" max_length="100" name="u_contract_number" type="string"/>
         <element label="Contract period" max_length="40" name="u_contract_period" type="integer"/>
         <element label="Currency" max_length="40" name="u_currency" read_only="true" reference="fx_currency" type="reference"/>
         <element label="Designation" max_length="200" name="u_designation" type="string"/>
@@ -246,7 +247,7 @@
         <element label="Pop B" max_length="32" name="u_pop_b" reference="alm_stockroom" reference_qual="type.name=Backbone Equipment^EQ" reference_qual_condition="type.name=Backbone Equipment^EQ" type="reference"/>
         <element label="Product type" max_length="32" name="u_product_type" reference="x_tsigh_cmb_product_type" type="reference"/>
         <element label="Project" max_length="32" name="u_project" reference="x_tsigh_cmb_project" type="reference"/>
-        <element choice="1" label="Project code" max_length="40" name="u_project_code" type="choice">
+        <element attributes="is_searchable_choice=true" choice="1" label="Project code" max_length="40" name="u_project_code" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Asahi_Austria" value="35010"/>
                 <element inactive_on_update="false" label="Asahi_Canada" value="35008"/>
@@ -644,7 +645,7 @@
             </choice>
         </element>
         <element label="RFS Commited" max_length="40" name="u_rfs_commited" type="glide_date"/>
-        <element label="RFS Requested&#9;" max_length="40" name="u_rfs_requested" type="glide_date"/>
+        <element label="RFS Requested&#9;" mandatory="true" max_length="40" name="u_rfs_requested" type="glide_date"/>
         <element label="Service description" max_length="100" name="u_service_description" type="string"/>
         <element choice="1" default="Initial" label="State" max_length="40" name="u_state" type="choice">
             <choice>

@@ -17,16 +17,16 @@
         <sys_ui_form_section action="INSERT_OR_UPDATE">
             <position>1</position>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-10-03 09:55:18</sys_created_on>
+            <sys_created_on>2022-11-17 16:16:27</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>707912b91b565150c7c9fc078b4bcb28</sys_id>
+            <sys_id>4730ab5c1b975d10c7c9fc078b4bcbda</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="x_tsigh_cmb_u_cmdb_ci_segment" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">78b792391b565150c7c9fc078b4bcb5c</sys_ui_form>
-            <sys_ui_section caption="Order form information" display_value="Order form information" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">f479de791b565150c7c9fc078b4bcb9d</sys_ui_section>
+            <sys_ui_section caption="Order form information" display_value="Order form information" name="x_tsigh_cmb_u_cmdb_ci_segment" sys_domain="global" view="fb8ded641b125d10c7c9fc078b4bcb8e">4330ab5c1b975d10c7c9fc078b4bcb75</sys_ui_section>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-10-03 09:55:18</sys_updated_on>
+            <sys_updated_on>2022-11-17 16:16:27</sys_updated_on>
         </sys_ui_form_section>
         <sys_ui_form action="INSERT_OR_UPDATE">
             <name>x_tsigh_cmb_u_cmdb_ci_segment</name>

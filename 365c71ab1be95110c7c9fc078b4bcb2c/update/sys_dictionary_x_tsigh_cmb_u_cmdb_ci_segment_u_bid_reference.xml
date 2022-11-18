@@ -14,7 +14,7 @@
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Bid reference</column_label>
+        <column_label>Quote reference</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -54,14 +54,14 @@
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-10-03 08:32:41</sys_created_on>
         <sys_id>6046063d1b52d15030bc986c9b4bcb82</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>Bid reference</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Quote reference</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_dictionary_x_tsigh_cmb_u_cmdb_ci_segment_u_bid_reference</sys_update_name>
-        <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-10-03 08:32:41</sys_updated_on>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-17 15:06:00</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

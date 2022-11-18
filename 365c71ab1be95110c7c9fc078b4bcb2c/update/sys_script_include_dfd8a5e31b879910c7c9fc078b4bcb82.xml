@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.Forecast</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>Forecast</name>
+        <script><![CDATA[var Forecast = Class.create();
+Forecast.prototype = {
+    initialize: function() {
+
+    },
+
+    SEP: ';',
+    TOTALREV: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    TOTALCOST: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    TOTALPROFIT: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    PROFITBYSERVICE: {},
+
+    generateCSV: function(billingProfiles, startDate, percent, monthcount, currency, exchDate) {
+        var revenue = 'Revenues \r\n';
+        var cost = 'Costs \r\n';
+        var profit = 'Profit \r\n';
+
+        for (var i = 0; i < billingProfiles.length; i++) {
+            var services = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
+            services.addQuery('u_billing_profile', billingProfiles[i]);
+            services.addQuery('u_state', '!=', 'Terminated');
+            services.query();
+            while (services.next()) {
+                if (services.u_state == 'Active') var calcStart = new GlideDateTime(services.u_acceptance_date);
+                else var calcStart = new GlideDateTime(services.u_rfs_requested);
+                var realEnd = new GlideDateTime(calcStart);
+                realEnd.addMonthsUTC(parseInt(services.u_contract_period));
+                var extraEnd = new GlideDateTime(realEnd);
+                extraEnd.addMonthsUTC(parseInt(monthcount));
+                gs.info("P log service, calcStart, realEnd, extraEnd" + services.number + ", " + calcStart + ", " + realEnd + ", " + extraEnd);
+                var row = this._calc(services, startDate, calcStart, realEnd, extraEnd, percent, "revenue", currency, exchDate);
+                revenue += row + ' \r\n';
+                row = this._calc(services, startDate, calcStart, realEnd, extraEnd, percent, "cost", currency, exchDate);
+                cost += row + ' \r\n';
+                row = this._profitCalc(services, realEnd, currency);
+                profit += row + ' \r\n';
+            }
+        }
+
+        var header = this._setupHeader(startDate);
+        var revtotal = 'Total Revenues;;;;;;;;;;' + this.TOTALREV.join(this.SEP) + '\r\n';
+        var costtotal = 'Total Costs;;;;;;;;;;' + this.TOTALCOST.join(this.SEP) + '\r\n';
+        var profittotal = 'Total Profit;;;;;;;;;;' + this.TOTALPROFIT.join(this.SEP) + '\r\n';
+        var csv = header + revenue + revtotal + cost + costtotal + profit + profittotal;
+        return csv;
+
+    },
+
+    _calc: function(service, start, serviceStart, serviceEnd, extraEnd, percent, mode, currency, exchDate) {
+        var row = service.number + this.SEP + service.u_product_type.getDisplayValue() + this.SEP + service.u_project.getDisplayValue() + this.SEP + service.u_project_code + this.SEP + "\"" + service.partner_ref_nr + "\"" + this.SEP + service.u_combridge_id + this.SEP + service.u_acceptance_date.toString() + this.SEP + service.u_contract_period + this.SEP + serviceEnd.toString() + this.SEP + currency;
+        var actualStart = new GlideDateTime(start);
+        var actualEnd = new GlideDateTime(actualStart);
+        actualEnd.addMonthsUTC(1);
+
+        // revenue and cost base calc
+        var cmbServiceUtils = new x_tsigh_cmb.CMBServiceUtils();
+        if (mode == "revenue") var Sum = cmbServiceUtils.getRevenueSum(service.sys_id);
+        else var Sum = this._getCostSum(service.sys_id); // mode=="cost"
+
+        // exchange to selected currency
+        if (service.u_currency != currency) {
+            var currencyUtils = new x_tsigh_cmb.CurrencyUtils();
+            Sum["mrc"] = currencyUtils.convertOnDate(Sum["mrc"], currency, service.u_currency, exchDate);
+            Sum["otc"] = currencyUtils.convertOnDate(Sum["otc"], currency, service.u_currency, exchDate);
+        }
+
+		// initialize array for profit calculation
+        if (mode == "revenue") this.PROFITBYSERVICE[service.number] = [];
+
+		// calculate for 36 month
+        for (var j = 0; j < 36; j++) {
+            // in activation month
+            if (actualStart.getYearUTC() == serviceStart.getYearUTC() && actualStart.getMonthUTC() == serviceStart.getMonthUTC()) {
+                var endOfMonth = new GlideDateTime(actualEnd);
+                endOfMonth.addDaysUTC(-1);
+                var higherRev = cmbServiceUtils.claculateMRC(Sum["mrc"], serviceStart, endOfMonth);
+                higherRev += Sum["otc"];
+                if (mode == "revenue") {
+                    this.TOTALREV[j] = this.TOTALREV[j] + higherRev;
+                    this.PROFITBYSERVICE[service.number][j] = higherRev;
+                } else {
+                    this.TOTALCOST[j] = this.TOTALCOST[j] + higherRev;
+                    this.PROFITBYSERVICE[service.number][j] = this.PROFITBYSERVICE[service.number][j] - higherRev;
+                }
+                row += this.SEP + higherRev.toString();
+            } else
+                // in a "normal" month
+                if (actualStart >= serviceStart && actualEnd <= serviceEnd) {
+                    if (mode == "revenue") {
+                        this.TOTALREV[j] = this.TOTALREV[j] + Sum["mrc"];
+                        this.PROFITBYSERVICE[service.number][j] = Sum["mrc"];
+                    } else {
+                        this.TOTALCOST[j] = this.TOTALCOST[j] + Sum["mrc"];
+                        this.PROFITBYSERVICE[service.number][j] = this.PROFITBYSERVICE[service.number][j] - Sum["mrc"];
+                    }
+                    row += this.SEP + Sum["mrc"].toString();
+                } else
+                    // in extra termin month
+                    if (actualStart >= serviceStart && actualEnd <= extraEnd) {
+                        var extra = Sum["mrc"] * parseFloat(percent);
+                        if (mode == "revenue") {
+                            this.TOTALREV[j] = this.TOTALREV[j] + extra;
+                            this.PROFITBYSERVICE[service.number][j] = extra
+                        } else {
+                            this.TOTALCOST[j] = this.TOTALCOST[j] + extra;
+                            this.PROFITBYSERVICE[service.number][j] = this.PROFITBYSERVICE[service.number][j] - extra;
+                        }
+                        row += this.SEP + extra.toString();
+                    } else
+            // not in the active timeframe
+            {
+                row += this.SEP + '0';
+                this.PROFITBYSERVICE[service.number][j] = 0;
+            }
+            actualStart.addMonthsUTC(1);
+            actualEnd.addMonthsUTC(1);
+        }
+        return row;
+    },
+
+    _getCostSum: function(service_sys_id) {
+        var otc = 0;
+        var mrc = 0;
+        var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_segment');
+        gr.addQuery('u_service', service_sys_id);
+        gr.query();
+        while (gr.next()) {
+            otc += gr.u_otc;
+            mrc += gr.u_mrc;
+        }
+        return {
+            'otc': otc,
+            'mrc': mrc
+        };
+    },
+
+
+    _setupHeader: function(startDate) {
+        var result = ';Product;Project;Project Code;Partner reference number;Combridge ID;Acceptance date;Contract period;End date;Currency';
+        var start = new GlideDateTime(startDate);
+        for (var j = 0; j < 36; j++) {
+            result += "; " + start.getMonthUTC().toString() + "-" + start.getYearUTC().toString();
+            start.addMonthsUTC(1);
+        }
+        result += ' \r\n';
+        return result;
+    },
+
+    _profitCalc: function(service, serviceEnd, currency) {
+        var row = service.number + this.SEP + service.u_product_type.getDisplayValue() + this.SEP + service.u_project.getDisplayValue() + this.SEP + service.u_project_code + this.SEP + "\"" + service.partner_ref_nr + "\"" + this.SEP + service.u_combridge_id + this.SEP + service.u_acceptance_date.toString() + this.SEP + service.u_contract_period + this.SEP + serviceEnd.toString() + this.SEP + currency;
+        for (var j = 0; j < 36; j++) {
+            var profit = this.PROFITBYSERVICE[service.number][j];
+            this.TOTALPROFIT[j] += profit;
+            row += "; " + profit.toString();
+        }
+        return row;
+    },
+
+    type: 'Forecast'
+
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-11-14 23:55:27</sys_created_on>
+        <sys_id>dfd8a5e31b879910c7c9fc078b4bcb82</sys_id>
+        <sys_mod_count>68</sys_mod_count>
+        <sys_name>Forecast</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_dfd8a5e31b879910c7c9fc078b4bcb82</sys_update_name>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-11-17 22:44:04</sys_updated_on>
+    </sys_script_include>
+</record_update>

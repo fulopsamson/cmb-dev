@@ -13,6 +13,7 @@ SupplierOrderPDF.prototype = {
     }, 
 	
 	getHTML: function(sys_id){
+		
 		var template = gs.getProperty('x_tsigh_cmb.order_template');
 		var gr = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_segment');
 		gr.addQuery('sys_id', sys_id);
@@ -27,20 +28,32 @@ if (logo)
 if(gr.getDisplayValue('kind_of_order') == 'New'){
 	template = template.replaceAll('kind_of_order', gr.getDisplayValue('kind_of_order'));
 	template = template.replaceAll('rfs_date', gr.rfs_r_date);
+	
+	template = template.replace('otc', gr.getDisplayValue('u_otc'));
+	template = template.replace('mrc', gr.getDisplayValue('u_mrc'));
+	template = template.replace('contract_term', gr.u_contract_period);
+
 }
 
 else if(gr.getDisplayValue('kind_of_order') == 'Edit'){
 	template = template.replaceAll('kind_of_order', gr.getDisplayValue('kind_of_order'));
 	template = template.replaceAll('R-RFS Date', 'Last Billing Date');
-	
 	template = template.replaceAll('rfs_date', gr.last_billing_date);
+	
+	template = template.replace('otc', gr.getDisplayValue('u_otc'));
+	template = template.replace('mrc', gr.getDisplayValue('u_mrc'));
+	template = template.replace('contract_term', gr.u_contract_period);
+	
 }
 			
 else if(gr.getDisplayValue('kind_of_order') == 'Cancellation'){
 	template = template.replaceAll('kind_of_order', gr.getDisplayValue('kind_of_order'));
 	template = template.replaceAll('R-RFS Date', 'Last Billing Date');
-	
 	template = template.replaceAll('rfs_date', gr.last_billing_date);
+	
+	template = template.replace('otc', 0);
+	template = template.replace('mrc', 0);
+	template = template.replace('contract_term', " ");
 }
 
 
@@ -55,22 +68,16 @@ if (agr.next()) {
 }
 
 var image_html = '<img src="data:' + attachmentType + ';base64,' + attachmentContent + '" />';
-			
-if(gr.u_additional_image){
-	template = template.replace('image', image_html);
-}
 
+template = template.replace('image', image_html);
 
 template = template.replace('segment_id', gr.number);
-template = template.replace('contract_term', gr.u_contract_period);
 template = template.replaceAll('date_of_order', gr.sys_created_on);
-template = template.replace('otc', gr.getDisplayValue('u_otc'));
-template = template.replace('mrc', gr.getDisplayValue('u_mrc'));
 template = template.replace('currency', gr.u_currency);
 template = template.replace('additional_info', gr.additional_information);
 template = template.replace('bid_ref', gr.u_bid_reference);
 
-			
+			/*
 var prov = new GlideRecord('sys_user');
 prov.addQuery('user_name', gr.sys_created_by);
 prov.query();
@@ -85,6 +92,13 @@ else if(!prov.next()){
 	template = template.replace('provisioning_phone_number', ' ');
 	template = template.replace('provisioning_email_address', ' ');
 }
+*/
+			
+var prov = gr.u_provisioning_contact.getRefRecord();
+var name = prov.first_name + " " + prov.last_name;
+template = template.replace('provisioning_contact_name', name);
+template = template.replace('provisioning_phone_number', prov.phone);
+template = template.replace('provisioning_email_address', prov.email);
 
 			
 var endA = gr.u_from.getRefRecord();
@@ -226,13 +240,13 @@ template = template.replace('right_text', gr.additional_info_b);
         <sys_created_by>szabo.zoltan</sys_created_by>
         <sys_created_on>2022-10-03 12:22:47</sys_created_on>
         <sys_id>94a1fa311bd65150c7c9fc078b4bcb33</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>57</sys_mod_count>
         <sys_name>SupplierOrderPDF</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_94a1fa311bd65150c7c9fc078b4bcb33</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-11-03 15:17:34</sys_updated_on>
+        <sys_updated_on>2022-11-17 15:28:34</sys_updated_on>
     </sys_script_include>
 </record_update>

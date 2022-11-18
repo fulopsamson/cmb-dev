@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="e93aabab1b0f9910c7c9fc078b4bcbae" sys_domain="global" table="alm_application_software" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:04:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b13aabab1b0f9910c7c9fc078b4bcbc2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_application_software" name="alm_application_software" sys_domain="global" view="Default view">e93aabab1b0f9910c7c9fc078b4bcbae</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="alm_application_software" sys_domain="global" view="Default view">393aabab1b0f9910c7c9fc078b4bcbbd</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:04:37</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:04:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f93aabab1b0f9910c7c9fc078b4bcbd5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_application_software" name="alm_application_software" sys_domain="global" view="Default view">e93aabab1b0f9910c7c9fc078b4bcbae</sys_ui_form>
+            <sys_ui_section caption="General" display_value="General" name="alm_application_software" sys_domain="global" view="Default view">b53aabab1b0f9910c7c9fc078b4bcbc2</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:04:37</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:04:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b13aabab1b0f9910c7c9fc078b4bcbb9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_application_software" name="alm_application_software" sys_domain="global" view="Default view">e93aabab1b0f9910c7c9fc078b4bcbae</sys_ui_form>
+            <sys_ui_section caption="Financial" display_value="Financial" name="alm_application_software" sys_domain="global" view="Default view">713aabab1b0f9910c7c9fc078b4bcbb5</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:04:37</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:04:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>353aabab1b0f9910c7c9fc078b4bcbbd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_application_software" name="alm_application_software" sys_domain="global" view="Default view">e93aabab1b0f9910c7c9fc078b4bcbae</sys_ui_form>
+            <sys_ui_section caption="Contracts" display_value="Contracts" name="alm_application_software" sys_domain="global" view="Default view">b53aabab1b0f9910c7c9fc078b4bcbb9</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:04:37</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:04:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f93aabab1b0f9910c7c9fc078b4bcbd8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_application_software" name="alm_application_software" sys_domain="global" view="Default view">e93aabab1b0f9910c7c9fc078b4bcbae</sys_ui_form>
+            <sys_ui_section caption="Activities" display_value="Activities" name="alm_application_software" sys_domain="global" view="Default view">fd3aabab1b0f9910c7c9fc078b4bcbd5</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:04:37</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:04:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7d3aabab1b0f9910c7c9fc078b4bcbb4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_application_software" name="alm_application_software" sys_domain="global" view="Default view">e93aabab1b0f9910c7c9fc078b4bcbae</sys_ui_form>
+            <sys_ui_section caption="Depreciation" display_value="Depreciation" name="alm_application_software" sys_domain="global" view="Default view">2d3aabab1b0f9910c7c9fc078b4bcbb0</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:04:37</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>alm_application_software</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:04:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e93aabab1b0f9910c7c9fc078b4bcbae</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>alm_application_software</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_form_sections_e93aabab1b0f9910c7c9fc078b4bcbae</sys_update_name>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:04:37</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

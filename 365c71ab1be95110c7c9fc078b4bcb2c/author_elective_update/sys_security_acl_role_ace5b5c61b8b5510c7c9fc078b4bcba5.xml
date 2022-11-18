@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-11-10 08:45:29</sys_created_on>
+        <sys_id>ace5b5c61b8b5510c7c9fc078b4bcba5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_forecast.x_tsigh_cmb.forecast_user</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_security_acl display_value="x_tsigh_cmb_forecast">a0e5b5c61b8b5510c7c9fc078b4bcba1</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_ace5b5c61b8b5510c7c9fc078b4bcba5</sys_update_name>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-11-10 08:45:29</sys_updated_on>
+        <sys_user_role display_value="x_tsigh_cmb.forecast_user" name="x_tsigh_cmb.forecast_user">20e539861b8b5510c7c9fc078b4bcbdf</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_security_acl_role_ace5b5c61b8b5510c7c9fc078b4bcba5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>toma.istvan</sys_created_by><sys_created_on>2022-11-10 08:45:29</sys_created_on><sys_id>ace5b5c61b8b5510c7c9fc078b4bcba5</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_tsigh_cmb_forecast.x_tsigh_cmb.forecast_user</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_security_acl display_value="x_tsigh_cmb_forecast">a0e5b5c61b8b5510c7c9fc078b4bcba1</sys_security_acl><sys_update_name>sys_security_acl_role_ace5b5c61b8b5510c7c9fc078b4bcba5</sys_update_name><sys_updated_by>toma.istvan</sys_updated_by><sys_updated_on>2022-11-10 08:45:29</sys_updated_on><sys_user_role display_value="x_tsigh_cmb.forecast_user" name="x_tsigh_cmb.forecast_user">20e539861b8b5510c7c9fc078b4bcbdf</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>178586993</payload_hash>
+        <record_name>x_tsigh_cmb_forecast.x_tsigh_cmb.forecast_user</record_name>
+        <reverted_from/>
+        <source>155d3a0d1b7d9510c7c9fc078b4bcb27</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-11-10 08:45:29</sys_created_on>
+        <sys_id>7ce5b5c61b8b5510c7c9fc078b4bcba9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18460b731f20000001</sys_recorded_at>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-11-10 08:45:29</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>b4e5b5c68d8b5510ebde19ada98275a9</update_guid>
+        <update_guid_history>b4e5b5c68d8b5510ebde19ada98275a9:178586993</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_tsigh_cmb_forecast.x_tsigh_cmb.forecast_user">6929798a1b8b5510c7c9fc078b4bcb5c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>toma.istvan</sys_created_by>
+        <sys_created_on>2022-11-10 08:59:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>4b177c1e75d04585898d7568fe156a19</sys_id>
+        <sys_metadata>ace5b5c61b8b5510c7c9fc078b4bcba5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_forecast.x_tsigh_cmb.forecast_user</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="">a0e5b5c61b8b5510c7c9fc078b4bcba1</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_ace5b5c61b8b5510c7c9fc078b4bcba5</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_ace5b5c61b8b5510c7c9fc078b4bcba5">7ce5b5c61b8b5510c7c9fc078b4bcba9</sys_update_version>
+        <sys_updated_by>toma.istvan</sys_updated_by>
+        <sys_updated_on>2022-11-10 08:59:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

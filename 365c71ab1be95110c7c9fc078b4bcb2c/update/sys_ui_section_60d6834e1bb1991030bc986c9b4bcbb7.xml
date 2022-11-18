@@ -322,6 +322,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>legacy_id</element>
+            <position>23</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-11 10:39:51</sys_created_on>
+            <sys_id>f5a957921b4fd51030bc986c9b4bcb40</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice_lines" sys_domain="global" view="Default view">60d6834e1bb1991030bc986c9b4bcbb7</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-11 10:39:51</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>

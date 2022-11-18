@@ -13,6 +13,160 @@ CMBUtils.prototype = {
 		this.serviceCopyFields = ['serial', 'u_account', 'u_billing_profile', 'u_owner', 'u_project', 'u_project_code', 'u_contract', 'u_contract_period', 'u_state', 'u_service_description', 'u_product_type', 'u_rfs_requested', 'u_rfs_commited', 'u_partner_circuit_id', 'u_currency', 'u_legacy_id', 'partner_ref_nr', 'u_endpoint_a', 'u_pop_a', 'u_endpoint_b', 'u_pop_b', 'u_mrc', 'u_otc', 'u_acceptance_document', 'u_early_termination_fee', 'u_reason_for_termination', 'u_cancellation_form', 'u_backup_service', 'id', 'original_id'];
 	},
 
+	createCustomerInvoice: function(assets) {
+		var assetIDs = assets.split(',');
+		var assetRecords = [];
+		var stockroom = '';
+		var multipleStockrooms = false;
+		var res = {};
+		var devices = {};
+		var consumables = [];
+		var removedAssets = [];
+
+		//Go through the assets selected by the user
+		for (var i = 0; i < assetIDs.length; i++) {
+			var gr = new GlideRecord('alm_asset');
+			//Check related stockroom, to see if all devices are in the related stockroom.
+			if (gr.get(assetIDs[i])) {
+				gs.info('Asset: '+gr.display_name+' - '+(gr.install_status+' - '+gr.substatus));
+				//Check asset state
+				if(gr.install_status == 6 && gr.substatus == 'available'){
+					//Check if asset has any stockroom
+					if (gr.stockroom) {
+						var sid = gr.stockroom.sys_id;
+						//Check if we already have a stockroom to compare
+						if (stockroom) {
+							//If current asset stocktroom doesn't match the actual stockroom then selected assets are from different stockrooms. Finish processing and send error
+							if (stockroom != sid) {
+								multipleStockrooms = true;
+							}
+							//Otherwise, this is the first asset with stockroom, so set it as a reference
+						} else stockroom = sid;
+						//Check if current asset is hardware. If yes, save it and collect current asset for aggregation
+						if (gr.sys_class_name == 'alm_hardware') {
+							var grh = new GlideRecord('alm_hardware');
+							grh.get(gr.sys_id);
+							//Check asset model
+							var pm = grh.model.sys_id;
+							//Check if we already have this model in the aggregation. If no, then create aggreagation for current model
+							if (!devices[pm]) {
+								devices[pm] = [];
+							}
+							//Add asset to aggregation
+							devices[pm].push(grh.sys_id.toString());
+
+						} else if (gr.sys_class_name == 'alm_consumable') {
+							//If current asset is consumable, collect it in a consumable list
+							consumables.push(gr.sys_id.toString());
+						}
+
+					}					
+				}
+				else {
+					removedAssets.push(gr.display_name);
+				}
+
+
+			}
+
+		}
+		gs.info('Removed assets: '+removedAssets.toString());
+		//If there are multiple stockrooms, generate error
+		if (multipleStockrooms) {
+			res.code = 'error';
+			res.msg = 'Selected devices are in multiple stockrooms';
+		} else if(removedAssets.length == assetIDs.length){
+			res.code = 'error';
+			res.msg = 'Selected devices had incorrect states';
+
+		} else {
+			//Otherwise create invoice
+			var grl;
+			var gri = new GlideRecord('x_tsigh_cmb_client_invoice');
+			gri.initialize();
+			gri.setValue('type', 'selling');
+			gri.automatically_generated = true;
+			gri.update();
+
+			//For each consumable, create an invoice line. Assign consumable to consumable field
+			for (var j = 0; j < consumables.length; j++) {
+				grl = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+				grl.initialize();
+				grl.setValue('client_invoice', gri.sys_id);
+				var cons = consumables[j];
+
+				var glc = new GlideRecord('alm_consumable');
+				glc.get(cons);
+				grl.setValue('product', glc.model);
+				grl.setValue('quantity', glc.quantity);
+				grl.update();
+				glc.setValue('x_tsigh_cmb_client_invoice_line', grl.sys_id);
+				glc.setValue('install_status', 9);
+				glc.setValue('substatus', 'reserved');
+				glc.update();
+
+			}
+			//Go through the aggregation. For each aggregation, create a line item, add the product model to the invoice, then set the invoice and line item for the asset so they can be tracked via the line item
+			//Get the aggregation keys (product model sys_ids) if any
+			gs.info('Devices: ' + JSON.stringify(devices));
+			var ha = Object.keys(devices);
+			if (ha.length > 0) {
+				//Go through the aggregation
+				for (var j = 0; j < ha.length; j++) {
+					var aggregatedAssets = devices[ha[j]];
+					var productId = ha[j];
+					//Create a line item for current aggregation (product model)
+					grl = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
+					grl.initialize();
+					//Set parent invoice
+					grl.setValue('client_invoice', gri.sys_id);
+					//Set current model as product for the invoice line
+
+					grl.setValue('product', productId);
+
+					//Set the quantity as the amount of assets for current aggregation
+					grl.setValue('quantity', aggregatedAssets.length);
+
+					//save the invoice line
+					grl.update();
+					gs.info(j + ' Invoice line item updated');
+					//Get the actual assets for the aggregation
+					gs.info('Aggregated assets: ' + aggregatedAssets.toString());
+					for (var x = 0; x < aggregatedAssets.length; x++) {
+						var asset = aggregatedAssets[x];
+						var ast = new GlideRecord('alm_hardware');
+						if (ast.get(asset)) {
+							//Set the invoice fields
+							ast.setValue('x_tsigh_cmb_client_invoice_line', grl.sys_id);
+							//Reserve the assets
+							ast.setValue('install_status', 9);
+							ast.setValue('substatus', 'reserved');
+							ast.update();
+
+						}
+					}
+				}
+			}
+			if(removedAssets.length == 0){
+				res.code = 'ok';
+				res.id = gri.sys_id.toString();
+
+			}else {
+				res.code = 'ok';
+				res.msg = 'The following devices had incorrect states, and weren\'t added to the client invoice: '+removedAssets.toString();
+				gri.work_notes = res.msg;
+				gri.update();
+				res.id = gri.sys_id.toString();
+			}
+
+
+		}
+		gs.info('Res: '+JSON.stringify(res));
+		return res;
+
+
+	},
+
 
 	setAssetState:function(inv, state, substate){
 		var gr = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
@@ -39,23 +193,43 @@ CMBUtils.prototype = {
 	revokeSales:function(inv){
 		this.setAssetState(inv, 6, 'available');
 	},
+	/**var grAsset = new GlideRecord('alm_asset');
+if (grAsset.get(current.asset)) {
+	grAsset.install_status = '6'; // in stock
+	if (grAsset.substatus != 'pre_allocated' && grAsset.substatus != 'defective')
+		grAsset.substatus = 'available';
+	grAsset.active_to = false;
+	grAsset.update();
+}
+*/
+	releaseAsset:function(tol){
+		gr.setValue('stage','cancelled');
+		gr.update();
+		var gra = new GlideRecord('alm_asset');
+		gra.addQuery('transfer_order', tol.sys_id);
+		gra.query();
+		while (gra.next()) {
+			//if(gra.sys_class_name == 'alm_hardware');
+			gra.stockroom = tol.transfer_order.from_stockroom;
+			gra.setValue('install_status', 6);
+			gra.setValue('substatus', 'available');
+			gra.active_to = false;
+			if(gra.sys_class_name == 'alm_consumable'){
+				gra.quantity += gra.quantity+tol.quantity_requested;
+
+			}			
+			gra.update();
+		}		
+
+
+	},
 
 	cancelTO:function(inv){
 		var gr = new GlideRecord('alm_transfer_order_line');
 		gr.addQuery('transfer_order', inv);
 		gr.query();
 		while (gr.next()) {
-			gr.setValue('stage','cancelled');
-			gr.update();
-			var gra = new GlideRecord('alm_asset');
-			gra.addQuery('transfer_order', gr.sys_id);
-			gra.query();
-			while (gra.next()) {
-				if(gra.sys_class_name == 'alm_hardware');
-				gra.setValue('install_status', 6);
-				gra.setValue('substatus', 'available');		
-				gra.update();
-			}		
+			this.releaseAsset(gr);
 		}
 		/*	var gr = new GlideRecord('alm_transfer_order_line');
 		gr.addQuery('transfer_order', inv);
@@ -357,26 +531,36 @@ CMBUtils.prototype = {
 		var assetList = assets.split(',');
 		var stockroom = '';
 		var multipleStockrooms = false;
+		var removedAssets = [];
+		var validAssets = [];
+
+
 		for (var i = 0; i < assetList.length; i++) {
 			var gr = new GlideRecord('alm_asset');
 			gr.get(assetList[i]);
-			if (!stockroom) {
-				stockroom = gr.stockroom.sys_id;
-			} else {
-				if (gr.stockroom.sys_id != stockroom) {
-					multipleStockrooms = true;
-					break;
+			//Check asset state
+			if(gr.install_status == 6 && gr.substatus == 'available'){			
+				if (!stockroom) {
+					stockroom = gr.stockroom.sys_id;
+				} else {
+					if (gr.stockroom.sys_id != stockroom) {
+						multipleStockrooms = true;
+					}
 				}
+				validAssets.push(assetList[i]);
+
+			}else {
+				removedAssets.push(gr.display_name);
 			}
 		}
 
-		if (!multipleStockrooms) {
+		if (!multipleStockrooms && validAssets.length>0) {
 			var grt = new GlideRecord('alm_transfer_order');
 			grt.initialize();
 			grt.from_stockroom = stockroom;
 			grt.update();
 			gs.info('TO: ' + grt.sys_id);
-			for (var j = 0; j < assetList.length; j++) {
+			for (var j = 0; j < validAssets.length; j++) {
 				gs.info('TO: asset ' + assetList[j]);
 				var gra = new GlideRecord('alm_asset');
 				gra.get(assetList[j]);
@@ -389,151 +573,32 @@ CMBUtils.prototype = {
 				grl.model = gra.model;
 				grl.update();
 			}
-			res.code = 'ok';
-			res.id = grt.sys_id.toString();
+			if(removedAssets.length == 0){
+				res.code = 'ok';
+				res.id = grt.sys_id.toString();
+
+			}else {
+				res.code = 'ok';
+				res.id = grt.sys_id.toString();
+				res.msg = 'The following devices have incorrect status: '+removedAssets.toString();
+			}
 
 
 		} else {
 			res.code = 'error';
-			res.msg = 'Selected devices are in multiple stockrooms';
+			res.msg = '';
+			if (multipleStockrooms){
+				res.msg += 'Selected devices are in multiple stockrooms. ';
+			}
+			if(validAssets.length == 0){
+				res.msg+='The following devices have incorrect status: '+removedAssets.toString();
+			}
+
 		}
-
-
 		return res;
 	},
 
-	createCustomerInvoice: function(assets) {
-		var assetList = assets.split(',');
-		var assetRecords = [];
-		var stockroom = '';
-		var multipleStockrooms = false;
-		var res = {};
-		var devices = {};
-		var consumables = [];
-		gs.info('Starting');
 
-		//Go through the assets selected by the user
-		for (var i = 0; i < assetList.length; i++) {
-			var gr = new GlideRecord('alm_asset');
-			//Check related stockroom, to see if all devices are in the related stockroom.
-			if (gr.get(assetList[i])) {
-				//Check if asset has any stockroom
-				if (gr.stockroom) {
-					var sid = gr.stockroom.sys_id;
-					//Check if we already have a stockroom to compare
-					if (stockroom) {
-						//If current asset stocktroom doesn't match the actual stockroom then selected assets are from different stockrooms. Finish processing and send error
-						if (stockroom != sid) {
-							multipleStockrooms = true;
-							assetRecords = [];
-							break;
-						}
-						//Otherwise, this is the first asset with stockroom, so set it as a reference
-					} else stockroom = sid;
-					//Check if current asset is hardware. If yes, save it and collect current asset for aggregation
-					if (gr.sys_class_name == 'alm_hardware') {
-						var grh = new GlideRecord('alm_hardware');
-						grh.get(gr.sys_id);
-						//Check asset model
-						var pm = grh.model.sys_id;
-						//Check if we already have this model in the aggregation. If no, then create aggreagation for current model
-						if (!devices[pm]) {
-							devices[pm] = [];
-						}
-						//Add asset to aggregation
-						devices[pm].push(grh.sys_id.toString());
-
-					} else if (gr.sys_class_name == 'alm_consumable') {
-						//If current asset is consumable, collect it in a consumable list
-						consumables.push(gr.sys_id.toString());
-					}
-
-				}
-			}
-
-		}
-		//If there are multiple stockrooms, generate error
-		if (multipleStockrooms) {
-			res.code = 'error';
-			res.msg = 'Selected devices are in multiple stockrooms';
-		} else {
-			//Otherwise create invoice
-			var grl;
-			var gri = new GlideRecord('x_tsigh_cmb_client_invoice');
-			gri.initialize();
-			gri.setValue('type', 'selling');
-			gri.automatically_generated = true;
-			gri.update();
-
-			//For each consumable, create an invoice line. Assign consumable to consumable field
-			for (var j = 0; j < consumables.length; j++) {
-				grl = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
-				grl.initialize();
-				grl.setValue('client_invoice', gri.sys_id);
-				var cons = consumables[j];
-
-				var glc = new GlideRecord('alm_consumable');
-				glc.get(cons);
-				grl.setValue('product', glc.model);
-				grl.setValue('quantity', glc.quantity);
-				grl.update();
-				glc.setValue('x_tsigh_cmb_client_invoice_line', grl.sys_id);
-				glc.setValue('install_status', 9);
-				glc.setValue('substatus', 'reserved');
-				glc.update();
-
-			}
-			//Go through the aggregation. For each aggregation, create a line item, add the product model to the invoice, then set the invoice and line item for the asset so they can be tracked via the line item
-			//Get the aggregation keys (product model sys_ids) if any
-			gs.info('Devices: ' + JSON.stringify(devices));
-			var ha = Object.keys(devices);
-			if (ha.length > 0) {
-				//Go through the aggregation
-				for (var j = 0; j < ha.length; j++) {
-					var aggregatedAssets = devices[ha[j]];
-					var productId = ha[j];
-					//Create a line item for current aggregation (product model)
-					grl = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
-					grl.initialize();
-					//Set parent invoice
-					grl.setValue('client_invoice', gri.sys_id);
-					//Set current model as product for the invoice line
-
-					grl.setValue('product', productId);
-
-					//Set the quantity as the amount of assets for current aggregation
-					grl.setValue('quantity', aggregatedAssets.length);
-
-					//save the invoice line
-					grl.update();
-					gs.info(j + ' Invoice line item updated');
-					//Get the actual assets for the aggregation
-					gs.info('Aggregated assets: ' + aggregatedAssets.toString());
-					for (var x = 0; x < aggregatedAssets.length; x++) {
-						var asset = aggregatedAssets[x];
-						gs.info(x + ' asset ' + asset);
-						var ast = new GlideRecord('alm_hardware');
-						if (ast.get(asset)) {
-							//Set the invoice fields
-							ast.setValue('x_tsigh_cmb_client_invoice_line', grl.sys_id);
-							//Reserve the assets
-							ast.setValue('install_status', 9);
-							ast.setValue('substatus', 'reserved');
-							ast.update();
-
-						}
-					}
-				}
-			}
-
-			res.code = 'ok';
-			res.id = gri.sys_id.toString();
-
-		}
-		return res;
-
-
-	},
 
 
 	createContract: function(current) {
@@ -711,13 +776,13 @@ CMBUtils.prototype = {
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-09-20 10:48:44</sys_created_on>
         <sys_id>0a162fad1b8ed11030bc986c9b4bcb2a</sys_id>
-        <sys_mod_count>143</sys_mod_count>
+        <sys_mod_count>160</sys_mod_count>
         <sys_name>CMBUtils</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_0a162fad1b8ed11030bc986c9b4bcb2a</sys_update_name>
-        <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-11-08 09:42:08</sys_updated_on>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-17 14:19:49</sys_updated_on>
     </sys_script_include>
 </record_update>

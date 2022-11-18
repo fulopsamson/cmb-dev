@@ -32,6 +32,9 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous) {
+	
+	var below_limit = new GlideDateTime(gs.getProperty('x_tsigh_cmb.start_date'));
+	
 	gs.info('Current acc: ' + current.u_acceptance_date + ' Previous acc: ' + previous.u_acceptance_date + ' Current state: ' + current.u_state + ' Previous state: ' + previous.u_state);
     var curr = new GlideDateTime(current.u_acceptance_date);
     var prev = new GlideDateTime(previous.u_acceptance_date);
@@ -41,7 +44,6 @@
         return;
 	}
     if (prev == curr && current.u_state == previous.u_state) {
-// 		gs.addInfoMessage('ACD: Service acceptance date was not changed');
         return;
     }
 
@@ -63,6 +65,9 @@
 //         gs.info('ACD: Service was activated with acceptance date: ' + current.u_acceptance_date);
 		gs.addInfoMessage('Service was activated with acceptance date: ' + current.u_acceptance_date);
         pointer = new GlideDateTime(curr);
+		if (pointer < below_limit) {
+			pointer  = new GlideDateTime(below_limit);
+		}
         while (pointer < now_end) {
             current_start = new GlideDateTime(pointer);
             pointer.setDayOfMonthUTC(31);
@@ -209,7 +214,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fbae2cb61ba6151030bc986c9b4bcb40</sys_id>
-        <sys_mod_count>47</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name>CMB Service Acceptance date change</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -217,7 +222,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_fbae2cb61ba6151030bc986c9b4bcb40</sys_update_name>
         <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-11-07 09:32:54</sys_updated_on>
+        <sys_updated_on>2022-11-11 07:53:40</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

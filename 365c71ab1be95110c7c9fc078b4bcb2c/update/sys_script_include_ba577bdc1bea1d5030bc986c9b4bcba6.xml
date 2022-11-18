@@ -99,7 +99,7 @@ ClientInvoiceImage.prototype = {
 				lines += "<td class=\"lines\">" + line.quantity + "</td>";
 				lines += "<td class=\"lines\">" + line.unit_price + " currency" + "</td>";
 				lines += "<td class=\"lines\">" + line.price + " currency" + "</td>";
-				lines += "<td class=\"lines\">" + line.vat_value_in_ron + " currency" + "</td>";
+				lines += "<td class=\"lines\">" + line.vat_value + " currency" + "</td>";
 				//lines += "<td class=\"lines\">" + invoice.total + " currency" + "</td>";
 				lines == "</tr>";
 				pos += 1;
@@ -140,7 +140,7 @@ ClientInvoiceImage.prototype = {
 		tmp = tmp.replace("exchange_rate", invoice.exchange_rate_value);
 		tmp = tmp.replace("comments", invoice.observation);
 			
-		
+		/*
 		var prov = new GlideRecord('sys_user');
 		prov.addQuery('user_name', invoice.sys_created_by);
 		prov.query();
@@ -153,7 +153,11 @@ ClientInvoiceImage.prototype = {
 			tmp = tmp.replace('contact_name', '-');
 			tmp = tmp.replace('contact_email', '-');
 		}
-		
+		*/
+		var name = invoice.contact_person.first_name + " " + invoice.contact_person.last_name
+		tmp = tmp.replace('contact_name', name);
+		tmp = tmp.replace('contact_email', invoice.contact_person.email);
+			
 		return tmp;
 	},
 	
@@ -163,13 +167,13 @@ ClientInvoiceImage.prototype = {
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-10-11 11:12:16</sys_created_on>
         <sys_id>ba577bdc1bea1d5030bc986c9b4bcba6</sys_id>
-        <sys_mod_count>67</sys_mod_count>
+        <sys_mod_count>69</sys_mod_count>
         <sys_name>ClientInvoiceImage</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_ba577bdc1bea1d5030bc986c9b4bcba6</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-10-24 08:56:38</sys_updated_on>
+        <sys_updated_on>2022-11-15 09:30:57</sys_updated_on>
     </sys_script_include>
 </record_update>

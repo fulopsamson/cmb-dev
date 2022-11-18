@@ -3,294 +3,308 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>f305a23d1bfa9910c7c9fc078b4bcb1e</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>b73fa7ef1b0f9910c7c9fc078b4bcbdc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>type</element>
             <position>1</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>7705a23d1bfa9910c7c9fc078b4bcb1e</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>3f3fa7ef1b0f9910c7c9fc078b4bcbdc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>client</element>
             <position>2</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>f705a23d1bfa9910c7c9fc078b4bcb1e</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>bf3fa7ef1b0f9910c7c9fc078b4bcbdc</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>billing_profile</element>
             <position>3</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>7b05a23d1bfa9910c7c9fc078b4bcb1e</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>333fa7ef1b0f9910c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>partner_reference_number</element>
             <position>4</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>fb05a23d1bfa9910c7c9fc078b4bcb1e</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>b33fa7ef1b0f9910c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>invoice_date</element>
             <position>5</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>7f05a23d1bfa9910c7c9fc078b4bcb1e</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>373fa7ef1b0f9910c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>due_date</element>
             <position>6</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>ff05a23d1bfa9910c7c9fc078b4bcb1e</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>b73fa7ef1b0f9910c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
             <position>7</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>7305a23d1bfa9910c7c9fc078b4bcb1f</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>3b3fa7ef1b0f9910c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>state</element>
             <position>8</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>f305a23d1bfa9910c7c9fc078b4bcb1f</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>bb3fa7ef1b0f9910c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>currency</element>
             <position>9</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>7705a23d1bfa9910c7c9fc078b4bcb1f</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>3f3fa7ef1b0f9910c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>exchange_rate_date</element>
             <position>10</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>f705a23d1bfa9910c7c9fc078b4bcb1f</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>bf3fa7ef1b0f9910c7c9fc078b4bcbdd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>exchange_rate_value</element>
             <position>11</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>7b05a23d1bfa9910c7c9fc078b4bcb1f</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>333fa7ef1b0f9910c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>automatically_generated</element>
             <position>12</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>fb05a23d1bfa9910c7c9fc078b4bcb1f</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>b33fa7ef1b0f9910c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>invoice_generating_method</element>
             <position>13</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>7f05a23d1bfa9910c7c9fc078b4bcb1f</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>373fa7ef1b0f9910c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>sys_created_by</element>
+            <element>contact_person</element>
             <position>14</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>ff05a23d1bfa9910c7c9fc078b4bcb1f</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>b73fa7ef1b0f9910c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>virtual_equipments_generated</element>
             <position>15</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>7305a23d1bfa9910c7c9fc078b4bcb20</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>3b3fa7ef1b0f9910c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.end_split</element>
             <position>16</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>f305a23d1bfa9910c7c9fc078b4bcb20</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>bb3fa7ef1b0f9910c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>observation</element>
             <position>17</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>7705a23d1bfa9910c7c9fc078b4bcb20</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>3f3fa7ef1b0f9910c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>approval</element>
             <position>18</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>f705a23d1bfa9910c7c9fc078b4bcb20</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>bf3fa7ef1b0f9910c7c9fc078b4bcbde</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>12M.x_tsigh_cmb_client_invoice.x_tsigh_cmb_client_invoice_lines.client_invoice</element>
             <position>19</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>7b05a23d1bfa9910c7c9fc078b4bcb20</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>333fa7ef1b0f9910c7c9fc078b4bcbdf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type>list</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>vat_value</element>
             <position>20</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-10-28 07:17:25</sys_created_on>
-            <sys_id>fb05a23d1bfa9910c7c9fc078b4bcb20</sys_id>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>b33fa7ef1b0f9910c7c9fc078b4bcbdf</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-10-28 07:17:25</sys_updated_on>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>legacy_id</element>
+            <position>21</position>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 09:26:37</sys_created_on>
+            <sys_id>373fa7ef1b0f9910c7c9fc078b4bcbdf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 09:26:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

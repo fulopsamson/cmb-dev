@@ -3,242 +3,242 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>ahw_model</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>950138bd1b4b1510c7c9fc078b4bcbb2</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>ab7d6e461b4f5510c7c9fc078b4bcbb5</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sin_invoice_number</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>1d0138bd1b4b1510c7c9fc078b4bcbb2</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>237d6e461b4f5510c7c9fc078b4bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sin_invoice_date</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>9d0138bd1b4b1510c7c9fc078b4bcbb2</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>a37d6e461b4f5510c7c9fc078b4bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sin_supplier</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>110138bd1b4b1510c7c9fc078b4bcbb3</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>277d6e461b4f5510c7c9fc078b4bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>ahw_u_number</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>910138bd1b4b1510c7c9fc078b4bcbb3</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>a77d6e461b4f5510c7c9fc078b4bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>ahw_cost</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>150138bd1b4b1510c7c9fc078b4bcbb3</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>3b7d6e461b4f5510c7c9fc078b4bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>ahw_stockroom</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <element>ahw_stockroom.type</element>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>950138bd1b4b1510c7c9fc078b4bcbb3</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>bb7d6e461b4f5510c7c9fc078b4bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>ahw_stockroom.type</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <element>ahw_stockroom</element>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>7</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>190138bd1b4b1510c7c9fc078b4bcbb3</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>3f7d6e461b4f5510c7c9fc078b4bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>ahw_x_tsigh_cmb_description</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>8</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>990138bd1b4b1510c7c9fc078b4bcbb3</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>bf7d6e461b4f5510c7c9fc078b4bcbb6</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>ahw_install_status</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>9</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>1d0138bd1b4b1510c7c9fc078b4bcbb3</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>337d6e461b4f5510c7c9fc078b4bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>ahw_substatus</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>10</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>9d0138bd1b4b1510c7c9fc078b4bcbb3</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>b37d6e461b4f5510c7c9fc078b4bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>ahw_x_tsigh_cmb_spare_strategy</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>11</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>110138bd1b4b1510c7c9fc078b4bcbb4</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>377d6e461b4f5510c7c9fc078b4bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>ahw_x_tsigh_cmb_spare_asset</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>12</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>910138bd1b4b1510c7c9fc078b4bcbb4</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>b77d6e461b4f5510c7c9fc078b4bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cmb_u_account</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>13</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>150138bd1b4b1510c7c9fc078b4bcbb4</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>3b7d6e461b4f5510c7c9fc078b4bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>cmb_u_combridge_id</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <element>cmb_number</element>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>14</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>950138bd1b4b1510c7c9fc078b4bcbb4</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>bb7d6e461b4f5510c7c9fc078b4bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sin_project_code</element>
-            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">d50138bd1b4b1510c7c9fc078b4bcbb1</list_id>
+            <list_id display_value="x_tsigh_cmb_equipment_situation_report" element="NULL" name="x_tsigh_cmb_equipment_situation_report" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e37d6e461b4f5510c7c9fc078b4bcbb4</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>15</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
-            <sys_id>190138bd1b4b1510c7c9fc078b4bcbb4</sys_id>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
+            <sys_id>3f7d6e461b4f5510c7c9fc078b4bcbb7</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -252,10 +252,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 09:06:07</sys_created_on>
+            <sys_created_on>2022-11-10 12:48:27</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>d50138bd1b4b1510c7c9fc078b4bcbb1</sys_id>
+            <sys_id>e37d6e461b4f5510c7c9fc078b4bcbb4</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_tsigh_cmb_equipment_situation_report</sys_name>
             <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -263,7 +263,7 @@
             <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
             <sys_update_name>sys_ui_list_x_tsigh_cmb_equipment_situation_report_null</sys_update_name>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 09:06:07</sys_updated_on>
+            <sys_updated_on>2022-11-10 12:48:27</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>

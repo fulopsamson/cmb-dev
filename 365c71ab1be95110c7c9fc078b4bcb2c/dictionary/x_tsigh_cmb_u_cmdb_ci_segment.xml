@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="cmdb_ci" label="Segment" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_segment" sizeclass="0" type="collection">
+    <element audit="true" extends="cmdb_ci" label="Segment" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_segment" sizeclass="41" type="collection">
         <element label="Additional Information" max_length="2000" name="additional_information" type="string"/>
         <element label="Additional Info for Endpoint A" max_length="2000" name="additional_info_a" type="string"/>
         <element label="Additional Info for Endpoint B" max_length="2000" name="additional_info_b" type="string"/>
@@ -18,14 +18,14 @@
         </element>
         <element label="RFS-R Date" max_length="40" name="rfs_r_date" type="glide_date"/>
         <element label="Additional image" max_length="40" name="u_additional_image" type="user_image"/>
-        <element label="Bid reference" max_length="256" name="u_bid_reference" type="string"/>
+        <element label="Quote reference" max_length="256" name="u_bid_reference" type="string"/>
         <element label="Billing Profile" max_length="32" name="u_billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.u_provider" type="reference" use_reference_qualifier="advanced"/>
         <element label="Contact" max_length="32" name="u_contact" reference="contact" type="reference"/>
         <element label="Contract period" max_length="40" name="u_contract_period" type="integer"/>
         <element label="CPE Configuration" max_length="40" name="u_cpe_configuration" type="file_attachment"/>
-        <element label="Currency" max_length="32" name="u_currency" read_only="true" reference="fx_currency" type="reference"/>
+        <element label="Currency" max_length="32" name="u_currency" reference="fx_currency" type="reference"/>
         <element label="Early termination fee" max_length="40" name="u_early_termination_fee" type="float"/>
-        <element label="From" max_length="32" name="u_from" reference="alm_stockroom" reference_qual="javascript:&quot;sys_id=&quot; + current.u_service.u_endpoint_a +  &quot;^ORsys_id=&quot; + current.u_service.u_endpoint_b + &quot;^ORsys_id=&quot; + current.u_service.u_pop_a + &quot;^ORsys_id=&quot; + current.u_service.u_pop_b" type="reference" use_reference_qualifier="advanced"/>
+        <element label="From" max_length="32" name="u_from" reference="alm_stockroom" reference_qual="type.value=endpoint^ORtype.value=backbone_equipment^EQ" reference_qual_condition="type.value=endpoint^ORtype.value=backbone_equipment^EQ" type="reference"/>
         <element label="Last negotiation" max_length="40" name="u_last_negotiation" type="glide_date_time"/>
         <element label="LA Provider ID" max_length="200" name="u_la_provider_id" type="string"/>
         <element label="Legacy ID" max_length="40" name="u_legacy_id" read_only="true" type="string"/>
@@ -37,9 +37,11 @@
             <choice/>
         </element>
         <element label="Provider" max_length="32" name="u_provider" reference="customer_account" type="reference"/>
+        <element default="javascript:gs.getUserID()&#13;&#10;" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Provisioning contact" max_length="32" name="u_provisioning_contact" reference="sys_user" type="reference" use_dynamic_default="true"/>
         <element label="Service" mandatory="true" max_length="32" name="u_service" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_cmb_service" reference_cascade_rule="cascade" type="reference"/>
         <element label="Service details" max_length="40" name="u_service_details" type="string"/>
         <element label="SLA profile" max_length="40" name="u_sla_profile" type="string"/>
-        <element label="To" max_length="32" name="u_to" reference="alm_stockroom" reference_qual="javascript:&quot;sys_id=&quot; + current.u_service.u_endpoint_a +  &quot;^ORsys_id=&quot; + current.u_service.u_endpoint_b + &quot;^ORsys_id=&quot; + current.u_service.u_pop_a + &quot;^ORsys_id=&quot; + current.u_service.u_pop_b" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Technical details" max_length="2000" name="u_technical_details" type="string"/>
+        <element label="To" max_length="32" name="u_to" reference="alm_stockroom" reference_qual="type.value=endpoint^ORtype.value=backbone_equipment^EQ" reference_qual_condition="type.value=endpoint^ORtype.value=backbone_equipment^EQ" type="reference"/>
     </element>
 </database>

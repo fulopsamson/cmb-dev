@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="month" table="x_tsigh_cmb_supplier_invoice" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>month</element>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_id>1471c9371b43d910c7c9fc078b4bcbf9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>month</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_choice_x_tsigh_cmb_supplier_invoice_month</sys_update_name>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>January</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dc71c9371b43d910c7c9fc078b4bcbf8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>February</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d471c9371b43d910c7c9fc078b4bcbfa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>March</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1c71c9371b43d910c7c9fc078b4bcbfb</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>April</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5071c9371b43d910c7c9fc078b4bcbfd</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>May</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>4</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9471c9371b43d910c7c9fc078b4bcbfe</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>5</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>June</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>5</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d871c9371b43d910c7c9fc078b4bcbff</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>6</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>July</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>6</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>10710d371b43d910c7c9fc078b4bcb01</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>7</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>August</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>7</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>54710d371b43d910c7c9fc078b4bcb02</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>8</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>September</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>8</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>98710d371b43d910c7c9fc078b4bcb03</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>9</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>October</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>9</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dc710d371b43d910c7c9fc078b4bcb04</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>10</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>November</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>10</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>14710d371b43d910c7c9fc078b4bcb06</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>11</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>month</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>December</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_supplier_invoice</name>
+            <sequence>11</sequence>
+            <synonyms/>
+            <sys_created_by>szabo.zoltan</sys_created_by>
+            <sys_created_on>2022-11-15 15:25:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>58710d371b43d910c7c9fc078b4bcb07</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>szabo.zoltan</sys_updated_by>
+            <sys_updated_on>2022-11-15 15:25:43</sys_updated_on>
+            <value>12</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

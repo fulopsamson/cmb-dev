@@ -12,16 +12,30 @@
         <order/>
         <script><![CDATA[function onLoad() {
     //Type appropriate comment here, and begin script below
-	if(!g_form.getValue('product_type') && !g_form.getValue('u_product_type_desired') && !g_form.getValue('rfs_r_date') && !g_form.getValue('u_last_billing_date')){
-		
-		var cmbService = g_form.getReference('u_service',callBack);
+	if(g_form.getValue('u_service')){
+		if(!g_form.getValue('product_type') && !g_form.getValue('u_product_type_desired')){
+			var cmbService = g_form.getReference('u_service', callBack);
 
-		function callBack(rec){
-			g_form.setValue('product_type',rec.u_product_type);
-			g_form.setValue('u_product_type_desired', rec.u_product_type);
-			g_form.setValue('rfs_r_date',rec.u_rfs_requested);
-			g_form.setValue('last_billing_date', rec.u_last_billing_date);
-			//g_form.save();
+			function callBack(rec){
+				if(rec.u_endpoint_a || rec.u_pop_a)
+					g_form.setValue('product_type',rec.u_product_type);
+				if(rec.u_endpoint_b || rec.u_pop_b)
+					g_form.setValue('u_product_type_desired', rec.u_product_type);
+			}
+		}
+		if(!g_form.getValue('rfs_r_date')){
+			cmbService = g_form.getReference('u_service', callBack);
+
+			function callBack(rec){
+				g_form.setValue('rfs_r_date',rec.u_rfs_requested);
+			}
+		}
+		if(!g_form.getValue('u_last_billing_date')){
+			cmbService = g_form.getReference('u_service', callBack);
+
+			function callBack(rec){
+				g_form.setValue('last_billing_date', rec.u_last_billing_date);
+			}
 		}
 	}
 }]]></script>
@@ -31,7 +45,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7a34b9ec1b125d10c7c9fc078b4bcbdc</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>Segment OnLoad</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -39,7 +53,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_client_7a34b9ec1b125d10c7c9fc078b4bcbdc</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-10-25 04:59:17</sys_updated_on>
+        <sys_updated_on>2022-11-16 15:16:51</sys_updated_on>
         <table>x_tsigh_cmb_u_cmdb_ci_segment</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

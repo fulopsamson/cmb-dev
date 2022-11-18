@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="68" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" function_definition="glidefunction:concat(business_service,business_service)" function_field="true" label="conc" max_length="40" name="x_tsigh_cmb_rpt_conc" read_only="true" type="glide_date"/>
+        <element active="false" attributes="edge_encryption_enabled=true" function_definition="glidefunction:datediff(due_date, activity_due)" function_field="true" label="ddsa" max_length="40" name="x_tsigh_cmb_rpt_ddsa" read_only="true" type="glide_date"/>
+    </element>
+</database>
