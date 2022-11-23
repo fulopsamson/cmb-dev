@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="cmdb_ci" label="CMB Service" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sizeclass="13" type="collection">
+    <element audit="true" extends="cmdb_ci" label="CMB Service" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sizeclass="14" type="collection">
         <element choice="1" choice_field="approval" choice_table="task" label="Approval" max_length="40" name="approval" type="string">
             <choice>
                 <element inactive_on_update="false" label="Not Yet Requested" sequence="0" value="not requested"/>
@@ -33,30 +33,30 @@
         <element attributes="edge_encryption_enabled=true" function_definition="glidefunction:subtract(u_mrc,u_otc)" function_field="true" label="test" max_length="40" name="rpt_test" read_only="true" type="glide_date"/>
         <element attributes="is_searchable_choice=true" choice="3" default="CMB" label="Serial" max_length="40" name="serial" type="choice">
             <choice>
+                <element inactive="true" inactive_on_update="true" label="BVPN" sequence="0" value="BVPN"/>
                 <element inactive_on_update="false" label="BVPN" sequence="0" value="BVPN"/>
-                <element inactive_on_update="false" label="BVPN" sequence="0" value="BVPN"/>
-                <element inactive="true" inactive_on_update="true" label="HA" sequence="0" value="HA"/>
                 <element inactive_on_update="false" label="HA" sequence="1" value="HA"/>
+                <element inactive_on_update="false" label="HA" sequence="1" value="HA"/>
+                <element inactive="true" inactive_on_update="true" label="CBLIA" sequence="2" value="CBLIA"/>
                 <element inactive_on_update="false" label="CBLIA" sequence="2" value="CBLIA"/>
-                <element inactive_on_update="false" label="CBLIA" sequence="2" value="CBLIA"/>
+                <element inactive="true" inactive_on_update="true" label="CBNGN" sequence="3" value="CBNGN"/>
                 <element inactive_on_update="false" label="CBNGN" sequence="3" value="CBNGN"/>
-                <element inactive_on_update="false" label="CBNGN" sequence="3" value="CBNGN"/>
+                <element inactive="true" inactive_on_update="true" label="CL2TP" sequence="4" value="CL2TP"/>
                 <element inactive_on_update="false" label="CL2TP" sequence="4" value="CL2TP"/>
-                <element inactive_on_update="false" label="CL2TP" sequence="4" value="CL2TP"/>
+                <element inactive="true" inactive_on_update="true" label="CMB" sequence="5" value="CMB"/>
                 <element inactive_on_update="false" label="CMB" sequence="5" value="CMB"/>
-                <element inactive_on_update="false" label="CMB" sequence="5" value="CMB"/>
+                <element inactive="true" inactive_on_update="true" label="CMBBB" sequence="6" value="CMBBB"/>
                 <element inactive_on_update="false" label="CMBBB" sequence="6" value="CMBBB"/>
-                <element inactive_on_update="false" label="CMBBB" sequence="6" value="CMBBB"/>
+                <element inactive="true" inactive_on_update="true" label="CMBIP" sequence="7" value="CMBIP"/>
                 <element inactive_on_update="false" label="CMBIP" sequence="7" value="CMBIP"/>
-                <element inactive_on_update="false" label="CMBIP" sequence="7" value="CMBIP"/>
+                <element inactive="true" inactive_on_update="true" label="CMBOS" sequence="8" value="CMBOS"/>
                 <element inactive_on_update="false" label="CMBOS" sequence="8" value="CMBOS"/>
-                <element inactive_on_update="false" label="CMBOS" sequence="8" value="CMBOS"/>
-                <element inactive_on_update="false" label="G0VPN" sequence="9" value="G0VPN"/>
+                <element inactive="true" inactive_on_update="true" label="G0VPN" sequence="9" value="G0VPN"/>
                 <element inactive_on_update="false" label="G0VPN" sequence="9" value="G0VPN"/>
                 <element inactive_on_update="false" label="HA" sequence="9" value="HA"/>
+                <element inactive="true" inactive_on_update="true" label="S0VPN" sequence="10" value="S0VPN"/>
                 <element inactive_on_update="false" label="S0VPN" sequence="10" value="S0VPN"/>
-                <element inactive_on_update="false" label="S0VPN" sequence="10" value="S0VPN"/>
-                <element inactive_on_update="false" label="TGBCB" sequence="11" value="TGBCB"/>
+                <element inactive="true" inactive_on_update="true" label="TGBCB" sequence="11" value="TGBCB"/>
                 <element inactive_on_update="false" label="TGBCB" sequence="11" value="TGBCB"/>
                 <element inactive_on_update="false" label="000001" sequence="12" value="000001"/>
                 <element inactive_on_update="false" label="1" sequence="13" value="1"/>

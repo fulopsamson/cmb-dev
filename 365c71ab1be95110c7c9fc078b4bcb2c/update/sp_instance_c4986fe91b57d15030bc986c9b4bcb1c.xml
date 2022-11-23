@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">c8986fe91b57d15030bc986c9b4bcb19</sp_column>
+        <sp_widget display_value="breadcrumbs">0fb269305b3212000d7ec7ad31f91ae2</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-11-21 14:05:15</sys_created_on>
+        <sys_id>c4986fe91b57d15030bc986c9b4bcb1c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sp_instance_c4986fe91b57d15030bc986c9b4bcb1c</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-21 14:06:58</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=c4986fe91b57d15030bc986c9b4bcb1c"/>
+</record_update>

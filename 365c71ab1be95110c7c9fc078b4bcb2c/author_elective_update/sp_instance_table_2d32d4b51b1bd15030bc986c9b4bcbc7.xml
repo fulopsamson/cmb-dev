@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>name,u_state,u_designation,u_partner_circuit_id</field_list>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>5</maximum_entries>
+        <order>1</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">48986fe91b57d15030bc986c9b4bcb2c</sp_column>
+        <sp_page/>
+        <sp_widget display_value="CMB Data Table from Instance Definition">87f118b51b1bd15030bc986c9b4bcb1f</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-11-21 17:07:13</sys_created_on>
+        <sys_id>2d32d4b51b1bd15030bc986c9b4bcbc7</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sp_instance_table_2d32d4b51b1bd15030bc986c9b4bcbc7</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-21 17:07:51</sys_updated_on>
+        <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="DELETE" query="documentkey=2d32d4b51b1bd15030bc986c9b4bcbc7"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sp_instance_table_2d32d4b51b1bd15030bc986c9b4bcbc7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table"><sp_instance_table action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><display_field/><field_list>name,u_state,u_designation,u_partner_circuit_id</field_list><filter/><glyph/><id/><maximum_entries>5</maximum_entries><order>1</order><order_by/><order_direction>asc</order_direction><roles/><short_description/><size>md</size><sp_column display_value="1">48986fe91b57d15030bc986c9b4bcb2c</sp_column><sp_page/><sp_widget display_value="CMB Data Table from Instance Definition">87f118b51b1bd15030bc986c9b4bcb1f</sp_widget><sys_class_name>sp_instance_table</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-11-21 17:07:13</sys_created_on><sys_id>2d32d4b51b1bd15030bc986c9b4bcbc7</sys_id><sys_mod_count>1</sys_mod_count><sys_name/><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sp_instance_table_2d32d4b51b1bd15030bc986c9b4bcbc7</sys_update_name><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-11-21 17:07:51</sys_updated_on><table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table><title/><url/><widget_parameters/></sp_instance_table><sys_translated_text action="delete_multiple" query="documentkey=2d32d4b51b1bd15030bc986c9b4bcbc7"/></record_update>]]></payload>
+        <payload_hash>-1664783880</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>b9a8cc301bdfdd1030bc986c9b4bcb64</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-11-21 17:07:51</sys_created_on>
+        <sys_id>3652d8b51b1bd15030bc986c9b4bcb19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1849b2912ee0000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-21 17:07:51</sys_updated_on>
+        <type>Instance with Table</type>
+        <update_guid>3e52d8b59d1bd150029daf4186c94118</update_guid>
+        <update_guid_history>3e52d8b59d1bd150029daf4186c94118:-1664783880,e532d4b5ff1bd1509070437c64799fc9:1932866786</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">e4939cf51b1bd15030bc986c9b4bcb84</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-11-21 17:13:09</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_table">sp_instance_table</sys_db_object>
+        <sys_id>354b9055f20e4ac7a67a0b7620a24b21</sys_id>
+        <sys_metadata>2d32d4b51b1bd15030bc986c9b4bcbc7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sp_instance_table_2d32d4b51b1bd15030bc986c9b4bcbc7</sys_update_name>
+        <sys_update_version display_value="sp_instance_table_2d32d4b51b1bd15030bc986c9b4bcbc7">3652d8b51b1bd15030bc986c9b4bcb19</sys_update_version>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-21 17:13:09</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

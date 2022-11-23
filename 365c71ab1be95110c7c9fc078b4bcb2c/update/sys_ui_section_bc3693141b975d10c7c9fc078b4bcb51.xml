@@ -3,140 +3,168 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2022-11-18 07:59:01</sys_created_on>
-            <sys_id>4af7f2a81b9bdd1030bc986c9b4bcb7e</sys_id>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>d46f5a251bd35150c7c9fc078b4bcb6d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-11-18 07:59:01</sys_updated_on>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>report_type</element>
             <position>1</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2022-11-18 07:59:01</sys_created_on>
-            <sys_id>cef7f2a81b9bdd1030bc986c9b4bcb7e</sys_id>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>d86f5a251bd35150c7c9fc078b4bcb6d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-11-18 07:59:01</sys_updated_on>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>billing_profiles</element>
             <position>2</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2022-11-18 07:59:01</sys_created_on>
-            <sys_id>42f7f2a81b9bdd1030bc986c9b4bcb7f</sys_id>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>dc6f5a251bd35150c7c9fc078b4bcb6d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-11-18 07:59:01</sys_updated_on>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>start_date</element>
             <position>3</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2022-11-18 07:59:01</sys_created_on>
-            <sys_id>c2f7f2a81b9bdd1030bc986c9b4bcb7f</sys_id>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>d06f5a251bd35150c7c9fc078b4bcb6e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-11-18 07:59:01</sys_updated_on>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>currency</element>
             <position>4</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2022-11-18 07:59:01</sys_created_on>
-            <sys_id>46f7f2a81b9bdd1030bc986c9b4bcb7f</sys_id>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>d46f5a251bd35150c7c9fc078b4bcb6e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-11-18 07:59:01</sys_updated_on>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>exchange_date</element>
             <position>5</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2022-11-18 07:59:01</sys_created_on>
-            <sys_id>c6f7f2a81b9bdd1030bc986c9b4bcb7f</sys_id>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>d86f5a251bd35150c7c9fc078b4bcb6e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-11-18 07:59:01</sys_updated_on>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.begin_split</element>
             <position>6</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2022-11-18 07:59:01</sys_created_on>
-            <sys_id>4af7f2a81b9bdd1030bc986c9b4bcb7f</sys_id>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>dc6f5a251bd35150c7c9fc078b4bcb6e</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-11-18 07:59:01</sys_updated_on>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number_of_months_after_expiration</element>
             <position>7</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2022-11-18 07:59:01</sys_created_on>
-            <sys_id>caf7f2a81b9bdd1030bc986c9b4bcb7f</sys_id>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>d06f5a251bd35150c7c9fc078b4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-11-18 07:59:01</sys_updated_on>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
             <position>8</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2022-11-18 07:59:01</sys_created_on>
-            <sys_id>4ef7f2a81b9bdd1030bc986c9b4bcb7f</sys_id>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>d46f5a251bd35150c7c9fc078b4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-11-18 07:59:01</sys_updated_on>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>percent</element>
             <position>9</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2022-11-18 07:59:01</sys_created_on>
-            <sys_id>cef7f2a81b9bdd1030bc986c9b4bcb7f</sys_id>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>d86f5a251bd35150c7c9fc078b4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2022-11-18 07:59:01</sys_updated_on>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>10</position>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>dc6f5a251bd35150c7c9fc078b4bcb6f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>generated</element>
+            <position>11</position>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:45:30</sys_created_on>
+            <sys_id>d06f5a251bd35150c7c9fc078b4bcb70</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:45:30</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

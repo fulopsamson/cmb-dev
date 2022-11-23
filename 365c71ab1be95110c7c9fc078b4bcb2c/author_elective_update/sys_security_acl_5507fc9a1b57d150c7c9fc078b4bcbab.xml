@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl">
+    <sys_security_acl action="DELETE">
+        <active>true</active>
+        <admin_overrides>true</admin_overrides>
+        <advanced>false</advanced>
+        <condition/>
+        <description/>
+        <name>alm_hardware</name>
+        <operation display_value="read">read</operation>
+        <script/>
+        <sys_class_name>sys_security_acl</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-11-23 09:05:21</sys_created_on>
+        <sys_id>5507fc9a1b57d150c7c9fc078b4bcbab</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>alm_hardware</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_security_acl_5507fc9a1b57d150c7c9fc078b4bcbab</sys_update_name>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-11-23 10:30:25</sys_updated_on>
+        <type display_value="record">record</type>
+    </sys_security_acl>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_security_acl_5507fc9a1b57d150c7c9fc078b4bcbab</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl"><sys_security_acl action="INSERT_OR_UPDATE"><active>true</active><admin_overrides>true</admin_overrides><advanced>false</advanced><condition/><description/><name>alm_hardware</name><operation display_value="read">read</operation><script/><sys_class_name>sys_security_acl</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-11-23 09:05:21</sys_created_on><sys_id>5507fc9a1b57d150c7c9fc078b4bcbab</sys_id><sys_mod_count>6</sys_mod_count><sys_name>alm_hardware</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_security_acl_5507fc9a1b57d150c7c9fc078b4bcbab</sys_update_name><sys_updated_by>istvan.toma</sys_updated_by><sys_updated_on>2022-11-23 10:30:25</sys_updated_on><type display_value="record">record</type></sys_security_acl></record_update>]]></payload>
+        <payload_hash>269163035</payload_hash>
+        <record_name>alm_hardware</record_name>
+        <reverted_from/>
+        <source>b9a8cc301bdfdd1030bc986c9b4bcb64</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>istvan.toma</sys_created_by>
+        <sys_created_on>2022-11-23 10:30:25</sys_created_on>
+        <sys_id>609a8d5e1b97d150c7c9fc078b4bcb87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184a409ef110000001</sys_recorded_at>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-11-23 10:30:25</sys_updated_on>
+        <type>Access Control</type>
+        <update_guid>689a8d5eaa97d15007fa8de455298886</update_guid>
+        <update_guid_history>689a8d5eaa97d15007fa8de455298886:269163035,652a495e9797d150cf523f27823c2624:-928258540,75f7f01ee457d150f390a953db69cd6f:269163035,1fe7f01e7a57d15013d094bac26ad2e5:-928258540,8ec7701e8957d150a89d4fecc4a2c59f:269163035,c68778da1157d1504936efa854e2f608:-928258540,2217b4da5a57d150c5395e5378ede249:269163035</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>istvan.toma</sys_created_by>
+        <sys_created_on>2022-11-23 10:32:05</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl">sys_security_acl</sys_db_object>
+        <sys_id>08cd8a147f104554b1d3caeaa70afb10</sys_id>
+        <sys_metadata>5507fc9a1b57d150c7c9fc078b4bcbab</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>alm_hardware</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="alm_hardware">13dfb9931ba11110c7c9fc078b4bcb0d</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_security_acl_5507fc9a1b57d150c7c9fc078b4bcbab</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_5507fc9a1b57d150c7c9fc078b4bcbab">609a8d5e1b97d150c7c9fc078b4bcb87</sys_update_version>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-11-23 10:32:05</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

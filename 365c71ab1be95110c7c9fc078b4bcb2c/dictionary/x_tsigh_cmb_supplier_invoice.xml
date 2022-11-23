@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Supplier invoice" max_length="40" name="x_tsigh_cmb_supplier_invoice" sizeclass="3" type="collection">
+    <element audit="true" label="Supplier invoice" max_length="40" name="x_tsigh_cmb_supplier_invoice" sizeclass="2" type="collection">
         <element choice="1" choice_field="approval" choice_table="x_tsigh_cmb_client_invoice" label="Approval" max_length="20" name="approval" type="string">
             <choice/>
         </element>

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Calculated report" max_length="40" name="x_tsigh_cmb_calculated_report" type="collection">
+    <element label="Calculated report" max_length="40" name="x_tsigh_cmb_calculated_report" sizeclass="13" type="collection">
         <element label="Billing Profiles" max_length="4000" name="billing_profiles" reference="x_tsigh_cmb_billing_profile" type="glide_list"/>
-        <element label="Currency" max_length="32" name="currency" reference="fx_currency" type="reference"/>
+        <element default="RON" label="Currency" max_length="32" name="currency" reference="fx_currency" type="reference"/>
         <element default="javascript: new GlideDateTime().getDate()" label="Exchange date" max_length="40" name="exchange_date" type="glide_date"/>
+        <element label="Generated" max_length="40" name="generated" read_only="true" type="boolean"/>
         <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
-        <element label="Number of months after expiration" max_length="40" name="number_of_months_after_expiration" type="integer"/>
+        <element default="0" label="Number of months after expiration" max_length="40" name="number_of_months_after_expiration" type="integer"/>
         <element choice="3" default="0" hint="Revenue and cost percent after contract termination" label="Percent" max_length="40" name="percent" type="choice">
             <choice>
                 <element inactive_on_update="false" label="100%" sequence="1" value="1"/>

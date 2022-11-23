@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="io_set_item">
+    <io_set_item action="INSERT_OR_UPDATE">
+        <order>1600</order>
+        <sc_cat_item display_value="Create a Customer Case CMB">6260fee11b175150c7c9fc078b4bcb3e</sc_cat_item>
+        <sys_class_name>io_set_item</sys_class_name>
+        <sys_created_by>istvan.toma</sys_created_by>
+        <sys_created_on>2022-11-21 14:35:07</sys_created_on>
+        <sys_id>256fa7291bd75150c7c9fc078b4bcb02</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>HTML Description.Create a Customer Case CMB</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>io_set_item_256fa7291bd75150c7c9fc078b4bcb02</sys_update_name>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-11-21 14:35:07</sys_updated_on>
+        <variable_set display_value="HTML Description">c66a3875531e10100f16ddeeff7b1281</variable_set>
+    </io_set_item>
+</record_update>

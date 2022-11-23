@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+    <sp_row action="INSERT_OR_UPDATE">
+        <class_name/>
+        <order>1</order>
+        <sp_column/>
+        <sp_container display_value="Service list - Container 2">cc986fe91b57d15030bc986c9b4bcb23</sp_container>
+        <sys_class_name>sp_row</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-11-21 14:05:15</sys_created_on>
+        <sys_id>40986fe91b57d15030bc986c9b4bcb26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>1</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sp_row_40986fe91b57d15030bc986c9b4bcb26</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-21 14:05:15</sys_updated_on>
+    </sp_row>
+</record_update>

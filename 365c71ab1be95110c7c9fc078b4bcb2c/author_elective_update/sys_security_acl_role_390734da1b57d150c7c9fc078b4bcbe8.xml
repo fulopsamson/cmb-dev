@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-11-23 09:05:21</sys_created_on>
+        <sys_id>390734da1b57d150c7c9fc078b4bcbe8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.snc_external</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_security_acl display_value="">5507fc9a1b57d150c7c9fc078b4bcbab</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_390734da1b57d150c7c9fc078b4bcbe8</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-23 09:05:21</sys_updated_on>
+        <sys_user_role display_value="snc_external" name="snc_external">940ba702933002009c8579b4f47ffbe2</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_security_acl_role_390734da1b57d150c7c9fc078b4bcbe8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-11-23 09:05:21</sys_created_on><sys_id>390734da1b57d150c7c9fc078b4bcbe8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.snc_external</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_security_acl display_value="">5507fc9a1b57d150c7c9fc078b4bcbab</sys_security_acl><sys_update_name>sys_security_acl_role_390734da1b57d150c7c9fc078b4bcbe8</sys_update_name><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-11-23 09:05:21</sys_updated_on><sys_user_role display_value="snc_external" name="snc_external">940ba702933002009c8579b4f47ffbe2</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1515674614</payload_hash>
+        <record_name>.snc_external</record_name>
+        <reverted_from/>
+        <source>b9a8cc301bdfdd1030bc986c9b4bcb64</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-11-23 09:05:21</sys_created_on>
+        <sys_id>ee17b4da1b57d150c7c9fc078b4bcb46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184a3bc0f550000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-23 09:05:21</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>2a17b4da3c57d150b1e3ab79ac93dc46</update_guid>
+        <update_guid_history>2a17b4da3c57d150b1e3ab79ac93dc46:-1515674614</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".snc_external">70fa459e1b97d150c7c9fc078b4bcbd4</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>istvan.toma</sys_created_by>
+        <sys_created_on>2022-11-23 10:32:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>379be92bad8947eab9c45a2a2bd8ba64</sys_id>
+        <sys_metadata>390734da1b57d150c7c9fc078b4bcbe8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.snc_external</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_390734da1b57d150c7c9fc078b4bcbe8</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_390734da1b57d150c7c9fc078b4bcbe8">ee17b4da1b57d150c7c9fc078b4bcb46</sys_update_version>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-11-23 10:32:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

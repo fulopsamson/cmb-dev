@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="customer_contact" version="2" view="contact_administration">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Contact - Contact Administration" name="customer_contact" related_list="NULL" sys_domain="global" view="171244751bd7d15030bc986c9b4bcbf8">d2c29cb51b1bd15030bc986c9b4bcb4a</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>sys_user_has_role.user</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-11-21 17:09:44</sys_created_on>
+            <sys_id>5ec29cb51b1bd15030bc986c9b4bcb4b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-11-21 17:09:44</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Contact - Contact Administration</calculated_name>
+            <filter/>
+            <name>customer_contact</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-11-21 17:09:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d2c29cb51b1bd15030bc986c9b4bcb4a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Contact - Contact Administration</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_related_customer_contact_contact_administration</sys_update_name>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-11-21 17:09:44</sys_updated_on>
+            <sys_user/>
+            <view display_value="Contact Administration" name="contact_administration">171244751bd7d15030bc986c9b4bcbf8</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

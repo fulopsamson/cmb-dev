@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="9e0433311b579150c7c9fc078b4bcb4a" sys_domain="global" table="x_tsigh_cmb_u_cmdb_ci_cmb_service" version="3" view="sp">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_account</element>
+            <position>0</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cb31a98a1bdb155030bc986c9b4bcb01</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_billing_profile</element>
+            <position>1</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cf31a98a1bdb155030bc986c9b4bcb01</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_owner</element>
+            <position>2</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c331a98a1bdb155030bc986c9b4bcb02</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_currency</element>
+            <position>3</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c731a98a1bdb155030bc986c9b4bcb02</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_product_type</element>
+            <position>4</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cb31a98a1bdb155030bc986c9b4bcb02</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_project</element>
+            <position>5</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cf31a98a1bdb155030bc986c9b4bcb02</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_project_code</element>
+            <position>6</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c331a98a1bdb155030bc986c9b4bcb03</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_contract_number</element>
+            <position>7</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c731a98a1bdb155030bc986c9b4bcb03</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>partner_ref_nr</element>
+            <position>8</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cb31a98a1bdb155030bc986c9b4bcb03</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>po_contract_number</element>
+            <position>9</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cf31a98a1bdb155030bc986c9b4bcb03</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_service_description</element>
+            <position>10</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c331a98a1bdb155030bc986c9b4bcb04</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_contract_period</element>
+            <position>11</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c731a98a1bdb155030bc986c9b4bcb04</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>12</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cb31a98a1bdb155030bc986c9b4bcb04</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>13</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cf31a98a1bdb155030bc986c9b4bcb04</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_partner_circuit_id</element>
+            <position>14</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c331a98a1bdb155030bc986c9b4bcb05</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_state</element>
+            <position>15</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c731a98a1bdb155030bc986c9b4bcb05</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_combridge_id</element>
+            <position>16</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cb31a98a1bdb155030bc986c9b4bcb05</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_rfs_requested</element>
+            <position>17</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cf31a98a1bdb155030bc986c9b4bcb05</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_rfs_commited</element>
+            <position>18</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c331a98a1bdb155030bc986c9b4bcb06</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_capacity_value</element>
+            <position>19</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c731a98a1bdb155030bc986c9b4bcb06</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_capacity_unit_of_measurement</element>
+            <position>20</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cb31a98a1bdb155030bc986c9b4bcb06</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>21</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cf31a98a1bdb155030bc986c9b4bcb06</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>22</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c331a98a1bdb155030bc986c9b4bcb07</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_mrc</element>
+            <position>23</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c731a98a1bdb155030bc986c9b4bcb07</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>24</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cb31a98a1bdb155030bc986c9b4bcb07</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_otc</element>
+            <position>25</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cf31a98a1bdb155030bc986c9b4bcb07</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>26</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c331a98a1bdb155030bc986c9b4bcb08</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>27</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c731a98a1bdb155030bc986c9b4bcb08</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_endpoint_a</element>
+            <position>28</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cb31a98a1bdb155030bc986c9b4bcb08</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_pop_a</element>
+            <position>29</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cf31a98a1bdb155030bc986c9b4bcb08</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>30</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c331a98a1bdb155030bc986c9b4bcb09</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_endpoint_b</element>
+            <position>31</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>c731a98a1bdb155030bc986c9b4bcb09</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_pop_b</element>
+            <position>32</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2022-11-22 17:30:57</sys_created_on>
+            <sys_id>cb31a98a1bdb155030bc986c9b4bcb09</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">9e0433311b579150c7c9fc078b4bcb4a</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:30:57</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-11-22 09:33:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9e0433311b579150c7c9fc078b4bcb4a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_tsigh_cmb_u_cmdb_ci_cmb_service</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_section_9e0433311b579150c7c9fc078b4bcb4a</sys_update_name>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-11-22 09:33:51</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Service Portal" name="sp">ec2daaf9d7523100a9ad1e173e24d4ea</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

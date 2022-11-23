@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="alm_stockroom" version="2" view="sp">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Stockroom - Service Portal" name="alm_stockroom" related_list="NULL" sys_domain="global" view="ec2daaf9d7523100a9ad1e173e24d4ea">dc30a9ce1b9b9150c7c9fc078b4bcb52</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-11-22 17:26:24</sys_created_on>
+            <sys_id>d830a9ce1b9b9150c7c9fc078b4bcb53</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:26:24</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Stockroom - Service Portal</calculated_name>
+            <filter/>
+            <name>alm_stockroom</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>daniel.szabo</sys_created_by>
+            <sys_created_on>2022-11-22 17:26:24</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>dc30a9ce1b9b9150c7c9fc078b4bcb52</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Stockroom - Service Portal</sys_name>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_related_alm_stockroom_sp</sys_update_name>
+            <sys_updated_by>daniel.szabo</sys_updated_by>
+            <sys_updated_on>2022-11-22 17:26:24</sys_updated_on>
+            <sys_user/>
+            <view display_value="Service Portal" name="sp">ec2daaf9d7523100a9ad1e173e24d4ea</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_tsigh_cmb_u_cmdb_ci_cmb_service">u_product_type=03770722c5c14c49b367bc035149dd35^EQ<item display_table="x_tsigh_cmb_product_type" display_value="TSI_Managed_Lan" endquery="false" field="u_product_type" goto="false" newquery="false" operator="=" or="false" value="03770722c5c14c49b367bc035149dd35"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>false</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Project code mand on TSI_Managed_LAN</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-11-21 15:06:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cf95ff691b97d15030bc986c9b4bcb5d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Project code mand on TSI_Managed_LAN</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ui_policy_cf95ff691b97d15030bc986c9b4bcb5d</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-11-21 15:09:34</sys_updated_on>
+        <table>x_tsigh_cmb_u_cmdb_ci_cmb_service</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

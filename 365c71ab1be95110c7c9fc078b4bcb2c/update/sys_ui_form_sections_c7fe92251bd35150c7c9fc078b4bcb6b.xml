@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="c7fe92251bd35150c7c9fc078b4bcb6b" sys_domain="global" table="x_tsigh_cmb_calculated_report" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:43:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>43fe92251bd35150c7c9fc078b4bcb6f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_tsigh_cmb_calculated_report" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">c7fe92251bd35150c7c9fc078b4bcb6b</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_calculated_report" sys_domain="global" view="Default view">bc3693141b975d10c7c9fc078b4bcb51</sys_ui_section>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:43:47</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_tsigh_cmb_calculated_report</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>istvan.toma</sys_created_by>
+            <sys_created_on>2022-11-21 08:43:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c7fe92251bd35150c7c9fc078b4bcb6b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_tsigh_cmb_calculated_report</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+            <sys_update_name>sys_ui_form_sections_c7fe92251bd35150c7c9fc078b4bcb6b</sys_update_name>
+            <sys_updated_by>istvan.toma</sys_updated_by>
+            <sys_updated_on>2022-11-21 08:43:47</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

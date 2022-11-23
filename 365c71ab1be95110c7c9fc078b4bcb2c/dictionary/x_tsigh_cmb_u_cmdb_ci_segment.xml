@@ -25,7 +25,7 @@
         <element label="CPE Configuration" max_length="40" name="u_cpe_configuration" type="file_attachment"/>
         <element label="Currency" max_length="32" name="u_currency" reference="fx_currency" type="reference"/>
         <element label="Early termination fee" max_length="40" name="u_early_termination_fee" type="float"/>
-        <element label="From" max_length="32" name="u_from" reference="alm_stockroom" reference_qual="type.value=endpoint^ORtype.value=backbone_equipment^EQ" reference_qual_condition="type.value=endpoint^ORtype.value=backbone_equipment^EQ" type="reference"/>
+        <element label="Endpoint From" max_length="32" name="u_from" reference="alm_stockroom" reference_qual="type.value=endpoint^ORtype.value=backbone_equipment^EQ" reference_qual_condition="type.value=endpoint^ORtype.value=backbone_equipment^EQ" type="reference"/>
         <element label="Last negotiation" max_length="40" name="u_last_negotiation" type="glide_date_time"/>
         <element label="LA Provider ID" max_length="200" name="u_la_provider_id" type="string"/>
         <element label="Legacy ID" max_length="40" name="u_legacy_id" read_only="true" type="string"/>
@@ -42,6 +42,6 @@
         <element label="Service details" max_length="40" name="u_service_details" type="string"/>
         <element label="SLA profile" max_length="40" name="u_sla_profile" type="string"/>
         <element label="Technical details" max_length="2000" name="u_technical_details" type="string"/>
-        <element label="To" max_length="32" name="u_to" reference="alm_stockroom" reference_qual="type.value=endpoint^ORtype.value=backbone_equipment^EQ" reference_qual_condition="type.value=endpoint^ORtype.value=backbone_equipment^EQ" type="reference"/>
+        <element label="Endpoint To" max_length="32" name="u_to" reference="alm_stockroom" reference_qual="type.value=endpoint^ORtype.value=backbone_equipment^EQ" reference_qual_condition="type.value=endpoint^ORtype.value=backbone_equipment^EQ" type="reference"/>
     </element>
 </database>

@@ -24,15 +24,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>01860a8f1b755d10c7c9fc078b4bcb09</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Supplier invoices</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_app_module_01860a8f1b755d10c7c9fc078b4bcb09</sys_update_name>
-        <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-10-28 10:18:54</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-11-21 17:31:57</sys_updated_on>
         <timeline_page/>
         <title>Supplier invoices</title>
         <uncancelable>false</uncancelable>
