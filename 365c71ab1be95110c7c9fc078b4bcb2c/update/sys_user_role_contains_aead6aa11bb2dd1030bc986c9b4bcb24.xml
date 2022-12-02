@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
     <sys_user_role_contains action="INSERT_OR_UPDATE">
-        <contains display_value="x_tsigh_cmb.supplier_reader" name="x_tsigh_cmb.supplier_reader">e1b46a6d1b72dd1030bc986c9b4bcb83</contains>
-        <role display_value="x_tsigh_cmb.supplier_manager" name="x_tsigh_cmb.supplier_manager">465d22611bb2dd1030bc986c9b4bcb93</role>
+        <contains display_value="x_tsigh_cmb.supplier_invoice_reader" name="x_tsigh_cmb.supplier_invoice_reader">e1b46a6d1b72dd1030bc986c9b4bcb83</contains>
+        <role display_value="x_tsigh_cmb.supplier_invoice_writer" name="x_tsigh_cmb.supplier_invoice_writer">465d22611bb2dd1030bc986c9b4bcb93</role>
         <sys_class_name>sys_user_role_contains</sys_class_name>
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-10-27 13:16:31</sys_created_on>

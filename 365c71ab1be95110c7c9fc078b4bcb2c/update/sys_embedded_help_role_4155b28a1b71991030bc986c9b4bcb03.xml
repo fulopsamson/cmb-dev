@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
     <sys_embedded_help_role action="INSERT_OR_UPDATE">
         <order>1000</order>
-        <role display_value="x_tsigh_cmb.client_invoice_user" name="x_tsigh_cmb.client_invoice_user">0155ba0a1b71991030bc986c9b4bcb0d</role>
+        <role display_value="x_tsigh_cmb.client_invoice_writer" name="x_tsigh_cmb.client_invoice_writer">0155ba0a1b71991030bc986c9b4bcb0d</role>
         <sys_class_name>sys_embedded_help_role</sys_class_name>
         <sys_created_by>szabo.daniel</sys_created_by>
         <sys_created_on>2022-09-09 10:04:11</sys_created_on>

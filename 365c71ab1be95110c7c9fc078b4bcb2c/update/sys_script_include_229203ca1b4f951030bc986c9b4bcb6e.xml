@@ -9,213 +9,213 @@
         <name>CMBExcelUploader</name>
         <script><![CDATA[var CMBExcelUploader = Class.create();
 CMBExcelUploader.prototype = {
-	initialize: function() {
-		this.contractMapping = {
-			'Contract number':{
-				'field':'vendor_contract'
-			},
-			'Account':{
-				'field':'account',
-				'reference':'customer_account',
-				'rfield':'name'
-			},
-			'Billing Profile':{
-				'field':'x_tsigh_cmb_billing_profile',
-				'reference':'x_tsigh_cmb_billing_profile',
-				'rfield':'name'
-			},
-			'Type':{
-				'field':'u_type',
-				'reference':'sys_choice',
-				'ctable':'x_tsigh_cmb_u_cmdb_ci_cmb_service',
-				'cfield':'u_type'				
-			},
-			'Start date':{
-				'field':'starts'
-			},
+    initialize: function() {
+        this.contractMapping = {
+                'Serial number': {
+                    'field': 'x_tsigh_cmb_asset',
+                    'reference': 'alm_asset',
+                    'reflabel': 'Asset',
+                    'rfield': 'serial_number'
+                },
+                'Start date': {
+                    'field': 'starts'
+                },
 
-			'End date':{
-				'field':'ends'
-			},
-
-			'Currency':{
-				'field':'u_currency'
-			},
-			'Price':{
-				'field':'u_price'
-			}
-		},
+                'End date': {
+                    'field': 'ends'
+                },
+                'Price': {
+                    'field': 'u_price'
+                }
+            },
 
 
-			this.supplierInvoiceLineMapping = {
-			'Project Code':{
-				'field':'project_code',
-				'reference':'sys_choice',
-				'ctable':'x_tsigh_cmb_u_cmdb_ci_cmb_service',
-				'cfield':'u_project_code'
-			},
-			'Serial numbers':{
-				'field':'serial_numbers',
-			},
-			'Product':{
-				'field':'product',
-				'reference':'cmdb_model',
-				'rfield':'display_name'
-			},
-			'Currency':{
-				'field':'currency'
-			},
-			'Quantity':{
-				'field':'quantity',
-			},
-			'Unit price':{
-				'field':'unit_price',
-			}
-		};
+            this.supplierInvoiceLineMapping = {
+                'Project Code': {
+                    'field': 'project_code',
+                    'reference': 'sys_choice',
+                    'ctable': 'x_tsigh_cmb_u_cmdb_ci_cmb_service',
+                    'cfield': 'u_project_code'
+                },
+                'Serial numbers': {
+                    'field': 'serial_numbers',
+                },
+                'Product': {
+                    'field': 'product',
+                    'reference': 'cmdb_model',
+                    'reflabel': 'Product Model',
+                    'rfield': 'display_name'
+                },
+                'Currency': {
+                    'field': 'currency'
+                },
+                'Quantity': {
+                    'field': 'quantity',
+                },
+                'Unit price': {
+                    'field': 'unit_price',
+                }
+            };
 
-	},
+    },
 
-	processSupplierInvoiceLines:function(attId,pid){
-		var err = this.loadXLS(attId,'x_tsigh_cmb_supplier_invoice_lines',this.supplierInvoiceLineMapping,'supplier_invoice',pid);
-		gs.info('Return: '+(err?err.toString():'No errors')+' pid: '+pid);
+    processSupplierInvoiceLines: function(attId, pid) {
+        var err = this.loadXLS(attId, 'x_tsigh_cmb_supplier_invoice_lines', this.supplierInvoiceLineMapping, 'supplier_invoice', pid);
+        gs.info('Return: ' + (err ? err.toString() : 'No errors') + ' pid: ' + pid);
 
-		var gr = new GlideRecord('x_tsigh_cmb_supplier_invoice');
-		gr.get(pid);
-		gs.info('Return: gr: '+gr.sys_id);
-		if(err){
-			gr.work_notes = err.join('\n');
-		}else gr.work_notes = 'Upload was successful';
-		gr.update();
+        var gr = new GlideRecord('x_tsigh_cmb_supplier_invoice');
+        gr.get(pid);
+        gs.info('Return: gr: ' + gr.sys_id);
+        if (err) {
+            gr.work_notes = err.join('\n');
+        } else gr.work_notes = 'Upload was successful';
+        gr.update();
 
-	},
+    },
 
-	loadXLS:function(attId, table, mapping,parentField, parentID){
-		gs.info('Mapping: '+JSON.stringify(mapping));
-		var parser = new sn_impex.GlideExcelParser(); 
-		var attachment = new GlideSysAttachment();
-		// use attachment sys id of an excel file
-		var attachmentStream = attachment.getContentStream(attId);
-		parser.parse(attachmentStream); 
-
-		//retrieve the column headers
-		var headers = parser.getColumnHeaders();  
-		var actualHeaders = [];
-		actualHeaders.push('Xyz');
-		for(var i=0;i<headers.length;i++){
-			var hi = headers[i];
-			if(mapping[hi]){
-				actualHeaders.push(hi);
-				gs.info('\tAH: '+JSON.stringify(actualHeaders));
-			} 
-		}
-		gs.info('Actual headers: '+actualHeaders.toString());
-		var dataSet = [];
-		while(parser.next()) { 
-
-			var row = parser.getRow(); 
-			var dataRow = [];
-			for(var i=0;i<actualHeaders.length;i++){
-				var data = {};
-				var ah = actualHeaders[i];
-				gs.info('Ah: '+ah);
-				if(mapping[ah]){
-					data.opt = mapping[ah];
-					data.value = row[ah];
-					data.efield = ah;
-					dataRow.push(data);
-				}
-			}
-			dataSet.push(dataRow);
-
-		}
-		if(dataSet.length>0){
-			return this.createRecords('x_tsigh_cmb_supplier_invoice_lines',dataSet,parentField,parentID);
-		}
-
-	},
-
-	createRecords:function(table, dataset, parentField, parentID){
-		var errorList = [];
-		for(var i=0;i<dataset.length;i++){
-			var gr = new GlideRecord(table);
-			gr.initialize();
-			if(parentField&&parentField){
-				gr.setValue(parentField,parentID);
-			}
-
-			var dataRow = dataset[i];
-			for(var j=0;j<dataRow.length;j++){
-
-				var data = dataRow[j];
-				var opt = data.opt;
-				var value = data.value;
-				if(opt.field){
-					if(opt.reference){
-						if(opt.reference == 'sys_choice'){
-							var ch;
-							if(opt.ctable && opt.cfield){
-								ch = this.getChoiceValue(opt.ctable,opt.cfield, value);
-
-							}else {
-								ch = this.getChoiceValue(table,opt.field, value);
-							}
-							if(ch) gr.setValue(opt.field, ch); 
-							else errorList.push('Error while processing row '+(j+2)+': Could not find element '+value+' for field '+data.efield);
-						}else if(opt.rfield) {
-							var ref = this.getReferenceByValue(opt.reference, opt.rfield, value);
-							if(ref) gr.setValue(opt.field, ref);
-							else errorList.push('Error while processing row '+(j+2)+': Could not find reference in table'+opt.reference+' with value '+value+' for field '+data.efield);
-						}
-
-					}else gr.setValue(opt.field, value);
-				}
-			}
-			gr.update();
-		}
-
-		if(errorList.length>0) return errorList;
-		return;
-
-	},
-
-	getChoiceValue:function(table,field, value){
-		gs.info('Retrieving choice: table: '+table+' - field: '+field+' - value: '+value);
-		var gr = new GlideRecord('sys_choice');
-		gr.addQuery('name',table);
-		gr.addQuery('element',field);
-		gr.addQuery('label',value);
-		gr.query();
-		if(gr.next()) return gr.value;
-		return;
-	},
-
-	getReferenceByValue:function(table, field, value){
-		gs.info('Looking for reference in table '+table+' - using field '+field+' with value '+value);
-		var gr = new GlideRecord(table);
-		gr.addQuery(field, value);
-		gr.query();
-		if(gr.next()) return gr.sys_id;
-		return;
-
-	},
+    processSupportContractLines: function(attid, pid) {
+        var err = this.loadXLS(attId, 'ast_contract', this.contractMapping, 'parent_contract', pid);
+        gs.info('Return: ' + (err ? err.toString() : 'No errors') + ' pid: ' + pid);
+        if (err) {
+            gs.error = err.join('\n');
+        }
+    },
 
 
+    loadXLS: function(attId, table, mapping, parentField, parentID) {
+        gs.info('Mapping: ' + JSON.stringify(mapping));
+        var parser = new sn_impex.GlideExcelParser();
+        var attachment = new GlideSysAttachment();
+        // use attachment sys id of an excel file
+        var attachmentStream = attachment.getContentStream(attId);
+        parser.parse(attachmentStream);
+
+        //retrieve the column headers
+        var headers = parser.getColumnHeaders();
+        var actualHeaders = [];
+        actualHeaders.push('Xyz');
+        for (var i = 0; i < headers.length; i++) {
+            var hi = headers[i];
+            if (mapping[hi]) {
+                actualHeaders.push(hi);
+                gs.info('\tAH: ' + JSON.stringify(actualHeaders));
+            }
+        }
+        gs.info('Actual headers: ' + actualHeaders.toString());
+        var dataSet = [];
+        while (parser.next()) {
+
+            var row = parser.getRow();
+            var dataRow = [];
+            for (var i = 0; i < actualHeaders.length; i++) {
+                var data = {};
+                var ah = actualHeaders[i];
+                gs.info('Ah: ' + ah);
+                if (mapping[ah]) {
+                    data.opt = mapping[ah];
+                    data.value = row[ah];
+                    data.efield = ah;
+                    dataRow.push(data);
+                }
+            }
+            dataSet.push(dataRow);
+
+        }
+        if (dataSet.length > 0) {
+            return this.createRecords(table, dataSet, parentField, parentID);
+        }
+
+    },
+
+    createRecords: function(table, dataset, parentField, parentID) {
+        var errorList = [];
+        for (var i = 0; i < dataset.length; i++) {
+            var gr = new GlideRecord(table);
+            gr.initialize();
+            if (parentField && parentField) {
+                gr.setValue(parentField, parentID);
+            }
+
+            var dataRow = dataset[i];
+            for (var j = 0; j < dataRow.length; j++) {
+
+                var data = dataRow[j];
+                var opt = data.opt;
+                var value = data.value;
+                if (opt.field) {
+                    if (opt.reference) {
+                        if (opt.reference == 'sys_choice') {
+                            var ch;
+                            if (opt.ctable && opt.cfield) {
+                                ch = this.getChoiceValue(opt.ctable, opt.cfield, value);
+
+                            } else {
+                                ch = this.getChoiceValue(table, opt.field, value);
+                            }
+                            if (ch) gr.setValue(opt.field, ch);
+                            else errorList.push('Error while processing row ' + (j + 2) + ': Could not find element ' + value + ' for field ' + data.efield);
+                        } else if (opt.rfield) {
+                            var ref = this.getReferenceByValue(opt.reference, opt.rfield, value);
+                            if (ref) gr.setValue(opt.field, ref);
+                            else errorList.push('Error while processing row ' + (j + 2) + ': Could not find reference in table ' + opt.reflabel + ' with value ' + value + ' for field ' + data.efield);
+                        }
+
+                    } else gr.setValue(opt.field, value);
+                }
+            }
+            if (table == 'ast_contract') {
+                gr.x_tsigh_cmb_contract_line = 'true';
+				gr.vendor = gr.parent_contract.vendor;
+				gr.contract_model = gr.parent_contract.contract_model;
+				gr.vendor_contract = gr.parent_contract.vendor_contract;
+				gr.u_currency = gr.parent_contract.u_currency;
+            }
+            gr.update();
+        }
+
+        if (errorList.length > 0) return errorList;
+        return;
+
+    },
+
+    getChoiceValue: function(table, field, value) {
+        gs.info('Retrieving choice: table: ' + table + ' - field: ' + field + ' - value: ' + value);
+        var gr = new GlideRecord('sys_choice');
+        gr.addQuery('name', table);
+        gr.addQuery('element', field);
+        gr.addQuery('label', value);
+        gr.query();
+        if (gr.next()) return gr.value;
+        return;
+    },
+
+    getReferenceByValue: function(table, field, value) {
+        gs.info('Looking for reference in table ' + table + ' - using field ' + field + ' with value ' + value);
+        var gr = new GlideRecord(table);
+        gr.addQuery(field, value);
+        gr.query();
+        if (gr.next()) return gr.sys_id;
+        return;
+
+    },
 
 
 
-	type: 'CMBExcelUploader'
+
+
+    type: 'CMBExcelUploader'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-11-10 14:22:01</sys_created_on>
         <sys_id>229203ca1b4f951030bc986c9b4bcb6e</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_name>CMBExcelUploader</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_229203ca1b4f951030bc986c9b4bcb6e</sys_update_name>
-        <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-11-17 14:09:03</sys_updated_on>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-12-02 10:01:23</sys_updated_on>
     </sys_script_include>
 </record_update>

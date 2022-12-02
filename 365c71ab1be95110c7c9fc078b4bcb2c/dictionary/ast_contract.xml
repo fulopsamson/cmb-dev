@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Contract" max_length="40" name="ast_contract" sizeclass="0" type="collection">
+    <element label="Contract" max_length="40" name="ast_contract" sizeclass="8" type="collection">
+        <element label="Asset" max_length="32" name="x_tsigh_cmb_asset" reference="alm_asset" type="reference"/>
         <element label="Billing Profile" max_length="32" name="x_tsigh_cmb_billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.account" type="reference" use_reference_qualifier="advanced"/>
-        <element label="Supplier invoice" max_length="32" name="x_tsigh_cmb_supplier_invoice" reference="x_tsigh_cmb_supplier_invoice" type="reference"/>
+        <element label="Contract line" max_length="40" name="x_tsigh_cmb_contract_line" read_only="true" type="boolean"/>
+        <element label="MRC" max_length="40" name="x_tsigh_cmb_mrc" type="float"/>
+        <element label="Supplier invoice" max_length="32" name="x_tsigh_cmb_supplier_invoice" read_only="true" reference="x_tsigh_cmb_supplier_invoice" type="reference"/>
         <index name="index">
             <element name="x_tsigh_cmb_billing_profile"/>
         </index>
         <index name="index2">
             <element name="x_tsigh_cmb_supplier_invoice"/>
+        </index>
+        <index name="index3">
+            <element name="x_tsigh_cmb_asset"/>
         </index>
     </element>
 </database>

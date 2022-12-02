@@ -28,11 +28,11 @@
         <instructions/>
         <layout>normal</layout>
         <list_table/>
-        <lookup_label/>
+        <lookup_label>u_combridge_id, u_product_type, u_acceptance_date</lookup_label>
         <lookup_price/>
-        <lookup_table/>
+        <lookup_table>x_tsigh_cmb_u_cmdb_ci_cmb_service</lookup_table>
         <lookup_unique>false</lookup_unique>
-        <lookup_value/>
+        <lookup_value>sys_id</lookup_value>
         <macro/>
         <macroponent/>
         <mandatory>true</mandatory>
@@ -71,21 +71,21 @@
         <sys_created_by>istvan.toma</sys_created_by>
         <sys_created_on>2022-11-21 10:12:48</sys_created_on>
         <sys_id>0f53baa51b175150c7c9fc078b4bcb56</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Service</sys_name>
         <sys_package display_value="Contributor User" source="sn_contributor">204773b4b3865010a9dce6e316a8dc26</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>item_option_new_0f53baa51b175150c7c9fc078b4bcb56</sys_update_name>
-        <sys_updated_by>istvan.toma</sys_updated_by>
-        <sys_updated_on>2022-11-22 15:09:23</sys_updated_on>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-23 14:20:08</sys_updated_on>
         <table/>
         <tooltip/>
-        <type>8</type>
+        <type>18</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
         <validate_regex/>
         <variable_name/>
         <variable_set/>

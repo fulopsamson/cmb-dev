@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-27 15:32:16</sys_created_on>
+        <sys_id>b6bc83651b36dd1030bc986c9b4bcbe7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_tsigh_cmb.finance_manager</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_security_acl display_value="">32bc83651b36dd1030bc986c9b4bcbe7</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_b6bc83651b36dd1030bc986c9b4bcbe7</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-27 15:32:16</sys_updated_on>
+        <sys_user_role display_value="x_tsigh_cmb.finance_manager" name="x_tsigh_cmb.finance_manager">09ddae651bb2dd1030bc986c9b4bcb97</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_security_acl_role_b6bc83651b36dd1030bc986c9b4bcbe7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-10-27 15:32:16</sys_created_on><sys_id>b6bc83651b36dd1030bc986c9b4bcbe7</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.x_tsigh_cmb.finance_manager</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_security_acl display_value="">32bc83651b36dd1030bc986c9b4bcbe7</sys_security_acl><sys_update_name>sys_security_acl_role_b6bc83651b36dd1030bc986c9b4bcbe7</sys_update_name><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-10-27 15:32:16</sys_updated_on><sys_user_role display_value="x_tsigh_cmb.finance_manager" name="x_tsigh_cmb.finance_manager">09ddae651bb2dd1030bc986c9b4bcb97</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1064687940</payload_hash>
+        <record_name>.x_tsigh_cmb.finance_manager</record_name>
+        <reverted_from/>
+        <source>fd610e951b729d1030bc986c9b4bcbe1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-27 15:32:16</sys_created_on>
+        <sys_id>f6bc83651b36dd1030bc986c9b4bcbe9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1841a12942a0000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-27 15:32:16</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>32bc83657e36dd10a2f759ee582613e9</update_guid>
+        <update_guid_history>32bc83657e36dd10a2f759ee582613e9:1064687940</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".x_tsigh_cmb.finance_manager">a6b247b81b6f9d5030bc986c9b4bcb4c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-12-01 13:40:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>647570b8f7564522bce887dc5a2e4bd1</sys_id>
+        <sys_metadata>b6bc83651b36dd1030bc986c9b4bcbe7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_tsigh_cmb.finance_manager</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="x_tsigh_cmb_validation_line">32bc83651b36dd1030bc986c9b4bcbe7</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_b6bc83651b36dd1030bc986c9b4bcbe7</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_b6bc83651b36dd1030bc986c9b4bcbe7">f6bc83651b36dd1030bc986c9b4bcbe9</sys_update_version>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-12-01 13:40:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

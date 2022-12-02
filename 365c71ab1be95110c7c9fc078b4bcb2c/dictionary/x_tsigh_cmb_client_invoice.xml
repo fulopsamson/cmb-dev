@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Client invoice" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="18" type="collection">
+    <element audit="true" label="Client invoice" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="23" type="collection">
         <element choice="3" choice_field="approval" choice_table="task" default="not requested" label="Approval" max_length="40" name="approval" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Not Yet Requested" sequence="0" value="not requested"/>

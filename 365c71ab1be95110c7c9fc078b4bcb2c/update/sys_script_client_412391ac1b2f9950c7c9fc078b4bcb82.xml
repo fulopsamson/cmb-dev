@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Product Model Default Values From Prms</name>
+        <order>1</order>
+        <script><![CDATA[function onLoad() {
+	var contract_type = getParameterValue('contract_type');
+	if(contract_type == 'vendor') {
+		g_form.setValue('cmdb_model_category', 'add378201beb9950c7c9fc078b4bcbbf');
+		g_form.setValue('sys_class_name', 'cmdb_contract_product_model');
+	} else if (contract_type == 'field_service') {
+		g_form.setValue('cmdb_model_category', 'a354bc201beb9950c7c9fc078b4bcb17');
+		g_form.setValue('sys_class_name', 'cmdb_contract_product_model');
+	}
+}
+
+function getParameterValue(name) {
+	var url = top.location.href;
+	var value = new URLSearchParams(url).get(name);
+	if (value) {
+		return value;
+	}
+	if (!value) {
+		var gUrl = new GlideURL();
+		gUrl.setFromCurrent();
+		value = gUrl.getParam(name);
+		return value;
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-11-30 10:58:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>412391ac1b2f9950c7c9fc078b4bcb82</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Product Model Default Values From Prms</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_client_412391ac1b2f9950c7c9fc078b4bcb82</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-02 15:38:38</sys_updated_on>
+        <table>cmdb_contract_product_model</table>
+        <type>onLoad</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

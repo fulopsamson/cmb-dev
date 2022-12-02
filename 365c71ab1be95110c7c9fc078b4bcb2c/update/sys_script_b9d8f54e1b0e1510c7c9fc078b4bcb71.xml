@@ -44,8 +44,8 @@
         var assets = new Array();
         assets = current.u_assets.toString().split(",");
         for (var i = 0; i < assets.length; i++) {
-            var result2 = CIRelUtils.createCIRel(current.sys_id, assets[i], ciRelType2);
-			result2 = CIRelUtils.setCIstatus(assets[i],'1'); // Installed/In Production
+            var result2 = CIRelUtils.createAssetRel(current.sys_id, assets[i], ciRelType2);
+			result2 = CIRelUtils.setAssetstatus(assets[i],'1',''); // In use
 			result2 = CIRelUtils.setAssetEQ(assets[i], current.sys_id, current.u_service);
         }
     }
@@ -57,15 +57,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b9d8f54e1b0e1510c7c9fc078b4bcb71</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Equipment Group after insert CI rel</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_b9d8f54e1b0e1510c7c9fc078b4bcb71</sys_update_name>
-        <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-11-08 08:21:12</sys_updated_on>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-11-29 11:14:34</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

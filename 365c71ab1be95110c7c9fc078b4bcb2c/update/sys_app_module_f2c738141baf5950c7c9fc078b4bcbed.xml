@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="CMB">72202e6b1b6d5110c7c9fc078b4bcbc2</application>
+        <assessment/>
+        <device_type/>
+        <filter table="x_tsigh_cmb_validation_line">client_invoiceISNOTEMPTY^EQ<item endquery="false" field="client_invoice" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Invoiced</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_tsigh_cmb_validation_line</name>
+        <order>45</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_tsigh_cmb.validation_line_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-11-29 14:17:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f2c738141baf5950c7c9fc078b4bcbed</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Invoiced</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_app_module_f2c738141baf5950c7c9fc078b4bcbed</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-12-02 09:48:32</sys_updated_on>
+        <timeline_page/>
+        <title>Invoiced</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

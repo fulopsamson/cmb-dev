@@ -7,21 +7,21 @@
         <encryption_context/>
         <grantable>true</grantable>
         <includes_roles/>
-        <name>x_tsigh_cmb.client_invoice_user</name>
+        <name>x_tsigh_cmb.client_invoice_writer</name>
         <requires_subscription>-1</requires_subscription>
         <scoped_admin>false</scoped_admin>
-        <suffix>client_invoice_user</suffix>
+        <suffix>client_invoice_writer</suffix>
         <sys_class_name>sys_user_role</sys_class_name>
         <sys_created_by>szabo.daniel</sys_created_by>
         <sys_created_on>2022-09-09 10:04:11</sys_created_on>
         <sys_id>0155ba0a1b71991030bc986c9b4bcb0d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_tsigh_cmb.client_invoice_user</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_tsigh_cmb.client_invoice_writer</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_user_role_0155ba0a1b71991030bc986c9b4bcb0d</sys_update_name>
-        <sys_updated_by>szabo.daniel</sys_updated_by>
-        <sys_updated_on>2022-09-09 10:04:11</sys_updated_on>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-12-01 13:42:07</sys_updated_on>
     </sys_user_role>
 </record_update>

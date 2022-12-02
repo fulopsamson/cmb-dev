@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="DELETE">
+        <contains display_value="x_tsigh_cmb.stockroom_manager" name="x_tsigh_cmb.stockroom_manager">e2fe62e51bb2dd1030bc986c9b4bcb47</contains>
+        <role display_value="x_tsigh_cmb.provisioning" name="x_tsigh_cmb.provisioning">ea64b6f51b72115030bc986c9b4bcb44</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-28 08:26:14</sys_created_on>
+        <sys_id>40d43ef51b72115030bc986c9b4bcb3d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.stockroom_manager.x_tsigh_cmb.provisioning</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_user_role_contains_40d43ef51b72115030bc986c9b4bcb3d</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-28 08:26:14</sys_updated_on>
+    </sys_user_role_contains>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_user_role_contains_40d43ef51b72115030bc986c9b4bcb3d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="x_tsigh_cmb.stockroom_manager" name="x_tsigh_cmb.stockroom_manager">e2fe62e51bb2dd1030bc986c9b4bcb47</contains><role display_value="x_tsigh_cmb.provisioning" name="x_tsigh_cmb.provisioning">ea64b6f51b72115030bc986c9b4bcb44</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-10-28 08:26:14</sys_created_on><sys_id>40d43ef51b72115030bc986c9b4bcb3d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_tsigh_cmb.stockroom_manager.x_tsigh_cmb.provisioning</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_user_role_contains_40d43ef51b72115030bc986c9b4bcb3d</sys_update_name><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-10-28 08:26:14</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+        <payload_hash>-1053450362</payload_hash>
+        <record_name>x_tsigh_cmb.stockroom_manager.x_tsigh_cmb.provisioning</record_name>
+        <reverted_from/>
+        <source>fd610e951b729d1030bc986c9b4bcbe1</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-10-28 08:26:14</sys_created_on>
+        <sys_id>ccd43ef51b72115030bc986c9b4bcb40</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1841db2e6050000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-10-28 08:26:14</sys_updated_on>
+        <type>Contained Role</type>
+        <update_guid>08d43ef52e721150dd443979c4df3b40</update_guid>
+        <update_guid_history>08d43ef52e721150dd443979c4df3b40:-1053450362</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-11-30 09:19:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role_contains">sys_user_role_contains</sys_db_object>
+        <sys_id>c2aa2a855dc542fea46e4394df2f15e4</sys_id>
+        <sys_metadata>40d43ef51b72115030bc986c9b4bcb3d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.stockroom_manager.x_tsigh_cmb.provisioning</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_user_role_contains_40d43ef51b72115030bc986c9b4bcb3d</sys_update_name>
+        <sys_update_version display_value="sys_user_role_contains_40d43ef51b72115030bc986c9b4bcb3d">ccd43ef51b72115030bc986c9b4bcb40</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-11-30 09:19:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

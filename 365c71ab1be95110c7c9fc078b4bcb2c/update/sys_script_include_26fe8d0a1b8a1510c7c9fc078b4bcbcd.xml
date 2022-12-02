@@ -47,19 +47,71 @@ CIRelUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         }
     },
 
-    setAssetEQ: function(ci, eq, service) {
+    setAssetEQ: function(asset, eq, service) {
         var gr = new GlideRecord('alm_asset');
-        gr.addQuery('ci', ci);
+        gr.addQuery('sys_id', asset);
         gr.query();
         if (gr.next()) {
             gr.x_tsigh_cmb_equipment_group = eq;
-			gr.x_tsigh_cmb_service = service;
+            gr.x_tsigh_cmb_service = service;
             gr.update();
             return true;
         } else {
             return false;
         }
 
+    },
+
+    createAssetRel: function(parent, asset, type) {
+        var ci = new GlideRecord('cmdb_ci');
+        ci.addQuery('asset', asset);
+        ci.query();
+        if (ci.next()) {
+            var grIn = new GlideRecord('cmdb_rel_ci');
+            grIn.initialize();
+            grIn.parent = parent;
+            grIn.child = ci.sys_id;
+            grIn.type = type; // sys_id of the Relationship Type
+            return grIn.insert();
+        } else {
+            gs.error('Cannot find CI for asset sys_id: ' + asset);
+            return false;
+        }
+    },
+
+    delAssetRel: function(parent, asset, type) {
+        var ci = new GlideRecord('cmdb_ci');
+        ci.addQuery('asset', asset);
+        ci.query();
+        if (ci.next()) {
+            var gr = new GlideRecord('cmdb_rel_ci');
+            gr.addQuery('parent', parent);
+            gr.addQuery('child', ci.sys_id);
+            gr.addQuery('type', type);
+            gr.query();
+            if (gr.next()) {
+                gr.deleteRecord();
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    },
+
+    setAssetstatus: function(asset, status, substatus) { // set install_status to 1 In use, 6 In Stock
+        var gr = new GlideRecord('alm_asset');
+        gr.addQuery('sys_id', asset);
+        gr.query();
+        if (gr.next()) {
+            gr.install_status = status;
+            gr.substatus = substatus;
+            gr.update();
+            return true;
+        } else {
+            return false;
+        }
     },
 
 
@@ -69,13 +121,13 @@ CIRelUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>toma.istvan</sys_created_by>
         <sys_created_on>2022-09-21 12:53:02</sys_created_on>
         <sys_id>26fe8d0a1b8a1510c7c9fc078b4bcbcd</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>CIRelUtils</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_26fe8d0a1b8a1510c7c9fc078b4bcbcd</sys_update_name>
-        <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-11-08 08:18:51</sys_updated_on>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-11-29 11:21:09</sys_updated_on>
     </sys_script_include>
 </record_update>

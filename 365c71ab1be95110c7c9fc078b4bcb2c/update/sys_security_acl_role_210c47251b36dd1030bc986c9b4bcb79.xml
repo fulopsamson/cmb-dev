@@ -13,7 +13,7 @@
         <sys_update_name>sys_security_acl_role_210c47251b36dd1030bc986c9b4bcb79</sys_update_name>
         <sys_updated_by>daniel.szabo</sys_updated_by>
         <sys_updated_on>2022-10-27 15:29:09</sys_updated_on>
-        <sys_user_role display_value="x_tsigh_cmb.supplier_manager" name="x_tsigh_cmb.supplier_manager">465d22611bb2dd1030bc986c9b4bcb93</sys_user_role>
+        <sys_user_role display_value="x_tsigh_cmb.supplier_invoice_writer" name="x_tsigh_cmb.supplier_invoice_writer">465d22611bb2dd1030bc986c9b4bcb93</sys_user_role>
         <transaction_id/>
     </sys_security_acl_role>
 </record_update>

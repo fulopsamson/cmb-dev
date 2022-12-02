@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.CMBSupplierInvoiceUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>CMBSupplierInvoiceUtils</name>
+        <script><![CDATA[var CMBSupplierInvoiceUtils = Class.create();
+CMBSupplierInvoiceUtils.prototype = {
+    initialize: function() {
+    },
+	getSupplierAccounts: function() {
+		var gr = new GlideRecord('x_tsigh_cmb_billing_profile');
+		var qr = gr.addQuery('type','supplier');
+		qr.addOrCondition('type', 'provider');
+		gr.query();
+		res = 'sys_idIN';
+		while (gr.next()) {
+			res += gr.account.sys_id + ',';
+		}
+		return res;
+	},
+    type: 'CMBSupplierInvoiceUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-11-28 18:09:51</sys_created_on>
+        <sys_id>5e93acc41bef1950c7c9fc078b4bcb47</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>CMBSupplierInvoiceUtils</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_5e93acc41bef1950c7c9fc078b4bcb47</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-11-28 18:19:21</sys_updated_on>
+    </sys_script_include>
+</record_update>

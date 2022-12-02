@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
     <sys_ui_action action="INSERT_OR_UPDATE">
-        <action_name/>
+        <action_name>cmb_cancel_invoice</action_name>
         <active>true</active>
-        <client>false</client>
+        <client>true</client>
         <client_script_v2><![CDATA[function onClick(g_form) {
 
 }]]></client_script_v2>
@@ -28,13 +28,30 @@
         <list_style/>
         <messages/>
         <name>Cancel invoice</name>
-        <onclick/>
+        <onclick>removeMandatoryCI()</onclick>
         <order>-1200</order>
-        <script><![CDATA[new x_tsigh_cmb.CMBUtils().revokeSales(current.sys_id);
+        <script><![CDATA[function removeMandatoryCI(){
+	g_form.setMandatory('client',false);
+	g_form.setMandatory('billing_profile',false);
+	gsftSubmit(null, g_form.getFormElement(), "cmb_cancel_invoice");
 
-current.state = 'cancelled';
-current.update();
-action.setRedirectURL(current);]]></script>
+
+}
+
+if(typeof window == 'undefined'){
+	gs.info('xyz');
+
+	performRemoval();
+} 
+
+function performRemoval(){
+	new x_tsigh_cmb.CMBUtils().revokeSales(current.sys_id);
+
+	current.state = 'cancelled';
+	current.update();
+	action.setRedirectURL(current);	
+}
+]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -45,7 +62,7 @@ action.setRedirectURL(current);]]></script>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e696d1dc1b521d10c7c9fc078b4bcbfe</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>Cancel invoice</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -53,7 +70,7 @@ action.setRedirectURL(current);]]></script>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_ui_action_e696d1dc1b521d10c7c9fc078b4bcbfe</sys_update_name>
         <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-11-16 14:49:30</sys_updated_on>
+        <sys_updated_on>2022-11-29 10:00:42</sys_updated_on>
         <table>x_tsigh_cmb_client_invoice</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

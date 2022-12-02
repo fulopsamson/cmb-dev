@@ -10,9 +10,9 @@
         <script><![CDATA[var CMBUtils = Class.create();
 CMBUtils.prototype = {
 	initialize: function() {
-		this.serviceCopyFields = ['serial', 'u_account', 'u_billing_profile', 'u_owner', 'u_project', 'u_project_code', 'u_contract', 'u_contract_period', 'u_state', 'u_service_description', 'u_product_type', 'u_rfs_requested', 'u_rfs_commited', 'u_partner_circuit_id', 'u_currency', 'u_legacy_id', 'partner_ref_nr', 'u_endpoint_a', 'u_pop_a', 'u_endpoint_b', 'u_pop_b', 'u_mrc', 'u_otc', 'u_acceptance_document', 'u_early_termination_fee', 'u_reason_for_termination', 'u_cancellation_form', 'u_backup_service', 'id', 'original_id'];
+		this.serviceCopyFields = ['serial', 'u_account', 'u_billing_profile', 'u_owner', 'u_project', 'u_project_code', 'u_contract_number', 'u_contract_period', 'u_state', 'u_service_description', 'u_product_type', 'u_rfs_requested', 'u_rfs_commited', 'u_partner_circuit_id', 'u_currency', 'partner_ref_nr', 'u_endpoint_a', 'u_pop_a', 'u_endpoint_b', 'u_pop_b', 'u_mrc', 'u_otc', 'u_acceptance_document', 'u_early_termination_fee', 'u_reason_for_termination', 'u_cancellation_form', 'u_backup_service', 'id', 'original_id'];
 	},
-	
+
 	getBillingProfile:function(id){
 		var gr = new GlideRecord('customer_contact');
 		if(gr.get(id)){
@@ -333,10 +333,11 @@ if (grAsset.get(current.asset)) {
 			var model = '';
 			var mcat = '';
 			if (gri.product) model = gri.product.sys_id;
+			gs.info('Model: '+model);
 			if (model) {
 				var grm = new GlideRecord('cmdb_model');
-				grm.get(gri.product.sys_id);
-				gs.info('\tProduct class: ' + grm.sys_class_name);
+				grm.get(model);
+				gs.info('\tProduct class: ' + grm.sys_class_name+' - '+grm.sys_class_name);
 				try {
 					if (grm.sys_class_name == 'cmdb_consumable_product_model') {
 						var gra = new GlideRecord('alm_consumable');
@@ -348,7 +349,7 @@ if (grAsset.get(current.asset)) {
 						if (id) {
 							devices.push(id);
 						}
-					} else if (grm.sys_class_name == 'cmdb_hardware_product_model') {
+					} else if (grm.sys_class_name == 'cmdb_hardware_product_model' || grm.sys_class_name == 'cmdb_model') {
 						if (grm.cmdb_model_category) {
 
 							mcat = grm.cmdb_model_category.split(',')[0];
@@ -414,65 +415,68 @@ if (grAsset.get(current.asset)) {
 		gri.query();
 		var processedSerials = [];
 		while (gri.next()) {
-			gs.info('\tProcessing supplier line item ' + gri.sys_id);
-			var grc = new GlideRecord('ast_contract');
-			grc.initialize();
-			grc.setValue('account', gr.supplier);
-			grc.setValue('x_tsigh_cmb_billing_profile', gr.billing_profile);
-			grc.setValue('contract_model', gri.product);
-			grc.setValue('vendor_contract', gri.contract_number);
-			grc.setValue('starts', gri.start_date);
-			grc.setValue('ends', gri.end_date);
-			grc.setValue('x_tsigh_cmb_supplier_invoice', gr.sys_id);
-			grc.setValue('u_currency', gri.getValue('currency'));
-			grc.setValue('u_price', gri.getValue('unit_price'));
-			grc.update();
-			gs.info('\tContract ' + grc.sys_id + ' created');
-			gs.info('\tProcessing related serial numbers ' + gri.serial_numbers);
-			if (gri.serial_numbers) {
-				var serials = gri.serial_numbers.split(',');
-				for (var j = 0; j < serials.length; j++) {
-					if (deviceSN[serials[j]]) {
-						gs.info('\t\tAllocating contract ' + grc.sys_id + ' to asset with serial number ' + serials[j] + ' assetsysid: ' + deviceSN[serials[j]]);
-						this._allocateContract(deviceSN[serials[j]], grc.sys_id);
-						processedSerials.push(serials[j]);
-					}
+            gs.info('\tProcessing supplier line item ' + gri.sys_id);
+            var grc = new GlideRecord('ast_contract');
+            grc.initialize();
+            grc.setValue('vendor', gr.supplier);
+            grc.setValue('x_tsigh_cmb_billing_profile', gr.billing_profile);
+            grc.setValue('contract_model', gri.product);
+            grc.setValue('vendor_contract', gri.contract_number);
+            // grc.setValue('starts', gri.start_date);
+            // grc.setValue('ends', gri.end_date);
+            grc.setValue('x_tsigh_cmb_supplier_invoice', gr.sys_id);
+            grc.setValue('u_currency', gri.getValue('currency'));
+            grc.setValue('u_price', gri.getValue('unit_price'));
+            grc.update();
+            gs.info('\tContract ' + grc.sys_id + ' created');
+            // gs.info('\tProcessing related serial numbers ' + gri.serial_numbers);
+            // if (gri.serial_numbers) {
+            //     var serials = gri.serial_numbers.split(',');
+            //     for (var j = 0; j < serials.length; j++) {
+            //         if (deviceSN[serials[j]]) {
+            //             gs.info('\t\tAllocating contract ' + grc.sys_id + ' to asset with serial number ' + serials[j] + ' assetsysid: ' + deviceSN[serials[j]]);
+            //             this._allocateContract(deviceSN[serials[j]], grc.sys_id);
+            //             processedSerials.push(serials[j]);
+            //         }
 
-				}
-				var others = this._arrdiff(serials, processedSerials);
-				if (others.length > 0) {
-					for (var k = 0; k < others.length; k++) {
-						var gras = new GlideRecord('alm_hardware');
-						gras.addQuery('serial_number', others[k]);
-						gras.query();
-						if (gras.next()) {
-							this._allocateContract(gras.sys_id, grc.sys_id);
-						}
+            //     }
+            //     var others = this._arrdiff(serials, processedSerials);
+            //     if (others.length > 0) {
+            //         for (var k = 0; k < others.length; k++) {
+            //             var gras = new GlideRecord('alm_hardware');
+            //             gras.addQuery('serial_number', others[k]);
+            //             gras.query();
+            //             if (gras.next()) {
+            //                 this._allocateContract(gras.sys_id, grc.sys_id);
+            //             }
 
-					}
-				}
+            //         }
+            //     }
 
 
-			}
-			if (gri.related_devices) {
-				var asts = gri.related_devices.split(',');
-				for (var i = 0; i < asts.length; i++) {
-					this._allocateContract(asts[i], grc.sys_id);
-				}
-			}
+            // }
+            // if (gri.related_devices) {
+            //     var asts = gri.related_devices.split(',');
+            //     for (var i = 0; i < asts.length; i++) {
+            //         this._allocateContract(asts[i], grc.sys_id);
+            //     }
+            // }
+
+        }
+		//Allocating budget
+		if(gr.budget){
+			var budgetId = gr.budget.sys_id.toString();
+			var grb = new GlideRecord('fm_budget');
+			grb.get(budgetId);
+			var sicur = current.getValue('invoice_currency');
+			var bcur = grb.getValue('x_tsigh_cmb_currency');
+			var amnt = +this.convertAmount(current.total_net_value_in_ron, bcur);
+			var rslt = +grb.getValue('x_tsigh_cmb_actual_value');
+			grb.setValue('x_tsigh_cmb_actual_value', Math.round((amnt + rslt) * 100) / 100);
+			grb.u_work_notes = 'Amount ' + amnt + ' was added to the budget due to Supplier Invoice ' + gr.invoice_number;
+			grb.update();
 
 		}
-		//Allocating budget
-		var budgetId = current.budget.sys_id.toString();
-		var grb = new GlideRecord('fm_budget');
-		grb.get(budgetId);
-		var sicur = current.getValue('invoice_currency');
-		var bcur = grb.getValue('x_tsigh_cmb_currency');
-		var amnt = +this.convertAmount(current.total_net_value_in_ron, bcur);
-		var rslt = +grb.getValue('x_tsigh_cmb_actual_value');
-		grb.setValue('x_tsigh_cmb_actual_value', Math.round((amnt + rslt) * 100) / 100);
-		grb.u_work_notes = 'Amount ' + amnt + ' was added to the budget due to Supplier Invoice ' + gr.invoice_number;
-		grb.update();
 
 
 	},
@@ -562,6 +566,7 @@ if (grAsset.get(current.asset)) {
 				removedAssets.push(gr.display_name);
 			}
 		}
+		gs.info('Valid assets: '+validAssets.toString()+' - removed assets: '+removedAssets.toString());
 
 		if (!multipleStockrooms && validAssets.length>0) {
 			var grt = new GlideRecord('alm_transfer_order');
@@ -570,9 +575,9 @@ if (grAsset.get(current.asset)) {
 			grt.update();
 			gs.info('TO: ' + grt.sys_id);
 			for (var j = 0; j < validAssets.length; j++) {
-				gs.info('TO: asset ' + assetList[j]);
+				gs.info('TO: asset ' + validAssets[j]);
 				var gra = new GlideRecord('alm_asset');
-				gra.get(assetList[j]);
+				gra.get(validAssets[j]);
 				gs.info('TO: asset2 ' + gra.sys_id);
 				var grl = new GlideRecord('alm_transfer_order_line');
 				grl.initialize();
@@ -785,13 +790,13 @@ if (grAsset.get(current.asset)) {
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-09-20 10:48:44</sys_created_on>
         <sys_id>0a162fad1b8ed11030bc986c9b4bcb2a</sys_id>
-        <sys_mod_count>162</sys_mod_count>
+        <sys_mod_count>173</sys_mod_count>
         <sys_name>CMBUtils</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_0a162fad1b8ed11030bc986c9b4bcb2a</sys_update_name>
-        <sys_updated_by>istvan.toma</sys_updated_by>
-        <sys_updated_on>2022-11-23 10:39:25</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-02 09:37:49</sys_updated_on>
     </sys_script_include>
 </record_update>

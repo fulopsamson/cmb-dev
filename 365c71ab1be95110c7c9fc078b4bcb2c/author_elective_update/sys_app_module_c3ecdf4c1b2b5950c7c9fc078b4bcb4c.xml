@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="CMB">72202e6b1b6d5110c7c9fc078b4bcbc2</application>
+        <assessment/>
+        <device_type/>
+        <filter table="sys_attachment">sys_id=cac281c21b5b9150c7c9fc078b4bcb05^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="cac281c21b5b9150c7c9fc078b4bcb05"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>DETAIL</link_type>
+        <map_page/>
+        <mobile_title>Test supplier</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>sys_attachment</name>
+        <order>2000</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-11-29 07:40:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c3ecdf4c1b2b5950c7c9fc078b4bcb4c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Test supplier</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_app_module_c3ecdf4c1b2b5950c7c9fc078b4bcb4c</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-11-29 07:43:30</sys_updated_on>
+        <timeline_page/>
+        <title>Test supplier</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_app_module_c3ecdf4c1b2b5950c7c9fc078b4bcb4c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="CMB">72202e6b1b6d5110c7c9fc078b4bcbc2</application><assessment/><device_type/><filter table="sys_attachment">sys_id=cac281c21b5b9150c7c9fc078b4bcb05^EQ<item endquery="false" field="sys_id" goto="false" newquery="false" operator="=" or="false" value="cac281c21b5b9150c7c9fc078b4bcb05"/><item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/></filter><hint/><homepage/><image/><link_type>DETAIL</link_type><map_page/><mobile_title>Test supplier</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>sys_attachment</name><order>2000</order><override_menu_roles>false</override_menu_roles><query/><report/><roles/><sys_class_name>sys_app_module</sys_class_name><sys_created_by>samson.fulop</sys_created_by><sys_created_on>2022-11-29 07:40:53</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c3ecdf4c1b2b5950c7c9fc078b4bcb4c</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Test supplier</sys_name><sys_overrides/><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_app_module_c3ecdf4c1b2b5950c7c9fc078b4bcb4c</sys_update_name><sys_updated_by>samson.fulop</sys_updated_by><sys_updated_on>2022-11-29 07:43:30</sys_updated_on><timeline_page/><title>Test supplier</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>704145375</payload_hash>
+        <record_name>Test supplier</record_name>
+        <reverted_from/>
+        <source>2bc4b9e21b971550c7c9fc078b4bcb2f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-11-29 07:43:30</sys_created_on>
+        <sys_id>86eddb8c1b2b5950c7c9fc078b4bcb84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184c25747e20000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-11-29 07:43:30</sys_updated_on>
+        <type>Module</type>
+        <update_guid>8eeddb8c912b59502606c3b7ad0bf183</update_guid>
+        <update_guid_history>8eeddb8c912b59502606c3b7ad0bf183:704145375,446dd38c792b59507ddc13550a551f30:1065981595,734d5b8cbd2b5950895275ebd72d0667:-371291243</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Test supplier">e06e9bcc1b2b5950c7c9fc078b4bcb0d</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-11-29 07:45:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>12d8aefbac9741648f7bb4a80ca1ee84</sys_id>
+        <sys_metadata>c3ecdf4c1b2b5950c7c9fc078b4bcb4c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Test supplier</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_app_module_c3ecdf4c1b2b5950c7c9fc078b4bcb4c</sys_update_name>
+        <sys_update_version display_value="sys_app_module_c3ecdf4c1b2b5950c7c9fc078b4bcb4c">86eddb8c1b2b5950c7c9fc078b4bcb84</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-11-29 07:45:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

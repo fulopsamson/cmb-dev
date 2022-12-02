@@ -13,7 +13,7 @@
         <sys_update_name>sys_security_acl_role_c61632ca1b71991030bc986c9b4bcb8f</sys_update_name>
         <sys_updated_by>szabo.daniel</sys_updated_by>
         <sys_updated_on>2022-09-09 10:07:32</sys_updated_on>
-        <sys_user_role display_value="x_tsigh_cmb.client_invoice_lines_user" name="x_tsigh_cmb.client_invoice_lines_user">3116368a1b71991030bc986c9b4bcb76</sys_user_role>
+        <sys_user_role display_value="x_tsigh_cmb.client_invoice_lines_reader" name="x_tsigh_cmb.client_invoice_lines_reader">3116368a1b71991030bc986c9b4bcb76</sys_user_role>
         <transaction_id/>
     </sys_security_acl_role>
 </record_update>

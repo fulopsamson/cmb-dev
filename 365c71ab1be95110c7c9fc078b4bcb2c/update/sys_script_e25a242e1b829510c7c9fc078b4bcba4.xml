@@ -43,8 +43,8 @@
     if (a1.length > 0) {
         for (var i = 0; i < a1.length; i++) {
             if (a2.indexOf(a1[i]) === -1) {
-                var result = CIRelUtils.delCIRel(current.sys_id, a1[i], ciRelType);
-				result = CIRelUtils.setCIstatus(a1[i],'6'); // In Stock
+                var result = CIRelUtils.delAssetRel(current.sys_id, a1[i], ciRelType);
+				result = CIRelUtils.setAssetstatus(a1[i],'6','available'); // In Stock
 				result = CIRelUtils.setAssetEQ(a1[i], '', '');
             }
         }
@@ -53,8 +53,8 @@
     if (a2.length > 0) {
         for (var j = 0; j < a2.length; j++) {
             if (a1.indexOf(a2[j]) === -1) {
-                var result2 = CIRelUtils.createCIRel(current.sys_id, a2[j], ciRelType);
-				result2 = CIRelUtils.setCIstatus(a2[j],'1'); // Installed/In Production
+                var result2 = CIRelUtils.createAssetRel(current.sys_id, a2[j], ciRelType);
+				result2 = CIRelUtils.setAssetstatus(a2[j],'1',''); // In use
 				result2 = CIRelUtils.setAssetEQ(a2[j], current.sys_id, current.u_service);
             }
         }
@@ -68,15 +68,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e25a242e1b829510c7c9fc078b4bcba4</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>Equipment Group after update CI rels</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_e25a242e1b829510c7c9fc078b4bcba4</sys_update_name>
-        <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-11-08 08:20:43</sys_updated_on>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-11-29 11:14:52</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

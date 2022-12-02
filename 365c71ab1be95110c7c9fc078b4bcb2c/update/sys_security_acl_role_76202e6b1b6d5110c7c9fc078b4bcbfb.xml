@@ -13,7 +13,7 @@
         <sys_update_name>sys_security_acl_role_76202e6b1b6d5110c7c9fc078b4bcbfb</sys_update_name>
         <sys_updated_by>istvan.toma</sys_updated_by>
         <sys_updated_on>2022-09-01 14:06:56</sys_updated_on>
-        <sys_user_role display_value="x_tsigh_cmb.project_user" name="x_tsigh_cmb.project_user">2a20e66b1b6d5110c7c9fc078b4bcb76</sys_user_role>
+        <sys_user_role display_value="x_tsigh_cmb.project_writer" name="x_tsigh_cmb.project_writer">2a20e66b1b6d5110c7c9fc078b4bcb76</sys_user_role>
         <transaction_id/>
     </sys_security_acl_role>
 </record_update>

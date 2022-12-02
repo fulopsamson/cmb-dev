@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.CMBSupplierInvoiceAjaxUtils</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>CMBSupplierInvoiceAjaxUtils</name>
+        <script><![CDATA[var CMBSupplierInvoiceAjaxUtils = Class.create();
+CMBSupplierInvoiceAjaxUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getSupplierAccount: function() {
+		var gr = new GlideRecord('x_tsigh_cmb_billing_profile');
+		var qr = gr.addQuery('type','supplier');
+		qr.addOrCondition('type', 'provider');
+		gr.query();
+		res = [];
+		while (gr.next()) {
+			res.push(gr.sys_id);
+		}
+		return res;
+	},
+	
+	
+    type: 'CMBSupplierInvoiceAjaxUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-11-28 18:04:18</sys_created_on>
+        <sys_id>3a3220081bef1950c7c9fc078b4bcbe1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>CMBSupplierInvoiceAjaxUtils</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_3a3220081bef1950c7c9fc078b4bcbe1</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-11-28 18:07:59</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_include_3a3220081bef1950c7c9fc078b4bcbe1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_tsigh_cmb.CMBSupplierInvoiceAjaxUtils&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;CMBSupplierInvoiceAjaxUtils&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var CMBSupplierInvoiceAjaxUtils = Class.create();
+CMBSupplierInvoiceAjaxUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	getSupplierAccount: function() {
+		var gr = new GlideRecord('x_tsigh_cmb_billing_profile');
+		var qr = gr.addQuery('type','supplier');
+		qr.addOrCondition('type', 'provider');
+		gr.query();
+		res = [];
+		while (gr.next()) {
+			res.push(gr.sys_id);
+		}
+		return res;
+	},
+	
+	
+    type: 'CMBSupplierInvoiceAjaxUtils'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;samson.fulop&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-28 18:04:18&lt;/sys_created_on&gt;&lt;sys_id&gt;3a3220081bef1950c7c9fc078b4bcbe1&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;CMBSupplierInvoiceAjaxUtils&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_3a3220081bef1950c7c9fc078b4bcbe1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;samson.fulop&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-28 18:07:59&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1089412468</payload_hash>
+        <record_name>CMBSupplierInvoiceAjaxUtils</record_name>
+        <reverted_from/>
+        <source>2bc4b9e21b971550c7c9fc078b4bcb2f</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-11-28 18:07:59</sys_created_on>
+        <sys_id>04436cc41bef1950c7c9fc078b4bcb39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184bf6ca6980000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-11-28 18:07:59</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>c8436cc4c4ef19501a797c6afe11a938</update_guid>
+        <update_guid_history>c8436cc4c4ef19501a797c6afe11a938:-1089412468,4a626cc460ef195049a70eb154b2250a:-164109578</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-11-28 18:09:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>28a1d593bcc94b57920286faefec29c9</sys_id>
+        <sys_metadata>3a3220081bef1950c7c9fc078b4bcbe1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMBSupplierInvoiceAjaxUtils</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_include_3a3220081bef1950c7c9fc078b4bcbe1</sys_update_name>
+        <sys_update_version display_value="sys_script_include_3a3220081bef1950c7c9fc078b4bcbe1">04436cc41bef1950c7c9fc078b4bcb39</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-11-28 18:09:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

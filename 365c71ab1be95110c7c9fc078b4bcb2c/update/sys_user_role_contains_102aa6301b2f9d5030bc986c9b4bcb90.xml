@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="INSERT_OR_UPDATE">
+        <contains display_value="x_tsigh_cmb.equipment_group_owner_writer" name="x_tsigh_cmb.equipment_group_owner_writer">77f36ab81beb9d5030bc986c9b4bcb47</contains>
+        <role display_value="x_tsigh_cmb.project_management" name="x_tsigh_cmb.project_management">78e37ab51b72115030bc986c9b4bcb24</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-12-01 11:52:44</sys_created_on>
+        <sys_id>102aa6301b2f9d5030bc986c9b4bcb90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.equipment_group_owner_writer.x_tsigh_cmb.project_management</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_user_role_contains_102aa6301b2f9d5030bc986c9b4bcb90</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-12-01 11:52:44</sys_updated_on>
+    </sys_user_role_contains>
+</record_update>

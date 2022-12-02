@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Supplier invoice" max_length="40" name="x_tsigh_cmb_supplier_invoice" sizeclass="2" type="collection">
+    <element audit="true" label="Supplier invoice" max_length="40" name="x_tsigh_cmb_supplier_invoice" sizeclass="48" type="collection">
         <element choice="1" choice_field="approval" choice_table="x_tsigh_cmb_client_invoice" label="Approval" max_length="20" name="approval" type="string">
             <choice/>
         </element>
-        <element label="Billing profile" mandatory="true" max_length="32" name="billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.supplier" type="reference" use_reference_qualifier="advanced"/>
+        <element label="Billing profile" mandatory="true" max_length="32" name="billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.supplier+&quot;^type=supplier&quot;" type="reference" use_reference_qualifier="advanced"/>
         <element label="Budget" max_length="32" name="budget" read_only="true" reference="fm_budget" type="reference"/>
         <element choice="1" label="Cost centre" mandatory="true" max_length="32" name="cost_centre" reference="cmn_cost_center" type="reference">
             <choice/>
@@ -440,7 +440,7 @@
             </choice>
         </element>
         <element default="javascript: gs.getProperty('x_tsigh_cmb.main_stockroom')&#13;&#10;" label="Stockroom" mandatory="true" max_length="32" name="stockroom" reference="alm_stockroom" type="reference"/>
-        <element display="true" label="Supplier" mandatory="true" max_length="32" name="supplier" reference="customer_account" type="reference"/>
+        <element display="true" label="Supplier" mandatory="true" max_length="32" name="supplier" reference="customer_account" reference_qual="javascript:  new x_tsigh_cmb.CMBSupplierInvoiceUtils().getSupplierAccounts()" type="reference" use_reference_qualifier="advanced"/>
         <element label="Total gross value in RON" max_length="40" name="total_gross_value_in_ron" read_only="true" type="float"/>
         <element label="Total net value" max_length="40" name="total_net_value" read_only="true" type="float"/>
         <element label="Total net value in RON" max_length="40" name="total_net_value_in_ron" read_only="true" type="float"/>

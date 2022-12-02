@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Product type" max_length="40" name="x_tsigh_cmb_product_type" sizeclass="3" type="collection">
+    <element label="Product type" max_length="40" name="x_tsigh_cmb_product_type" sizeclass="5" type="collection">
         <element label="Capacity" max_length="40" name="capacity" type="boolean"/>
         <element label="Cost code" max_length="40" name="cost_code" type="string"/>
         <element label="Description" max_length="40" name="description" type="string"/>

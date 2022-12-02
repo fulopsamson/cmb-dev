@@ -64,10 +64,17 @@
 
     if (previous.u_state == 'Active') {
         if (curr <= now_end) {
+			
+		
+			
             gs.info('LBD: prev = null  && curr < now_end');
             pointer = new GlideDateTime(curr);
             pointer.setDayOfMonthUTC(1);
-
+			
+			if (curr < acd) {
+				pointer = new GlideDateTime(acd);
+			}
+			
             while (pointer < now_end) {
                 current_start = new GlideDateTime(pointer);
                 pointer.setDayOfMonthUTC(31);
@@ -97,33 +104,36 @@
                 gs.info(current_start.getDate() + ' - ' + current_end.getDate());
                 pointer.addDaysUTC(1);
             }
-            dummy = new GlideDateTime(curr);
-            dummy.setDayOfMonthUTC(1);
-            current_start = new GlideDateTime(dummy);
-            current_end = new GlideDateTime(curr);
-            if (acd <= current_end && acd >= current_start) {
-                current_start = new GlideDateTime(acd);
-            }
+			
+			if (curr >= acd) {
+				dummy = new GlideDateTime(curr);
+				dummy.setDayOfMonthUTC(1);
+				current_start = new GlideDateTime(dummy);
+				current_end = new GlideDateTime(curr);
+				if (acd <= current_end && acd >= current_start) {
+					current_start = new GlideDateTime(acd);
+				}
 
-            validationLine.initialize();
-            validationLine.setValue('period_start', current_start.getDate());
-            validationLine.setValue('period_end', current_end.getDate());
-            validationLine.setValue("billing_profile", current.u_billing_profile);
-            validationLine.setValue("service", current.sys_id);
-            validationLine.setValue("year", current_start.getYearUTC());
-            validationLine.setValue("month", current_start.getMonthUTC());
-            validationLine.setValue('otc', rev.otc);
-            validationLine.setValue('mrc', rev.mrc);
-			if (acd <= current_end && acd >= current_start) {
-                validationLine.setValue('otc_calculated', rev.otc);
-            } else {
-				validationLine.setValue('otc_calculated', 0);
+				validationLine.initialize();
+				validationLine.setValue('period_start', current_start.getDate());
+				validationLine.setValue('period_end', current_end.getDate());
+				validationLine.setValue("billing_profile", current.u_billing_profile);
+				validationLine.setValue("service", current.sys_id);
+				validationLine.setValue("year", current_start.getYearUTC());
+				validationLine.setValue("month", current_start.getMonthUTC());
+				validationLine.setValue('otc', rev.otc);
+				validationLine.setValue('mrc', rev.mrc);
+				if (acd <= current_end && acd >= current_start) {
+					validationLine.setValue('otc_calculated', rev.otc);
+				} else {
+					validationLine.setValue('otc_calculated', 0);
+				}
+				validationLine.setValue('mrc_calculated', parseFloat(current.u_early_termination_fee) + utils.claculateMRC(rev.mrc, current_start, current_end));
+				validationLine.setValue('project', current.u_project);
+				validationLine.setValue('project_code', current.u_project_code);
+				validationLine.setValue('product_type', current.u_product_type);
+				validationLine.insert();
 			}
-            validationLine.setValue('mrc_calculated', parseFloat(current.u_early_termination_fee) + utils.claculateMRC(rev.mrc, current_start, current_end));
-			validationLine.setValue('project', current.u_project);
-			validationLine.setValue('project_code', current.u_project_code);
-			validationLine.setValue('product_type', current.u_product_type);
-            validationLine.insert();
 			gs.info(current_start.getDate() + ' - ' + current_end.getDate());
 
         } else {
@@ -320,7 +330,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a885dd831be6551030bc986c9b4bcbfe</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>CMB Service Last billing date change</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -328,7 +338,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_a885dd831be6551030bc986c9b4bcbfe</sys_update_name>
         <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-11-07 09:34:22</sys_updated_on>
+        <sys_updated_on>2022-11-29 15:58:36</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

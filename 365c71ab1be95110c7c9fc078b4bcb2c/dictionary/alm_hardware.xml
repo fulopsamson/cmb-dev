@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="alm_asset" label="Hardware" max_length="40" name="alm_hardware" sizeclass="4" type="collection">
+    <element audit="true" extends="alm_asset" label="Hardware" max_length="40" name="alm_hardware" sizeclass="48" type="collection">
         <element label="Spare Asset" max_length="32" name="x_tsigh_cmb_spare_asset" reference="alm_hardware" reference_qual="javascript:if(current.x_tsigh_cmb_spare_strategy == 'Local')&quot;install_status=6^stockroomISNOTEMPTY^stockroom=&quot; + current.stockroom; else &quot;install_status=6^stockroomISNOTEMPTY^stockroom!=&quot; + current.stockroom;" type="reference" use_reference_qualifier="advanced"/>
         <element choice="1" label="Spare strategy" max_length="40" name="x_tsigh_cmb_spare_strategy" type="choice">
             <choice>

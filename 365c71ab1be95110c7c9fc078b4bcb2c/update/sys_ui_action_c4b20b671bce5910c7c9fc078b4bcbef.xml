@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.install_status == 6 &amp;&amp; current.substatus == 'available'</condition>
+        <condition>current.install_status == 6 &amp;&amp; current.substatus == 'available' &amp;&amp; gs.hasRole('x_tsigh_cmb.supplier_manager')</condition>
         <form_action>false</form_action>
         <form_button>false</form_button>
         <form_button_v2>false</form_button_v2>
@@ -41,10 +41,9 @@
 	ga.addParam('devicelist', entries);
 	ga.getXML(function(response){
 		var answer = response.responseXML.documentElement.getAttribute("answer");
-		alert(JSON.parse(answer));
 		var ret = JSON.parse(answer);
 		if(ret.code == 'error'){
-
+			if(ret.msg) alert(ret.msg);
 		}else {
 			if(ret.msg) alert(ret.msg);
 			var url = new GlideURL("x_tsigh_cmb_client_invoice.do");
@@ -65,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c4b20b671bce5910c7c9fc078b4bcbef</sys_id>
-        <sys_mod_count>38</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>Sell devices</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -73,7 +72,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_ui_action_c4b20b671bce5910c7c9fc078b4bcbef</sys_update_name>
         <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-11-15 13:14:41</sys_updated_on>
+        <sys_updated_on>2022-11-29 15:20:21</sys_updated_on>
         <table>alm_asset</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
