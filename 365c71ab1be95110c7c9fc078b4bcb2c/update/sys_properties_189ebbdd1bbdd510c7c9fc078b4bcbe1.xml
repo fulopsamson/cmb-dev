@@ -11,16 +11,16 @@
         <sys_created_by>toma.istvan</sys_created_by>
         <sys_created_on>2022-09-07 07:28:44</sys_created_on>
         <sys_id>189ebbdd1bbdd510c7c9fc078b4bcbe1</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>glide.ui.x_tsigh_cmb_u_cmdb_ci_cmb_service_activity.fields</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_properties_189ebbdd1bbdd510c7c9fc078b4bcbe1</sys_update_name>
-        <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-09-15 12:34:33</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-08 14:50:53</sys_updated_on>
         <type>string</type>
-        <value>sys_class_name,sys_updated_on,u_billing_profile,u_account,u_acceptance_date,u_contract,u_contract_period,u_endpoint_a,u_endpoint_b,u_pop_a,u_pop_b,u_rfs_commited,u_rfs_requested,u_project,u_project_code,u_product_type,u_work_note,u_otc,*Relations*</value>
+        <value>sys_class_name,sys_updated_on,u_billing_profile,u_account,u_acceptance_date,u_contract,u_contract_period,u_endpoint_a,u_endpoint_b,u_pop_a,u_pop_b,u_rfs_commited,u_rfs_requested,u_project,u_project_code,u_product_type,u_work_note,u_otc,u_mrc,*Relations*,*Attachments*,u_contract_number,sys_created_by,u_acceptance_document,approval,change_control,asset,asset_tag,assigned,assigned_to,attestation_score,attestation_status,attested,attested_by,attested_date,attributes,u_backup_service,business_unit,can_print,u_cancellation_form,u_capacity_unit_of_measurement,u_capacity_value,category,assignment_group,checked_in,checked_out,u_combridge_id,comments,commercial_change,company,contract_end_date,contract_name,contract_start_date,contract_type,correlation_id,cost,cost_center,cost_cc,sys_created_on,u_currency,dns_domain,department,short_description,u_designation,discovery_source,sys_domain,sys_domain_path,due,due_in,duplicate_of,u_early_termination_fee,endpoint_a_location,endpoint_b_location,environment,fault_count,first_discovered,fqdn,gl_account,id,ip_address,install_date,invoice_number,justification,u_last_billing_date,lease_id,u_legacy_id,life_cycle_stage,life_cycle_stage_status,u_link,location,mac_address,u_mrc_pos_on_po,maintenance_schedule,managed_by_group,managed_by,manufacturer,model_id,model_number,monitor,last_discovered,name,new_endpoint_a,new_endpoint_b,new_contract,number,u_otc_pos_on_po,operational_status,delivery_date,order_date,original_id,owned_by,u_owner,po_number,po_contract_number,u_parent_service,u_partner_circuit_id,partner_ref_nr,purchase_date,u_reason_for_termination,unverified,schedule,serial,serial_number,u_service_description,skip_sync,start_date,u_state,install_status,subcategory,support_group,supported_by,sys_class_path,sys_tags,sys_updated_by,sys_mod_count,vendor,warranty_expiration,rpt_test,*Email*</value>
         <write_roles/>
     </sys_properties>
     <sys_translated_text action="delete_multiple" query="documentkey=189ebbdd1bbdd510c7c9fc078b4bcbe1"/>

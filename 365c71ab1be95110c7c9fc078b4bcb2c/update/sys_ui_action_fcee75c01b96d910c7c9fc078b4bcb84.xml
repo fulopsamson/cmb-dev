@@ -7,7 +7,7 @@
 
 }]]></client_script_v2>
         <comments/>
-        <condition>current.state=='temporary'</condition>
+        <condition>current.state=='temporary' &amp;&amp; current.canWrite()</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>true</form_button_v2>
@@ -27,7 +27,7 @@
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
         <messages/>
-        <name>Valid</name>
+        <name>Approve</name>
         <onclick/>
         <order>-1100</order>
         <script><![CDATA[var invoice_lines = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
@@ -65,15 +65,15 @@ if (invoice_lines.getRowCount() > 0) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fcee75c01b96d910c7c9fc078b4bcb84</sys_id>
-        <sys_mod_count>29</sys_mod_count>
-        <sys_name>Valid</sys_name>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name>Approve</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_ui_action_fcee75c01b96d910c7c9fc078b4bcb84</sys_update_name>
-        <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-11-09 08:29:37</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-07 09:08:46</sys_updated_on>
         <table>x_tsigh_cmb_client_invoice</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

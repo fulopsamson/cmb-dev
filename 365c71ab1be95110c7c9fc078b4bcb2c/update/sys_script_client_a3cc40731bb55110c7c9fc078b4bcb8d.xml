@@ -15,7 +15,12 @@
 	var supplierinvoice = g_form.getReference('supplier_invoice', callBack);
 	
 	function callBack(rec){
-		g_form.setValue('currency', rec.invoice_currency);
+		var currency = g_form.getValue('currency');
+// 		alert(currency);
+		if (!currency || currency == '' || currency == null) {
+// 			alert(rec.invoice_currency);
+			g_form.setValue('currency', rec.invoice_currency);
+		}
 	}
    
 }]]></script>
@@ -25,15 +30,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a3cc40731bb55110c7c9fc078b4bcb8d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Supplier invoice lines Currency</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_client_a3cc40731bb55110c7c9fc078b4bcb8d</sys_update_name>
-        <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-09-14 08:18:36</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-07 14:47:56</sys_updated_on>
         <table>x_tsigh_cmb_supplier_invoice_lines</table>
         <type>onLoad</type>
         <ui_type>10</ui_type>

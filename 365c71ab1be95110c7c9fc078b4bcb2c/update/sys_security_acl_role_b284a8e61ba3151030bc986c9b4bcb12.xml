@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-06 12:38:27</sys_created_on>
+        <sys_id>b284a8e61ba3151030bc986c9b4bcb12</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_tsigh_cmb_project.x_tsigh_cmb.project_reader</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_security_acl display_value="x_tsigh_cmb_project">4d5843211b36dd1030bc986c9b4bcbeb</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_b284a8e61ba3151030bc986c9b4bcb12</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-06 12:38:59</sys_updated_on>
+        <sys_user_role display_value="x_tsigh_cmb.project_reader" name="x_tsigh_cmb.project_reader">05dbfe701b6f9d5030bc986c9b4bcbce</sys_user_role>
+        <transaction_id>3684a8a61ba3151030bc986c9b4bcbc3</transaction_id>
+    </sys_security_acl_role>
+</record_update>

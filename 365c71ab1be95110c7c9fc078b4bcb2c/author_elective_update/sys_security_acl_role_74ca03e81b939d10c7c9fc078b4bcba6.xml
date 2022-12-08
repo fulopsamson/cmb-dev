@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-11-18 09:21:08</sys_created_on>
+        <sys_id>74ca03e81b939d10c7c9fc078b4bcba6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_tsigh_cmb.project_management</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_security_acl display_value="">f8ca8fa81b939d10c7c9fc078b4bcb64</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_74ca03e81b939d10c7c9fc078b4bcba6</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-18 09:21:08</sys_updated_on>
+        <sys_user_role display_value="x_tsigh_cmb.project_management" name="x_tsigh_cmb.project_management">78e37ab51b72115030bc986c9b4bcb24</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_security_acl_role_74ca03e81b939d10c7c9fc078b4bcba6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-11-18 09:21:08</sys_created_on><sys_id>74ca03e81b939d10c7c9fc078b4bcba6</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.x_tsigh_cmb.project_management</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_security_acl display_value="">f8ca8fa81b939d10c7c9fc078b4bcb64</sys_security_acl><sys_update_name>sys_security_acl_role_74ca03e81b939d10c7c9fc078b4bcba6</sys_update_name><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-11-18 09:21:08</sys_updated_on><sys_user_role display_value="x_tsigh_cmb.project_management" name="x_tsigh_cmb.project_management">78e37ab51b72115030bc986c9b4bcb24</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>997169500</payload_hash>
+        <record_name>.x_tsigh_cmb.project_management</record_name>
+        <reverted_from/>
+        <source>8b2142bd1bcb551030bc986c9b4bcbbf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-11-18 09:21:08</sys_created_on>
+        <sys_id>f4ca03e81b939d10c7c9fc078b4bcba8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1848a0ab4800000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-11-18 09:21:08</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>30ca03e8fb939d10b97c215d6e607ea8</update_guid>
+        <update_guid_history>30ca03e8fb939d10b97c215d6e607ea8:997169500</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".x_tsigh_cmb.project_management">9b1049261b27151030bc986c9b4bcb38</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-06 14:38:54</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>04b485fd0ab5478097416e5975a081f1</sys_id>
+        <sys_metadata>74ca03e81b939d10c7c9fc078b4bcba6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_tsigh_cmb.project_management</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="x_tsigh_cmb_u_cmdb_ci_cmb_service.u_endpoint_b">f8ca8fa81b939d10c7c9fc078b4bcb64</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_74ca03e81b939d10c7c9fc078b4bcba6</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_74ca03e81b939d10c7c9fc078b4bcba6">f4ca03e81b939d10c7c9fc078b4bcba8</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-06 14:38:54</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

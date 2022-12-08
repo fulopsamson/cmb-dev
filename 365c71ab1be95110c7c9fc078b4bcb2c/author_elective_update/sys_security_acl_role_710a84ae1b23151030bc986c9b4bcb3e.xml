@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-06 10:42:37</sys_created_on>
+        <sys_id>710a84ae1b23151030bc986c9b4bcb3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_product_type.description.snc_internal</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_security_acl display_value="">2347ba7c1b2f9d5030bc986c9b4bcb01</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_710a84ae1b23151030bc986c9b4bcb3e</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:42:37</sys_updated_on>
+        <sys_user_role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</sys_user_role>
+        <transaction_id>b50acc6a1b23151030bc986c9b4bcb15</transaction_id>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_security_acl_role_710a84ae1b23151030bc986c9b4bcb3e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>samson.fulop</sys_created_by><sys_created_on>2022-12-06 10:42:37</sys_created_on><sys_id>710a84ae1b23151030bc986c9b4bcb3e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_tsigh_cmb_product_type.description.snc_internal</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_security_acl display_value="">2347ba7c1b2f9d5030bc986c9b4bcb01</sys_security_acl><sys_update_name>sys_security_acl_role_710a84ae1b23151030bc986c9b4bcb3e</sys_update_name><sys_updated_by>samson.fulop</sys_updated_by><sys_updated_on>2022-12-06 10:42:37</sys_updated_on><sys_user_role display_value="snc_internal" name="snc_internal">7fcaa702933002009c8579b4f47ffbde</sys_user_role><transaction_id>b50acc6a1b23151030bc986c9b4bcb15</transaction_id></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1299885710</payload_hash>
+        <record_name>x_tsigh_cmb_product_type.description.snc_internal</record_name>
+        <reverted_from/>
+        <source>35a70a111b231110c7c9fc078b4bcbf9</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2022-12-02 22:39:04</sys_created_on>
+        <sys_id>54c5e06a1ba3151030bc986c9b4bcbbf</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>184d4fe43400000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>Access Roles</type>
+        <update_guid>14c5e06ab4a31510f22df48310e914bf</update_guid>
+        <update_guid_history>14c5e06ab4a31510f22df48310e914bf:-1299885710</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_tsigh_cmb_product_type.description.snc_internal">54c5e46a1ba3151030bc986c9b4bcbb0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-06 12:43:45</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>8ba8cadbb9f542f4802edb336e8763e4</sys_id>
+        <sys_metadata>710a84ae1b23151030bc986c9b4bcb3e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb_product_type.description.snc_internal</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_710a84ae1b23151030bc986c9b4bcb3e</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_710a84ae1b23151030bc986c9b4bcb3e">54c5e06a1ba3151030bc986c9b4bcbbf</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-06 12:43:45</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

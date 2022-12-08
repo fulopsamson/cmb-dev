@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Client invoice lines" max_length="40" name="x_tsigh_cmb_client_invoice_lines" sizeclass="74" type="collection">
+    <element audit="true" label="Client invoice lines" max_length="40" name="x_tsigh_cmb_client_invoice_lines" sizeclass="89" type="collection">
         <element label="Client invoice" max_length="32" name="client_invoice" read_only="true" reference="x_tsigh_cmb_client_invoice" reference_cascade_rule="cascade" type="reference"/>
         <element attributes="encode_utf8=false" label="Consumable" max_length="32" name="consumable" reference="alm_consumable" type="reference"/>
         <element label="Cost code" max_length="40" name="cost_code" type="string"/>
@@ -16,7 +16,392 @@
         <element attributes="encode_utf8=false" label="Product type" max_length="32" name="product_type" reference="x_tsigh_cmb_product_type" type="reference"/>
         <element label="Project" max_length="32" name="project" reference="x_tsigh_cmb_project" type="reference"/>
         <element attributes="edge_encryption_enabled=true" choice="1" choice_field="u_project_code" choice_table="x_tsigh_cmb_u_cmdb_ci_cmb_service" label="Project code" max_length="40" name="project_code" type="string">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Asahi_Austria" sequence="0" value="35010"/>
+                <element inactive_on_update="false" label="Asahi_Canada" sequence="1" value="35008"/>
+                <element inactive_on_update="false" label="Asahi_Cehia" sequence="2" value="35002"/>
+                <element inactive_on_update="false" label="Asahi_Germany" sequence="3" value="35001"/>
+                <element inactive_on_update="false" label="Asahi_Hong Kong" sequence="4" value="35015"/>
+                <element inactive_on_update="false" label="Asahi_Hungary" sequence="5" value="35012"/>
+                <element inactive_on_update="false" label="Asahi_Italy" sequence="6" value="35004"/>
+                <element inactive_on_update="false" label="Asahi_Olanda" sequence="7" value="35003"/>
+                <element inactive_on_update="false" label="Asahi_Poland" sequence="8" value="35009"/>
+                <element inactive_on_update="false" label="Asahi_Romania" sequence="9" value="35013"/>
+                <element inactive_on_update="false" label="Asahi_Slovakia" sequence="10" value="35011"/>
+                <element inactive_on_update="false" label="Asahi_South Korea" sequence="11" value="35005"/>
+                <element inactive_on_update="false" label="Asahi_Sweden" sequence="12" value="35014"/>
+                <element inactive_on_update="false" label="Asahi_Taiwan" sequence="13" value="35006"/>
+                <element inactive_on_update="false" label="Asahi_USA" sequence="14" value="35007"/>
+                <element inactive_on_update="false" label="Asahi_XXX" sequence="15" value="35016"/>
+                <element inactive_on_update="false" label="AT&amp;S PoC_Austria" sequence="16" value="36002"/>
+                <element inactive_on_update="false" label="AT&amp;S PoC_China" sequence="17" value="36001"/>
+                <element inactive_on_update="false" label="BCG_China" sequence="18" value="26004"/>
+                <element inactive_on_update="false" label="BCG_Indonesia" sequence="19" value="26002"/>
+                <element inactive_on_update="false" label="BCG_Israel" sequence="20" value="26003"/>
+                <element inactive_on_update="false" label="BCG_Philippines" sequence="21" value="26006"/>
+                <element inactive_on_update="false" label="BCG_Qatar" sequence="22" value="26007"/>
+                <element inactive_on_update="false" label="BCG_Thailand" sequence="23" value="26001"/>
+                <element inactive_on_update="false" label="BCG_United Arab Emirates" sequence="24" value="26005"/>
+                <element inactive_on_update="false" label="Besi_Austria" sequence="25" value="10001"/>
+                <element inactive_on_update="false" label="Besi_China" sequence="26" value="10002"/>
+                <element inactive_on_update="false" label="Besi_Malaysia" sequence="27" value="10003"/>
+                <element inactive_on_update="false" label="Besi_Netherlands" sequence="28" value="10004"/>
+                <element inactive_on_update="false" label="Besi_Project Management" sequence="29" value="10010"/>
+                <element inactive_on_update="false" label="Besi_Singapore" sequence="30" value="10005"/>
+                <element inactive_on_update="false" label="Besi_South Korea" sequence="31" value="10006"/>
+                <element inactive_on_update="false" label="Besi_Switzerland" sequence="32" value="10007"/>
+                <element inactive_on_update="false" label="Besi_Taiwan" sequence="33" value="10008"/>
+                <element inactive_on_update="false" label="Besi_USA" sequence="34" value="10009"/>
+                <element inactive_on_update="false" label="Bosch_Croatia" sequence="35" value="44003"/>
+                <element inactive_on_update="false" label="Bosch_Hungary" sequence="36" value="44004"/>
+                <element inactive_on_update="false" label="Bosch_Romania" sequence="37" value="44001"/>
+                <element inactive_on_update="false" label="Bosch_Slovenia" sequence="38" value="44002"/>
+                <element inactive_on_update="false" label="Buerkert Switzerland" sequence="39" value="24011"/>
+                <element inactive_on_update="false" label="Buerkert_Australia" sequence="40" value="24020"/>
+                <element inactive_on_update="false" label="Buerkert_Austria" sequence="41" value="24001"/>
+                <element inactive_on_update="false" label="Buerkert_Brazil" sequence="42" value="24008"/>
+                <element inactive_on_update="false" label="Buerkert_Canada" sequence="43" value="24009"/>
+                <element inactive_on_update="false" label="Buerkert_China" sequence="44" value="24003"/>
+                <element inactive_on_update="false" label="Buerkert_Czech Republic" sequence="45" value="24005"/>
+                <element inactive_on_update="false" label="Buerkert_Denmark" sequence="46" value="24021"/>
+                <element inactive_on_update="false" label="Buerkert_Finland" sequence="47" value="24023"/>
+                <element inactive_on_update="false" label="Buerkert_France" sequence="48" value="24010"/>
+                <element inactive_on_update="false" label="Buerkert_Germany" sequence="49" value="24002"/>
+                <element inactive_on_update="false" label="Buerkert_India" sequence="50" value="24025"/>
+                <element inactive_on_update="false" label="Buerkert_Italy" sequence="51" value="24026"/>
+                <element inactive_on_update="false" label="Buerkert_Japan" sequence="52" value="24012"/>
+                <element inactive_on_update="false" label="Buerkert_Malaysia" sequence="53" value="24014"/>
+                <element inactive_on_update="false" label="Buerkert_Netherlands" sequence="54" value="24015"/>
+                <element inactive_on_update="false" label="Buerkert_New Zealand" sequence="55" value="24028"/>
+                <element inactive_on_update="false" label="Buerkert_Norway" sequence="56" value="24027"/>
+                <element inactive_on_update="false" label="Buerkert_Philippines" sequence="57" value="24016"/>
+                <element inactive_on_update="false" label="Buerkert_Poland" sequence="58" value="24017"/>
+                <element inactive_on_update="false" label="Buerkert_Singapore" sequence="59" value="24006"/>
+                <element inactive_on_update="false" label="Buerkert_South Africa" sequence="60" value="24030"/>
+                <element inactive_on_update="false" label="Buerkert_South Korea" sequence="61" value="24013"/>
+                <element inactive_on_update="false" label="Buerkert_Spain" sequence="62" value="24022"/>
+                <element inactive_on_update="false" label="Buerkert_Sweden" sequence="63" value="24018"/>
+                <element inactive_on_update="false" label="Buerkert_Turkey" sequence="64" value="24007"/>
+                <element inactive_on_update="false" label="Buerkert_UK" sequence="65" value="24024"/>
+                <element inactive_on_update="false" label="Buerkert_United Arab Emirates" sequence="66" value="24004"/>
+                <element inactive_on_update="false" label="Buerkert_Uruguay" sequence="67" value="24019"/>
+                <element inactive_on_update="false" label="Buerkert_USA" sequence="68" value="24029"/>
+                <element inactive_on_update="false" label="Covestro Crown_China" sequence="69" value="32005"/>
+                <element inactive_on_update="false" label="Covestro Crown_Germany" sequence="70" value="32007"/>
+                <element inactive_on_update="false" label="Covestro Crown_Japan" sequence="71" value="32002"/>
+                <element inactive_on_update="false" label="Covestro Crown_Netherlands" sequence="72" value="32006"/>
+                <element inactive_on_update="false" label="Covestro Crown_Spain" sequence="73" value="32001"/>
+                <element inactive_on_update="false" label="Covestro Crown_USA" sequence="74" value="32003"/>
+                <element inactive_on_update="false" label="Covestro_Australia" sequence="75" value="11019"/>
+                <element inactive_on_update="false" label="Covestro_Belgium" sequence="76" value="11022"/>
+                <element inactive_on_update="false" label="Covestro_Brazil" sequence="77" value="11004"/>
+                <element inactive_on_update="false" label="Covestro_China" sequence="78" value="11005"/>
+                <element inactive_on_update="false" label="Covestro_France" sequence="79" value="11006"/>
+                <element inactive_on_update="false" label="Covestro_Germany" sequence="80" value="11001"/>
+                <element inactive_on_update="false" label="Covestro_India" sequence="81" value="11007"/>
+                <element inactive_on_update="false" label="Covestro_Indonezia" sequence="82" value="11023"/>
+                <element inactive_on_update="false" label="Covestro_Italy" sequence="83" value="11008"/>
+                <element inactive_on_update="false" label="Covestro_Japan" sequence="84" value="11009"/>
+                <element inactive_on_update="false" label="Covestro_Malaysia" sequence="85" value="11010"/>
+                <element inactive_on_update="false" label="Covestro_Mexico" sequence="86" value="11026"/>
+                <element inactive_on_update="false" label="Covestro_Netherlands" sequence="87" value="11011"/>
+                <element inactive_on_update="false" label="Covestro_Poland" sequence="88" value="11021"/>
+                <element inactive_on_update="false" label="Covestro_Romania" sequence="89" value="11027"/>
+                <element inactive_on_update="false" label="Covestro_Russia" sequence="90" value="11025"/>
+                <element inactive_on_update="false" label="Covestro_Singapore" sequence="91" value="11012"/>
+                <element inactive_on_update="false" label="Covestro_Slovakia" sequence="92" value="11002"/>
+                <element inactive_on_update="false" label="Covestro_South Korea" sequence="93" value="11024"/>
+                <element inactive_on_update="false" label="Covestro_Spain" sequence="94" value="11003"/>
+                <element inactive_on_update="false" label="Covestro_Switzerland" sequence="95" value="11013"/>
+                <element inactive_on_update="false" label="Covestro_Thailand" sequence="96" value="11014"/>
+                <element inactive_on_update="false" label="Covestro_Turkey" sequence="97" value="11015"/>
+                <element inactive_on_update="false" label="Covestro_United Arab Emirates" sequence="98" value="11016"/>
+                <element inactive_on_update="false" label="Covestro_United Kingdom" sequence="99" value="11017"/>
+                <element inactive_on_update="false" label="Covestro_USA" sequence="100" value="11020"/>
+                <element inactive_on_update="false" label="Covestro_Vietnam" sequence="101" value="11018"/>
+                <element inactive_on_update="false" label="CSO" sequence="102" value="38001"/>
+                <element inactive_on_update="false" label="CSO Synch Tools SW" sequence="103" value="38002"/>
+                <element inactive_on_update="false" label="Daimler_Germany" sequence="104" value="31001"/>
+                <element inactive_on_update="false" label="Delfort_Austria" sequence="105" value="12001"/>
+                <element inactive_on_update="false" label="Delfort_Bulgaria" sequence="106" value="12002"/>
+                <element inactive_on_update="false" label="Delfort_Czech Republic" sequence="107" value="12003"/>
+                <element inactive_on_update="false" label="Delfort_Finland" sequence="108" value="12004"/>
+                <element inactive_on_update="false" label="Delfort_Germany" sequence="109" value="12005"/>
+                <element inactive_on_update="false" label="Delfort_Hungary" sequence="110" value="12006"/>
+                <element inactive_on_update="false" label="Delfort_Malaysia" sequence="111" value="12007"/>
+                <element inactive_on_update="false" label="Delfort_Mexico" sequence="112" value="12008"/>
+                <element inactive_on_update="false" label="Delfort_Project Management" sequence="113" value="12012"/>
+                <element inactive_on_update="false" label="Delfort_United Kingdom" sequence="114" value="12009"/>
+                <element inactive_on_update="false" label="Delfort_USA" sequence="115" value="12010"/>
+                <element inactive_on_update="false" label="Delfort_Vietnam" sequence="116" value="12011"/>
+                <element inactive_on_update="false" label="Denso_Hungary" sequence="117" value="39002"/>
+                <element inactive_on_update="false" label="Denso_Turkey" sequence="118" value="39001"/>
+                <element inactive_on_update="false" label="DMG Mori_Australia" sequence="119" value="46001"/>
+                <element inactive_on_update="false" label="DMG Mori_Austria" sequence="120" value="46002"/>
+                <element inactive_on_update="false" label="DMG Mori_Belgium" sequence="121" value="46003"/>
+                <element inactive_on_update="false" label="DMG Mori_China" sequence="122" value="46032"/>
+                <element inactive_on_update="false" label="DMG Mori_Czech Republic" sequence="123" value="46004"/>
+                <element inactive_on_update="false" label="DMG Mori_Denmark" sequence="124" value="46005"/>
+                <element inactive_on_update="false" label="DMG Mori_Egypt" sequence="125" value="46006"/>
+                <element inactive_on_update="false" label="DMG Mori_Finland" sequence="126" value="46007"/>
+                <element inactive_on_update="false" label="DMG Mori_France" sequence="127" value="46008"/>
+                <element inactive_on_update="false" label="DMG Mori_Germany" sequence="128" value="46009"/>
+                <element inactive_on_update="false" label="DMG Mori_Greece" sequence="129" value="46010"/>
+                <element inactive_on_update="false" label="DMG Mori_Hungary" sequence="130" value="46011"/>
+                <element inactive_on_update="false" label="DMG Mori_India" sequence="131" value="46012"/>
+                <element inactive_on_update="false" label="DMG Mori_Israel" sequence="132" value="46013"/>
+                <element inactive_on_update="false" label="DMG Mori_Italy" sequence="133" value="46014"/>
+                <element inactive_on_update="false" label="DMG Mori_Japan" sequence="134" value="46031"/>
+                <element inactive_on_update="false" label="DMG Mori_Malaysia" sequence="135" value="46015"/>
+                <element inactive_on_update="false" label="DMG Mori_Netherlands" sequence="136" value="46016"/>
+                <element inactive_on_update="false" label="DMG Mori_Philippines" sequence="137" value="46017"/>
+                <element inactive_on_update="false" label="DMG Mori_Poland" sequence="138" value="46018"/>
+                <element inactive_on_update="false" label="DMG Mori_Portugal" sequence="139" value="46019"/>
+                <element inactive_on_update="false" label="DMG Mori_Romania" sequence="140" value="46020"/>
+                <element inactive_on_update="false" label="DMG Mori_Singapore" sequence="141" value="46021"/>
+                <element inactive_on_update="false" label="DMG Mori_Slovenia" sequence="142" value="46022"/>
+                <element inactive_on_update="false" label="DMG Mori_South Korea" sequence="143" value="46023"/>
+                <element inactive_on_update="false" label="DMG Mori_Spain" sequence="144" value="46024"/>
+                <element inactive_on_update="false" label="DMG Mori_Sweden" sequence="145" value="46025"/>
+                <element inactive_on_update="false" label="DMG Mori_Switzerland" sequence="146" value="46026"/>
+                <element inactive_on_update="false" label="DMG Mori_Taiwan" sequence="147" value="46027"/>
+                <element inactive_on_update="false" label="DMG Mori_Turkey" sequence="148" value="46028"/>
+                <element inactive_on_update="false" label="DMG Mori_United Kingdom" sequence="149" value="46029"/>
+                <element inactive_on_update="false" label="DMG Mori_Vietnam" sequence="150" value="46030"/>
+                <element inactive_on_update="false" label="Doka_Australia" sequence="151" value="33006"/>
+                <element inactive_on_update="false" label="Doka_Austria" sequence="152" value="33001"/>
+                <element inactive_on_update="false" label="Doka_Egypt" sequence="153" value="33004"/>
+                <element inactive_on_update="false" label="Doka_Germany" sequence="154" value="33005"/>
+                <element inactive_on_update="false" label="Doka_Ireland" sequence="155" value="33002"/>
+                <element inactive_on_update="false" label="Doka_United Arab Emirates" sequence="156" value="33003"/>
+                <element inactive_on_update="false" label="DS Smith_Croatia" sequence="157" value="13005"/>
+                <element inactive_on_update="false" label="DS Smith_Czech Republic" sequence="158" value="13006"/>
+                <element inactive_on_update="false" label="DS Smith_Poland" sequence="159" value="13007"/>
+                <element inactive_on_update="false" label="DS Smith_Romania" sequence="160" value="13001"/>
+                <element inactive_on_update="false" label="DS Smith_Serbia" sequence="161" value="13004"/>
+                <element inactive_on_update="false" label="DS Smith_Slovakia" sequence="162" value="13002"/>
+                <element inactive_on_update="false" label="DS Smith_Slovenia" sequence="163" value="13003"/>
+                <element inactive_on_update="false" label="DTGBS Belgium_Lab Enablement" sequence="164" value="52001"/>
+                <element inactive_on_update="false" label="Durr_Brazil" sequence="165" value="53002"/>
+                <element inactive_on_update="false" label="Durr_China" sequence="166" value="53003"/>
+                <element inactive_on_update="false" label="Durr_Czech Republic" sequence="167" value="53004"/>
+                <element inactive_on_update="false" label="Durr_Denmark" sequence="168" value="53005"/>
+                <element inactive_on_update="false" label="Durr_France" sequence="169" value="53006"/>
+                <element inactive_on_update="false" label="Durr_Germany" sequence="170" value="53001"/>
+                <element inactive_on_update="false" label="Durr_Hong Kong" sequence="171" value="53007"/>
+                <element inactive_on_update="false" label="Durr_India" sequence="172" value="53008"/>
+                <element inactive_on_update="false" label="Durr_Italy" sequence="173" value="53009"/>
+                <element inactive_on_update="false" label="Durr_Mexico" sequence="174" value="53010"/>
+                <element inactive_on_update="false" label="Durr_Poland" sequence="175" value="53011"/>
+                <element inactive_on_update="false" label="Durr_Singapore" sequence="176" value="53012"/>
+                <element inactive_on_update="false" label="Durr_South Korea" sequence="177" value="53013"/>
+                <element inactive_on_update="false" label="Durr_Spain" sequence="178" value="53014"/>
+                <element inactive_on_update="false" label="Durr_USA" sequence="179" value="53015"/>
+                <element inactive_on_update="false" label="Endress   Hauser" sequence="180" value="29037"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Argentina" sequence="181" value="29025"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Austria" sequence="182" value="29021"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Belgium" sequence="183" value="29026"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Canada" sequence="184" value="29008"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Chile" sequence="185" value="29027"/>
+                <element inactive_on_update="false" label="Endress   Hauser_China" sequence="186" value="29007"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Croatia" sequence="187" value="29020"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Czech Republic" sequence="188" value="29012"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Denmark" sequence="189" value="29018"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Finland" sequence="190" value="29019"/>
+                <element inactive_on_update="false" label="Endress   Hauser_France" sequence="191" value="29002"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Germany" sequence="192" value="29003"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Hong Kong" sequence="193" value="29028"/>
+                <element inactive_on_update="false" label="Endress   Hauser_India" sequence="194" value="29010"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Indonesia" sequence="195" value="29030"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Italy" sequence="196" value="29009"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Japan" sequence="197" value="29015"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Malaysia" sequence="198" value="29031"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Mexico" sequence="199" value="29011"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Netherlands" sequence="200" value="29004"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Norway" sequence="201" value="29022"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Panama" sequence="202" value="29036"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Poland" sequence="203" value="29023"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Romania" sequence="204" value="29016"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Singapore" sequence="205" value="29005"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Slovenia" sequence="206" value="29024"/>
+                <element inactive_on_update="false" label="Endress   Hauser_South Africa" sequence="207" value="29032"/>
+                <element inactive_on_update="false" label="Endress   Hauser_South Korea" sequence="208" value="29033"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Sweden" sequence="209" value="29001"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Switzerland" sequence="210" value="29017"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Thailand" sequence="211" value="29034"/>
+                <element inactive_on_update="false" label="Endress   Hauser_United Kingdom" sequence="212" value="29013"/>
+                <element inactive_on_update="false" label="Endress   Hauser_USA" sequence="213" value="29006"/>
+                <element inactive_on_update="false" label="Endress   Hauser_Vietnam" sequence="214" value="29035"/>
+                <element inactive_on_update="false" label="Endress  Hause_Brazil" sequence="215" value="29014"/>
+                <element inactive_on_update="false" label="Fara cod proiect" sequence="216" value="51001"/>
+                <element inactive_on_update="false" label="Farmasi" sequence="217" value="40001"/>
+                <element inactive_on_update="false" label="FQML_Mauritania" sequence="218" value="25001"/>
+                <element inactive_on_update="false" label="FQML_South Africa" sequence="219" value="25002"/>
+                <element inactive_on_update="false" label="FQML_UK" sequence="220" value="25003"/>
+                <element inactive_on_update="false" label="GDC_Germany" sequence="221" value="34001"/>
+                <element inactive_on_update="false" label="Georg Fischer_Hungary" sequence="222" value="18002"/>
+                <element inactive_on_update="false" label="Georg Fischer_India" sequence="223" value="18001"/>
+                <element inactive_on_update="false" label="HBPO_Slovakia" sequence="224" value="49001"/>
+                <element inactive_on_update="false" label="Landgard_Austria" sequence="225" value="30002"/>
+                <element inactive_on_update="false" label="Landgard_Germany" sequence="226" value="30001"/>
+                <element inactive_on_update="false" label="Landgard_Netherland" sequence="227" value="30003"/>
+                <element inactive_on_update="false" label="Mazda_Croatia" sequence="228" value="19001"/>
+                <element inactive_on_update="false" label="Mazda_Hungary" sequence="229" value="19003"/>
+                <element inactive_on_update="false" label="Mazda_Project Management" sequence="230" value="19005"/>
+                <element inactive_on_update="false" label="Mazda_Slovakia" sequence="231" value="19004"/>
+                <element inactive_on_update="false" label="Mazda_Slovenia" sequence="232" value="19002"/>
+                <element inactive_on_update="false" label="MSC_Austria" sequence="233" value="45001"/>
+                <element inactive_on_update="false" label="MSC_Schweiz" sequence="234" value="45002"/>
+                <element inactive_on_update="false" label="MSIG_Belgium" sequence="235" value="47004"/>
+                <element inactive_on_update="false" label="MSIG_France" sequence="236" value="47007"/>
+                <element inactive_on_update="false" label="MSIG_Germany" sequence="237" value="47002"/>
+                <element inactive_on_update="false" label="MSIG_Italy" sequence="238" value="47006"/>
+                <element inactive_on_update="false" label="MSIG_Netherlands" sequence="239" value="47001"/>
+                <element inactive_on_update="false" label="MSIG_Slovakia" sequence="240" value="47003"/>
+                <element inactive_on_update="false" label="MSIG_Spain" sequence="241" value="47005"/>
+                <element inactive_on_update="false" label="PMG_Austria" sequence="242" value="28003"/>
+                <element inactive_on_update="false" label="PMG_Germany" sequence="243" value="28004"/>
+                <element inactive_on_update="false" label="PMG_Romania" sequence="244" value="28005"/>
+                <element inactive_on_update="false" label="PMG_Spain" sequence="245" value="28001"/>
+                <element inactive_on_update="false" label="PMG_USA" sequence="246" value="28002"/>
+                <element inactive_on_update="false" label="Primetals_Austria" sequence="247" value="14001"/>
+                <element inactive_on_update="false" label="Primetals_Belgium" sequence="248" value="14012"/>
+                <element inactive_on_update="false" label="Primetals_Brazil" sequence="249" value="14002"/>
+                <element inactive_on_update="false" label="Primetals_China" sequence="250" value="14009"/>
+                <element inactive_on_update="false" label="Primetals_Czech Republic" sequence="251" value="14018"/>
+                <element inactive_on_update="false" label="Primetals_Germany" sequence="252" value="14013"/>
+                <element inactive_on_update="false" label="Primetals_India" sequence="253" value="14010"/>
+                <element inactive_on_update="false" label="Primetals_Italy" sequence="254" value="14015"/>
+                <element inactive_on_update="false" label="Primetals_Japan" sequence="255" value="14003"/>
+                <element inactive_on_update="false" label="Primetals_Mexico" sequence="256" value="14007"/>
+                <element inactive_on_update="false" label="Primetals_Poland" sequence="257" value="14014"/>
+                <element inactive_on_update="false" label="Primetals_Project Management" sequence="258" value="14005"/>
+                <element inactive_on_update="false" label="Primetals_Singapore" sequence="259" value="14008"/>
+                <element inactive_on_update="false" label="Primetals_Slovakia" sequence="260" value="14019"/>
+                <element inactive_on_update="false" label="Primetals_South Korea" sequence="261" value="14020"/>
+                <element inactive_on_update="false" label="Primetals_Turkey" sequence="262" value="14016"/>
+                <element inactive_on_update="false" label="Primetals_UK" sequence="263" value="14011"/>
+                <element inactive_on_update="false" label="Primetals_Ukraine" sequence="264" value="14017"/>
+                <element inactive_on_update="false" label="Primetals_USA" sequence="265" value="14004"/>
+                <element inactive_on_update="false" label="Primetals_XXX" sequence="266" value="14006"/>
+                <element inactive_on_update="false" label="Prinzhorn_Austria" sequence="267" value="15001"/>
+                <element inactive_on_update="false" label="Prinzhorn_Bulgaria" sequence="268" value="15002"/>
+                <element inactive_on_update="false" label="Prinzhorn_Cehia" sequence="269" value="15011"/>
+                <element inactive_on_update="false" label="Prinzhorn_Croatia" sequence="270" value="15003"/>
+                <element inactive_on_update="false" label="Prinzhorn_Germany" sequence="271" value="15004"/>
+                <element inactive_on_update="false" label="Prinzhorn_Greece" sequence="272" value="15005"/>
+                <element inactive_on_update="false" label="Prinzhorn_Hungary" sequence="273" value="15006"/>
+                <element inactive_on_update="false" label="Prinzhorn_Poland" sequence="274" value="15007"/>
+                <element inactive_on_update="false" label="Prinzhorn_Romania" sequence="275" value="15008"/>
+                <element inactive_on_update="false" label="Prinzhorn_Turkey" sequence="276" value="15009"/>
+                <element inactive_on_update="false" label="Prinzhorn_Ukraine" sequence="277" value="15010"/>
+                <element inactive_on_update="false" label="RKW Cisco CPE_Egypt" sequence="278" value="20001"/>
+                <element inactive_on_update="false" label="Rotschild_India" sequence="279" value="23001"/>
+                <element inactive_on_update="false" label="Rotschild_Indonesia" sequence="280" value="23002"/>
+                <element inactive_on_update="false" label="Rotschild_Malaysia" sequence="281" value="23003"/>
+                <element inactive_on_update="false" label="Rotschild_USA" sequence="282" value="23004"/>
+                <element inactive_on_update="false" label="Shell_Qatar" sequence="283" value="55001"/>
+                <element inactive_on_update="false" label="Swietelsky_AT" sequence="284" value="56001"/>
+                <element inactive_on_update="false" label="T-Agile_Lab" sequence="285" value="42002"/>
+                <element inactive_on_update="false" label="T-Agile_SDx equipm" sequence="286" value="42003"/>
+                <element inactive_on_update="false" label="T-Agile_SDx Provider Hub" sequence="287" value="42001"/>
+                <element inactive_on_update="false" label="Tann Karton_Austria" sequence="288" value="16001"/>
+                <element inactive_on_update="false" label="Tann Karton_Canada" sequence="289" value="16002"/>
+                <element inactive_on_update="false" label="Tann Karton_China" sequence="290" value="16003"/>
+                <element inactive_on_update="false" label="Tann Karton_Colombiana" sequence="291" value="16004"/>
+                <element inactive_on_update="false" label="Tann Karton_Germany" sequence="292" value="16005"/>
+                <element inactive_on_update="false" label="Tann Karton_Philippines" sequence="293" value="16006"/>
+                <element inactive_on_update="false" label="Tann Karton_Russia" sequence="294" value="16007"/>
+                <element inactive_on_update="false" label="Teufelberger_Austria" sequence="295" value="48001"/>
+                <element inactive_on_update="false" label="Teufelberger_Czech Republic" sequence="296" value="48002"/>
+                <element inactive_on_update="false" label="Teufelberger_Poland" sequence="297" value="48003"/>
+                <element inactive_on_update="false" label="Tiger_Austria" sequence="298" value="17001"/>
+                <element inactive_on_update="false" label="Tiger_Belgium" sequence="299" value="17002"/>
+                <element inactive_on_update="false" label="Tiger_Canada" sequence="300" value="17003"/>
+                <element inactive_on_update="false" label="Tiger_China" sequence="301" value="17004"/>
+                <element inactive_on_update="false" label="Tiger_Czech Republik" sequence="302" value="17005"/>
+                <element inactive_on_update="false" label="Tiger_France" sequence="303" value="17006"/>
+                <element inactive_on_update="false" label="Tiger_Hungary" sequence="304" value="17007"/>
+                <element inactive_on_update="false" label="Tiger_Mexico" sequence="305" value="17008"/>
+                <element inactive_on_update="false" label="Tiger_Poland" sequence="306" value="17009"/>
+                <element inactive_on_update="false" label="Tiger_Project Management" sequence="307" value="17013"/>
+                <element inactive_on_update="false" label="Tiger_Slovakia" sequence="308" value="17010"/>
+                <element inactive_on_update="false" label="Tiger_USA" sequence="309" value="17011"/>
+                <element inactive_on_update="false" label="Tiger_Vietnam" sequence="310" value="17012"/>
+                <element inactive_on_update="false" label="TM CZ" sequence="311" value="37001"/>
+                <element inactive_on_update="false" label="Toyota_Cyprus" sequence="312" value="43001"/>
+                <element inactive_on_update="false" label="Toyota_Hungary" sequence="313" value="43003"/>
+                <element inactive_on_update="false" label="Toyota_Romania" sequence="314" value="43004"/>
+                <element inactive_on_update="false" label="Toyota_Slovenia" sequence="315" value="43002"/>
+                <element inactive_on_update="false" label="Toyota_Ukraine" sequence="316" value="43005"/>
+                <element inactive_on_update="false" label="TS_PL" sequence="317" value="54001"/>
+                <element inactive_on_update="false" label="Uniper_Austria" sequence="318" value="27007"/>
+                <element inactive_on_update="false" label="Uniper_Germany" sequence="319" value="27001"/>
+                <element inactive_on_update="false" label="Uniper_Hungary" sequence="320" value="27006"/>
+                <element inactive_on_update="false" label="Uniper_Netherlands" sequence="321" value="27008"/>
+                <element inactive_on_update="false" label="Uniper_Singapore" sequence="322" value="27003"/>
+                <element inactive_on_update="false" label="Uniper_Sweden" sequence="323" value="27009"/>
+                <element inactive_on_update="false" label="Uniper_UK" sequence="324" value="27002"/>
+                <element inactive_on_update="false" label="Uniper_United Arab Emirates" sequence="325" value="27004"/>
+                <element inactive_on_update="false" label="Uniper_USA" sequence="326" value="27005"/>
+                <element inactive_on_update="false" label="Uniqua Slovakia" sequence="327" value="22007"/>
+                <element inactive_on_update="false" label="Uniqua_Bosnia and Herzegovina" sequence="328" value="22008"/>
+                <element inactive_on_update="false" label="Uniqua_Bulgaria" sequence="329" value="22001"/>
+                <element inactive_on_update="false" label="Uniqua_Croatia" sequence="330" value="22002"/>
+                <element inactive_on_update="false" label="Uniqua_Czech Republic" sequence="331" value="22003"/>
+                <element inactive_on_update="false" label="Uniqua_Hungary" sequence="332" value="22004"/>
+                <element inactive_on_update="false" label="Uniqua_Lichtenstein" sequence="333" value="22010"/>
+                <element inactive_on_update="false" label="Uniqua_Montenegro" sequence="334" value="22011"/>
+                <element inactive_on_update="false" label="Uniqua_Poland" sequence="335" value="22005"/>
+                <element inactive_on_update="false" label="Uniqua_Romania" sequence="336" value="22006"/>
+                <element inactive_on_update="false" label="Uniqua_Russia" sequence="337" value="22013"/>
+                <element inactive_on_update="false" label="Uniqua_Serbia" sequence="338" value="22009"/>
+                <element inactive_on_update="false" label="Uniqua_Switzerland" sequence="339" value="22012"/>
+                <element inactive_on_update="false" label="Versa_Austria" sequence="340" value="41001"/>
+                <element inactive_on_update="false" label="Voestalpine_Australia" sequence="341" value="21007"/>
+                <element inactive_on_update="false" label="Voestalpine_Austria" sequence="342" value="21001"/>
+                <element inactive_on_update="false" label="Voestalpine_Belgium" sequence="343" value="21010"/>
+                <element inactive_on_update="false" label="Voestalpine_Brazil" sequence="344" value="21005"/>
+                <element inactive_on_update="false" label="Voestalpine_Canada" sequence="345" value="21024"/>
+                <element inactive_on_update="false" label="Voestalpine_Cehia" sequence="346" value="21013"/>
+                <element inactive_on_update="false" label="Voestalpine_China" sequence="347" value="21018"/>
+                <element inactive_on_update="false" label="Voestalpine_Croatia" sequence="348" value="21021"/>
+                <element inactive_on_update="false" label="Voestalpine_Denmark" sequence="349" value="21019"/>
+                <element inactive_on_update="false" label="Voestalpine_Finland" sequence="350" value="21031"/>
+                <element inactive_on_update="false" label="Voestalpine_France" sequence="351" value="21008"/>
+                <element inactive_on_update="false" label="Voestalpine_Germany" sequence="352" value="21002"/>
+                <element inactive_on_update="false" label="Voestalpine_Hungary" sequence="353" value="21023"/>
+                <element inactive_on_update="false" label="Voestalpine_India" sequence="354" value="21026"/>
+                <element inactive_on_update="false" label="Voestalpine_Italy" sequence="355" value="21004"/>
+                <element inactive_on_update="false" label="Voestalpine_Japan" sequence="356" value="21011"/>
+                <element inactive_on_update="false" label="Voestalpine_Malaysia" sequence="357" value="21029"/>
+                <element inactive_on_update="false" label="Voestalpine_Mexico" sequence="358" value="21027"/>
+                <element inactive_on_update="false" label="Voestalpine_Netherlands" sequence="359" value="21009"/>
+                <element inactive_on_update="false" label="Voestalpine_Norway" sequence="360" value="21017"/>
+                <element inactive_on_update="false" label="Voestalpine_Poland" sequence="361" value="21006"/>
+                <element inactive_on_update="false" label="Voestalpine_Portugal" sequence="362" value="21028"/>
+                <element inactive_on_update="false" label="Voestalpine_Russia" sequence="363" value="21025"/>
+                <element inactive_on_update="false" label="Voestalpine_Serbia" sequence="364" value="21020"/>
+                <element inactive_on_update="false" label="Voestalpine_Slovakia" sequence="365" value="21016"/>
+                <element inactive_on_update="false" label="Voestalpine_Slovenia" sequence="366" value="21022"/>
+                <element inactive_on_update="false" label="Voestalpine_Spain" sequence="367" value="21015"/>
+                <element inactive_on_update="false" label="Voestalpine_Sweden" sequence="368" value="21014"/>
+                <element inactive_on_update="false" label="Voestalpine_Switzerland" sequence="369" value="21030"/>
+                <element inactive_on_update="false" label="Voestalpine_Thailand" sequence="370" value="21032"/>
+                <element inactive_on_update="false" label="Voestalpine_UK" sequence="371" value="21003"/>
+                <element inactive_on_update="false" label="Voestalpine_USA" sequence="372" value="21012"/>
+                <element inactive_on_update="false" label="XXXX" sequence="373" value="44005"/>
+                <element inactive_on_update="false" label="Zollner_China" sequence="374" value="50006"/>
+                <element inactive_on_update="false" label="Zollner_CostaRica" sequence="375" value="50002"/>
+                <element inactive_on_update="false" label="Zollner_Germany" sequence="376" value="50001"/>
+                <element inactive_on_update="false" label="Zollner_HongKong" sequence="377" value="50009"/>
+                <element inactive_on_update="false" label="Zollner_Hungary" sequence="378" value="50003"/>
+                <element inactive_on_update="false" label="Zollner_Romania" sequence="379" value="50004"/>
+                <element inactive_on_update="false" label="Zollner_Switzerland" sequence="380" value="50008"/>
+                <element inactive_on_update="false" label="Zollner_Tunisia" sequence="381" value="50007"/>
+                <element inactive_on_update="false" label="Zollner_USA" sequence="382" value="50005"/>
+                <element inactive_on_update="false" label="undefined" sequence="383" value="undefined"/>
+            </choice>
         </element>
         <element default="1" label="Quantity" max_length="40" name="quantity" type="integer"/>
         <element label="Unit price" max_length="40" name="unit_price" type="float"/>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Supplier invoice lines activity formatter fields</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.ui.x_tsigh_cmb_supplier_invoice_lines_activity.fields</name>
+        <read_roles/>
+        <suffix>x_tsigh_cmb</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-08 15:27:53</sys_created_on>
+        <sys_id>108edbcf1bab951030bc986c9b4bcb5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.ui.x_tsigh_cmb_supplier_invoice_lines_activity.fields</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_properties_108edbcf1bab951030bc986c9b4bcb5d</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-08 15:27:53</sys_updated_on>
+        <type>string</type>
+        <value>serial_numbers,product,currency,quantity,unit_price,total_price,contract_number,sys_created_on,sys_created_by,end_date,legacy_id,project_code,related_devices,start_date,supplier_invoice,sys_tags,sys_updated_on,sys_updated_by,sys_mod_count,*Email*,*Relations*,*Attachments*</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=108edbcf1bab951030bc986c9b4bcb5d"/>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Client invoice lines activity formatter fields</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.ui.x_tsigh_cmb_client_invoice_lines_activity.fields</name>
+        <read_roles/>
+        <suffix>x_tsigh_cmb</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-08 15:32:18</sys_created_on>
+        <sys_id>b48f9b431beb951030bc986c9b4bcbac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.ui.x_tsigh_cmb_client_invoice_lines_activity.fields</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_properties_b48f9b431beb951030bc986c9b4bcbac</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-08 15:32:18</sys_updated_on>
+        <type>string</type>
+        <value>number,client_invoice,consumable,period_end,sys_created_on,cost_code,sys_created_by,description,legacy_id,period_start,position,price,price_in_ron,product,product_identifier,product_type,project,project_code,quantity,sys_tags,unit_price,unit_price_in_ron,unit_price_with_vat_in_ron,sys_updated_on,sys_updated_by,sys_mod_count,vat_value,vat_value_in_ron,*Email*,*Relations*,*Attachments*</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=b48f9b431beb951030bc986c9b4bcbac"/>
+</record_update>

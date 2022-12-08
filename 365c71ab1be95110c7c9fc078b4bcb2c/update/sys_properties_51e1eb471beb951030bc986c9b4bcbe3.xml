@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Equipment Group activity formatter fields</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.ui.x_tsigh_cmb_u_cmdb_ci_equipment_group_activity.fields</name>
+        <read_roles/>
+        <suffix>x_tsigh_cmb</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-08 15:42:43</sys_created_on>
+        <sys_id>51e1eb471beb951030bc986c9b4bcbe3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.ui.x_tsigh_cmb_u_cmdb_ci_equipment_group_activity.fields</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_properties_51e1eb471beb951030bc986c9b4bcbe3</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-08 15:42:43</sys_updated_on>
+        <type>string</type>
+        <value>u_hostname,u_mrc,u_otc,u_currency,sys_updated_on,u_service,change_control,asset,asset_tag,u_assets,assigned,assigned_to,attestation_score,attestation_status,attested,attested_by,attested_date,attributes,business_unit,can_print,category,assignment_group,checked_in,checked_out,sys_class_name,comments,company,correlation_id,cost,cost_center,cost_cc,sys_created_on,sys_created_by,dns_domain,department,short_description,discovery_source,sys_domain,sys_domain_path,due,due_in,duplicate_of,environment,fault_count,first_discovered,fqdn,gl_account,ip_address,install_date,invoice_number,justification,lease_id,life_cycle_stage,life_cycle_stage_status,location,mac_address,maintenance_schedule,managed_by_group,managed_by,manufacturer,model_id,model_number,monitor,last_discovered,name,operational_status,delivery_date,order_date,owned_by,po_number,purchase_date,unverified,schedule,serial_number,skip_sync,start_date,install_status,subcategory,support_group,supported_by,sys_class_path,sys_tags,sys_updated_by,sys_mod_count,vendor,warranty_expiration,*Email*,*Relations*,*Attachments*</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=51e1eb471beb951030bc986c9b4bcbe3"/>
+</record_update>

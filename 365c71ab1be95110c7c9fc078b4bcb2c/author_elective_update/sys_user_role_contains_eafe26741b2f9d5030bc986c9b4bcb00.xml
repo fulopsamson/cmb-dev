@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="DELETE">
+        <contains display_value="x_tsigh_cmb.billing_profile_owner_reader" name="x_tsigh_cmb.billing_profile_owner_reader">78be26741b2f9d5030bc986c9b4bcb7e</contains>
+        <role display_value="x_tsigh_cmb.billing_profile_owner_writer" name="x_tsigh_cmb.billing_profile_owner_writer">711ee6341b2f9d5030bc986c9b4bcbfc</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-12-01 12:13:55</sys_created_on>
+        <sys_id>eafe26741b2f9d5030bc986c9b4bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.billing_profile_owner_reader.x_tsigh_cmb.billing_profile_owner_writer</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_user_role_contains_eafe26741b2f9d5030bc986c9b4bcb00</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-12-01 12:13:55</sys_updated_on>
+    </sys_user_role_contains>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_user_role_contains_eafe26741b2f9d5030bc986c9b4bcb00</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="x_tsigh_cmb.billing_profile_owner_reader" name="x_tsigh_cmb.billing_profile_owner_reader">78be26741b2f9d5030bc986c9b4bcb7e</contains><role display_value="x_tsigh_cmb.billing_profile_owner_writer" name="x_tsigh_cmb.billing_profile_owner_writer">711ee6341b2f9d5030bc986c9b4bcbfc</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-12-01 12:13:55</sys_created_on><sys_id>eafe26741b2f9d5030bc986c9b4bcb00</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_tsigh_cmb.billing_profile_owner_reader.x_tsigh_cmb.billing_profile_owner_writer</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_user_role_contains_eafe26741b2f9d5030bc986c9b4bcb00</sys_update_name><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-12-01 12:13:55</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+        <payload_hash>1481576347</payload_hash>
+        <record_name>x_tsigh_cmb.billing_profile_owner_reader.x_tsigh_cmb.billing_profile_owner_writer</record_name>
+        <reverted_from/>
+        <source>33030e521b9bd150c7c9fc078b4bcbc2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-12-01 12:13:55</sys_created_on>
+        <sys_id>6efe26741b2f9d5030bc986c9b4bcb03</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184cd9b92020000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-12-01 12:13:55</sys_updated_on>
+        <type>Contained Role</type>
+        <update_guid>a6fe2674ef2f9d50c3c9e985af87e603</update_guid>
+        <update_guid_history>a6fe2674ef2f9d50c3c9e985af87e603:1481576347</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-06 10:39:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role_contains">sys_user_role_contains</sys_db_object>
+        <sys_id>05b1fc627c8a4d3481c2d530f4078690</sys_id>
+        <sys_metadata>eafe26741b2f9d5030bc986c9b4bcb00</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.billing_profile_owner_reader.x_tsigh_cmb.billing_profile_owner_writer</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_user_role_contains_eafe26741b2f9d5030bc986c9b4bcb00</sys_update_name>
+        <sys_update_version display_value="sys_user_role_contains_eafe26741b2f9d5030bc986c9b4bcb00">6efe26741b2f9d5030bc986c9b4bcb03</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:39:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

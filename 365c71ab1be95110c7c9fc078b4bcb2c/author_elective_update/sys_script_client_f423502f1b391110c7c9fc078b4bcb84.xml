@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>unit_price</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Total for Unit price Invoice line</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   if (g_form.getValue('quantity')){
+		var quant = g_form.getValue('quantity').replace(/,/g, '');
+		var unit = (newValue).replace(/,/g, '');
+
+		var total = parseFloat(quant * unit);
+		g_form.setValue('total_price', total);
+	}
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-09-13 14:08:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f423502f1b391110c7c9fc078b4bcb84</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Total for Unit price Invoice line</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_client_f423502f1b391110c7c9fc078b4bcb84</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-04 10:52:20</sys_updated_on>
+        <table>x_tsigh_cmb_supplier_invoice_lines</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_client_f423502f1b391110c7c9fc078b4bcb84</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;false&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;unit_price&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;Total for Unit price Invoice line&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   if (g_form.getValue('quantity')){
+		var quant = g_form.getValue('quantity').replace(/,/g, '');
+		var unit = (newValue).replace(/,/g, '');
+
+		var total = parseFloat(quant * unit);
+		g_form.setValue('total_price', total);
+	}
+
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;szabo.zoltan&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-13 14:08:56&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;f423502f1b391110c7c9fc078b4bcb84&lt;/sys_id&gt;&lt;sys_mod_count&gt;17&lt;/sys_mod_count&gt;&lt;sys_name&gt;Total for Unit price Invoice line&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_f423502f1b391110c7c9fc078b4bcb84&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;szabo.zoltan&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-04 10:52:20&lt;/sys_updated_on&gt;&lt;table&gt;x_tsigh_cmb_supplier_invoice_lines&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2075570058</payload_hash>
+        <record_name>Total for Unit price Invoice line</record_name>
+        <reverted_from/>
+        <source>89509a301bbd5510c7c9fc078b4bcbfc</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-10-04 10:52:20</sys_created_on>
+        <sys_id>ce10370e1bd69150c7c9fc078b4bcb2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>183a2a008150000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-10-04 10:52:20</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>c610370eebd69150ccef25261d968a2e</update_guid>
+        <update_guid_history>c610370eebd69150ccef25261d968a2e:-2075570058,bd35083b84755110f23afac9478b92ed:-243121615,d2f773ebae355110a13acd591e14d11e:-27738033,571e982b03791110eda00eb2ee44713a:-958001915,e28d58a7fd7911101ebb26bc42c76e76:-1234448537,40995827ce791110529dca1e62c88f7a:-1436345581,b549d427a9791110fda4c64ec480dc90:-1848681097,0209d027c9791110608d9dde2a915788:192723054,0da8d8e33a7911106047bc09d7f02d3c:827993000,c678d0e3757911103de6a56625fc549c:-941047834,474710a334791110e6e5357f3be0800c:-1378041426,f2e6d0a30f79111040238333ab9658de:966481948,cb86d423147911101721319f249502e7:-1756295755,1656d4632579111007e32578f471f098:1888683679,ace5dcef16391110a9de7d024da81582:-1706966339,a1c45cefe73911107ffd08f53739031b:2059978586,d904d4ef633911106c065ddc5641a421:-305293716,adb314afe83911106463fc739f14d72d:-1691073202</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-07 14:15:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>4764700a77dd46ce945a152e32f0d1c4</sys_id>
+        <sys_metadata>f423502f1b391110c7c9fc078b4bcb84</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Total for Unit price Invoice line</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Supplier invoice lines">012273d31bf51110c7c9fc078b4bcb89</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_client_f423502f1b391110c7c9fc078b4bcb84</sys_update_name>
+        <sys_update_version display_value="sys_script_client_f423502f1b391110c7c9fc078b4bcb84">ce10370e1bd69150c7c9fc078b4bcb2e</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-07 14:15:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
