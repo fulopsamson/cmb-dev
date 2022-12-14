@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_push_notif_app_install">
     <sys_push_notif_app_install action="INSERT_OR_UPDATE">
         <active>true</active>
-        <last_registered_on>2022-11-24 14:04:49</last_registered_on>
+        <last_registered_on>2022-12-12 14:27:10</last_registered_on>
         <sys_class_name>sys_push_notif_app_install</sys_class_name>
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-10-19 10:03:57</sys_created_on>
         <sys_id>e7d434071b66551030bc986c9b4bcb40</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>5FBC8B75BF38EC0067D619D0B10501390DD745A6078D18BEA5D06098866678BD</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
@@ -15,8 +15,8 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_push_notif_app_install_e7d434071b66551030bc986c9b4bcb40</sys_update_name>
         <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-11-24 14:04:49</sys_updated_on>
-        <sys_user_id display_value="Sámson Fülöp">c7ca32381b319510c7c9fc078b4bcb96</sys_user_id>
+        <sys_updated_on>2022-12-12 14:27:10</sys_updated_on>
+        <sys_user_id display_value="Fülöp">c7ca32381b319510c7c9fc078b4bcb96</sys_user_id>
         <token>5FBC8B75BF38EC0067D619D0B10501390DD745A6078D18BEA5D06098866678BD</token>
     </sys_push_notif_app_install>
 </record_update>

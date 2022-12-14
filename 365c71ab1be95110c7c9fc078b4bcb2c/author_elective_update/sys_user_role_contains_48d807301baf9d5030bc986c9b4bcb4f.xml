@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
+    <sys_user_role_contains action="DELETE">
+        <contains display_value="x_tsigh_cmb.client_invoice_lines_writer" name="x_tsigh_cmb.client_invoice_lines_writer">c89783fc1b6f9d5030bc986c9b4bcb54</contains>
+        <role display_value="x_tsigh_cmb.project_management" name="x_tsigh_cmb.project_management">78e37ab51b72115030bc986c9b4bcb24</role>
+        <sys_class_name>sys_user_role_contains</sys_class_name>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-12-01 14:06:47</sys_created_on>
+        <sys_id>48d807301baf9d5030bc986c9b4bcb4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.client_invoice_lines_writer.x_tsigh_cmb.project_management</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_user_role_contains_48d807301baf9d5030bc986c9b4bcb4f</sys_update_name>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-12-01 14:06:47</sys_updated_on>
+    </sys_user_role_contains>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_user_role_contains_48d807301baf9d5030bc986c9b4bcb4f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains"><sys_user_role_contains action="INSERT_OR_UPDATE"><contains display_value="x_tsigh_cmb.client_invoice_lines_writer" name="x_tsigh_cmb.client_invoice_lines_writer">c89783fc1b6f9d5030bc986c9b4bcb54</contains><role display_value="x_tsigh_cmb.project_management" name="x_tsigh_cmb.project_management">78e37ab51b72115030bc986c9b4bcb24</role><sys_class_name>sys_user_role_contains</sys_class_name><sys_created_by>daniel.szabo</sys_created_by><sys_created_on>2022-12-01 14:06:47</sys_created_on><sys_id>48d807301baf9d5030bc986c9b4bcb4f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_tsigh_cmb.client_invoice_lines_writer.x_tsigh_cmb.project_management</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_user_role_contains_48d807301baf9d5030bc986c9b4bcb4f</sys_update_name><sys_updated_by>daniel.szabo</sys_updated_by><sys_updated_on>2022-12-01 14:06:47</sys_updated_on></sys_user_role_contains></record_update>]]></payload>
+        <payload_hash>1024402887</payload_hash>
+        <record_name>x_tsigh_cmb.client_invoice_lines_writer.x_tsigh_cmb.project_management</record_name>
+        <reverted_from/>
+        <source>33030e521b9bd150c7c9fc078b4bcbc2</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>daniel.szabo</sys_created_by>
+        <sys_created_on>2022-12-01 14:06:47</sys_created_on>
+        <sys_id>c4d80b301baf9d5030bc986c9b4bcb9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184ce02e6bc0000001</sys_recorded_at>
+        <sys_updated_by>daniel.szabo</sys_updated_by>
+        <sys_updated_on>2022-12-01 14:06:47</sys_updated_on>
+        <type>Contained Role</type>
+        <update_guid>08d8073002af9d50b31f65212b35f556</update_guid>
+        <update_guid_history>08d8073002af9d50b31f65212b35f556:1024402887</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-12-05 15:25:42</sys_created_on>
+        <sys_db_object display_value="" name="sys_user_role_contains">sys_user_role_contains</sys_db_object>
+        <sys_id>41c2885b7de143ae905373529ae28ee4</sys_id>
+        <sys_metadata>48d807301baf9d5030bc986c9b4bcb4f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.client_invoice_lines_writer.x_tsigh_cmb.project_management</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_user_role_contains_48d807301baf9d5030bc986c9b4bcb4f</sys_update_name>
+        <sys_update_version display_value="sys_user_role_contains_48d807301baf9d5030bc986c9b4bcb4f">c4d80b301baf9d5030bc986c9b4bcb9d</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-12-05 15:25:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Project" max_length="40" name="x_tsigh_cmb_project" sizeclass="1" type="collection">
+    <element label="Project" max_length="40" name="x_tsigh_cmb_project" sizeclass="3" type="collection">
         <element label="Cost code" max_length="40" name="cost_code" type="string"/>
         <element label="Description" max_length="200" name="description" type="string"/>
         <element label="Legacy ID" max_length="10" name="legacy_id" read_only="true" type="string"/>

@@ -30,31 +30,21 @@
         <name>Approve</name>
         <onclick/>
         <order>-1100</order>
-        <script><![CDATA[var invoice_lines = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
-invoice_lines.addQuery('client_invoice', current.sys_id);
-invoice_lines.addQuery('approval', '!=', 'approved');
-invoice_lines.query();
-if (invoice_lines.getRowCount() > 0) {
-    gs.addErrorMessage('All invoice lines must be Approved before sending to financial Approval');
-	action.setRedirectURL(current);
-} else {
+        <script><![CDATA[try {
+    var gr = new GlideRecord('x_tsigh_cmb_client_invoice');
+    var rec = gr.get(current.sys_id);
+    var inputs = {};
+    inputs['client_invoice'] = gr; // GlideRecord of table: x_tsigh_cmb_client_invoice 
+    sn_fd.FlowAPI.getRunner().subflow('x_tsigh_cmb.client_invoice_after_validation').inBackground().withInputs(inputs).run();
 
-    try {
-        var gr = new GlideRecord('x_tsigh_cmb_client_invoice');
-        var rec = gr.get(current.sys_id);
-        var inputs = {};
-        inputs['client_invoice'] = gr; // GlideRecord of table: x_tsigh_cmb_client_invoice 
-        sn_fd.FlowAPI.getRunner().subflow('x_tsigh_cmb.client_invoice_after_validation').inBackground().withInputs(inputs).run();
-
-    } catch (ex) {
-        var message = ex.getMessage();
-        gs.error(message);
-    }
-    action.setRedirectURL(current);
-    current.state = 'validated_by_owner';
-	if (current.number=='') current.number = new global.NumberManager("x_tsigh_cmb_client_invoice").getNextObjNumberPadded();
-    current.update();
-}]]></script>
+} catch (ex) {
+    var message = ex.getMessage();
+    gs.error(message);
+}
+action.setRedirectURL(current);
+current.state = 'validated_by_finance';
+if (current.number == '') current.number = new global.NumberManager("x_tsigh_cmb_client_invoice").getNextObjNumberPadded();
+current.update();]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
@@ -65,15 +55,15 @@ if (invoice_lines.getRowCount() > 0) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fcee75c01b96d910c7c9fc078b4bcb84</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>36</sys_mod_count>
         <sys_name>Approve</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_ui_action_fcee75c01b96d910c7c9fc078b4bcb84</sys_update_name>
-        <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-12-07 09:08:46</sys_updated_on>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-12-13 15:25:26</sys_updated_on>
         <table>x_tsigh_cmb_client_invoice</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>

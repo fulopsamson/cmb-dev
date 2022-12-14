@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_m2m_dashboard_tabs">
+    <pa_m2m_dashboard_tabs action="DELETE">
+        <dashboard display_value="Test Dashboard">2b3fc9b41b3b1d1030bc986c9b4bcb9e</dashboard>
+        <home>false</home>
+        <homepage/>
+        <order>1</order>
+        <sys_class_name>pa_m2m_dashboard_tabs</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-13 15:31:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>046f0db41b3b1d1030bc986c9b4bcb6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2b3fc9b41b3b1d1030bc986c9b4bcb9e</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>pa_m2m_dashboard_tabs_046f0db41b3b1d1030bc986c9b4bcb6d</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-13 15:31:55</sys_updated_on>
+        <tab display_value="Test Dashboard - New Tab">775f0db41b3b1d1030bc986c9b4bcb6a</tab>
+    </pa_m2m_dashboard_tabs>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>pa_m2m_dashboard_tabs_046f0db41b3b1d1030bc986c9b4bcb6d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_m2m_dashboard_tabs"><pa_m2m_dashboard_tabs action="INSERT_OR_UPDATE"><dashboard display_value="Test Dashboard">2b3fc9b41b3b1d1030bc986c9b4bcb9e</dashboard><home>false</home><homepage/><order>1</order><sys_class_name>pa_m2m_dashboard_tabs</sys_class_name><sys_created_by>samson.fulop</sys_created_by><sys_created_on>2022-12-13 15:31:55</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>046f0db41b3b1d1030bc986c9b4bcb6d</sys_id><sys_mod_count>0</sys_mod_count><sys_name>2b3fc9b41b3b1d1030bc986c9b4bcb9e</sys_name><sys_overrides/><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>pa_m2m_dashboard_tabs_046f0db41b3b1d1030bc986c9b4bcb6d</sys_update_name><sys_updated_by>samson.fulop</sys_updated_by><sys_updated_on>2022-12-13 15:31:55</sys_updated_on><tab display_value="Test Dashboard - New Tab">775f0db41b3b1d1030bc986c9b4bcb6a</tab></pa_m2m_dashboard_tabs></record_update>]]></payload>
+        <payload_hash>1264015030</payload_hash>
+        <record_name>2b3fc9b41b3b1d1030bc986c9b4bcb9e</record_name>
+        <reverted_from/>
+        <source>22a2eff51bef5110c7c9fc078b4bcb82</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-13 15:31:55</sys_created_on>
+        <sys_id>c06f4db41b3b1d1030bc986c9b4bcb9a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1850c1d26d80000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-13 15:31:55</sys_updated_on>
+        <type>Dashboard Tab</type>
+        <update_guid>c86f4db4fb3b1d10c93f1a1b55786099</update_guid>
+        <update_guid_history>c86f4db4fb3b1d10c93f1a1b55786099:1264015030</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">a57f8db41b3b1d1030bc986c9b4bcbff</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-13 15:32:18</sys_created_on>
+        <sys_db_object display_value="" name="pa_m2m_dashboard_tabs">pa_m2m_dashboard_tabs</sys_db_object>
+        <sys_id>2b5542fe3638404093575f9a040dc100</sys_id>
+        <sys_metadata>046f0db41b3b1d1030bc986c9b4bcb6d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2b3fc9b41b3b1d1030bc986c9b4bcb9e</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>pa_m2m_dashboard_tabs_046f0db41b3b1d1030bc986c9b4bcb6d</sys_update_name>
+        <sys_update_version display_value="pa_m2m_dashboard_tabs_046f0db41b3b1d1030bc986c9b4bcb6d">c06f4db41b3b1d1030bc986c9b4bcb9a</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-13 15:32:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

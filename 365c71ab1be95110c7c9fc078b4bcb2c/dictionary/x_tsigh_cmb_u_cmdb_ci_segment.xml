@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="cmdb_ci" label="Segment" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_segment" sizeclass="73" type="collection">
+    <element audit="true" extends="cmdb_ci" label="Segment" max_length="40" name="x_tsigh_cmb_u_cmdb_ci_segment" sizeclass="1020" type="collection">
         <element label="Additional Information" max_length="2000" name="additional_information" type="string"/>
         <element label="Additional Info for Endpoint A" max_length="2000" name="additional_info_a" type="string"/>
         <element label="Additional Info for Endpoint B" max_length="2000" name="additional_info_b" type="string"/>
+        <element choice="3" choice_field="approval" choice_table="task" default="not requested" label="Approval" max_length="40" name="approval" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Not Yet Requested" sequence="0" value="not requested"/>
+                <element inactive_on_update="false" label="Requested" sequence="1" value="requested"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="rejected"/>
+            </choice>
+        </element>
         <element choice="3" default="new" label="Kind of order" max_length="40" name="kind_of_order" type="choice">
             <choice>
                 <element inactive="true" inactive_on_update="true" label="-- New choice --" sequence="0" value="-- New choice --"/>
@@ -38,7 +46,7 @@
         </element>
         <element label="Provider" max_length="32" name="u_provider" reference="customer_account" type="reference"/>
         <element default="javascript:gs.getUserID()&#13;&#10;" dynamic_default_value="2fd8e97bef3221002841f7f775c0fbc1" label="Provisioning contact" max_length="32" name="u_provisioning_contact" reference="sys_user" type="reference" use_dynamic_default="true"/>
-        <element label="Service" mandatory="true" max_length="32" name="u_service" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_cmb_service" reference_cascade_rule="cascade" type="reference"/>
+        <element label="Service" mandatory="true" max_length="32" name="u_service" read_only="true" reference="x_tsigh_cmb_u_cmdb_ci_cmb_service" reference_cascade_rule="cascade" reference_floats="true" type="reference"/>
         <element label="Service details" max_length="40" name="u_service_details" type="string"/>
         <element label="SLA profile" max_length="40" name="u_sla_profile" type="string"/>
         <element label="Technical details" max_length="2000" name="u_technical_details" type="string"/>

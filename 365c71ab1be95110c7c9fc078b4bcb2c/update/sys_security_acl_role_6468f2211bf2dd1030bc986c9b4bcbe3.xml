@@ -13,7 +13,7 @@
         <sys_update_name>sys_security_acl_role_6468f2211bf2dd1030bc986c9b4bcbe3</sys_update_name>
         <sys_updated_by>daniel.szabo</sys_updated_by>
         <sys_updated_on>2022-10-27 14:04:07</sys_updated_on>
-        <sys_user_role display_value="x_tsigh_cmb.service_worker" name="x_tsigh_cmb.service_worker">c6732a2d1b72dd1030bc986c9b4bcb78</sys_user_role>
+        <sys_user_role display_value="x_tsigh_cmb.service_writer" name="x_tsigh_cmb.service_writer">c6732a2d1b72dd1030bc986c9b4bcb78</sys_user_role>
         <transaction_id/>
     </sys_security_acl_role>
 </record_update>

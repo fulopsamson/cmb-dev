@@ -17,7 +17,7 @@
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_tsigh_cmb.supplier_invoice_lines_user</roles>
+        <roles/>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>szabo.zoltan</sys_created_by>
         <sys_created_on>2022-09-13 11:53:59</sys_created_on>

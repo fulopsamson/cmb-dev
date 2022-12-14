@@ -19,7 +19,7 @@
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_tsigh_cmb.validation_line_user</roles>
+        <roles/>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-11-29 14:15:10</sys_created_on>

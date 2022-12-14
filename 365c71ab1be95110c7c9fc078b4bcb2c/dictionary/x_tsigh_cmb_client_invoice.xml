@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Client invoice" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="23" type="collection">
+    <element audit="true" label="Client invoice" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="26" type="collection">
         <element choice="3" choice_field="approval" choice_table="task" default="not requested" label="Approval" max_length="40" name="approval" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Not Yet Requested" sequence="0" value="not requested"/>
@@ -17,6 +17,7 @@
         <element default="javascript: new GlideDateTime().getDate()" label="Exchange rate date" mandatory="true" max_length="40" name="exchange_rate_date" type="glide_date"/>
         <element label="Exchange rate value" max_length="40" name="exchange_rate_value" read_only="true" type="float"/>
         <element default="javascript: new GlideDateTime().getDate()" label="Invoice date" mandatory="true" max_length="40" name="invoice_date" type="glide_date"/>
+        <element label="Invoice file" max_length="40" name="invoice_file" read_only="true" type="file_attachment"/>
         <element choice="3" label="Invoice generating method" max_length="100" name="invoice_generating_method" read_only="true" type="string" use_dependent_field="true">
             <choice>
                 <element inactive="true" inactive_on_update="true" label="Group by order" sequence="0" value="1"/>

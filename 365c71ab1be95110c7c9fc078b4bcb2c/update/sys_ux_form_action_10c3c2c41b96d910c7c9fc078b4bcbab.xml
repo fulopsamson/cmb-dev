@@ -19,6 +19,6 @@
         <sys_updated_by>toma.istvan</sys_updated_by>
         <sys_updated_on>2022-09-27 21:51:09</sys_updated_on>
         <table>x_tsigh_cmb_client_invoice</table>
-        <ui_action display_value="Valid">fcee75c01b96d910c7c9fc078b4bcb84</ui_action>
+        <ui_action display_value="Approve">fcee75c01b96d910c7c9fc078b4bcb84</ui_action>
     </sys_ux_form_action>
 </record_update>

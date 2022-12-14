@@ -17,7 +17,7 @@
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_tsigh_cmb.account_owner</roles>
+        <roles/>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>toma.istvan</sys_created_by>
         <sys_created_on>2022-09-08 10:35:55</sys_created_on>

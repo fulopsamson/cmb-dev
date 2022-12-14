@@ -17,7 +17,7 @@
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_tsigh_cmb.segment_reader,x_tsigh_cmb.segment_reader_owner</roles>
+        <roles>x_tsigh_cmb.segment_reader</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-10-21 16:55:11</sys_created_on>

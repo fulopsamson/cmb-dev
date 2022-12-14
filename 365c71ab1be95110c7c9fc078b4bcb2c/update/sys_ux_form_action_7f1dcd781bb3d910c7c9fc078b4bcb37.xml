@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action">
+    <sys_ux_form_action action="INSERT_OR_UPDATE">
+        <action_type>ui_action</action_type>
+        <active>true</active>
+        <declarative_action/>
+        <description/>
+        <name>Generate invoice</name>
+        <specificity>10</specificity>
+        <sys_class_name>sys_ux_form_action</sys_class_name>
+        <sys_created_by>istvan.toma</sys_created_by>
+        <sys_created_on>2022-12-13 15:22:04</sys_created_on>
+        <sys_id>7f1dcd781bb3d910c7c9fc078b4bcb37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Generate invoice</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_ux_form_action_7f1dcd781bb3d910c7c9fc078b4bcb37</sys_update_name>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-12-13 15:22:04</sys_updated_on>
+        <table>x_tsigh_cmb_client_invoice</table>
+        <ui_action display_value="Generate invoice">3b1dcd781bb3d910c7c9fc078b4bcb37</ui_action>
+    </sys_ux_form_action>
+</record_update>

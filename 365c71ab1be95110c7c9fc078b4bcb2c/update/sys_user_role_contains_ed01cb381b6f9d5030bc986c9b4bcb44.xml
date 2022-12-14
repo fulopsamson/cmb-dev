@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
     <sys_user_role_contains action="INSERT_OR_UPDATE">
-        <contains display_value="x_tsigh_cmb.product_reader" name="x_tsigh_cmb.product_reader">9e94226d1b72dd1030bc986c9b4bcb22</contains>
+        <contains display_value="x_tsigh_cmb.product_type_reader" name="x_tsigh_cmb.product_type_reader">9e94226d1b72dd1030bc986c9b4bcb22</contains>
         <role display_value="x_tsigh_cmb.helpdesk" name="x_tsigh_cmb.helpdesk">a0e8323d1b72115030bc986c9b4bcb43</role>
         <sys_class_name>sys_user_role_contains</sys_class_name>
         <sys_created_by>daniel.szabo</sys_created_by>

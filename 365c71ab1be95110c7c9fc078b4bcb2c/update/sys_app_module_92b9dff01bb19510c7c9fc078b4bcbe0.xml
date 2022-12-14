@@ -19,7 +19,7 @@
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_tsigh_cmb.service_manager,x_tsigh_cmb.service_admin,x_tsigh_cmb.service_reader,x_tsigh_cmb.billing_profile_owner_reader</roles>
+        <roles>x_tsigh_cmb.service_admin,x_tsigh_cmb.service_reader</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>istvan.toma</sys_created_by>
         <sys_created_on>2022-09-05 15:31:25</sys_created_on>
