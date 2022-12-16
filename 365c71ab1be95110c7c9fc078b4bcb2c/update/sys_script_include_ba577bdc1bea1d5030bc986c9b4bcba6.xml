@@ -47,17 +47,17 @@ ClientInvoiceImage.prototype = {
 				lines += "<td class=\"lines\">" + pos + ".</td>";
 				lines += "<td class=\"lines\">" + line.getDisplayValue('description') + "</td>";
 				lines += "<td class=\"lines\">" + 'BUC' + "</td>";
-				lines += "<td class=\"lines\">" + line.quantity + "</td>";
-				lines += "<td class=\"lines\">" + line.unit_price_in_ron + "</td>";
-				lines += "<td class=\"lines\">" + line.price_in_ron +  "</td>";
+				lines += "<td class=\"lines\">" + line.getDisplayValue('quantity') + "</td>";
+				lines += "<td class=\"lines\">" + line.getDisplayValue('unit_price_in_ron') + "</td>";
+				lines += "<td class=\"lines\">" + line.getDisplayValue('price_in_ron') +  "</td>";
 				lines += "<td class=\"lines\">" + invoice.vat_value * 100 + "</td>";
-				lines += "<td class=\"lines\">" + line.vat_value_in_ron + "</td>";
+				lines += "<td class=\"lines\">" + line.getDisplayValue('vat_value_in_ron') + "</td>";
 				lines == "</tr>";
 				pos += 1;
 			}
-			tmp = tmp.replace("total_net", invoice.total_net_value_in_ron);
-			tmp = tmp.replace("total_tva", invoice.total_value_of_vat_in_ron);
-			tmp = tmp.replace("total_brut", invoice.total_in_ron);
+			tmp = tmp.replace("total_net", invoice.getDisplayValue('total_net_value_in_ron'));
+			tmp = tmp.replace("total_tva", invoice.getDisplayValue('total_value_of_vat_in_ron'));
+			tmp = tmp.replace("total_brut", invoice.getDisplayValue('total_in_ron'));
 
 		}
 		
@@ -74,17 +74,21 @@ ClientInvoiceImage.prototype = {
 			tmp = tmp.replace('company_code', comp_code);
 			
 			if(invoice.vat_value){
+				tmp = tmp.replace('__exch__', '<tr><th class="col-cent" colspan="1">Exchange Rate</th><td class="lines" colspan="3">1 currency = exchange_rate RON</td></tr>');
 				var ron_line = '<tr rowspan="2"><th class="col-cent">Total excl.VAT RON</th>';
 				
-				ron_line += '<td class="lines">' + invoice.total_net_value_in_ron + ' RON</td>';
-				ron_line += '<td class="lines">' + invoice.total_value_of_vat_in_ron + ' RON</td></tr>';
+				ron_line += '<td class="lines">' + invoice.getDisplayValue('total_net_value_in_ron') + ' RON</td>';
+				ron_line += '<td class="lines">' + invoice.getDisplayValue('total_value_of_vat_in_ron') + ' RON</td></tr>';
 				ron_line += '<tr><th class="col-cent" colspan="1"> Total RON</th>'; 
-				ron_line += '<td class="lines" colspan="3">' + invoice.total_in_ron + ' RON</td></tr>';
+				ron_line += '<td class="lines" colspan="3">' + invoice.getDisplayValue('total_in_ron') + ' RON</td></tr>';
 				
 				tmp = tmp.replace('__ron__', ron_line);
 			}
-			else
+			
+			else{
+				tmp = tmp.replace('__exch__', "")
 				tmp = tmp.replace('__ron__', "");
+			}
 			
 			var pos = 1;
 			var line = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
@@ -96,18 +100,18 @@ ClientInvoiceImage.prototype = {
 				lines += "<tr>";
 				lines += "<td class=\"lines\">" + pos + ".</td>";
 				lines += "<td class=\"lines\">" + line.getDisplayValue('description') + "</td>";
-				lines += "<td class=\"lines\">" + line.quantity + "</td>";
-				lines += "<td class=\"lines\">" + line.unit_price + " currency" + "</td>";
-				lines += "<td class=\"lines\">" + line.price + " currency" + "</td>";
-				lines += "<td class=\"lines\">" + line.vat_value + " currency" + "</td>";
+				lines += "<td class=\"lines\">" + line.getDisplayValue('quantity') + "</td>";
+				lines += "<td class=\"lines\">" + line.getDisplayValue('unit_price') + " currency" + "</td>";
+				lines += "<td class=\"lines\">" + line.getDisplayValue('price') + " currency" + "</td>";
+				lines += "<td class=\"lines\">" + line.getDisplayValue('vat_value') + " currency" + "</td>";
 				//lines += "<td class=\"lines\">" + invoice.total + " currency" + "</td>";
 				lines == "</tr>";
 				pos += 1;
 			}
 
-			tmp = tmp.replace("total_net", invoice.total_net_value);
-			tmp = tmp.replace("total_tva", invoice.total_value_of_vat);
-			tmp = tmp.replace("total_brut", invoice.total);
+			tmp = tmp.replace("total_net", invoice.getDisplayValue('total_net_value'));
+			tmp = tmp.replace("total_tva", invoice.getDisplayValue('total_value_of_vat'));
+			tmp = tmp.replace("total_brut", invoice.getDisplayValue('total'));
 			
 		}
 		
@@ -137,7 +141,7 @@ ClientInvoiceImage.prototype = {
 		tmp = tmp.replace("__lines__", lines);
 		
 		tmp = tmp.replaceAll("currency", invoice.currency);
-		tmp = tmp.replace("exchange_rate", invoice.exchange_rate_value);
+		tmp = tmp.replace("exchange_rate", invoice.getDisplayValue('exchange_rate_value'));
 		tmp = tmp.replace("comments", invoice.observation);
 			
 		/*
@@ -167,13 +171,13 @@ ClientInvoiceImage.prototype = {
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-10-11 11:12:16</sys_created_on>
         <sys_id>ba577bdc1bea1d5030bc986c9b4bcba6</sys_id>
-        <sys_mod_count>69</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name>ClientInvoiceImage</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_ba577bdc1bea1d5030bc986c9b4bcba6</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-11-15 09:30:57</sys_updated_on>
+        <sys_updated_on>2022-12-14 15:41:50</sys_updated_on>
     </sys_script_include>
 </record_update>

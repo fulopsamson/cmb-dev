@@ -20,7 +20,7 @@
             </choice>
         </element>
         <element label="Last Billing Date" max_length="40" name="last_billing_date" type="glide_date"/>
-        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" display="true" label="Number" max_length="40" name="number" read_only="true" type="string"/>
         <element attributes="desired_state=u_product_type_desired" choice="1" label="Product Type A" max_length="32" name="product_type" reference="x_tsigh_cmb_product_type" type="reference">
             <choice/>
         </element>

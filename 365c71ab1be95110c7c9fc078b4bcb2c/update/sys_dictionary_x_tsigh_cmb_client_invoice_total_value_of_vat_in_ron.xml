@@ -6,7 +6,7 @@
         <attributes/>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
-	return (+current.total_value_of_vat) * (+current.exchange_rate_value);
+	return Number(Math.round((+current.total_value_of_vat) * (+current.exchange_rate_value) + 'e2') + 'e-2');
 
 })(current);]]></calculation>
         <choice/>
@@ -52,14 +52,14 @@
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-10-21 09:03:01</sys_created_on>
         <sys_id>87e9faaf1b6ed51030bc986c9b4bcb63</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Total value of VAT in RON</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_dictionary_x_tsigh_cmb_client_invoice_total_value_of_vat_in_ron</sys_update_name>
         <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-10-21 09:48:01</sys_updated_on>
+        <sys_updated_on>2022-12-16 11:37:02</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

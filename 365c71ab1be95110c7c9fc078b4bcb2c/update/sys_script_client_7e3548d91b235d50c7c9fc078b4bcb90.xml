@@ -25,7 +25,8 @@
 		g_form.setVisible('ends', true);
 		g_form.setVisible('parent_contract', true);
 		g_form.setVisible('x_tsigh_cmb_mrc', true);
-			
+		
+		g_form.setVisible('x_tsigh_cmb_supplier_invoice', false);
 		g_form.setVisible('u_import', false);
 		g_form.hideRelatedList('ast_contract');
 	} else {
@@ -37,6 +38,7 @@
 		g_form.setVisible('parent_contract', false);
 		g_form.setVisible('x_tsigh_cmb_mrc', false);
 		
+		g_form.setVisible('x_tsigh_cmb_supplier_invoice', true);
 		g_form.setVisible('u_import', true);
 		g_form.showRelatedList('ast_contract');
 	}
@@ -48,7 +50,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7e3548d91b235d50c7c9fc078b4bcb90</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>Contract Field Control</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -56,7 +58,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_client_7e3548d91b235d50c7c9fc078b4bcb90</sys_update_name>
         <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-12-02 14:01:24</sys_updated_on>
+        <sys_updated_on>2022-12-15 13:13:41</sys_updated_on>
         <table>ast_contract</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>

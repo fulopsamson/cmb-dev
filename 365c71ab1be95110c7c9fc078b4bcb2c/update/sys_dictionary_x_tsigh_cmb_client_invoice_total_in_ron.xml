@@ -8,7 +8,8 @@
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
 	
-	return (+current.total) * (+current.exchange_rate_value);
+// 	return (+current.total) * (+current.exchange_rate_value);
+	return Number(Math.round((+current.total) * (+current.exchange_rate_value) + 'e2') + 'e-2');
 
 })(current);]]></calculation>
         <choice/>
@@ -54,14 +55,14 @@
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-10-21 09:03:01</sys_created_on>
         <sys_id>dc993aaf1b6ed51030bc986c9b4bcbde</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Total in RON</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_dictionary_x_tsigh_cmb_client_invoice_total_in_ron</sys_update_name>
         <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-10-21 09:49:37</sys_updated_on>
+        <sys_updated_on>2022-12-16 11:38:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -22,9 +22,10 @@ CMBInvoiceUtils.prototype = {
         return gr.getRowCount();
     },
 
-    /*Generate client invoice from validation lines
-    	etr: Validation line sys_ids in an array
-    	check: when true, only function will only perform validation line item check. This is used to pre-validate the validation lines to see if there are any errors preventing actual client invoice generation
+    /*
+	Generate client invoice from validation lines
+		etr: Validation line sys_ids in an array
+		check: when true, function will only perform validation line item check. This is used to pre-validate the validation lines to see if there are any errors preventing actual client invoice generation
     */
     processValidationLines: function(etr, check) {
         var errors = [];
@@ -83,7 +84,7 @@ CMBInvoiceUtils.prototype = {
             var prf = keys[i];
             //Get the element list for the prn. 
             var el = pris[keys[i]];
-            gs.info('\tVL qualification. Current setPRN: ' + prf + ' - ' + el.toString());
+            //gs.info('\tVL qualification. Current setPRN: ' + prf + ' - ' + el.toString());
             if (el.length > 0) {
                 var productType = '';
                 var projectCode = '';
@@ -133,61 +134,6 @@ CMBInvoiceUtils.prototype = {
         return;
 
     },
-    /*checkValidationLines:function(el){
-    	var productType = '';
-    	var projectCode = '';
-    	var invalid = false;
-    	var vlines = [];
-    	var msg = [];
-
-    	for(var i=0;i<el.length;i++){
-    		var gr = new GlideRecord('x_tsigh_cmb_validation_line');
-    		gr.get(el[i]);
-    		gs.info('Global product type: '+productType+' - global project code: '+projectCode);
-    		gs.info('Validation line '+gr.number+' Product type: '+gr.getValue('product_type')+' - '+gr.getValue('product_type'));
-    		var prd = gr.getValue('product_type');
-    		if(productType){
-    			if(!prd){
-    				msg.push('Validation line '+gr.number+' has different product type than other related line items '+vlines.toString());
-    				break;
-    			}else if(prd != productType){
-    				msg.push('Error during processing validation lines. Lines '+gr.number()+' doesn\'t have a product type defined');
-    				break;
-    			}
-    		}else {
-    			if(prd && i>0){
-    				msg.push('Error during processing validation lines. Lines '+vlines.toString()+' doesn\'t have a product type defined');
-    				break;
-    			}else productType = prd;
-
-
-    		}
-
-    		var prj = gr.getValue('project_code');
-    		if(prj){
-    			if(projectCode){
-    				if(!prj){
-    					msg.push('Validation line '+gr.number+' has different project code than other related line items '+vlines.toString());
-    					break;
-    				}else if(prj != projectCode){
-    					msg.push('Error during processing validation lines. Line '+gr.number()+' doesn\'t have a project code defined');
-    					break;
-    				}
-    			}else {
-    				if(prj && i>0){
-    					msg.push('Error during processing validation lines. Lines '+vlines.toString()+' doesn\'t have a roject code defined');
-    					break;
-    				}else projectCode = prj;
-    			}
-
-    		}
-    		vlines.push(gr.number);
-
-    	}
-    	gs.info(msg.length>0?msg.toString():'No errors detected during checking the validation lines');
-    	if(msg.length>0) return msg;
-    	return;
-    },	*/
 
     validateLines: function(ids) {
         var ret = [];
@@ -231,11 +177,12 @@ CMBInvoiceUtils.prototype = {
         totalVatValue = Math.round(totalVatValue * 100) / 100;
         return totalVatValue;
     },
-    /*Group invoice lines by order
+
+    /*
+	Group invoice lines by order
     ids: list of validation lines
-    bp:related billing profile record
-	
-    */
+    bp:related billing profile record 
+	*/
     generateInvoiceLinesGroupByOrder: function(ids, bp) {
         var total = 0;
         /*Get the periods for the invoice*/
@@ -297,33 +244,14 @@ CMBInvoiceUtils.prototype = {
             }
         }
 
-
-        /*for(var i=0;i<keys.length;i++){
-        	var el = pris[keys[i]];
-        	var otc = 0;
-        	var mrc = 0;
-        	for(var j=0;j<el.length;j++){	
-        		var grv = new GlideRecord('x_tsigh_cmb_validation_line');
-        		grv.get(el[j]);
-        		otc+=grv.otc_calculated?(grv.otc_calculated):0;
-        		mrc+=grv.mrc_calculated?(grv.mrc_calculated):0;
-        		grv.setValue('client_invoice',gri.sys_id);
-        		grv.update();
-
-        	}
-        	if(otc != 0) this._createInvoiceLine((gr.service?gr.service.sys_id:''),gri,otc,periods, 'Demo description - OTC value: '+otc);
-        	if(mrc != 0) this._createInvoiceLine((gr.service?gr.service.sys_id:''),gri,mrc,periods, 'Demo description - MRC value: '+mrc);
-        	total+=otc+mrc;
-        }*/
         gri.setValue('total_net_value', total);
         gri.update();
-
 
     },
 
 
     generateInvoiceDescription: function(bp, type, prn, ctr, from, to) {
-        gs.info('Generating description for type ' + type + ' with partner ref. id: ' + prn + ' to period ' + (from + ' - ' + to));
+        //gs.info('Generating description for type ' + type + ' with partner ref. id: ' + prn + ' to period ' + (from + ' - ' + to));
         var ext = 'Telecommunication service fee for order no. ' + prn + ', contract no. ' + ctr + ' ' + ((type == 'mrc' ? ('MRC for ' + (from + ' ' + to) + ')') : 'OTC'));
         var inte = 'Servicii de telecomunicatii cf. ' + ctr + ' taxa lunara pentru perioada ' + ' ' + ((type == 'mrc' ? ((from + ' ' + to + ' ')) : '') + prn);
 
@@ -336,60 +264,61 @@ CMBInvoiceUtils.prototype = {
 
         return ret;
 
-
-
     },
 
-    /*Generate invoice and invoice lines separated by orders. For each order a separate invoice line will be generated*/
+    /*Generate invoice and invoice lines separated by partner reference, grouped by service	*/
     generateInvoiceLinesSeparate: function(ids, bp) {
 
         //Set total
         var total = 0;
         //Get periods based on validation lines
         var periods = this._getPeriods(ids);
+
         /*Sort all validation lines based on partner reference id's. So end result will be something like this: 
         {
-          pr1:[vline1,vline2, vline3],
-          pr2:[vline3, vline4]
+          pr1:[vline1,vline2, vline3, vline4],
+          pr2:[vline3, vline5]
         }
         */
-
         var pris = this._sortByRefNr(ids);
-        // _sortByRefNr
+
         var keys = Object.keys(pris);
         //Get the keys (partner reference numbers) and iterate through the data. Each of the PRN will generate a separate invoice
         for (var i = 0; i < keys.length; i++) {
             //Create invoice for the PRN
             var pos = 1;
 
-            //P: post processing to get correct partner reference numbers
-            // var service = new GlideRecord('x_tsigh_cmb_u_cmdb_ci_cmb_service');
-            // service.get(keys[i]);
             var prf = keys[i];
-
             var gri = this._createInvoice(bp, periods, prf);
-
-            //Get the element list for the prn. 
 
             var val_lines_of_prf = pris[keys[i]];
 
+            /*Sort validation lines inside partner reference by service 
+            	input:
+            	{
+            	pr1:[vline1,vline2, vline3, vline4],
+            	}
+            	output:
+            	{
+            	service1:[vline1,vline2,vline4],
+            	service2:[vline3]
+            	}
+            */
             var group_on_service = this._sortByOrder(val_lines_of_prf);
 
             var by_service_keys = Object.keys(group_on_service);
 
+            // Iterate through each service and process its validation lines
             for (var dummy = 0; dummy < by_service_keys.length; dummy++) {
                 var el = group_on_service[by_service_keys[dummy]];
                 // var el = pris[keys[i]];
                 if (el.length > 0) {
 
-
-                    // var pris = this._sortByOrder(ids);
-
                     /*Sort the validation lines by date (more precisely year+month so line for the same month can be aggregated)
                     data will look like this:
                     {
                     	202201:[vline1, vline2],
-                    	202202:[vline3]
+                    	202202:[vline4]
                     }
                     */
                     var sortedByDate = this._groupByDate(el);
@@ -419,8 +348,8 @@ CMBInvoiceUtils.prototype = {
                         var year = dkey.slice(0, 4);
                         var month = dkey.slice(-2);
                         var per = this._createLineItemPeriod(year, month);
-                        //Create an invoice line for all the MRC for the PRF for that specific month
 
+                        //Create an invoice line for all the MRC for the PRF for that specific month
                         if (mrc != 0) this._createInvoiceLine('', gri, grv, mrc, per.period, this.generateInvoiceDescription(bp, 'mrc', prf, ctr, per.ps, per.pe), pos++);
                         if (otc != 0) this._createInvoiceLine('', gri, grv, otc, per.period, this.generateInvoiceDescription(bp, 'otc', prf, ctr, per.ps, per.pe), pos++);
                     }
@@ -431,7 +360,6 @@ CMBInvoiceUtils.prototype = {
         //Create a separate line for the OTC for that PRN
 
         //Set the total for the invoice
-
         gri.setValue('total_net_value', total);
         gri.update();
 
@@ -466,7 +394,6 @@ CMBInvoiceUtils.prototype = {
                 one OTC (if any) and one MRC*/
                 var pris = this._sortByRefNr(el);
 
-
                 //Go through the services for the month
                 var pkeys = Object.keys(pris);
                 for (var j = 0; j < pkeys.length; j++) {
@@ -477,6 +404,7 @@ CMBInvoiceUtils.prototype = {
                     var mrc = 0;
                     var grv;
                     var ctr;
+
                     //Go through all the separate vlines for the specific service for this month and sum the OTCs and MRCs
                     for (var k = 0; k < plist.length; k++) {
                         grv = new GlideRecord('x_tsigh_cmb_validation_line');
@@ -521,11 +449,11 @@ CMBInvoiceUtils.prototype = {
     },
 
 
-    /*Do the invoice generation.
+    /*
+	Do the invoice generation.
     ids: list of validation lines for the invoice. These should have matchint billing profile
     bp: billing profile record of the validation lines
     check: when true, only validation line item check is performed. This is used to pre-validate the validation lines to see if there are any errors preventing actual client invoice generation
-	
     */
     generateInvoiceLines: function(ids, bp, check) {
         var cis = [];
@@ -533,26 +461,23 @@ CMBInvoiceUtils.prototype = {
         var method = bp.invoice_generating_method;
         //Use correct invoice generation method
         switch (+method) {
-            case 1:
-                {
-                    if (check) return;
-                    cis = this.generateInvoiceLinesGroupByOrder(ids, bp);
-                    return cis;
+            case 1: {
+                if (check) return;
+                cis = this.generateInvoiceLinesGroupByOrder(ids, bp);
+                return cis;
+            }
+            case 3: {
+                if (check) {
+                    return this.checkValidationLines(ids);
                 }
-            case 3:
-                {
-                    if (check) {
-                        return this.checkValidationLines(ids);
-                    }
-                    cis = this.generateInvoiceLinesGroupByPRF(ids, bp);
-                    return cis;
-                }
-            case 4:
-                {
-                    if (check) return this.checkValidationLines(ids);
-                    cis = this.generateInvoiceLinesSeparate(ids, bp);
-                    return cis;
-                }
+                cis = this.generateInvoiceLinesGroupByPRF(ids, bp);
+                return cis;
+            }
+            case 4: {
+                if (check) return this.checkValidationLines(ids);
+                cis = this.generateInvoiceLinesSeparate(ids, bp);
+                return cis;
+            }
 
         }
 
@@ -679,25 +604,29 @@ CMBInvoiceUtils.prototype = {
         return ret;
     },
 
+    // get the whole period by the earliest start and the latest end of all the validation lines
     _getPeriods: function(ids) {
         var yearStart;
         var yearEnd;
         var monthStart;
         var monthEnd;
+        // iterating through all the validation lines
         for (var i = 0; i < ids.length; i++) {
             var gr = new GlideRecord('x_tsigh_cmb_validation_line');
             gr.get(ids[i]);
+            // initializing values in case of empty start and end 
             if (!yearStart && !monthStart && !yearEnd && !monthEnd) {
                 yearStart = gr.getValue('year');
                 monthStart = ('0' + gr.getValue('month')).slice(-2);
                 yearEnd = gr.getValue('year');
                 monthEnd = ('0' + gr.getValue('month')).slice(-2);
             } else {
+                // start is earlier than current value
                 if ((yearStart + '-' + monthStart) < ((gr.getValue('year') + '-' + gr.getValue('month')))) {
                     yearStart = gr.getValue('year');
                     monthStart = gr.getValue('month');
                 }
-
+                // end is later than current value
                 if ((yearEnd + '-' + monthEnd) > ((gr.getValue('year') + '-' + gr.getValue('month')))) {
                     yearEnd = gr.getValue('year');
                     monthEnd = gr.getValue('month');
@@ -737,13 +666,13 @@ CMBInvoiceUtils.prototype = {
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-10-19 08:49:33</sys_created_on>
         <sys_id>edb1e0031b26551030bc986c9b4bcb74</sys_id>
-        <sys_mod_count>197</sys_mod_count>
+        <sys_mod_count>198</sys_mod_count>
         <sys_name>CMBInvoiceUtils</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_edb1e0031b26551030bc986c9b4bcb74</sys_update_name>
-        <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-12-13 10:53:54</sys_updated_on>
+        <sys_updated_by>istvan.toma</sys_updated_by>
+        <sys_updated_on>2022-12-14 21:10:49</sys_updated_on>
     </sys_script_include>
 </record_update>

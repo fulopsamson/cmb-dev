@@ -21,6 +21,7 @@
 		return;
 	}
 	
+	
     var billingProfile = g_form.getReference('billing_profile', callBack);
 	
 	function callBack(rec){
@@ -35,15 +36,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0a229b4e1b569150c7c9fc078b4bcb83</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Client invoice Billing profile OnChange</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_client_0a229b4e1b569150c7c9fc078b4bcb83</sys_update_name>
-        <sys_updated_by>toma.istvan</sys_updated_by>
-        <sys_updated_on>2022-10-25 08:48:32</sys_updated_on>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-12-14 09:45:51</sys_updated_on>
         <table>x_tsigh_cmb_client_invoice</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

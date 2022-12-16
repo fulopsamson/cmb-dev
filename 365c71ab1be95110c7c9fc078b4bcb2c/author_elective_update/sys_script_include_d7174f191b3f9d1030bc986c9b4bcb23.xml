@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="DELETE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_tsigh_cmb.StockroomCheck</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>StockroomCheck</name>
+        <script><![CDATA[var StockroomCheck = Class.create();
+StockroomCheck.prototype = {
+    initialize: function() {
+    },
+	
+	check: function(name) {
+		var gr  = new GlideRecord('alm_stockroom');
+		gr.addQuery('name', current.name);
+		gr.query();
+		if (gr.next()) {
+			gs.info('Van mar ezzel a nevvel');
+			return true;
+		}
+		gs.info('Nincs meg ezzel a nevvel');
+		return false;
+	},
+    type: 'StockroomCheck'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-15 13:34:05</sys_created_on>
+        <sys_id>d7174f191b3f9d1030bc986c9b4bcb23</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>StockroomCheck</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_include_d7174f191b3f9d1030bc986c9b4bcb23</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-15 13:37:55</sys_updated_on>
+    </sys_script_include>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_include_d7174f191b3f9d1030bc986c9b4bcb23</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;x_tsigh_cmb.StockroomCheck&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;StockroomCheck&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var StockroomCheck = Class.create();
+StockroomCheck.prototype = {
+    initialize: function() {
+    },
+	
+	check: function(name) {
+		var gr  = new GlideRecord('alm_stockroom');
+		gr.addQuery('name', current.name);
+		gr.query();
+		if (gr.next()) {
+			gs.info('Van mar ezzel a nevvel');
+			return true;
+		}
+		gs.info('Nincs meg ezzel a nevvel');
+		return false;
+	},
+    type: 'StockroomCheck'
+};]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;samson.fulop&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-12-15 13:34:05&lt;/sys_created_on&gt;&lt;sys_id&gt;d7174f191b3f9d1030bc986c9b4bcb23&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;StockroomCheck&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_d7174f191b3f9d1030bc986c9b4bcb23&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;samson.fulop&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-12-15 13:37:55&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2126722250</payload_hash>
+        <record_name>StockroomCheck</record_name>
+        <reverted_from/>
+        <source>22a2eff51bef5110c7c9fc078b4bcb82</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-15 13:37:55</sys_created_on>
+        <sys_id>29780f591b3f9d1030bc986c9b4bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185160181af0000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-15 13:37:55</sys_updated_on>
+        <type>Script Include</type>
+        <update_guid>ad780f59553f9d1070d853e5e93809c8</update_guid>
+        <update_guid_history>ad780f59553f9d1070d853e5e93809c8:2126722250,4c080f59cd3f9d108949716eda9dc9bb:1435493166,2d978719993f9d1069b9d1a67ff2c72a:976270163</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-15 13:56:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_include">sys_script_include</sys_db_object>
+        <sys_id>13f8ced28ea14a0d844dca3649a7c471</sys_id>
+        <sys_metadata>d7174f191b3f9d1030bc986c9b4bcb23</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>StockroomCheck</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_include_d7174f191b3f9d1030bc986c9b4bcb23</sys_update_name>
+        <sys_update_version display_value="sys_script_include_d7174f191b3f9d1030bc986c9b4bcb23">29780f591b3f9d1030bc986c9b4bcbc9</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-15 13:56:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

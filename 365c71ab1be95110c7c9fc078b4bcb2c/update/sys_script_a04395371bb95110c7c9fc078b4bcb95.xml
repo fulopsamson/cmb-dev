@@ -35,6 +35,7 @@
 	var id = current.supplier_invoice;
 	
 	var newValue = current.quantity * current.unit_price;
+	newValue = Number(Math.round(newValue + 'e2')+'e-2');
 	
 	if(current.total_price != newValue) 
 		current.total_price = newValue;
@@ -60,14 +61,17 @@
 		
 		inv.total_net_value = total;
 		var tot_ron = total*rate;
+		tot_ron = Number(Math.round(tot_ron + 'e2')+'e-2');
 		inv.total_net_value_in_ron = tot_ron;
 		
 		var VAT = gs.getProperty('x_tsigh_cmb.tva_percent');
 
 		if(inv.supplier){
-			if(inv.supplier.u_intern_extern == 'intern')
-				inv.total_gross_value_in_ron = tot_ron + tot_ron*VAT;
-			
+			if(inv.supplier.u_intern_extern == 'intern'){
+				var tot_gross_ron = tot_ron + tot_ron*VAT;
+				tot_gross_ron = Number(Math.round(tot_gross_ron + 'e2')+'e-2');
+				inv.total_gross_value_in_ron = tot_gross_ron;
+			}
 			else if(inv.supplier.u_intern_extern == 'extern')
 				inv.total_gross_value_in_ron = tot_ron;
 			else{
@@ -88,7 +92,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a04395371bb95110c7c9fc078b4bcb95</sys_id>
-        <sys_mod_count>71</sys_mod_count>
+        <sys_mod_count>72</sys_mod_count>
         <sys_name>Supplier Invoice line total/total in ron</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -96,7 +100,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_a04395371bb95110c7c9fc078b4bcb95</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-10-27 10:21:55</sys_updated_on>
+        <sys_updated_on>2022-12-16 09:11:07</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

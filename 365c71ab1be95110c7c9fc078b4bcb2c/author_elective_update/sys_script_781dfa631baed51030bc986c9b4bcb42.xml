@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_tsigh_cmb_client_invoice_lines</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>CMB Client Invoice Line calculate RON</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+	current.vat_value_in_ron = current.vat_value * current.client_invoice.exchange_rate_value;
+	current.price_in_ron = current.price * current.client_invoice.exchange_rate_value;
+	var upr = Math.round(current.unit_price * current.client_invoice.exchange_rate_value*100)/100;
+	current.unit_price_in_ron = upr;
+	var x = upr*(1+current.client_invoice.vat_value);
+	current.unit_price_with_vat_in_ron = Number(Math.round(x + 'e4') + 'e-4');
+	current.update();
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-10-21 09:20:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>781dfa631baed51030bc986c9b4bcb42</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>CMB Client Invoice Line calculate RON</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_781dfa631baed51030bc986c9b4bcb42</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-16 09:04:02</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=781dfa631baed51030bc986c9b4bcb42"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_781dfa631baed51030bc986c9b4bcb42</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;false&lt;/action_delete&gt;&lt;action_insert&gt;true&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;true&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_tsigh_cmb_client_invoice_lines&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;CMB Client Invoice Line calculate RON&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+	
+	current.vat_value_in_ron = current.vat_value * current.client_invoice.exchange_rate_value;
+	current.price_in_ron = current.price * current.client_invoice.exchange_rate_value;
+	var upr = Math.round(current.unit_price * current.client_invoice.exchange_rate_value*100)/100;
+	current.unit_price_in_ron = upr;
+	var x = upr*(1+current.client_invoice.vat_value);
+	current.unit_price_with_vat_in_ron = Number(Math.round(x + 'e4') + 'e-4');
+	current.update();
+	
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;samson.fulop&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-21 09:20:45&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;781dfa631baed51030bc986c9b4bcb42&lt;/sys_id&gt;&lt;sys_mod_count&gt;6&lt;/sys_mod_count&gt;&lt;sys_name&gt;CMB Client Invoice Line calculate RON&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_781dfa631baed51030bc986c9b4bcb42&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;samson.fulop&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-12-16 09:04:02&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=781dfa631baed51030bc986c9b4bcb42"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1425139816</payload_hash>
+        <record_name>CMB Client Invoice Line calculate RON</record_name>
+        <reverted_from/>
+        <source>22a2eff51bef5110c7c9fc078b4bcb82</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-16 09:04:02</sys_created_on>
+        <sys_id>17535b6d1bfbdd1030bc986c9b4bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1851a2d1e270000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-16 09:04:02</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>db535b6d4dfbdd10f754fb75c28dc0b1</update_guid>
+        <update_guid_history>db535b6d4dfbdd10f754fb75c28dc0b1:1425139816,b1313835720755101503ae5d06f94d39:828691648,27107c71e20755105bac338b6696b0ec:1175073284,4f6397abeeeed510f54dac4350f58582:-1793508968,0a4d07e313eed510f932235dc6f5d77e:-1627063381,672d8fa3b5eed5107247bdc919aaa2fe:-1793508968,122e7aa383aed51011a611afc2ed33bc:-1627063381</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-16 09:44:00</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>01f2e92ee32f48428403d929011264c4</sys_id>
+        <sys_metadata>781dfa631baed51030bc986c9b4bcb42</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMB Client Invoice Line calculate RON</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Client invoice lines">2d75364a1b71991030bc986c9b4bcb4b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_781dfa631baed51030bc986c9b4bcb42</sys_update_name>
+        <sys_update_version display_value="sys_script_781dfa631baed51030bc986c9b4bcb42">17535b6d1bfbdd1030bc986c9b4bcbb2</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-16 09:44:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

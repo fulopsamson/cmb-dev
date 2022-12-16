@@ -1,7 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Product Model" max_length="40" name="cmdb_model" sizeclass="150" type="collection">
+    <element label="Product Model" max_length="40" name="cmdb_model" sizeclass="156" type="collection">
         <element label="Description" max_length="1000" name="x_tsigh_cmb_description" type="string"/>
-        <element label="Group" max_length="30" name="x_tsigh_cmb_group" type="string"/>
+        <element attributes="is_searchable_choice=true" choice="1" label="Group" max_length="30" name="x_tsigh_cmb_group" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Alcatel SDH" value="166"/>
+                <element inactive_on_update="false" label="Calculatoare" value="188"/>
+                <element inactive_on_update="false" label="CISCO Equipments" value="148"/>
+                <element inactive_on_update="false" label="Cisco Support" value="183"/>
+                <element inactive_on_update="false" label="Csaki" value="111"/>
+                <element inactive_on_update="false" label="Equip Voce - Sapientia" value="184"/>
+                <element inactive_on_update="false" label="Generic Equipment" value="250"/>
+                <element inactive_on_update="false" label="Hardware si/sau Software resale" value="185"/>
+                <element inactive_on_update="false" label="HUB Digicom" value="196"/>
+                <element inactive_on_update="false" label="HUB Ines" value="197"/>
+                <element inactive_on_update="false" label="HUB MediaSat" value="198"/>
+                <element inactive_on_update="false" label="HUB RDS" value="199"/>
+                <element inactive_on_update="false" label="HUB UPC" value="200"/>
+                <element inactive_on_update="false" label="IC Cosmote" value="113"/>
+                <element inactive_on_update="false" label="IC Dial" value="193"/>
+                <element inactive_on_update="false" label="IC MediaSat" value="194"/>
+                <element inactive_on_update="false" label="IC Orange" value="114"/>
+                <element inactive_on_update="false" label="IC RCS&amp;RDS" value="115"/>
+                <element inactive_on_update="false" label="IC Romtelecom" value="116"/>
+                <element inactive_on_update="false" label="IC Telemobil" value="117"/>
+                <element inactive_on_update="false" label="IC UPC" value="118"/>
+                <element inactive_on_update="false" label="IC Vodafone" value="119"/>
+                <element inactive_on_update="false" label="ICS Team" value="247"/>
+                <element inactive_on_update="false" label="Indefeasible Right of Use (IRU) fee" value="167"/>
+                <element inactive_on_update="false" label="IRU  OTE International" value="261"/>
+                <element inactive_on_update="false" label="IRU Cogent" value="251"/>
+                <element inactive_on_update="false" label="IRU Interoute BG 2007" value="162"/>
+                <element inactive_on_update="false" label="IRU Interoute RO 2006" value="189"/>
+                <element inactive_on_update="false" label="IRU Interoute RO 2007" value="161"/>
+                <element inactive_on_update="false" label="IRU Prime" value="170"/>
+                <element inactive_on_update="false" label="IRU RDS" value="255"/>
+                <element inactive_on_update="false" label="IRU TTI HU 2019" value="260"/>
+                <element inactive_on_update="false" label="IRU TTI swap 2019" value="259"/>
+                <element inactive_on_update="false" label="IRU UPC" value="242"/>
+                <element inactive_on_update="false" label="ISDN AlterNet" value="211"/>
+                <element inactive_on_update="false" label="ISDN Amera" value="212"/>
+                <element inactive_on_update="false" label="ISDN Ave CJ" value="213"/>
+                <element inactive_on_update="false" label="ISDN Baleanu" value="121"/>
+                <element inactive_on_update="false" label="ISDN Best Telecom" value="254"/>
+                <element inactive_on_update="false" label="ISDN Cons.Gen.HU" value="204"/>
+                <element inactive_on_update="false" label="ISDN Consulat HU" value="253"/>
+                <element inactive_on_update="false" label="ISDN Creditexpress" value="122"/>
+                <element inactive_on_update="false" label="ISDN DBR Holding" value="123"/>
+                <element inactive_on_update="false" label="ISDN Digi Communication" value="124"/>
+                <element inactive_on_update="false" label="ISDN Digicom Systems" value="125"/>
+                <element inactive_on_update="false" label="ISDN Holosfind" value="126"/>
+                <element inactive_on_update="false" label="ISDN Imagistica" value="206"/>
+                <element inactive_on_update="false" label="ISDN ING" value="208"/>
+                <element inactive_on_update="false" label="ISDN Kesz" value="207"/>
+                <element inactive_on_update="false" label="ISDN Netaccess" value="127"/>
+                <element inactive_on_update="false" label="ISDN Norcable" value="209"/>
+                <element inactive_on_update="false" label="ISDN Nova Sat" value="128"/>
+                <element inactive_on_update="false" label="ISDN Opticnet" value="129"/>
+                <element inactive_on_update="false" label="ISDN Real Media Network" value="210"/>
+                <element inactive_on_update="false" label="ISDN Siemens Enterpr.Com." value="130"/>
+                <element inactive_on_update="false" label="ISDN Sykes" value="205"/>
+                <element inactive_on_update="false" label="ISDN TDN" value="131"/>
+                <element inactive_on_update="false" label="ISDN Tehnoconstruct" value="132"/>
+                <element inactive_on_update="false" label="ISDN Vianet" value="133"/>
+                <element inactive_on_update="false" label="ISDN Voestalpine" value="252"/>
+                <element inactive_on_update="false" label="ISDN WeCall4You" value="134"/>
+                <element inactive_on_update="false" label="ISDN WTCB" value="135"/>
+                <element inactive_on_update="false" label="KA Allianz Asigurari" value="136"/>
+                <element inactive_on_update="false" label="Ka Allianz Pensii" value="137"/>
+                <element inactive_on_update="false" label="KA Asit Real Estate" value="138"/>
+                <element inactive_on_update="false" label="Kesz chirie birou" value="246"/>
+                <element inactive_on_update="false" label="Mihaly" value="112"/>
+                <element inactive_on_update="false" label="MT" value="171"/>
+                <element inactive_on_update="false" label="Novatel" value="172"/>
+                <element inactive_on_update="false" label="Office IT" value="153"/>
+                <element inactive_on_update="false" label="OptiX OSN 6800" value="164"/>
+                <element inactive_on_update="false" label="OptiX OSN 8800" value="257"/>
+                <element inactive_on_update="false" label="Orange" value="243"/>
+                <element inactive_on_update="false" label="Pasive" value="109"/>
+                <element inactive_on_update="false" label="PORR" value="214"/>
+                <element inactive_on_update="false" label="Romtelecom" value="235"/>
+                <element inactive_on_update="false" label="Servicii" value="107"/>
+                <element inactive_on_update="false" label="T-Systems" value="182"/>
+                <element inactive_on_update="false" label="Telia BG" value="156"/>
+                <element inactive_on_update="false" label="Telia RO" value="155"/>
+                <element inactive_on_update="false" label="V A&amp;C" value="239"/>
+                <element inactive_on_update="false" label="V ADNet" value="168"/>
+                <element inactive_on_update="false" label="V Akton" value="143"/>
+                <element inactive_on_update="false" label="V ApelNet" value="158"/>
+                <element inactive_on_update="false" label="V AVCOM" value="175"/>
+                <element inactive_on_update="false" label="V Bensoft" value="234"/>
+                <element inactive_on_update="false" label="V Beotel" value="249"/>
+                <element inactive_on_update="false" label="V Best Telecom" value="228"/>
+                <element inactive_on_update="false" label="V Bitech" value="195"/>
+                <element inactive_on_update="false" label="V Canal7" value="226"/>
+                <element inactive_on_update="false" label="V CENAFER" value="238"/>
+                <element inactive_on_update="false" label="V Conectys" value="248"/>
+                <element inactive_on_update="false" label="V Deutsche" value="177"/>
+                <element inactive_on_update="false" label="V Dial" value="215"/>
+                <element inactive_on_update="false" label="V Digicom" value="219"/>
+                <element inactive_on_update="false" label="V DoNet" value="173"/>
+                <element inactive_on_update="false" label="V DotRo" value="221"/>
+                <element inactive_on_update="false" label="V Eko Papir" value="237"/>
+                <element inactive_on_update="false" label="V EuroTel" value="163"/>
+                <element inactive_on_update="false" label="V EuroTel" value="160"/>
+                <element inactive_on_update="false" label="V Euroweb" value="216"/>
+                <element inactive_on_update="false" label="V FusionTel" value="178"/>
+                <element inactive_on_update="false" label="V Gold" value="190"/>
+                <element inactive_on_update="false" label="V Greencall" value="222"/>
+                <element inactive_on_update="false" label="V Greencall" value="179"/>
+                <element inactive_on_update="false" label="V Idilis" value="224"/>
+                <element inactive_on_update="false" label="V IDT" value="245"/>
+                <element inactive_on_update="false" label="V IP-Control" value="227"/>
+                <element inactive_on_update="false" label="V IpVoip" value="139"/>
+                <element inactive_on_update="false" label="V Lanck" value="150"/>
+                <element inactive_on_update="false" label="V MediaExchange" value="146"/>
+                <element inactive_on_update="false" label="V MediaSat" value="220"/>
+                <element inactive_on_update="false" label="V Netconnect" value="217"/>
+                <element inactive_on_update="false" label="V Nobel" value="110"/>
+                <element inactive_on_update="false" label="V Orion" value="186"/>
+                <element inactive_on_update="false" label="V Oscar" value="236"/>
+                <element inactive_on_update="false" label="V Pas Techn" value="229"/>
+                <element inactive_on_update="false" label="V Phonetime" value="165"/>
+                <element inactive_on_update="false" label="V PrimeTel" value="141"/>
+                <element inactive_on_update="false" label="V QNS" value="145"/>
+                <element inactive_on_update="false" label="V QNS" value="218"/>
+                <element inactive_on_update="false" label="V RNT" value="244"/>
+                <element inactive_on_update="false" label="V SashaTel" value="176"/>
+                <element inactive_on_update="false" label="V SEED" value="233"/>
+                <element inactive_on_update="false" label="V Sinet" value="187"/>
+                <element inactive_on_update="false" label="V SNR" value="223"/>
+                <element inactive_on_update="false" label="V Tata" value="147"/>
+                <element inactive_on_update="false" label="V TechNet" value="225"/>
+                <element inactive_on_update="false" label="V TeleCall" value="169"/>
+                <element inactive_on_update="false" label="V TG Transit" value="149"/>
+                <element inactive_on_update="false" label="V TNEX" value="140"/>
+                <element inactive_on_update="false" label="V TotalCall" value="231"/>
+                <element inactive_on_update="false" label="V Violind" value="232"/>
+                <element inactive_on_update="false" label="V VNC" value="144"/>
+                <element inactive_on_update="false" label="V VoiceMarket" value="142"/>
+                <element inactive_on_update="false" label="V Vox Carrier" value="241"/>
+                <element inactive_on_update="false" label="V Vox Filem" value="230"/>
+                <element inactive_on_update="false" label="V Voxility" value="191"/>
+                <element inactive_on_update="false" label="V Wappal" value="159"/>
+                <element inactive_on_update="false" label="V YUBC" value="181"/>
+                <element inactive_on_update="false" label="V Acord" sequence="1" value="192"/>
+                <element inactive_on_update="false" label="V Orbitel" sequence="1" value="151"/>
+                <element inactive_on_update="false" label="V Vectone" sequence="2" value="152"/>
+                <element inactive_on_update="false" label="ISDN Avolo" sequence="3" value="120"/>
+                <element inactive_on_update="false" label="V ApelNet" sequence="3" value="154"/>
+                <element inactive_on_update="false" label="OptiX OSN 1800" sequence="4" value="180"/>
+                <element inactive_on_update="false" label="CARS &amp; Related" sequence="5" value="157"/>
+                <element inactive_on_update="false" label="V Internet Telecom" sequence="5" value="240"/>
+                <element inactive_on_update="false" label="HUB WTN" sequence="20" value="201"/>
+                <element inactive_on_update="false" label="ISDN Ziegler" sequence="21" value="202"/>
+                <element inactive_on_update="false" label="ISDN HSG Zander" sequence="22" value="203"/>
+            </choice>
+        </element>
         <element label="Legacy ID" max_length="40" name="x_tsigh_cmb_legacy_id" read_only="true" type="string"/>
         <element label="VAT" max_length="40" name="x_tsigh_cmb_vat" type="float"/>
     </element>

@@ -32,8 +32,10 @@ Forecast.prototype = {
             while (services.next()) {
                 if (services.u_state == 'Active') var calcStart = new GlideDateTime(services.u_acceptance_date);
                 else var calcStart = new GlideDateTime(services.u_rfs_requested);
+                calcStart = new GlideDateTime(startDate);
                 var realEnd = new GlideDateTime(calcStart);
-                realEnd.addMonthsUTC(parseInt(services.u_contract_period));
+                // realEnd.addMonthsUTC(parseInt(services.u_contract_period));
+                realEnd.addMonthsUTC(parseInt(monthcount));
                 var extraEnd = new GlideDateTime(realEnd);
                 extraEnd.addMonthsUTC(parseInt(monthcount));
                 //gs.info("P log service, calcStart, realEnd, extraEnd" + services.number + ", " + calcStart + ", " + realEnd + ", " + extraEnd);
@@ -73,10 +75,10 @@ Forecast.prototype = {
             Sum["otc"] = currencyUtils.convertOnDate(Sum["otc"], currency, service.u_currency, exchDate);
         }
 
-		// initialize array for profit calculation
+        // initialize array for profit calculation
         if (mode == "revenue") this.PROFITBYSERVICE[service.number] = [];
 
-		// calculate for 36 month
+        // calculate for 36 month
         for (var j = 0; j < 36; j++) {
             // in activation month
             if (actualStart.getYearUTC() == serviceStart.getYearUTC() && actualStart.getMonthUTC() == serviceStart.getMonthUTC()) {
@@ -93,29 +95,29 @@ Forecast.prototype = {
                 }
                 row += this.SEP + higherRev.toString();
             } else
-                // in a "normal" month
-                if (actualStart >= serviceStart && actualEnd <= serviceEnd) {
-                    if (mode == "revenue") {
-                        this.TOTALREV[j] = this.TOTALREV[j] + Sum["mrc"];
-                        this.PROFITBYSERVICE[service.number][j] = Sum["mrc"];
-                    } else {
-                        this.TOTALCOST[j] = this.TOTALCOST[j] + Sum["mrc"];
-                        this.PROFITBYSERVICE[service.number][j] = this.PROFITBYSERVICE[service.number][j] - Sum["mrc"];
-                    }
-                    row += this.SEP + Sum["mrc"].toString();
-                } else
-                    // in extra termin month
-                    if (actualStart >= serviceStart && actualEnd <= extraEnd) {
-                        var extra = Sum["mrc"] * parseFloat(percent);
-                        if (mode == "revenue") {
-                            this.TOTALREV[j] = this.TOTALREV[j] + extra;
-                            this.PROFITBYSERVICE[service.number][j] = extra;
-                        } else {
-                            this.TOTALCOST[j] = this.TOTALCOST[j] + extra;
-                            this.PROFITBYSERVICE[service.number][j] = this.PROFITBYSERVICE[service.number][j] - extra;
-                        }
-                        row += this.SEP + extra.toString();
-                    } else
+            // in a "normal" month
+            if (actualStart >= serviceStart && actualEnd <= serviceEnd) {
+                if (mode == "revenue") {
+                    this.TOTALREV[j] = this.TOTALREV[j] + Sum["mrc"];
+                    this.PROFITBYSERVICE[service.number][j] = Sum["mrc"];
+                } else {
+                    this.TOTALCOST[j] = this.TOTALCOST[j] + Sum["mrc"];
+                    this.PROFITBYSERVICE[service.number][j] = this.PROFITBYSERVICE[service.number][j] - Sum["mrc"];
+                }
+                row += this.SEP + Sum["mrc"].toString();
+            } else
+            // in extra termin month
+            if (actualStart >= serviceStart && actualEnd <= extraEnd) {
+                var extra = Sum["mrc"] * parseFloat(percent);
+                if (mode == "revenue") {
+                    this.TOTALREV[j] = this.TOTALREV[j] + extra;
+                    this.PROFITBYSERVICE[service.number][j] = extra;
+                } else {
+                    this.TOTALCOST[j] = this.TOTALCOST[j] + extra;
+                    this.PROFITBYSERVICE[service.number][j] = this.PROFITBYSERVICE[service.number][j] - extra;
+                }
+                row += this.SEP + extra.toString();
+            } else
             // not in the active timeframe
             {
                 row += this.SEP + '0';
@@ -172,13 +174,13 @@ Forecast.prototype = {
         <sys_created_by>toma.istvan</sys_created_by>
         <sys_created_on>2022-11-14 23:55:27</sys_created_on>
         <sys_id>dfd8a5e31b879910c7c9fc078b4bcb82</sys_id>
-        <sys_mod_count>70</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>Forecast</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_dfd8a5e31b879910c7c9fc078b4bcb82</sys_update_name>
-        <sys_updated_by>istvan.toma</sys_updated_by>
-        <sys_updated_on>2022-12-01 20:27:24</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-16 11:22:39</sys_updated_on>
     </sys_script_include>
 </record_update>

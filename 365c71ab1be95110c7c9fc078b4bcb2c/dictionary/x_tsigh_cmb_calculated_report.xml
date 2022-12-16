@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element label="Calculated report" max_length="40" name="x_tsigh_cmb_calculated_report" sizeclass="13" type="collection">
+    <element label="Calculated report" max_length="40" name="x_tsigh_cmb_calculated_report" sizeclass="14" type="collection">
         <element label="Billing Profiles" max_length="4000" name="billing_profiles" reference="x_tsigh_cmb_billing_profile" type="glide_list"/>
         <element default="RON" label="Currency" max_length="32" name="currency" reference="fx_currency" type="reference"/>
         <element default="javascript: new GlideDateTime().getDate()" label="Exchange date" max_length="40" name="exchange_date" type="glide_date"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Billing Profile" max_length="40" name="x_tsigh_cmb_billing_profile" sizeclass="127" type="collection">
+    <element audit="true" label="Billing Profile" max_length="40" name="x_tsigh_cmb_billing_profile" sizeclass="129" type="collection">
         <element label="Account" mandatory="true" max_length="32" name="account" reference="customer_account" type="reference"/>
         <element dependent="comment" dependent_on_field="comment" label="Additional comments" max_length="4000" name="additional_comments" type="journal_list" use_dependent_field="true"/>
         <element label="Bank account number" max_length="40" name="banking_account" type="string"/>

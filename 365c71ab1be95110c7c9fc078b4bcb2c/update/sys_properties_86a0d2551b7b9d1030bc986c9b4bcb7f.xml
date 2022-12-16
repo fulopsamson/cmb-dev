@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Segment activity formatter fields</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.ui.x_tsigh_cmb_u_cmdb_ci_segment_activity.fields</name>
+        <read_roles/>
+        <suffix>x_tsigh_cmb</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2022-12-15 09:34:06</sys_created_on>
+        <sys_id>86a0d2551b7b9d1030bc986c9b4bcb7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>glide.ui.x_tsigh_cmb_u_cmdb_ci_segment_activity.fields</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_properties_86a0d2551b7b9d1030bc986c9b4bcb7f</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-15 09:34:06</sys_updated_on>
+        <type>string</type>
+        <value>number,u_legacy_id,u_provider,u_billing_profile,u_la_provider_id,u_service,comments,short_description,additional_info_a,additional_info_b,additional_information,u_additional_image,approval,change_control,asset,asset_tag,assigned,assigned_to,attestation_score,attestation_status,attested,attested_by,attested_date,attributes,business_unit,u_cpe_configuration,can_print,category,assignment_group,checked_in,checked_out,sys_class_name,company,u_contact,u_contract_period,correlation_id,cost,cost_center,cost_cc,sys_created_on,sys_created_by,u_currency,dns_domain,department,discovery_source,sys_domain,sys_domain_path,due,due_in,duplicate_of,u_early_termination_fee,u_from,u_to,environment,fault_count,first_discovered,fqdn,gl_account,ip_address,install_date,invoice_number,justification,kind_of_order,last_billing_date,u_last_negotiation,lease_id,life_cycle_stage,life_cycle_stage_status,location,mac_address,u_mrc,maintenance_schedule,managed_by_group,managed_by,manufacturer,model_id,model_number,monitor,last_discovered,name,u_otc,operational_status,u_order,delivery_date,order_date,owned_by,po_number,u_position,product_type,u_product_type_desired,u_provisioning_contact,purchase_date,u_bid_reference,rfs_r_date,unverified,u_sla_profile,schedule,serial_number,u_service_details,skip_sync,start_date,install_status,subcategory,support_group,supported_by,sys_class_path,sys_tags,u_technical_details,sys_updated_on,sys_updated_by,sys_mod_count,vendor,warranty_expiration,*Email*,*Relations*,*Attachments*</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=86a0d2551b7b9d1030bc986c9b4bcb7f"/>
+</record_update>

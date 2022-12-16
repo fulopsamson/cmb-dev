@@ -3,7 +3,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes/>
+        <attributes>is_searchable_choice=true</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -11,7 +11,7 @@
 	return '';  // return the calculated value
 
 })(current);]]></calculation>
-        <choice/>
+        <choice>1</choice>
         <choice_field/>
         <choice_table/>
         <column_label>Group</column_label>
@@ -32,7 +32,7 @@
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="String">string</internal_type>
+        <internal_type display_value="Choice">choice</internal_type>
         <mandatory>false</mandatory>
         <max_length>30</max_length>
         <name>cmdb_model</name>
@@ -54,14 +54,14 @@
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-09-14 12:34:08</sys_created_on>
         <sys_id>f5d6053b1b795110c7c9fc078b4bcb1e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Group</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_dictionary_cmdb_model_x_tsigh_cmb_group</sys_update_name>
-        <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-09-14 12:34:08</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2022-12-15 14:58:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

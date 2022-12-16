@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Client invoice" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="26" type="collection">
+    <element audit="true" label="Client invoice" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="14" type="collection">
         <element choice="3" choice_field="approval" choice_table="task" default="not requested" label="Approval" max_length="40" name="approval" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Not Yet Requested" sequence="0" value="not requested"/>
@@ -16,6 +16,7 @@
         <element label="Due date" max_length="40" name="due_date" type="glide_date"/>
         <element default="javascript: new GlideDateTime().getDate()" label="Exchange rate date" mandatory="true" max_length="40" name="exchange_rate_date" type="glide_date"/>
         <element label="Exchange rate value" max_length="40" name="exchange_rate_value" read_only="true" type="float"/>
+        <element label="Internal/External" max_length="40" name="internal_external" read_only="true" type="string"/>
         <element default="javascript: new GlideDateTime().getDate()" label="Invoice date" mandatory="true" max_length="40" name="invoice_date" type="glide_date"/>
         <element label="Invoice file" max_length="40" name="invoice_file" read_only="true" type="file_attachment"/>
         <element choice="3" label="Invoice generating method" max_length="100" name="invoice_generating_method" read_only="true" type="string" use_dependent_field="true">
@@ -42,11 +43,11 @@
             </choice>
         </element>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.total_net_value+current.total_value_of_vat;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Total" max_length="40" name="total" read_only="true" type="float"/>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;&#13;&#10;&#9;return (+current.total) * (+current.exchange_rate_value);&#13;&#10;&#13;&#10;})(current);" label="Total in RON" max_length="40" name="total_in_ron" read_only="true" type="float" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;&#13;&#10;// &#9;return (+current.total) * (+current.exchange_rate_value);&#13;&#10;&#9;return Number(Math.round((+current.total) * (+current.exchange_rate_value) + 'e2') + 'e-2');&#13;&#10;&#13;&#10;})(current);" label="Total in RON" max_length="40" name="total_in_ron" read_only="true" type="float" virtual="true"/>
         <element label="Total net value" max_length="40" name="total_net_value" read_only="true" type="float"/>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;return (+current.total_net_value) * (+current.exchange_rate_value);&#13;&#10;})(current);" label="Total net value in RON" max_length="40" name="total_net_value_in_ron" read_only="true" type="float" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;// &#9;return (+current.total_net_value) * (+current.exchange_rate_value);&#13;&#10;&#9;return Number(Math.round((+current.total_net_value) * (+current.exchange_rate_value) + 'e2') + 'e-2');&#13;&#10;})(current);" label="Total net value in RON" max_length="40" name="total_net_value_in_ron" read_only="true" type="float" virtual="true"/>
         <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return Math.round(current.total_net_value*current.vat_value*100)/100;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Total value of VAT" max_length="40" name="total_value_of_vat" read_only="true" type="float"/>
-        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;return (+current.total_value_of_vat) * (+current.exchange_rate_value);&#13;&#10;&#13;&#10;})(current);" label="Total value of VAT in RON" max_length="40" name="total_value_of_vat_in_ron" read_only="true" type="float" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#9;return Number(Math.round((+current.total_value_of_vat) * (+current.exchange_rate_value) + 'e2') + 'e-2');&#13;&#10;&#13;&#10;})(current);" label="Total value of VAT in RON" max_length="40" name="total_value_of_vat_in_ron" read_only="true" type="float" virtual="true"/>
         <element choice="3" default="selling" label="Type" max_length="10" name="type" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Billing of Service" value="billing"/>
