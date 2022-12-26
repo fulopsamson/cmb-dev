@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Supplier invoice lines" max_length="40" name="x_tsigh_cmb_supplier_invoice_lines" sizeclass="219" type="collection">
+    <element audit="true" label="Supplier invoice lines" max_length="40" name="x_tsigh_cmb_supplier_invoice_lines" sizeclass="220" type="collection">
         <element label="Contract number" max_length="40" name="contract_number" type="string"/>
         <element label="Currency" max_length="32" name="currency" read_only="true" reference="fx_currency" type="reference"/>
         <element label="End date" max_length="40" name="end_date" type="glide_date"/>

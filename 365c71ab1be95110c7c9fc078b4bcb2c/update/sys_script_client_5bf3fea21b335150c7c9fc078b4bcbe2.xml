@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>invoice_currency</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>CMB Supplier invoice change currency</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	
+	var ga = new GlideAjax('x_tsigh_cmb.CMBAjax');
+	ga.addParam('sysparm_name', 'getCurrencyValue');
+	ga.addParam('curdate', g_form.getValue('exchange_rate_date'));
+	ga.addParam('currency', g_form.getValue('invoice_currency'));
+	ga.getXML(function(response){
+		var answer = response.responseXML.documentElement.getAttribute("answer");
+		if(answer != 0){
+			g_form.setValue('exchange_rate_value', answer);
+			g_form.setValue('exchange_rate_value', parseFloat(answer));
+		}else {
+			g_form.clearValue('exchange_rate_value');
+			g_form.clearValue('exchange_rate_date');
+			g_form.addErrorMessage('No exchange rate found for selected exchange date, please select another!');
+		}
+
+	});	
+   //Type appropriate comment here, and begin script below
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2022-12-19 09:23:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5bf3fea21b335150c7c9fc078b4bcbe2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CMB Supplier invoice change currency</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_client_5bf3fea21b335150c7c9fc078b4bcbe2</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2022-12-19 09:23:34</sys_updated_on>
+        <table>x_tsigh_cmb_supplier_invoice</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
