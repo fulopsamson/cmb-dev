@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>true</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_tsigh_cmb_client_invoice</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_tsigh_cmb_client_invoice">billing_profile.send_email_automatically=true^stateCHANGESTOvalidated_by_finance^EQ<item endquery="false" field="billing_profile.send_email_automatically" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item display_value="Validated by finance" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="validated_by_finance"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message><![CDATA[<p>Email sent!</p>]]></message>
+        <name>Send Invoice via email</name>
+        <order>10000</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	var gr = new GlideRecord('customer_contact');
+	gr.addQuery('u_billing_profile', current.billing_profile);
+	gr.addQuery('u_type', 'billing_contact');
+	gr.query();
+	var to_mail = '';
+	var cc_mail = '';
+	while (gr.next()) {
+		cc_mail += gr.email + ',';
+		to_mail = gr.email;
+	}
+	gs.info('Param1: ' + to_mail);
+	gs.info('Param2: ' + cc_mail);
+	to_mail = 'samson.fulop@combridge.ro';
+	cc_mail = 'szabo.zoltan@combridge.ro';
+	gs.eventQueue('x_tsigh_cmb.invoice.approved', current, to_mail,  cc_mail);
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-04 14:08:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c80f02b31bcc659030bc986c9b4bcbd0</sys_id>
+        <sys_mod_count>27</sys_mod_count>
+        <sys_name>Send Invoice via email</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_c80f02b31bcc659030bc986c9b4bcbd0</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-05 14:23:30</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=c80f02b31bcc659030bc986c9b4bcbd0"/>
+</record_update>

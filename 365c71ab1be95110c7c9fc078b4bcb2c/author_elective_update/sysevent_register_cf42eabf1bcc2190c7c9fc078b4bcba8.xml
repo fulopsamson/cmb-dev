@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register">
+    <sysevent_register action="DELETE">
+        <caller_access/>
+        <description/>
+        <event_name>x_tsigh_cmb.send.email</event_name>
+        <fired_by/>
+        <queue/>
+        <suffix>send.email</suffix>
+        <sys_class_name>sysevent_register</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2023-01-04 15:32:23</sys_created_on>
+        <sys_id>cf42eabf1bcc2190c7c9fc078b4bcba8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.send.email</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sysevent_register_cf42eabf1bcc2190c7c9fc078b4bcba8</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2023-01-04 15:32:23</sys_updated_on>
+        <table>x_tsigh_cmb_client_invoice</table>
+    </sysevent_register>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sysevent_register_cf42eabf1bcc2190c7c9fc078b4bcba8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_register"><sysevent_register action="INSERT_OR_UPDATE"><caller_access/><description/><event_name>x_tsigh_cmb.send.email</event_name><fired_by/><queue/><suffix>send.email</suffix><sys_class_name>sysevent_register</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2023-01-04 15:32:23</sys_created_on><sys_id>cf42eabf1bcc2190c7c9fc078b4bcba8</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_tsigh_cmb.send.email</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sysevent_register_cf42eabf1bcc2190c7c9fc078b4bcba8</sys_update_name><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2023-01-04 15:32:23</sys_updated_on><table>x_tsigh_cmb_client_invoice</table></sysevent_register></record_update>]]></payload>
+        <payload_hash>1350287258</payload_hash>
+        <record_name>x_tsigh_cmb.send.email</record_name>
+        <reverted_from/>
+        <source>c92261bb1b0c2190c7c9fc078b4bcb0e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2023-01-04 15:32:23</sys_created_on>
+        <sys_id>5572eabf1bcc2190c7c9fc078b4bcb97</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1857d697bec0000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2023-01-04 15:32:23</sys_updated_on>
+        <type>Event Registration</type>
+        <update_guid>d972eabfa9cc21905387c23468db1f96</update_guid>
+        <update_guid_history>d972eabfa9cc21905387c23468db1f96:1350287258</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2023-01-04 15:32:33</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_register">sysevent_register</sys_db_object>
+        <sys_id>867e6cbf702a42fd94b3507bfe71d1a9</sys_id>
+        <sys_metadata>cf42eabf1bcc2190c7c9fc078b4bcba8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.send.email</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Client invoice">3d54f24a1b71991030bc986c9b4bcb2b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sysevent_register_cf42eabf1bcc2190c7c9fc078b4bcba8</sys_update_name>
+        <sys_update_version display_value="sysevent_register_cf42eabf1bcc2190c7c9fc078b4bcba8">5572eabf1bcc2190c7c9fc078b4bcb97</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2023-01-04 15:32:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

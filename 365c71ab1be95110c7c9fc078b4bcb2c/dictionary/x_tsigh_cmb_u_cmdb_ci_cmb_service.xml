@@ -216,6 +216,7 @@
         <element label="Backup service" max_length="32" name="u_backup_service" reference="x_tsigh_cmb_u_cmdb_ci_cmb_service" type="reference"/>
         <element attributes="no_truncate" label="Billing Profile" mandatory="true" max_length="32" name="u_billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.u_account" type="reference" use_reference_qualifier="advanced"/>
         <element label="Cancellation form" max_length="40" name="u_cancellation_form" type="file_attachment"/>
+        <element label="Capacicy Value" max_length="40" name="u_capacicy_value_2" type="float"/>
         <element choice="1" label="Capacity unit of measurement" max_length="40" name="u_capacity_unit_of_measurement" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Mbps" sequence="1" value="Mbps"/>

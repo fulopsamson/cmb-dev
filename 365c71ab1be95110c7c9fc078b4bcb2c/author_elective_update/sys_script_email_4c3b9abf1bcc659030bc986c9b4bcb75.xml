@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="DELETE">
+        <name>send_client_invoice</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+	
+// 	var gr = new GlideRecord('customer_contact');
+// 	gr.addQuery('u_billing_profile', event.parm2);
+// 	gr.addQuery('u_type', 'billing_contact');
+// 	gr.query();
+// 	while(gr.next()) {
+// 		email.addAddress("cc",gr.email, gr.name);
+// 	}
+	email.addAddress("bcc","fulopsamson@icloud.com","Name");
+	
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-04 15:04:16</sys_created_on>
+        <sys_id>4c3b9abf1bcc659030bc986c9b4bcb75</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>send_client_invoice</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_script_email_4c3b9abf1bcc659030bc986c9b4bcb75</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-04 16:04:59</sys_updated_on>
+    </sys_script_email>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_script_email_4c3b9abf1bcc659030bc986c9b4bcb75</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_email"&gt;&lt;sys_script_email action="INSERT_OR_UPDATE"&gt;&lt;name&gt;send_client_invoice&lt;/name&gt;&lt;new_lines_to_html&gt;false&lt;/new_lines_to_html&gt;&lt;script&gt;&lt;![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+	
+// 	var gr = new GlideRecord('customer_contact');
+// 	gr.addQuery('u_billing_profile', event.parm2);
+// 	gr.addQuery('u_type', 'billing_contact');
+// 	gr.query();
+// 	while(gr.next()) {
+// 		email.addAddress("cc",gr.email, gr.name);
+// 	}
+	email.addAddress("bcc","fulopsamson@icloud.com","Name");
+	
+})(current, template, email, email_action, event);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_email&lt;/sys_class_name&gt;&lt;sys_created_by&gt;samson.fulop&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-01-04 15:04:16&lt;/sys_created_on&gt;&lt;sys_id&gt;4c3b9abf1bcc659030bc986c9b4bcb75&lt;/sys_id&gt;&lt;sys_mod_count&gt;14&lt;/sys_mod_count&gt;&lt;sys_name&gt;send_client_invoice&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_email_4c3b9abf1bcc659030bc986c9b4bcb75&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;samson.fulop&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-01-04 16:04:59&lt;/sys_updated_on&gt;&lt;/sys_script_email&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1928887594</payload_hash>
+        <record_name>send_client_invoice</record_name>
+        <reverted_from/>
+        <source>22a2eff51bef5110c7c9fc078b4bcb82</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-04 16:04:59</sys_created_on>
+        <sys_id>32e9627f1b00a59030bc986c9b4bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1857d8754540000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-04 16:04:59</sys_updated_on>
+        <type>Email Script</type>
+        <update_guid>b6e9627fde00a5905acebdb03aa646a2</update_guid>
+        <update_guid_history>b6e9627fde00a5905acebdb03aa646a2:1928887594,2de96e3fef00a590e02f57a32df6325b:-447197180,9b392efb7800a590ae81ef90a9891f13:1436364699,d9c7aabb6200a590561856d6dd87d9ba:1721335942,87b7eabbc800a5903b68cdd20437d164:-1817007302,25f622bb3400a590f62d1e8c0f61c7d1:-1551836555,4386aa7bd200a5907837ea06750d1063:-2072290813,d446627bd400a590e9312b35e5565692:-1695504745,e926627b0800a5902a0a489a7139f79d:-1683221641,bca5227b9c00a590e3a056cd8021432c:988957033,8955663b1300a5904e4994dec8f9fbe5:109808201,69d4e2778d00a590cbd5f26228934e3b:709459742,9f5e9273b000a5907983d115814f8add:-239824148,693d16338600a5904488720f006fd252:1965251651,250c16ff64cc65909a31a8d832849add:1154191939</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-05 08:35:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_email">sys_script_email</sys_db_object>
+        <sys_id>05dc6e9a355d4e5781a2c161ff6987f1</sys_id>
+        <sys_metadata>4c3b9abf1bcc659030bc986c9b4bcb75</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>send_client_invoice</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_script_email_4c3b9abf1bcc659030bc986c9b4bcb75</sys_update_name>
+        <sys_update_version display_value="sys_script_email_4c3b9abf1bcc659030bc986c9b4bcb75">32e9627f1b00a59030bc986c9b4bcba3</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-05 08:35:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

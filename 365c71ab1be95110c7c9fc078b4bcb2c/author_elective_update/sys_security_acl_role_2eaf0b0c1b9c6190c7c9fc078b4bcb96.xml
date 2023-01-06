@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2023-01-05 13:29:16</sys_created_on>
+        <sys_id>2eaf0b0c1b9c6190c7c9fc078b4bcb96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_tsigh_cmb.contact_writer</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_security_acl display_value="">3daf8b0c1b9c6190c7c9fc078b4bcb55</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_2eaf0b0c1b9c6190c7c9fc078b4bcb96</sys_update_name>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2023-01-05 13:29:16</sys_updated_on>
+        <sys_user_role display_value="x_tsigh_cmb.contact_writer" name="x_tsigh_cmb.contact_writer">329e8bc81b9c6190c7c9fc078b4bcb23</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_security_acl_role_2eaf0b0c1b9c6190c7c9fc078b4bcb96</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>szabo.zoltan</sys_created_by><sys_created_on>2023-01-05 13:29:16</sys_created_on><sys_id>2eaf0b0c1b9c6190c7c9fc078b4bcb96</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.x_tsigh_cmb.contact_writer</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_security_acl display_value="">3daf8b0c1b9c6190c7c9fc078b4bcb55</sys_security_acl><sys_update_name>sys_security_acl_role_2eaf0b0c1b9c6190c7c9fc078b4bcb96</sys_update_name><sys_updated_by>szabo.zoltan</sys_updated_by><sys_updated_on>2023-01-05 13:29:16</sys_updated_on><sys_user_role display_value="x_tsigh_cmb.contact_writer" name="x_tsigh_cmb.contact_writer">329e8bc81b9c6190c7c9fc078b4bcb23</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-242340541</payload_hash>
+        <record_name>.x_tsigh_cmb.contact_writer</record_name>
+        <reverted_from/>
+        <source>c92261bb1b0c2190c7c9fc078b4bcb0e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2023-01-05 13:29:16</sys_created_on>
+        <sys_id>63df0b0c1b9c6190c7c9fc078b4bcbe7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185821f20340000001</sys_recorded_at>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2023-01-05 13:29:16</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>6bdf0b0c459c6190c18e3accbe1babe6</update_guid>
+        <update_guid_history>6bdf0b0c459c6190c18e3accbe1babe6:-242340541</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value=".x_tsigh_cmb.contact_writer">9e66d3c01bdc6190c7c9fc078b4bcb4b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>szabo.zoltan</sys_created_by>
+        <sys_created_on>2023-01-05 13:57:52</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>92e5022a041145eea7807c96817f7fc9</sys_id>
+        <sys_metadata>2eaf0b0c1b9c6190c7c9fc078b4bcb96</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.x_tsigh_cmb.contact_writer</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_2eaf0b0c1b9c6190c7c9fc078b4bcb96</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_2eaf0b0c1b9c6190c7c9fc078b4bcb96">63df0b0c1b9c6190c7c9fc078b4bcbe7</sys_update_version>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2023-01-05 13:57:52</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

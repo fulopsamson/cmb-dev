@@ -13,7 +13,7 @@
         <mobile_title>Accounts</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
         <name>customer_account</name>
-        <order>10</order>
+        <order/>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
@@ -24,15 +24,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>03d2f5b11bf15910c7c9fc078b4bcbfb</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Accounts</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_app_module_03d2f5b11bf15910c7c9fc078b4bcbfb</sys_update_name>
-        <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-11-22 07:59:55</sys_updated_on>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2023-01-06 10:45:41</sys_updated_on>
         <timeline_page/>
         <title>Accounts</title>
         <uncancelable>false</uncancelable>

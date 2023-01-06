@@ -350,6 +350,20 @@
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_capacicy_value_2</element>
+            <position>25</position>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2023-01-06 10:20:47</sys_created_on>
+            <sys_id>185e67d41b50299030bc986c9b4bcbe4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">f23a66c51b75951030bc986c9b4bcb54</sys_ui_section>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2023-01-06 10:20:47</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>true</header>
