@@ -3,28 +3,28 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_work_note</element>
             <position>0</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-09-07 08:22:40</sys_created_on>
-            <sys_id>eeeac0211b311910c7c9fc078b4bcbc9</sys_id>
+            <sys_created_by>ryan.schaefer@snc</sys_created_by>
+            <sys_created_on>2023-01-03 19:52:00</sys_created_on>
+            <sys_id>6a44de6f1b802190c7c9fc078b4bcbec</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Notes" display_value="Notes" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c4b268991bf1d510c7c9fc078b4bcb9e</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-09-07 08:22:40</sys_updated_on>
+            <sys_updated_by>ryan.schaefer@snc</sys_updated_by>
+            <sys_updated_on>2023-01-03 19:52:00</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>activity.xml</element>
             <position>1</position>
-            <sys_created_by>toma.istvan</sys_created_by>
-            <sys_created_on>2022-09-07 08:22:40</sys_created_on>
-            <sys_id>e2eac0211b311910c7c9fc078b4bcbca</sys_id>
+            <sys_created_by>ryan.schaefer@snc</sys_created_by>
+            <sys_created_on>2023-01-03 19:52:00</sys_created_on>
+            <sys_id>ea44de6f1b802190c7c9fc078b4bcbec</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
             <sys_ui_section caption="Notes" display_value="Notes" name="x_tsigh_cmb_u_cmdb_ci_cmb_service" sys_domain="global" view="Default view">c4b268991bf1d510c7c9fc078b4bcb9e</sys_ui_section>
-            <sys_updated_by>toma.istvan</sys_updated_by>
-            <sys_updated_on>2022-09-07 08:22:40</sys_updated_on>
+            <sys_updated_by>ryan.schaefer@snc</sys_updated_by>
+            <sys_updated_on>2023-01-03 19:52:00</sys_updated_on>
             <sys_user/>
             <type>formatter</type>
         </sys_ui_element>

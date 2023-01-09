@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>System property for the CMB billing address.</description>
+        <description>CMB swift code for accounts with HUF currency </description>
         <ignore_cache>true</ignore_cache>
         <is_private>false</is_private>
-        <name>x_tsigh_cmb.billing_address</name>
+        <name>x_tsigh_cmb.provider_swift_huf</name>
         <read_roles/>
-        <suffix>billing_address</suffix>
+        <suffix>provider_swift_huf</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>szabo.zoltan</sys_created_by>
-        <sys_created_on>2022-09-29 13:40:42</sys_created_on>
-        <sys_id>aca5a6ec1bd25d10c7c9fc078b4bcb57</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>x_tsigh_cmb.billing_address</sys_name>
+        <sys_created_on>2023-01-09 14:37:10</sys_created_on>
+        <sys_id>c03548e91b1ca110c7c9fc078b4bcbee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.provider_swift_huf</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
-        <sys_update_name>sys_properties_aca5a6ec1bd25d10c7c9fc078b4bcb57</sys_update_name>
+        <sys_update_name>sys_properties_c03548e91b1ca110c7c9fc078b4bcbee</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2023-01-09 16:37:49</sys_updated_on>
+        <sys_updated_on>2023-01-09 14:37:10</sys_updated_on>
         <type>string</type>
-        <value>747097a7943642faa8a9f219b13ca9a4</value>
+        <value>OTPVROBU</value>
         <write_roles/>
     </sys_properties>
-    <sys_translated_text action="delete_multiple" query="documentkey=aca5a6ec1bd25d10c7c9fc078b4bcb57"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=c03548e91b1ca110c7c9fc078b4bcbee"/>
 </record_update>

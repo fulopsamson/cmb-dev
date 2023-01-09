@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>CMB account swift code</description>
+        <description>CMB swift code for accounts with USD and EUR currency </description>
         <ignore_cache>true</ignore_cache>
         <is_private>false</is_private>
-        <name>x_tsigh_cmb.provider_swift</name>
+        <name>x_tsigh_cmb.provider_swift_eur_usd</name>
         <read_roles/>
-        <suffix>provider_swift</suffix>
+        <suffix>provider_swift_eur_usd</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>szabo.zoltan</sys_created_by>
         <sys_created_on>2022-10-19 09:33:01</sys_created_on>
         <sys_id>671da4831ba65110c7c9fc078b4bcb49</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_tsigh_cmb.provider_swift</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_tsigh_cmb.provider_swift_eur_usd</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_properties_671da4831ba65110c7c9fc078b4bcb49</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-10-19 09:33:01</sys_updated_on>
+        <sys_updated_on>2023-01-09 14:36:31</sys_updated_on>
         <type>string</type>
         <value>BACXROBU</value>
         <write_roles/>

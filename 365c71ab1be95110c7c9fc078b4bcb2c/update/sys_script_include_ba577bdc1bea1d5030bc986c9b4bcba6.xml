@@ -33,7 +33,7 @@ ClientInvoiceImage.prototype = {
 			
 			tmp = tmp.replace("cont_2", invoice.billing_profile.banking_account);
 			tmp = tmp.replace("bank_2", invoice.billing_profile.bank_name);
-			tmp = tmp.replace("reg_2", gr.u_register_number);
+			tmp = tmp.replace("reg_2", gr.registration_code);
 					
 			var pos = 1;
 			var line = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
@@ -66,9 +66,14 @@ ClientInvoiceImage.prototype = {
 			tmp = gs.getProperty("x_tsigh_cmb.external_client_invoice_template");
 			
 			tmp = tmp.replace("cmb_id", invoice.number); 
-			
-			var swift = gs.getProperty('x_tsigh_cmb.provider_swift');
-			tmp = tmp.replace("swift", swift);
+			if(invoice.currency.code == 'HUF'){
+				var swift = gs.getProperty('x_tsigh_cmb.provider_swift_huf');
+				tmp = tmp.replace("swift", swift);
+			}
+			else if(invoice.currency.code == 'EUR' || invoice.currency.code == 'USD'){
+				swift = gs.getProperty('x_tsigh_cmb.provider_swift_eur_usd');
+				tmp = tmp.replace("swift", swift);
+			}
 			
 			var comp_code = gs.getProperty('x_tsigh_cmb.company_code');
 			tmp = tmp.replace('company_code', comp_code);
@@ -127,37 +132,72 @@ ClientInvoiceImage.prototype = {
 		var gr = new GlideRecord('customer_account');
 		gr.get(combridge_sys_id);
 		tmp = tmp.replace("provider", gr.name);
-		tmp = tmp.replace("reg_1", gr.u_register_number);
+		tmp = tmp.replace("reg_1", gr.registration_code);
+		if(invoice.currency.code == 'HUF'){
+			var bill_adr = new GlideRecord('x_tsigh_cmb_billing_profile');
+			bill_adr.addQuery('account', combridge_sys_id);
+			bill_adr.addQuery('currency', 'HUF');
+			bill_adr.query();
+			if(bill_adr.next()){
+				tmp = tmp.replace("cont_1", bill_adr.banking_account);
+				tmp = tmp.replace("bank_1", bill_adr.bank_name);
+			}
+		}
+		else if(invoice.currency.code == 'EUR'){
+			var bill_adr = new GlideRecord('x_tsigh_cmb_billing_profile');
+			bill_adr.addQuery('account', combridge_sys_id);
+			bill_adr.addQuery('currency', 'EUR');
+			bill_adr.query();
+			if(bill_adr.next()){
+				tmp = tmp.replace("cont_1", bill_adr.banking_account);
+				tmp = tmp.replace("bank_1", bill_adr.bank_name);
+			}
+		}
+		else if(invoice.currency.code == 'USD'){
+			var bill_adr = new GlideRecord('x_tsigh_cmb_billing_profile');
+			bill_adr.addQuery('account', combridge_sys_id);
+			bill_adr.addQuery('currency', 'USD');
+			bill_adr.query();
+			if(bill_adr.next()){
+				tmp = tmp.replace("cont_1", bill_adr.banking_account);
+				tmp = tmp.replace("bank_1", bill_adr.bank_name);
+			}
+		}
+		else if(invoice.currency.code == 'RON'){
+			var bill_adr = new GlideRecord('x_tsigh_cmb_billing_profile');
+			bill_adr.addQuery('account', combridge_sys_id);
+			bill_adr.addQuery('currency', 'RON');
+			bill_adr.query();
+			if(bill_adr.next()){
+				tmp = tmp.replace("cont_1", bill_adr.banking_account);
+				tmp = tmp.replace("bank_1", bill_adr.bank_name);
+			}
+		}
 		tmp = tmp.replace("cif_1", gr.u_contribution_code_vat_cui);
 		tmp = tmp.replace("loc_1", gr.u_location.name);
-		tmp = tmp.replace("cont_1", 'cmb_bank_account');
-		tmp = tmp.replace("bank_1", 'UniCredit Bank');
 		
 		gr.get(invoice.client);
+		//gr.addQuery('')
 		tmp = tmp.replace("customer", gr.name);
 		tmp = tmp.replace("cif_2", gr.u_contribution_code_vat_cui);
-		tmp = tmp.replace("loc_2", invoice.billing_profile.location.name);
+		
+		var loc2 = invoice.billing_profile.location.country + ', ' + invoice.billing_profile.location.zip + ', ' + invoice.billing_profile.location.state + ', ' + invoice.billing_profile.location.city + ', ' + invoice.billing_profile.location.street;
+		tmp = tmp.replace("loc_2", loc2);
 		
 		tmp = tmp.replace("__lines__", lines);
 		
 		tmp = tmp.replaceAll("currency", invoice.currency);
-		tmp = tmp.replace("exchange_rate", invoice.getDisplayValue('exchange_rate_value'));
+		tmp = tmp.replace("exchange_rate", invoice.exchange_rate_value);
 		tmp = tmp.replace("comments", invoice.observation);
-			
-		/*
+					
 		var prov = new GlideRecord('sys_user');
 		prov.addQuery('user_name', invoice.sys_created_by);
 		prov.query();
 		if(prov.next()){
-			var name = prov.first_name + " " + prov.last_name;
-			tmp = tmp.replace('contact_name', name);
-			tmp = tmp.replace('contact_email', prov.email);
+			var iss_by = prov.first_name + " " + prov.last_name;
+			tmp = tmp.replace('iss_by', iss_by);
 		}
-		else if(!prov.next()){
-			tmp = tmp.replace('contact_name', '-');
-			tmp = tmp.replace('contact_email', '-');
-		}
-		*/
+		
 		var name = invoice.contact_person.first_name + " " + invoice.contact_person.last_name
 		tmp = tmp.replace('contact_name', name);
 		tmp = tmp.replace('contact_email', invoice.contact_person.email);
@@ -171,13 +211,13 @@ ClientInvoiceImage.prototype = {
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-10-11 11:12:16</sys_created_on>
         <sys_id>ba577bdc1bea1d5030bc986c9b4bcba6</sys_id>
-        <sys_mod_count>76</sys_mod_count>
+        <sys_mod_count>86</sys_mod_count>
         <sys_name>ClientInvoiceImage</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_ba577bdc1bea1d5030bc986c9b4bcba6</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-12-14 15:41:50</sys_updated_on>
+        <sys_updated_on>2023-01-09 17:13:26</sys_updated_on>
     </sys_script_include>
 </record_update>

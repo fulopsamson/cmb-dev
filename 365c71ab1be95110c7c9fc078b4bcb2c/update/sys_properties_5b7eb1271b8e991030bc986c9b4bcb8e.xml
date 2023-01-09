@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description>HTML tamplate for PDF generation used for supplier order.</description>
+        <description>HTML template for PDF generation used for supplier order.</description>
         <ignore_cache>true</ignore_cache>
         <is_private>false</is_private>
         <name>x_tsigh_cmb.order_template</name>
@@ -11,14 +11,14 @@
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-09-26 08:13:31</sys_created_on>
         <sys_id>5b7eb1271b8e991030bc986c9b4bcb8e</sys_id>
-        <sys_mod_count>152</sys_mod_count>
+        <sys_mod_count>153</sys_mod_count>
         <sys_name>x_tsigh_cmb.order_template</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_properties_5b7eb1271b8e991030bc986c9b4bcb8e</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-11-28 13:51:40</sys_updated_on>
+        <sys_updated_on>2023-01-09 09:20:39</sys_updated_on>
         <type>string</type>
         <value>&lt;!DOCTYPE html&gt;&#13;
 &lt;html lang="en"&gt;&#13;

@@ -11,14 +11,14 @@
         <sys_created_by>szabo.zoltan</sys_created_by>
         <sys_created_on>2022-10-18 14:59:17</sys_created_on>
         <sys_id>c7be68b61b6a1110c7c9fc078b4bcb0c</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>x_tsigh_cmb.external_client_invoice_template</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_properties_c7be68b61b6a1110c7c9fc078b4bcb0c</sys_update_name>
         <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-12-16 13:02:11</sys_updated_on>
+        <sys_updated_on>2023-01-09 15:01:53</sys_updated_on>
         <type>string</type>
         <value>&lt;!DOCTYPE html&gt;&#13;
 &lt;html lang="en"&gt;&#13;
@@ -237,7 +237,9 @@
             &lt;div&gt;Reverse charge for VAT based on art.278 from Romanian Fiscal Code.&lt;/div&gt;&#13;
             &lt;tfoot&gt;&#13;
                 &lt;tr&gt;&#13;
-                    &lt;td colspan="2"&gt;Contact Person: contact_name &lt;br/&gt;contact_email&lt;/td&gt;&#13;
+                    &lt;td colspan="2"&gt;Contact Person: contact_name &lt;br/&gt;contact_email &lt;br/&gt;&#13;
+                        &lt;br/&gt; Issued by: iss_by&#13;
+                    &lt;/td&gt;&#13;
                     &lt;td colspan="4"&gt;&#13;
                         &lt;table style="width: 100%; margin: 0; padding: 0; height: 100%;"&gt;&#13;
                             __exch__&#13;
