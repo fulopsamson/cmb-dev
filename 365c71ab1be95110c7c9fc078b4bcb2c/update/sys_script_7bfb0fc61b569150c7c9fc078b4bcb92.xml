@@ -21,7 +21,7 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>CMB Update currency</name>
+        <name>CMB Update Exch Value</name>
         <order>95</order>
         <priority>100</priority>
         <rest_method/>
@@ -36,34 +36,16 @@
 		current.currency = current.billing_profile.currency;
 		current.invoice_generating_method = current.billing_profile.invoice_generating_method;
 	}
-
-	if (!current.exchange_rate_date) {
-		current.exchange_rate_date = new GlideDateTime().getDate();
-	}
 	var curr = current.currency;
+	
 	var date = current.exchange_rate_date;
-
 
 	var exch = new x_tsigh_cmb.InvoiceExchangeRateServ();
 	var result = exch.invoiceExchange(curr, date);
-	gs.info('Exchange rate, value: '+result);
 	if(result != null)
 		current.exchange_rate_value = result;	
 	else
 		gs.addErrorMessage("There is no valid exchange rate at this date!");
-	/*var x = new x_tsigh_cmb.InvoiceExchangeRateServ();
-
-	var value = x.invoiceExchange(current.currency, current.exchange_rate_date);
-	gs.info('Exchange rate, value: '+value);
-	if(value){
-		current.exchange_rate_value = value;
-	}else{
-		current.exchange_rate_value = 0;
-		gs.addErrorMessage('Please provide an exchange date with valid exchange rate!');
-	} 
-	*/
-
-
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>daniel.szabo</sys_created_by>
@@ -71,15 +53,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7bfb0fc61b569150c7c9fc078b4bcb92</sys_id>
-        <sys_mod_count>21</sys_mod_count>
-        <sys_name>CMB Update currency</sys_name>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>CMB Update Exch Value</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_7bfb0fc61b569150c7c9fc078b4bcb92</sys_update_name>
-        <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-10-26 15:20:21</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-10 13:23:40</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

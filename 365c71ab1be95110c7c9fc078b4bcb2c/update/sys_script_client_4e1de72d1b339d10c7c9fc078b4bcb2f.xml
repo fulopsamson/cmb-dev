@@ -8,7 +8,7 @@
         <global>true</global>
         <isolate_script>true</isolate_script>
         <messages/>
-        <name>CMB Client invoice Intern/extern onchang</name>
+        <name>Client Invoice Intern/extern onchang</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 	if (isLoading || newValue === '') {
@@ -36,15 +36,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4e1de72d1b339d10c7c9fc078b4bcb2f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>CMB Client invoice Intern/extern onchang</sys_name>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Client Invoice Intern/extern onchang</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_client_4e1de72d1b339d10c7c9fc078b4bcb2f</sys_update_name>
-        <sys_updated_by>szabo.zoltan</sys_updated_by>
-        <sys_updated_on>2022-12-16 11:16:38</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-10 13:00:18</sys_updated_on>
         <table>x_tsigh_cmb_client_invoice</table>
         <type>onChange</type>
         <ui_type>10</ui_type>

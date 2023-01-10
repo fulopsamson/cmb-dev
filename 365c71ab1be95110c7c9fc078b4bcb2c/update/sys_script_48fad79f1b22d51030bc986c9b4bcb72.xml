@@ -32,34 +32,52 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 	
-	current.price = Math.round(current.unit_price*current.quantity*100)/100;
-	current.vat_value = Math.round(current.price*current.client_invoice.vat_value*100)/100;
+	current.price = Math.round(current.unit_price * current.quantity * 100) / 100;
 	
-	current.vat_value_in_ron = Math.round(current.vat_value * current.client_invoice.exchange_rate_value*100)/100;
-	current.price_in_ron = Math.round(current.price * current.client_invoice.exchange_rate_value*100)/100;
-	//current.unit_price_in_ron = current.unit_price * current.client_invoice.exchange_rate_value;
-	var upr = Math.round(current.unit_price * current.client_invoice.exchange_rate_value*100)/100;
-	current.unit_price_in_ron = upr;	
-	var x = upr*(1+current.client_invoice.vat_value);
-	current.unit_price_with_vat_in_ron = Number(Math.round(x + 'e2') + 'e-2');
+	current.vat_value = Math.round(current.price * current.client_invoice.vat_value * 100) / 100;
+	
+	var unit_price_ron = Math.round(current.unit_price * current.client_invoice.exchange_rate_value * 100) / 100;
+	
+	var price_in_ron = unit_price_ron * current.quantity;
+	
+	var vat_value_in_ron = Math.round(price_in_ron * current.client_invoice.vat_value * 100) / 100;
+	
+	current.unit_price_in_ron = unit_price_ron;
+	
+	current.price_in_ron = price_in_ron;
+	
+	current.vat_value_in_ron = vat_value_in_ron;
+	
+	current.unit_price_with_vat_in_ron = unit_price_ron + Math.round(unit_price_ron * current.client_invoice.vat_value * 100) / 100;
+	
 	current.update();
 	
-
 	var gr = new GlideRecord('x_tsigh_cmb_client_invoice_lines');
-	gr.addQuery('client_invoice',current.client_invoice);
+	gr.addQuery('client_invoice', current.client_invoice);
 	gr.query();
-	var total = 0;
-	while(gr.next()){
-		total+=gr.price;
+	var total_curr_net = 0;
+	var total_curr_vat = 0;
+	var total_ron_net = 0;
+	var total_ron_vat = 0;
+	while (gr.next()){
+		total_curr_net += gr.price;
+		total_curr_vat += gr.vat_value;
+		total_ron_net += gr.price_in_ron;
+		total_ron_vat += gr.vat_value_in_ron;
+		
 	}
 	
 	var gri = new GlideRecord('x_tsigh_cmb_client_invoice');
 	gri.get(current.client_invoice.sys_id);
-	var totalNet = Math.round(total*100)/100;
-	gri.total_net_value = totalNet; //parseFloat(parseInt(total*100))/100;
-	var totalVat = Math.round(totalNet*gri.vat_value*100)/100;
-	gri.total_value_of_vat = totalVat;
-	gri.total = totalNet+totalVat;
+	
+	gri.total_net_value = total_curr_net;
+	gri.total_value_of_vat = total_curr_vat;
+	gri.total = total_curr_net + total_curr_vat;
+	
+	gri.total_net_value_in_ron = total_ron_net;
+	gri.total_value_of_vat_in_ron = total_ron_vat;
+	gri.total_in_ron = total_ron_net + total_ron_vat;
+
 	gri.update();
 
 })(current, previous);]]></script>
@@ -69,7 +87,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>48fad79f1b22d51030bc986c9b4bcb72</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>CMB Calculate Invoice Totals</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
@@ -77,7 +95,7 @@
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_48fad79f1b22d51030bc986c9b4bcb72</sys_update_name>
         <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2022-12-16 10:03:03</sys_updated_on>
+        <sys_updated_on>2023-01-10 11:13:32</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

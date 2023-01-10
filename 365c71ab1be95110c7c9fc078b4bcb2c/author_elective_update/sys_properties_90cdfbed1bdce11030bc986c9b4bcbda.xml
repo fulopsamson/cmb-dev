@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="DELETE">
+        <choices/>
+        <description>Client invoice internal numbering.</description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_tsigh_cmb.client_invoice_number</name>
+        <read_roles/>
+        <suffix>client_invoice_number</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-10 08:43:36</sys_created_on>
+        <sys_id>90cdfbed1bdce11030bc986c9b4bcbda</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_tsigh_cmb.client_invoice_number</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_properties_90cdfbed1bdce11030bc986c9b4bcbda</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-10 09:38:24</sys_updated_on>
+        <type>integer</type>
+        <value>0</value>
+        <write_roles>snc_internal</write_roles>
+    </sys_properties>
+    <sys_translated_text action="DELETE" query="documentkey=90cdfbed1bdce11030bc986c9b4bcbda"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_properties_90cdfbed1bdce11030bc986c9b4bcbda</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties"><sys_properties action="INSERT_OR_UPDATE"><choices/><description>Client invoice internal numbering.</description><ignore_cache>true</ignore_cache><is_private>false</is_private><name>x_tsigh_cmb.client_invoice_number</name><read_roles/><suffix>client_invoice_number</suffix><sys_class_name>sys_properties</sys_class_name><sys_created_by>samson.fulop</sys_created_by><sys_created_on>2023-01-10 08:43:36</sys_created_on><sys_id>90cdfbed1bdce11030bc986c9b4bcbda</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_tsigh_cmb.client_invoice_number</sys_name><sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package><sys_policy/><sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope><sys_update_name>sys_properties_90cdfbed1bdce11030bc986c9b4bcbda</sys_update_name><sys_updated_by>samson.fulop</sys_updated_by><sys_updated_on>2023-01-10 09:38:24</sys_updated_on><type>integer</type><value>0</value><write_roles>snc_internal</write_roles></sys_properties><sys_translated_text action="delete_multiple" query="documentkey=90cdfbed1bdce11030bc986c9b4bcbda"/></record_update>]]></payload>
+        <payload_hash>-773343263</payload_hash>
+        <record_name>x_tsigh_cmb.client_invoice_number</record_name>
+        <reverted_from/>
+        <source>9eda18601b14299030bc986c9b4bcb09</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-10 09:38:24</sys_created_on>
+        <sys_id>a6fac43d1b10251030bc986c9b4bcb7a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1859b0b91690000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-10 09:38:24</sys_updated_on>
+        <type>System Property</type>
+        <update_guid>2efac43d76102510b988be860adee379</update_guid>
+        <update_guid_history>2efac43d76102510b988be860adee379:-773343263,736ef7ad0edce110b18c590f7c3f65af:-1545858294</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-10 10:17:28</sys_created_on>
+        <sys_db_object display_value="" name="sys_properties">sys_properties</sys_db_object>
+        <sys_id>1e2e79bf2dac485286cb41dcf6e542f9</sys_id>
+        <sys_metadata>90cdfbed1bdce11030bc986c9b4bcbda</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_tsigh_cmb.client_invoice_number</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_properties_90cdfbed1bdce11030bc986c9b4bcbda</sys_update_name>
+        <sys_update_version display_value="sys_properties_90cdfbed1bdce11030bc986c9b4bcbda">a6fac43d1b10251030bc986c9b4bcb7a</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-10 10:17:28</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

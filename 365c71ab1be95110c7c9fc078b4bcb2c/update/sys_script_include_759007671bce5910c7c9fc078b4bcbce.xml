@@ -26,6 +26,17 @@ CMBAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 		return new x_tsigh_cmb.CMBUtils().validateAssetStates(devices);
 	},
 	
+	addDays: function() {
+		var input = this.getParameter('date_input');
+		var diff = this.getParameter('days');
+		var x = new GlideDateTime(input);
+		var k = parseInt(diff);
+		if (x && k) {
+			x.addDaysUTC(k);
+			return x.getDate();
+		}
+		return;
+	},
 	
 	
 	generateClientInvoice:function(){
@@ -161,13 +172,13 @@ CMBAjax.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-09-26 13:08:52</sys_created_on>
         <sys_id>759007671bce5910c7c9fc078b4bcbce</sys_id>
-        <sys_mod_count>76</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_name>CMBAjax</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_759007671bce5910c7c9fc078b4bcbce</sys_update_name>
-        <sys_updated_by>daniel.szabo</sys_updated_by>
-        <sys_updated_on>2022-11-15 12:36:47</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-10 13:11:13</sys_updated_on>
     </sys_script_include>
 </record_update>
