@@ -403,6 +403,7 @@
                 <element inactive_on_update="false" label="DMG Mori_Vietnam" value="46030"/>
                 <element inactive_on_update="false" label="Doka_Australia" value="33006"/>
                 <element inactive_on_update="false" label="Doka_Austria" value="33001"/>
+                <element inactive_on_update="false" label="Doka_Canada" value="33007"/>
                 <element inactive_on_update="false" label="Doka_Egypt" value="33004"/>
                 <element inactive_on_update="false" label="Doka_Germany" value="33005"/>
                 <element inactive_on_update="false" label="Doka_Ireland" value="33002"/>

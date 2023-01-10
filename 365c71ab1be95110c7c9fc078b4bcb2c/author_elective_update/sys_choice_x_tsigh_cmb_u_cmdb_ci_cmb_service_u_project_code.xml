@@ -5421,6 +5421,26 @@
             <element>u_project_code</element>
             <hint/>
             <inactive>false</inactive>
+            <label>Doka_Canada</label>
+            <language>en</language>
+            <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>samson.fulop</sys_created_by>
+            <sys_created_on>2023-01-10 13:38:48</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5cf189f11b14251030bc986c9b4bcb65</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>samson.fulop</sys_updated_by>
+            <sys_updated_on>2023-01-10 13:38:48</sys_updated_on>
+            <value>33007</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_project_code</element>
+            <hint/>
+            <inactive>false</inactive>
             <label>GDC_Germany</label>
             <language>en</language>
             <name>x_tsigh_cmb_u_cmdb_ci_cmb_service</name>
