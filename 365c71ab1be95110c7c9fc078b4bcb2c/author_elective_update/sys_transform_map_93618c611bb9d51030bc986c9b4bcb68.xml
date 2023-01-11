@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_map">
+    <sys_transform_map action="DELETE">
+        <active>true</active>
+        <copy_empty_fields>false</copy_empty_fields>
+        <create_new_record_on_empty_coalesce_fields>false</create_new_record_on_empty_coalesce_fields>
+        <enforce_mandatory_fields>No</enforce_mandatory_fields>
+        <name>Projects</name>
+        <order>100</order>
+        <run_business_rules>true</run_business_rules>
+        <run_script>false</run_script>
+        <script><![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+
+	// Add your code here
+
+})(source, target, map, log, action==="update");]]></script>
+        <source_table>u_projects</source_table>
+        <sys_class_name>sys_transform_map</sys_class_name>
+        <sys_created_by>samson</sys_created_by>
+        <sys_created_on>2022-09-07 07:41:40</sys_created_on>
+        <sys_id>93618c611bb9d51030bc986c9b4bcb68</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Projects</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_transform_map_93618c611bb9d51030bc986c9b4bcb68</sys_update_name>
+        <sys_updated_by>samson</sys_updated_by>
+        <sys_updated_on>2022-09-07 07:41:40</sys_updated_on>
+        <target_table>x_tsigh_cmb_project</target_table>
+    </sys_transform_map>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_transform_map_93618c611bb9d51030bc986c9b4bcb68</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_map"&gt;&lt;sys_transform_map action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;copy_empty_fields&gt;false&lt;/copy_empty_fields&gt;&lt;create_new_record_on_empty_coalesce_fields&gt;false&lt;/create_new_record_on_empty_coalesce_fields&gt;&lt;enforce_mandatory_fields&gt;No&lt;/enforce_mandatory_fields&gt;&lt;name&gt;Projects&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;run_business_rules&gt;true&lt;/run_business_rules&gt;&lt;run_script&gt;false&lt;/run_script&gt;&lt;script&gt;&lt;![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+
+	// Add your code here
+
+})(source, target, map, log, action==="update");]]&gt;&lt;/script&gt;&lt;source_table&gt;u_projects&lt;/source_table&gt;&lt;sys_class_name&gt;sys_transform_map&lt;/sys_class_name&gt;&lt;sys_created_by&gt;samson&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-07 07:41:40&lt;/sys_created_on&gt;&lt;sys_id&gt;93618c611bb9d51030bc986c9b4bcb68&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Projects&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_map_93618c611bb9d51030bc986c9b4bcb68&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;samson&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-09-07 07:41:40&lt;/sys_updated_on&gt;&lt;target_table&gt;x_tsigh_cmb_project&lt;/target_table&gt;&lt;/sys_transform_map&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-369002849</payload_hash>
+        <record_name>Projects</record_name>
+        <reverted_from/>
+        <source>45310a671b6d111030bc986c9b4bcb4e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson</sys_created_by>
+        <sys_created_on>2022-09-07 07:41:40</sys_created_on>
+        <sys_id>75814ca11bb9d51030bc986c9b4bcb05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18316e5c41b0000001</sys_recorded_at>
+        <sys_updated_by>samson</sys_updated_by>
+        <sys_updated_on>2022-09-07 07:41:40</sys_updated_on>
+        <type>Table Transform Map</type>
+        <update_guid>bd814ca1b8b9d510e5520af0ba25cb04</update_guid>
+        <update_guid_history>bd814ca1b8b9d510e5520af0ba25cb04:-369002849</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-11 07:58:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_map">sys_transform_map</sys_db_object>
+        <sys_id>81809ea09f0b43909571695bd9646900</sys_id>
+        <sys_metadata>93618c611bb9d51030bc986c9b4bcb68</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Projects</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_transform_map_93618c611bb9d51030bc986c9b4bcb68</sys_update_name>
+        <sys_update_version display_value="sys_transform_map_93618c611bb9d51030bc986c9b4bcb68">75814ca11bb9d51030bc986c9b4bcb05</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-11 07:58:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

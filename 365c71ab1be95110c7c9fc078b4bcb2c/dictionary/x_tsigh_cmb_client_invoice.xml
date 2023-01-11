@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" label="Client invoice" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="19" type="collection">
+    <element audit="true" label="Client invoice" max_length="40" name="x_tsigh_cmb_client_invoice" sizeclass="22" type="collection">
         <element choice="3" choice_field="approval" choice_table="task" default="not requested" label="Approval" max_length="40" name="approval" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Not Yet Requested" sequence="0" value="not requested"/>
@@ -12,6 +12,10 @@
         <element label="Billing profile" mandatory="true" max_length="32" name="billing_profile" reference="x_tsigh_cmb_billing_profile" reference_qual="javascript:&quot;account=&quot; + current.client" type="reference" use_reference_qualifier="advanced"/>
         <element label="Client" mandatory="true" max_length="32" name="client" reference="customer_account" type="reference"/>
         <element default="javascript: gs.getUserID()" label="Contact person" max_length="32" name="contact_person" reference="sys_user" type="reference"/>
+        <element label="Cosys Currency" max_length="32" name="cosys_currency" read_only="true" reference="fx_currency" type="reference"/>
+        <element label="Cosys Exchange Rate" max_length="40" name="cosys_exchange_rate" read_only="true" type="float"/>
+        <element label="Cosys total" max_length="40" name="cosys_total" read_only="true" type="float"/>
+        <element label="Cosys VAT" max_length="40" name="cosys_vat" read_only="true" type="float"/>
         <element attributes="encode_utf8=false" label="Currency" max_length="32" name="currency" read_only="true" reference="fx_currency" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
         <element label="Due date" max_length="40" name="due_date" type="glide_date"/>
         <element label="Exchange rate date" max_length="40" name="exchange_rate_date" type="glide_date"/>
@@ -67,9 +71,12 @@
             <element name="contact_person"/>
         </index>
         <index name="index3">
-            <element name="client"/>
+            <element name="cosys_currency"/>
         </index>
         <index name="index4">
+            <element name="client"/>
+        </index>
+        <index name="index5">
             <element name="currency"/>
         </index>
     </element>

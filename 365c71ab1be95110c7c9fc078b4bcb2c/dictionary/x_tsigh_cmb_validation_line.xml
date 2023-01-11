@@ -34,7 +34,7 @@
         <element label="Period end" max_length="40" name="period_end" type="glide_date"/>
         <element label="Period start" max_length="40" name="period_start" type="glide_date"/>
         <element label="Product type" max_length="32" name="product_type" read_only="true" reference="x_tsigh_cmb_product_type" type="reference"/>
-        <element label="Project" max_length="32" name="project" read_only="true" reference="x_tsigh_cmb_project" type="reference"/>
+        <element label="Project" max_length="32" name="project" reference="x_tsigh_cmb_project" type="reference"/>
         <element choice="1" choice_field="u_project_code" choice_table="x_tsigh_cmb_u_cmdb_ci_cmb_service" label="Project code" max_length="40" name="project_code" read_only="true" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Asahi_Austria" sequence="0" value="35010"/>

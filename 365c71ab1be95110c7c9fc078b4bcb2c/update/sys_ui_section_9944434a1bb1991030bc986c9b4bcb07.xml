@@ -4,13 +4,13 @@
             <element>internal_number</element>
             <position>0</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>ae1730f51bd0251030bc986c9b4bcb01</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>44fe6dc21b54651030bc986c9b4bcb62</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>number</element>
             <position>1</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>661730f51bd0251030bc986c9b4bcb02</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>c8fe6dc21b54651030bc986c9b4bcb62</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>type</element>
             <position>2</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>e61730f51bd0251030bc986c9b4bcb02</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>4cfe6dc21b54651030bc986c9b4bcb62</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>client</element>
             <position>3</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>6a1730f51bd0251030bc986c9b4bcb02</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>ccfe6dc21b54651030bc986c9b4bcb62</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>billing_profile</element>
             <position>4</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>ea1730f51bd0251030bc986c9b4bcb02</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>40fe6dc21b54651030bc986c9b4bcb63</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>internal_external</element>
             <position>5</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>6e1730f51bd0251030bc986c9b4bcb02</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>c0fe6dc21b54651030bc986c9b4bcb63</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>partner_reference_number</element>
             <position>6</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>ee1730f51bd0251030bc986c9b4bcb02</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>44fe6dc21b54651030bc986c9b4bcb63</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>invoice_date</element>
             <position>7</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>621730f51bd0251030bc986c9b4bcb03</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>c4fe6dc21b54651030bc986c9b4bcb63</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,13 +116,13 @@
             <element>due_date</element>
             <position>8</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>e21730f51bd0251030bc986c9b4bcb03</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>48fe6dc21b54651030bc986c9b4bcb63</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -130,13 +130,13 @@
             <element>invoice_file</element>
             <position>9</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>661730f51bd0251030bc986c9b4bcb03</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>c8fe6dc21b54651030bc986c9b4bcb63</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -144,13 +144,13 @@
             <element>.split</element>
             <position>10</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>e61730f51bd0251030bc986c9b4bcb03</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>4cfe6dc21b54651030bc986c9b4bcb63</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -158,13 +158,13 @@
             <element>state</element>
             <position>11</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>6a1730f51bd0251030bc986c9b4bcb03</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>ccfe6dc21b54651030bc986c9b4bcb63</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -172,13 +172,13 @@
             <element>currency</element>
             <position>12</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>ea1730f51bd0251030bc986c9b4bcb03</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>40fe6dc21b54651030bc986c9b4bcb64</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -186,13 +186,13 @@
             <element>exchange_rate_date</element>
             <position>13</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>6e1730f51bd0251030bc986c9b4bcb03</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>c0fe6dc21b54651030bc986c9b4bcb64</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -200,13 +200,13 @@
             <element>exchange_rate_value</element>
             <position>14</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>ee1730f51bd0251030bc986c9b4bcb03</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>44fe6dc21b54651030bc986c9b4bcb64</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -214,13 +214,13 @@
             <element>automatically_generated</element>
             <position>15</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>621730f51bd0251030bc986c9b4bcb04</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>c4fe6dc21b54651030bc986c9b4bcb64</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -228,13 +228,13 @@
             <element>invoice_generating_method</element>
             <position>16</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>e21730f51bd0251030bc986c9b4bcb04</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>48fe6dc21b54651030bc986c9b4bcb64</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -242,13 +242,13 @@
             <element>contact_person</element>
             <position>17</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>661730f51bd0251030bc986c9b4bcb04</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>c8fe6dc21b54651030bc986c9b4bcb64</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -256,13 +256,13 @@
             <element>virtual_equipments_generated</element>
             <position>18</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>e61730f51bd0251030bc986c9b4bcb04</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>4cfe6dc21b54651030bc986c9b4bcb64</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -270,13 +270,13 @@
             <element>.end_split</element>
             <position>19</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>6a1730f51bd0251030bc986c9b4bcb04</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>ccfe6dc21b54651030bc986c9b4bcb64</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -284,13 +284,13 @@
             <element>observation</element>
             <position>20</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>ea1730f51bd0251030bc986c9b4bcb04</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>40fe6dc21b54651030bc986c9b4bcb65</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -298,13 +298,13 @@
             <element>12M.x_tsigh_cmb_client_invoice.x_tsigh_cmb_client_invoice_lines.client_invoice</element>
             <position>21</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>6e1730f51bd0251030bc986c9b4bcb04</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>c0fe6dc21b54651030bc986c9b4bcb65</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type>list</type>
         </sys_ui_element>
@@ -312,27 +312,13 @@
             <element>vat_value</element>
             <position>22</position>
             <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>ee1730f51bd0251030bc986c9b4bcb04</sys_id>
+            <sys_created_on>2023-01-11 11:33:37</sys_created_on>
+            <sys_id>44fe6dc21b54651030bc986c9b4bcb65</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
             <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>legacy_id</element>
-            <position>23</position>
-            <sys_created_by>samson.fulop</sys_created_by>
-            <sys_created_on>2023-01-10 12:51:12</sys_created_on>
-            <sys_id>621730f51bd0251030bc986c9b4bcb05</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_tsigh_cmb_client_invoice" sys_domain="global" view="Default view">9944434a1bb1991030bc986c9b4bcb07</sys_ui_section>
-            <sys_updated_by>samson.fulop</sys_updated_by>
-            <sys_updated_on>2023-01-10 12:51:12</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:33:37</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

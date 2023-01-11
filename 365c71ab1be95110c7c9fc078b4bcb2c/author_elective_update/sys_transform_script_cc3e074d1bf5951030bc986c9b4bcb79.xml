@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_script">
+    <sys_transform_script action="DELETE">
+        <active>true</active>
+        <map display_value="Accounts">40e787c51bf5951030bc986c9b4bcbb1</map>
+        <order>100</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+	gs.info('In script');
+	var insert = true;
+	var gr = new GlideRecord('cmn_location');
+	gr.addQuery('u_legacy_id', source.u_id__s_);
+	gr.query();
+	if (gr.next()) {
+		gs.info('Location with legacy id:' + source.u_id__s_ + ' already exist');
+		insert = false;
+	}
+	else {
+		gs.info('Location with legacy id:' + source.u_id__s_ + ' does not exist');
+		gr.initialize();
+	}
+	gr.u_legacy_id = source.u_address_id;
+	gr.zip = source.u_zip_code;
+	gr.city = source.u_city;
+	gr.country = source.u_country_code;
+	gr.state = source.u_county_code;
+	gr.street = source.u_street + ', nr. ' + source.u_street_nr;
+	if (source.u_block) {
+		gr.street += ', block ' + source.u_block;
+	}
+	if (source.u_entrance) {
+		gr.street += ', entrance ' + source.u_entrance;
+	}
+	if (source.u_flat) {
+		gr.street += ', flat ' + source.u_flat;
+	}
+	gr.name = gr.country + ', ' + gr.street;
+	if (insert) {
+		var location_id = gr.insert();
+		target.u_location = location_id;
+	}
+	else
+		gr.update();
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>samson</sys_created_by>
+        <sys_created_on>2022-09-06 09:27:49</sys_created_on>
+        <sys_id>cc3e074d1bf5951030bc986c9b4bcb79</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sys_transform_script_cc3e074d1bf5951030bc986c9b4bcb79</sys_update_name>
+        <sys_updated_by>samson</sys_updated_by>
+        <sys_updated_on>2022-09-06 12:10:35</sys_updated_on>
+        <when>onBefore</when>
+    </sys_transform_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sys_transform_script_cc3e074d1bf5951030bc986c9b4bcb79</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_script"&gt;&lt;sys_transform_script action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;map display_value="Accounts"&gt;40e787c51bf5951030bc986c9b4bcbb1&lt;/map&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+	gs.info('In script');
+	var insert = true;
+	var gr = new GlideRecord('cmn_location');
+	gr.addQuery('u_legacy_id', source.u_id__s_);
+	gr.query();
+	if (gr.next()) {
+		gs.info('Location with legacy id:' + source.u_id__s_ + ' already exist');
+		insert = false;
+	}
+	else {
+		gs.info('Location with legacy id:' + source.u_id__s_ + ' does not exist');
+		gr.initialize();
+	}
+	gr.u_legacy_id = source.u_address_id;
+	gr.zip = source.u_zip_code;
+	gr.city = source.u_city;
+	gr.country = source.u_country_code;
+	gr.state = source.u_county_code;
+	gr.street = source.u_street + ', nr. ' + source.u_street_nr;
+	if (source.u_block) {
+		gr.street += ', block ' + source.u_block;
+	}
+	if (source.u_entrance) {
+		gr.street += ', entrance ' + source.u_entrance;
+	}
+	if (source.u_flat) {
+		gr.street += ', flat ' + source.u_flat;
+	}
+	gr.name = gr.country + ', ' + gr.street;
+	if (insert) {
+		var location_id = gr.insert();
+		target.u_location = location_id;
+	}
+	else
+		gr.update();
+})(source, map, log, target);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_transform_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;samson&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-09-06 09:27:49&lt;/sys_created_on&gt;&lt;sys_id&gt;cc3e074d1bf5951030bc986c9b4bcb79&lt;/sys_id&gt;&lt;sys_mod_count&gt;13&lt;/sys_mod_count&gt;&lt;sys_name&gt;onBefore&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_script_cc3e074d1bf5951030bc986c9b4bcb79&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;samson&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-09-06 12:10:35&lt;/sys_updated_on&gt;&lt;when&gt;onBefore&lt;/when&gt;&lt;/sys_transform_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>433469133</payload_hash>
+        <record_name>onBefore</record_name>
+        <reverted_from/>
+        <source>45310a671b6d111030bc986c9b4bcb4e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson</sys_created_by>
+        <sys_created_on>2022-09-06 12:10:36</sys_created_on>
+        <sys_id>e7757bc91bb9951030bc986c9b4bcbc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18312b59e870000001</sys_recorded_at>
+        <sys_updated_by>samson</sys_updated_by>
+        <sys_updated_on>2022-09-06 12:10:36</sys_updated_on>
+        <type>Transform Script</type>
+        <update_guid>ef757bc9cbb9951097d58e3ac1a100c6</update_guid>
+        <update_guid_history>ef757bc9cbb9951097d58e3ac1a100c6:433469133,54ff9781277995105521c7ec20450cc3:-1008575459,838b1b0dc039951015b874f78aa72893:1067446903,308a97c9dd3995109a305c9dcbd22e4f:-1284458381,ead99f89a7399510c4c130f0160444e0:-1650070413,f7e5df05e1399510d9e9147860cc6130:307790530,e0855b810c3995102c238c3509bec999:1525692226,0d259341ce399510d98e73883d7e5a2f:-1630129560,c90557c1c839951021a677343b0fadc7:-1125358242,9e349305af399510c06c34147713647c:783728906,58a29f41b839951043a08ce8c8362d1e:210915968,c701d30197399510ef3c8b5082b180c2:-1092164600,5ac05f018339951003d4fe8f72f53dc8:566897958,033057018e3995108fdbc984a96e9a14:-396029495</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-11 07:58:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_script">sys_transform_script</sys_db_object>
+        <sys_id>33dcfa7542fe46b6a5d0bca4f88cbb89</sys_id>
+        <sys_metadata>cc3e074d1bf5951030bc986c9b4bcb79</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>onBefore</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sys_transform_script_cc3e074d1bf5951030bc986c9b4bcb79</sys_update_name>
+        <sys_update_version display_value="sys_transform_script_cc3e074d1bf5951030bc986c9b4bcb79">e7757bc91bb9951030bc986c9b4bcbc7</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-11 07:58:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

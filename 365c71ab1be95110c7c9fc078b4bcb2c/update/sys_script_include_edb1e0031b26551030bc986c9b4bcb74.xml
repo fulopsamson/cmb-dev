@@ -252,7 +252,7 @@ CMBInvoiceUtils.prototype = {
 
     generateInvoiceDescription: function(bp, type, prn, ctr, from, to) {
         //gs.info('Generating description for type ' + type + ' with partner ref. id: ' + prn + ' to period ' + (from + ' - ' + to));
-        var ext = 'Telecommunication service fee for order no. ' + prn + ', contract no. ' + ctr + ' ' + ((type == 'mrc' ? ('MRC for ' + (from + ' ' + to) + ')') : 'OTC'));
+        var ext = 'Telecommunication service fee for order no. ' + prn + ', contract no. ' + ctr + ' ' + ((type == 'mrc' ? ('MRC for ' + (from + ' ' + to)) : 'OTC'));
         var inte = 'Servicii de telecomunicatii cf. ' + ctr + ' taxa lunara pentru perioada ' + ' ' + ((type == 'mrc' ? ((from + ' ' + to + ' ')) : '') + prn);
 
         var ret = '';
@@ -501,7 +501,8 @@ CMBInvoiceUtils.prototype = {
         gr.setValue('type', 'billing');
         gr.setValue('client', bp.account.sys_id);
         gr.setValue('billing_profile', bp.sys_id);
-        if (prf) gr.setValue('partner_reference_number', prf)
+		gr.setValue('contact_person', bp.owner);
+        if (prf) gr.setValue('partner_reference_number', prf);
         gr.setValue('currency', bp.currency.sys_id);
         if (gd) {
             gr.setValue('exchange_rate_date', new GlideDateTime(gd.sys_created_on).getDate());
@@ -531,7 +532,8 @@ CMBInvoiceUtils.prototype = {
             gil.product_identifier = grv.product_type.product_identifier;
             gil.cost_code = grv.product_type.cost_code;
 
-        } else {
+        }
+		if (grv.project) {
             gil.product_identifier = grv.project.product_identifier;
             gil.cost_code = grv.project.cost_code;
         }
@@ -666,13 +668,13 @@ CMBInvoiceUtils.prototype = {
         <sys_created_by>daniel.szabo</sys_created_by>
         <sys_created_on>2022-10-19 08:49:33</sys_created_on>
         <sys_id>edb1e0031b26551030bc986c9b4bcb74</sys_id>
-        <sys_mod_count>198</sys_mod_count>
+        <sys_mod_count>201</sys_mod_count>
         <sys_name>CMBInvoiceUtils</sys_name>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy>protected</sys_policy>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_include_edb1e0031b26551030bc986c9b4bcb74</sys_update_name>
-        <sys_updated_by>istvan.toma</sys_updated_by>
-        <sys_updated_on>2022-12-14 21:10:49</sys_updated_on>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-11 11:18:41</sys_updated_on>
     </sys_script_include>
 </record_update>

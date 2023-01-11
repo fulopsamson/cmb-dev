@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysevent_email_template">
+    <sysevent_email_template action="DELETE">
+        <collection>x_tsigh_cmb_client_invoice</collection>
+        <email_layout/>
+        <message/>
+        <message_html><![CDATA[<p>Let's see if this works properly.</p>
+<p>Billing profile Name: ${billing_profile.name}</p>
+<p>${mail_script:send_client_invoice}</p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>Client Invoice Email Template</name>
+        <sms_alternate/>
+        <subject>Test Subject</subject>
+        <sys_class_name>sysevent_email_template</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-04 15:19:45</sys_created_on>
+        <sys_id>3d2fd6b31b00a59030bc986c9b4bcbd2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Client Invoice Email Template</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_update_name>sysevent_email_template_3d2fd6b31b00a59030bc986c9b4bcbd2</sys_update_name>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-04 15:19:45</sys_updated_on>
+        <sys_version>2</sys_version>
+    </sysevent_email_template>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</application>
+        <file_path/>
+        <instance_id>ccd9b113db25195449eac59705961957</instance_id>
+        <instance_name>combridgedev</instance_name>
+        <name>sysevent_email_template_3d2fd6b31b00a59030bc986c9b4bcbd2</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sysevent_email_template"&gt;&lt;sysevent_email_template action="INSERT_OR_UPDATE"&gt;&lt;collection&gt;x_tsigh_cmb_client_invoice&lt;/collection&gt;&lt;email_layout/&gt;&lt;message/&gt;&lt;message_html&gt;&lt;![CDATA[&lt;p&gt;Let's see if this works properly.&lt;/p&gt;
+&lt;p&gt;Billing profile Name: ${billing_profile.name}&lt;/p&gt;
+&lt;p&gt;${mail_script:send_client_invoice}&lt;/p&gt;]]&gt;&lt;/message_html&gt;&lt;message_list/&gt;&lt;message_text/&gt;&lt;name&gt;Client Invoice Email Template&lt;/name&gt;&lt;sms_alternate/&gt;&lt;subject&gt;Test Subject&lt;/subject&gt;&lt;sys_class_name&gt;sysevent_email_template&lt;/sys_class_name&gt;&lt;sys_created_by&gt;samson.fulop&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-01-04 15:19:45&lt;/sys_created_on&gt;&lt;sys_id&gt;3d2fd6b31b00a59030bc986c9b4bcbd2&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Client Invoice Email Template&lt;/sys_name&gt;&lt;sys_package display_value="CMB" source="x_tsigh_cmb"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="CMB"&gt;365c71ab1be95110c7c9fc078b4bcb2c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sysevent_email_template_3d2fd6b31b00a59030bc986c9b4bcbd2&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;samson.fulop&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-01-04 15:19:45&lt;/sys_updated_on&gt;&lt;sys_version&gt;2&lt;/sys_version&gt;&lt;/sysevent_email_template&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>782377734</payload_hash>
+        <record_name>Client Invoice Email Template</record_name>
+        <reverted_from/>
+        <source>22a2eff51bef5110c7c9fc078b4bcb82</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-04 15:19:45</sys_created_on>
+        <sys_id>5c9fd6b31b00a59030bc986c9b4bcbd9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1857d5deacf0000001</sys_recorded_at>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-04 15:19:45</sys_updated_on>
+        <type>Email Template</type>
+        <update_guid>549fd6b33200a59025f4edee98dca5d9</update_guid>
+        <update_guid_history>549fd6b33200a59025f4edee98dca5d9:782377734</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>samson.fulop</sys_created_by>
+        <sys_created_on>2023-01-11 08:13:44</sys_created_on>
+        <sys_db_object display_value="" name="sysevent_email_template">sysevent_email_template</sys_db_object>
+        <sys_id>db869f9ed5c14121b7482479522cc659</sys_id>
+        <sys_metadata>3d2fd6b31b00a59030bc986c9b4bcbd2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Client Invoice Email Template</sys_name>
+        <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
+        <sys_parent display_value="Client invoice">3d54f24a1b71991030bc986c9b4bcb2b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
+        <sys_scope_delete display_value="">0c3af6fb7fd2405a81b156e2f1c96044</sys_scope_delete>
+        <sys_update_name>sysevent_email_template_3d2fd6b31b00a59030bc986c9b4bcbd2</sys_update_name>
+        <sys_update_version display_value="sysevent_email_template_3d2fd6b31b00a59030bc986c9b4bcbd2">5c9fd6b31b00a59030bc986c9b4bcbd9</sys_update_version>
+        <sys_updated_by>samson.fulop</sys_updated_by>
+        <sys_updated_on>2023-01-11 08:13:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

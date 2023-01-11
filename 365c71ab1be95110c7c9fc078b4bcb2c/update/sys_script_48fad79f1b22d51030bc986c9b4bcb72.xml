@@ -32,9 +32,9 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
 	
-	current.price = Math.round(current.unit_price * current.quantity * 100) / 100;
+	current.price = (Math.round(current.unit_price * current.quantity * 100) / 100);
 	
-	current.vat_value = Math.round(current.price * current.client_invoice.vat_value * 100) / 100;
+	current.vat_value = (Math.round(current.price * current.client_invoice.vat_value * 100) / 100);
 	
 	var unit_price_ron = Math.round(current.unit_price * current.client_invoice.exchange_rate_value * 100) / 100;
 	
@@ -46,9 +46,10 @@
 	
 	current.price_in_ron = price_in_ron;
 	
-	current.vat_value_in_ron = vat_value_in_ron;
+	current.vat_value_in_ron = vat_value_in_ron
+	;
 	
-	current.unit_price_with_vat_in_ron = unit_price_ron + Math.round(unit_price_ron * current.client_invoice.vat_value * 100) / 100;
+	current.unit_price_with_vat_in_ron = (unit_price_ron + Math.round(unit_price_ron * current.client_invoice.vat_value * 100) / 100);
 	
 	current.update();
 	
@@ -72,11 +73,11 @@
 	
 	gri.total_net_value = total_curr_net;
 	gri.total_value_of_vat = total_curr_vat;
-	gri.total = total_curr_net + total_curr_vat;
+	gri.total = (total_curr_net + total_curr_vat);
 	
 	gri.total_net_value_in_ron = total_ron_net;
 	gri.total_value_of_vat_in_ron = total_ron_vat;
-	gri.total_in_ron = total_ron_net + total_ron_vat;
+	gri.total_in_ron = (total_ron_net + total_ron_vat);
 
 	gri.update();
 
@@ -87,15 +88,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>48fad79f1b22d51030bc986c9b4bcb72</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>CMB Calculate Invoice Totals</sys_name>
         <sys_overrides/>
         <sys_package display_value="CMB" source="x_tsigh_cmb">365c71ab1be95110c7c9fc078b4bcb2c</sys_package>
         <sys_policy/>
         <sys_scope display_value="CMB">365c71ab1be95110c7c9fc078b4bcb2c</sys_scope>
         <sys_update_name>sys_script_48fad79f1b22d51030bc986c9b4bcb72</sys_update_name>
-        <sys_updated_by>samson.fulop</sys_updated_by>
-        <sys_updated_on>2023-01-10 11:13:32</sys_updated_on>
+        <sys_updated_by>szabo.zoltan</sys_updated_by>
+        <sys_updated_on>2023-01-11 08:54:53</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

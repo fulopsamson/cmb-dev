@@ -3,302 +3,302 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cin_number</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>2463117d1bcb1510c7c9fc078b4bcbd9</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>a4f13d421b1c2510c7c9fc078b4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cin_invoice_date</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>a463117d1bcb1510c7c9fc078b4bcbd9</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>2cf13d421b1c2510c7c9fc078b4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cin_due_date</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>2863117d1bcb1510c7c9fc078b4bcbd9</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>acf13d421b1c2510c7c9fc078b4bcb6f</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>acc_u_contribution_code_vat_cui</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>a863117d1bcb1510c7c9fc078b4bcbd9</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>20f13d421b1c2510c7c9fc078b4bcb70</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cin_total_in_ron</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>2c63117d1bcb1510c7c9fc078b4bcbd9</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>a0f13d421b1c2510c7c9fc078b4bcb70</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cin_total_net_value_in_ron</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>5</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>ac63117d1bcb1510c7c9fc078b4bcbd9</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>24f13d421b1c2510c7c9fc078b4bcb70</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>cin_total</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <element>cin_cosys_total</element>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>6</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>2063117d1bcb1510c7c9fc078b4bcbda</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>a4f13d421b1c2510c7c9fc078b4bcb70</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>cin_currency</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <element>cin_cosys_currency</element>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>7</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>a063117d1bcb1510c7c9fc078b4bcbda</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>28f13d421b1c2510c7c9fc078b4bcb70</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>cin_exchange_rate_value</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <element>cin_cosys_exchange_rate</element>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>8</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>2463117d1bcb1510c7c9fc078b4bcbda</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>a8f13d421b1c2510c7c9fc078b4bcb70</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cin_total_value_of_vat_in_ron</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>9</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>a463117d1bcb1510c7c9fc078b4bcbda</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>2cf13d421b1c2510c7c9fc078b4bcb70</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cil_product_identifier</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>10</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>2863117d1bcb1510c7c9fc078b4bcbda</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>acf13d421b1c2510c7c9fc078b4bcb70</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cil_cost_code</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>11</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>a863117d1bcb1510c7c9fc078b4bcbda</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>20f13d421b1c2510c7c9fc078b4bcb71</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cil_quantity</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>12</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>2c63117d1bcb1510c7c9fc078b4bcbda</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>a0f13d421b1c2510c7c9fc078b4bcb71</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cil_unit_price_in_ron</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>13</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>ac63117d1bcb1510c7c9fc078b4bcbda</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>24f13d421b1c2510c7c9fc078b4bcb71</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cil_unit_price_with_vat_in_ron</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>14</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>2063117d1bcb1510c7c9fc078b4bcbdb</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>a4f13d421b1c2510c7c9fc078b4bcb71</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>cil_unit_price</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <element>cil_cosys_unit_price</element>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>15</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>a063117d1bcb1510c7c9fc078b4bcbdb</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>28f13d421b1c2510c7c9fc078b4bcb71</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cil_price_in_ron</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>16</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>2463117d1bcb1510c7c9fc078b4bcbdb</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>a8f13d421b1c2510c7c9fc078b4bcb71</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>cin_vat_value</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <element>cin_cosys_vat</element>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>17</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>a463117d1bcb1510c7c9fc078b4bcbdb</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>2cf13d421b1c2510c7c9fc078b4bcb71</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cil_vat_value_in_ron</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>18</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>2863117d1bcb1510c7c9fc078b4bcbdb</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>acf13d421b1c2510c7c9fc078b4bcb71</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>cil_project_code</element>
-            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">6863117d1bcb1510c7c9fc078b4bcbd8</list_id>
+            <list_id display_value="x_tsigh_cmb_import" element="NULL" name="x_tsigh_cmb_import" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e4f13d421b1c2510c7c9fc078b4bcb6e</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>19</position>
             <sum>false</sum>
             <sys_created_by>szabo.zoltan</sys_created_by>
-            <sys_created_on>2022-11-09 11:36:16</sys_created_on>
-            <sys_id>a863117d1bcb1510c7c9fc078b4bcbdb</sys_id>
+            <sys_created_on>2023-01-11 11:46:46</sys_created_on>
+            <sys_id>20f13d421b1c2510c7c9fc078b4bcb72</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>szabo.zoltan</sys_updated_by>
-            <sys_updated_on>2022-11-09 11:36:16</sys_updated_on>
+            <sys_updated_on>2023-01-11 11:46:46</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>

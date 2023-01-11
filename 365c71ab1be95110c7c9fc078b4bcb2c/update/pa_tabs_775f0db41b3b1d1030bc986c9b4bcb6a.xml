@@ -2,7 +2,7 @@
     <pa_tabs action="INSERT_OR_UPDATE">
         <canvas_page display_value="PA Test Dashboard - New Tab">b75f0db41b3b1d1030bc986c9b4bcb67</canvas_page>
         <name>Test Dashboard - New Tab</name>
-        <page display_value="PA Test Dashboard - New Tab">fb5f0db41b3b1d1030bc986c9b4bcb65</page>
+        <page/>
         <sys_class_name>pa_tabs</sys_class_name>
         <sys_created_by>samson.fulop</sys_created_by>
         <sys_created_on>2022-12-13 15:31:55</sys_created_on>
